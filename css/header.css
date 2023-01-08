@@ -1,0 +1,75 @@
+header{
+    position: fixed;
+    z-index: 100;   
+    width: 100%;
+  
+}
+
+header .bg-dark{
+    background-color: #27303a98 !important;
+    background-color: #27303a00 !important;
+}
+.cont-header{           
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-height: fit-content;
+    padding: 10px 20px 10px 20px;
+}
+.navbar-brand {
+    width: auto;    
+    max-width: 100px;
+}
+.navbar-brand img{
+    width: 100%;
+}
+.container-logo-title{
+    display: flex;
+    max-height: 50px;
+    align-items: center;
+}
+.short-title{
+    color: #187148;
+}
+
+.container-logo-title span{
+    font-size: 16px;    
+    min-width: initial;
+}
+.contenedor-imagen-logo{
+    max-width:40px;
+    min-width:40px;
+}
+.contenedor-imagen-logo img{
+    display: block;
+    width: 100%;    
+	cursor: pointer;
+}
+.container-logo-title h1{
+    font-weight: 300;
+    margin: 0;
+    font-size: 1.5em;
+}
+.title-quick{
+    font-weight: 500 !important;
+}
+.cont-mesadomicilio-carrito{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+}
+.cont-mesadomicilio-carrito h1{
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 300;
+}
+.icono-carrito-compras{
+    font-size: 1.5em;
+    color: #e5bd5d;    
+	cursor: pointer;
+}
+
+

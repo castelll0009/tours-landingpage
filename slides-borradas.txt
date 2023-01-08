@@ -1,0 +1,323 @@
+	<div>
+										<div class="product-slider__item swiper-slide swiper-slide-active" data-target="img7" style="width: 788px; opacity: 1; transform: translate3d(-2364px, 0px, 0px); transition-duration: 0ms;">
+											<div class="product-slider__card">
+											  <!-- <img src="imgs/imgs/bg-cards.png"  class="product-slider__cover"> -->
+											  <div class="product-slider__content">
+												<h1 class="product-slider__title">
+												  Monica <br> Castillo
+			  
+												</h1>								  
+												<span class="product-slider__price">  <br>Desing graphic<sup>  new</sup></span>
+												<div class="product-ctr">
+												  <div class="product-labels">
+													<div class="product-labels__title">Skills</div>
+								  
+													<div class="product-labels__group">
+													  <label class="product-labels__item">
+														<input type="radio" class="product-labels__checkbox" name="type6" checked="">
+														<span class="product-labels__txt">photographer</span>										  
+													  </label>
+			  
+													  <label class="product-labels__item">
+														  <input type="radio" class="product-labels__checkbox" name="type6" >											
+														  <span class="product-labels__txt">senior retoucher</span>
+														</label>					
+											  
+													</div>
+								  
+													<div class="product-labels__title">loadout</div>
+								  
+													<div class="product-labels__group">
+													  <label class="product-labels__item">
+														<input type="radio" class="product-labels__checkbox" name="type7" >
+														<span class="product-labels__txt">lightroom</span>
+													  </label>
+								  
+													  <label class="product-labels__item">
+														<input type="radio" class="product-labels__checkbox" name="type7" checked="">
+														<span class="product-labels__txt">photoshop</span>
+													  </label>
+			  
+													  <label class="product-labels__item">
+														  <input type="radio" class="product-labels__checkbox" name="type7">
+														  <span class="product-labels__txt">illustrator</span>
+														</label>
+			  
+														<label class="product-labels__item">
+														  <input type="radio" class="product-labels__checkbox" name="type7">
+														  <span class="product-labels__txt">indesign</span>
+														</label>
+			  
+													</div>
+								  
+												  </div>
+								  
+												  <span class="hr-vertical"></span>
+								  
+												  <div class="product-inf">
+													<div class="product-inf__percent">
+													  <div class="product-inf__percent-circle">
+														<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+														  <defs>
+															<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+															  <stop offset="0%" stop-color="#0c1e2c" stop-opacity="0"></stop>
+															  <stop offset="100%" stop-color="#cb2240" stop-opacity="1"></stop>
+															</linearGradient>
+														  </defs>
+														  <circle class="product-inf__percent-circle-circle" cx="50" cy="50" r="47" stroke-dasharray="" stroke-dashoffset="" stroke="#cb2240" stroke-width="4" fill="none"></circle>
+														</svg>
+													  </div>
+													  <div class="product-inf__percent-txt">
+														60%
+													  </div>
+													</div>
+								  
+													<span class="product-inf__title">PRESTIGE PERCENT</span>
+												  </div>
+								  
+												</div>
+								  
+												<div class="product-slider__bottom">
+												  <button class="product-slider__cart">
+												   CONTACT
+												  </button>
+								  
+												  <button class="product-slider__fav js-fav"><span class="heart"></span> FOLLOW</button>
+												</div>
+											  </div>
+											</div>
+										  </div>	
+								  
+										  <div class="product-slider__item swiper-slide swiper-slide-active" data-target="img5" style="width: 788px; opacity: 1; transform: translate3d(-2364px, 0px, 0px); transition-duration: 0ms;">
+											<div class="product-slider__card">
+											  <!-- <img src="imgs/imgs/bg-cards.png"  class="product-slider__cover"> -->
+											  <div class="product-slider__content">
+												<h1 class="product-slider__title">
+												  Mandy <br>
+			  
+												</h1>								  
+												<span class="product-slider__price"> Amanda Peralta <br>Dear Artist<sup>  new</sup></span>
+												<div class="product-ctr">
+												  <div class="product-labels">
+													<div class="product-labels__title">Skills</div>
+								  
+													<div class="product-labels__group">
+													  <label class="product-labels__item">
+														<input type="radio" class="product-labels__checkbox" name="type6" checked="">
+														<span class="product-labels__txt">graphic designer</span>
+													  </label>
+								  
+													  <label class="product-labels__item">
+														<input type="radio" class="product-labels__checkbox" name="type6">
+														<span class="product-labels__txt">illustrator</span>
+													  </label>
+													</div>
+								  
+													<div class="product-labels__title">loadout</div>
+								  
+													<div class="product-labels__group">
+													  <label class="product-labels__item">
+														<input type="radio" class="product-labels__checkbox" name="type7" checked="">
+														<span class="product-labels__txt">Adobe Stack</span>
+													  </label>
+								  
+													  <label class="product-labels__item">
+														<input type="radio" class="product-labels__checkbox" name="type7">
+														<span class="product-labels__txt">freehand drawing</span>
+													  </label>
+													</div>
+								  
+												  </div>
+								  
+												  <span class="hr-vertical"></span>
+								  
+												  <div class="product-inf">
+													<div class="product-inf__percent">
+													  <div class="product-inf__percent-circle">
+														<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+														  <defs>
+															<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+															  <stop offset="0%" stop-color="#0c1e2c" stop-opacity="0"></stop>
+															  <stop offset="100%" stop-color="#cb2240" stop-opacity="1"></stop>
+															</linearGradient>
+														  </defs>
+														  <circle class="product-inf__percent-circle-circle" cx="50" cy="50" r="47" stroke-dasharray="" stroke-dashoffset="" stroke="#cb2240" stroke-width="4" fill="none"></circle>
+														</svg>
+													  </div>
+													  <div class="product-inf__percent-txt">
+														60%
+													  </div>
+													</div>
+								  
+													<span class="product-inf__title">PRESTIGE PERCENT</span>
+												  </div>
+								  
+												</div>
+								  
+												<div class="product-slider__bottom">
+												  <button class="product-slider__cart">
+												   CONTACT
+												  </button>
+								  
+												  <button class="product-slider__fav js-fav"><span class="heart"></span> FOLLOW</button>
+												</div>
+											  </div>
+											</div>
+										  </div>	
+										  
+										  <div class="product-slider__item swiper-slide swiper-slide-prev" data-target="img2" style="width: 788px; opacity: 1; transform: translate3d(-1576px, 0px, 0px); transition-duration: 0ms;">
+											  <div class="product-slider__card">
+												<!-- <img src="imgs/imgs/background-cards.png"  class="product-slider__cover"> -->
+												<div class="product-slider__content">
+												  <h1 class="product-slider__title">
+													Ivan Esteban<br> Castillo
+												  </h1>
+												  <span class="product-slider__price">Developer<sup> new </sup></span>
+												  <div class="product-ctr">
+													<div class="product-labels">
+													  <div class="product-labels__title">professional skills</div>
+									
+													  <div class="product-labels__group">
+														<label class="product-labels__item">
+														  <input type="radio" class="product-labels__checkbox" name="type3" checked="">
+														  <span class="product-labels__txt">Web Developer<sup>main</sup></span>
+														</label>
+									
+														<label class="product-labels__item">
+														  <input type="radio" class="product-labels__checkbox" name="type3">
+														  <span class="product-labels__txt">
+															  
+														Systems<sup>engineer</sup><br>and<br> telematics</span>
+														</label>
+													  </div>
+									
+													  <div class="product-labels__title">explicit skills</div>
+									
+													  <div class="product-labels__group">
+														<label class="product-labels__item">
+														  <input type="radio" class="product-labels__checkbox" name="type2">
+														  <span class="product-labels__txt">Dev Full Stack</span>
+														</label>
+									
+														<label class="product-labels__item">
+														  <input type="radio" class="product-labels__checkbox" name="type2" checked="">
+														  <span class="product-labels__txt">web designer</span>
+														</label>					  					  														  
+													  </div>
+									
+													</div>
+									
+													<span class="hr-vertical"></span>
+									
+													<div class="product-inf">
+													  <div class="product-inf__percent">
+														<div class="product-inf__percent-circle">
+														  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+															<defs>
+															  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+																<stop offset="0%" stop-color="#0c1e2c" stop-opacity="0"></stop>
+																<stop offset="100%" stop-color="#cb2240" stop-opacity="1"></stop>
+															  </linearGradient>
+															</defs>
+															<circle class="product-inf__percent-circle-circle" cx="50" cy="50" r="47" stroke-dasharray="" stroke-dashoffset="" stroke="#cb2240" stroke-width="4" fill="none"></circle>
+														  </svg>
+														</div>
+														<div class="product-inf__percent-txt">
+														  65%
+														</div>
+													  </div>
+									
+													  <span class="product-inf__title">PRESTIGE PERCENT</span>
+													</div>
+									
+												  </div>
+									
+												  <div class="product-slider__bottom">
+													<button class="product-slider__cart">
+													 CONTACT
+													</button>
+									
+													<button class="product-slider__fav js-fav"><span class="heart"></span> FOLLOW</button>
+												  </div>
+												</div>
+											  </div>
+										  </div>
+			  
+										  <div class="product-slider__item swiper-slide swiper-slide-prev" data-target="img6" style="width: 788px; opacity: 1; transform: translate3d(-1576px, 0px, 0px); transition-duration: 0ms;">
+											  <div class="product-slider__card">
+												<!-- <img src="imgs/imgs/background-cards.png"  class="product-slider__cover"> -->
+												<div class="product-slider__content">
+												  <h1 class="product-slider__title">
+													  Daniel esteban<br>
+												  </h1>
+												  <span class="product-slider__price">3D Artist<sup>  </sup></span>
+												  <div class="product-ctr">
+													<div class="product-labels">
+													  <div class="product-labels__title">professional skills</div>
+									
+													  <div class="product-labels__group">
+														<label class="product-labels__item">
+														  <input type="radio" class="product-labels__checkbox" name="type3" checked="">
+														  <span class="product-labels__txt">3D Artist<sup>main</sup></span>
+														</label>
+									
+														<label class="product-labels__item">
+														  <input type="radio" class="product-labels__checkbox" name="type3">
+														  <span class="product-labels__txt">												
+															Nan<sup></sup>
+														  </span>
+														</label>
+													  </div>
+									
+													  <div class="product-labels__title">explicit skills</div>
+									
+													  <div class="product-labels__group">
+														<label class="product-labels__item">
+														  <input type="radio" class="product-labels__checkbox" name="type2">
+														  <span class="product-labels__txt">drawing</span>
+														</label>
+									
+														<label class="product-labels__item">
+														  <input type="radio" class="product-labels__checkbox" name="type2" checked="">
+														  <span class="product-labels__txt">paint</span>
+														</label>					  					  														  
+													  </div>
+									
+													</div>
+									
+													<span class="hr-vertical"></span>
+									
+													<div class="product-inf">
+													  <div class="product-inf__percent">
+														<div class="product-inf__percent-circle">
+														  <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+															<defs>
+															  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+																<stop offset="0%" stop-color="#0c1e2c" stop-opacity="0"></stop>
+																<stop offset="100%" stop-color="#cb2240" stop-opacity="1"></stop>
+															  </linearGradient>
+															</defs>
+															<circle class="product-inf__percent-circle-circle" cx="50" cy="50" r="47" stroke-dasharray="" stroke-dashoffset="" stroke="#cb2240" stroke-width="4" fill="none"></circle>
+														  </svg>
+														</div>
+														<div class="product-inf__percent-txt">
+														  78%
+														</div>
+													  </div>
+									
+													  <span class="product-inf__title">PRESTIGE PERCENT</span>
+													</div>
+									
+												  </div>
+									
+												  <div class="product-slider__bottom">
+													<button class="product-slider__cart">
+													 CONTACT
+													</button>
+									
+													<button class="product-slider__fav js-fav"><span class="heart"></span> FOLLOW</button>
+												  </div>
+												</div>
+											  </div>
+										  </div>
+									</div>

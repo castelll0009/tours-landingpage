@@ -1,0 +1,102 @@
+main .blocks{
+    flex-direction: row;
+    padding: 0vw 0vw ; 
+    min-height: 100vh;
+}
+main .section-art{    
+    display: flex;
+    flex-direction: column !important;
+ 
+    /* background: radial-gradient(circle, rgb(120 30 231 / 59%) 0%, rgba(38,45,53,1) 100%); 
+    background: radial-gradient(circle, rgb(205 92 254 / 45%) 0%, rgba(38,45,53,1) 100%); */
+     
+    background-color: rgb(27 145 125);
+    background: rgb(55,75,98);
+    background: radial-gradient(circle, rgba(55, 75, 98, 0.753) 0%, rgba(38,45,53,1) 100%);           
+    background: radial-gradient(circle, rgba(55,75,98,1) 0%, rgba(38,45,53,1) 100%);                    
+    -webkit-transition: background-color 1s linear;
+    -moz-transition: background-color 1s linear;
+    -o-transition: background-color 1s linear;
+    transition: background-color 1s linear;    
+
+        
+}
+.p-text-art{
+    background-color: #33445487;
+}
+/* main .section-art:hover{    
+    background: radial-gradient(circle, rgb(205 92 254 / 45%) 0%, rgba(38,45,53,1) 100%); 
+    cursor: pointer;
+    background: radial-gradient(circle, rgba(55,75,98,1) 0%, rgba(38,45,53,1) 100%);                     
+} */
+
+.section-art .cont-container{     
+    padding: 80px 50px 10px 50px;
+    height: auto;
+    /* background-color: rgb(38, 45, 53); 
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    z-index: -1;
+    */
+    text-align: center;    
+
+}
+.section-art .cont-art-cont-container{ 
+    background-image: url(../imgs/unknow-imgs/square-background-white.png);    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.cont-art-section{    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cont-art-section picture {    
+    max-width: 400px ;
+    min-width: 400px ;
+    padding: 20px;
+}
+
+
+.section-art .cont-container .picture-img-section img {        
+    min-width: 100%;
+}
+
+@media only screen and (max-width: 1200px){
+    .cont-art-section picture {    
+        max-width: 400px ;
+        min-width: 350px ;
+        padding: 20px;
+    }
+
+    .section-art .cont-art-cont-container{                                  
+        background-image: url("../imgs/unknow-imgs/square-background-movil.png") ;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: contain;         
+    }
+    
+    .cont-art-section{            
+        flex-direction: column;                
+    }
+
+    .cont-container{        
+        height: 100%;    
+    }
+    main .blocks{
+        flex-direction: column;
+        padding: 0vw 0vw ; 
+    }
+      
+    
+}
+

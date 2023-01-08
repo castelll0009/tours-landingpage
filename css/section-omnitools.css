@@ -1,0 +1,115 @@
+main .blocks{
+    flex-direction: row;        
+}
+.section-omnitools{
+    /* background-image: url("../imgs/unknow-imgs/square-background.png") ; */
+    min-height: 100vh;
+    z-index: 1;    
+    padding: 10vw 5vw !important; 
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    background-color: #f4f4f4;   
+    
+}
+.cont-omnitools-cont-container
+{
+    background-color: rgba(95, 158, 160, 0);
+    background-image: url("../imgs/unknow-imgs/Imagen\ 1.png");
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+ 
+}
+.section-omnitools .cont-container{    
+    padding: 80px 50px 100px;
+    /* background-color: rgb(38, 45, 53); */
+    width: 50%;
+    /* height: 100vh; */
+    min-height: 100%;
+    max-height: 100%;
+    z-index: 0;
+}
+.cont-omnitools-cont-container .cont-container .text-container{
+    color: white;
+    margin-top: 30px;
+    background-color: rgb(4 0 22 / 57%);
+    padding: 20px;
+    border-radius: 2%;
+    color: silver;
+    display: inline-block;
+    /* padding-top: 50px; */
+    padding: 0 2vw;
+    padding-top: 30px ;
+    padding: 30px;
+    box-sizing: border-box;
+}
+.h2-omnitools{
+    color: #56e3b4 !important;
+    font-size: 3.5em; 
+    margin-top: 50px;
+}
+.p-content-omnitools{
+    color: white;
+  
+}
+.section-omnitools .cont-containe .picture-img-section {
+    width: 100%;
+    display: block;
+}
+.ul-omnitools li{
+    background-color: #f4f4f4;
+    background-color: #f4f4f4ad;
+    width: fit-content;
+}
+
+
+.section-omnitools .cont-container .picture-img-section img {        
+    min-width: 400px;
+}
+@media only screen and (max-width: 1200px){
+
+    .theme-font-body{
+        font-size: 1.2em;
+    }
+    .section-omnitools .cont-container{        
+        height: 100%;
+        padding: 80px 20px 100px;
+        /* background-color: rgb(38, 45, 53); */
+        width: 100%;
+        /* height: 100vh; */
+        min-height: 100%;
+        max-height: 100%;
+        z-index: 0;    
+    }
+    .section-omnitools .cont-container:nth-child(1){           
+        z-index: 1;
+    } 
+    .section-omnitools .cont-container:nth-child(2){   
+        display: block;
+        margin-left: -200px;
+        z-index: 0;
+    } 
+    main .blocks{
+        flex-direction: column;
+        padding: 0vw 0vw ; 
+    }
+    
+    .cont-omnitools-cont-container
+    {
+    background-color: rgb(27 145 125);
+    background-image: url("../imgs/unknow-imgs/Imagen\ 2.png");
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+    min-height: max-content;
+    }  
+    
+}
+

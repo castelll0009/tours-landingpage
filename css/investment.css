@@ -1,0 +1,46 @@
+main .blocks-investment{
+    flex-direction: row-reverse;
+    padding: 0vw 0vw ; 
+}
+main .investment{
+    background-color: #262d35;
+    background: radial-gradient(circle, rgba(55,75,98,1) 0%, rgba(38,45,53,1) 100%);      
+    /* background-image: url("../imgs/unknow-imgs/square-background.png") ; */
+    
+}
+
+.cont-container-investment{    
+    padding: 80px 50px 100px;
+    /* background-color: rgb(38, 45, 53); */
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    min-height: 100%;
+    max-height: 100%;
+    /* z-index: -1; */
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1200px){
+    
+    main .blocks-investment{
+        flex-direction: column;
+        padding: 0vw 0vw ; 
+    }
+    
+    main .investment{
+        /* background-image: url("../imgs/unknow-imgs/bac"); */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+}
+

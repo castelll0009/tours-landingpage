@@ -1,0 +1,105 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: rgb(8, 8, 8);
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.content {
+  height: 500px;
+  min-height: 500px;
+  margin: auto;
+  width: 100%;
+  max-width: 1050px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.cont-swiper-container{
+  max-width: 100% !important;
+  background-image: url("../imgs/unknow-imgs/Banner\ wo\ logo_auto_x2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 620px  !important;
+}
+.contenedor-todo-swiper{
+  z-index: 50;
+  width: 100%;  
+  min-height: max-content;
+}
+
+.swiper-container {  
+  width: 100%;
+  height: 100%;  
+}
+.swiper-wrapper{    
+}
+
+.swiper-slide {
+  min-width: 150px;
+  max-width: 150px;
+  min-height: max-content;
+  max-height: max-content;
+  text-align: center;
+  font-size: 18px;
+  background: rgb(0, 0, 0);    
+  /*background: transparent;*/
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;  
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;      
+  border-radius: 10px; 
+}
+.swiper-disable{
+  opacity: 0;
+  display: block;
+}
+.swiper-slide img{  
+  width: 100%;
+  border-radius: 10px; 
+}
+.swiper-slide h5{  
+  font-size: 1em;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-family: swiper-icons;
+  /* font-size: var(--swiper-navigation-size); */
+  font-size: 0.9em !important;
+  color: aquamarine;
+  text-transform: none!important;
+  letter-spacing: 0;
+  font-size: 3em !important;
+  font-variant: initial;
+  line-height: 1;
+}
+@media only screen and (max-width: 1200px){
+  
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    /* font-size: var(--swiper-navigation-size); */
+    font-size: 0.9em !important;
+    color: aquamarine;
+    text-transform: none!important;
+    letter-spacing: 0;
+    font-size: 1em !important;
+    font-variant: initial;  
+  }
+}

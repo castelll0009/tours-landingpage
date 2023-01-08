@@ -1,0 +1,37 @@
+main .blocks-about{
+    flex-direction: row-reverse;
+    padding: 0vw 0vw ; 
+}
+main .project-about{
+    background-color: #262d35;
+    background-image: url("../imgs/unknow-imgs/square-background.png") ;
+    
+}
+.cont-container-about{    
+    padding: 80px 50px 100px;
+    /* background-color: rgb(38, 45, 53); */
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    max-height: 100%;
+    /*z-index: -1;*/
+}
+@media only screen and (max-width: 1200px){
+
+    .cont-container-about{        
+        height: 100%;    
+    }
+    main .blocks-about{
+        flex-direction: column;
+        padding: 0vw 0vw ; 
+    }
+    
+    main .project-about{
+        background-image: url("../imgs/unknow-imgs/square-background-movil.png");
+        background-position: center;
+        background-repeat: repeat;
+        background-size: contain;
+    }
+    
+}
+

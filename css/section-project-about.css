@@ -1,0 +1,82 @@
+main .blocks{
+    flex-direction: row;
+    padding: 0vw 0vw ; 
+}
+main .section-project-about{
+    background-color: #27303a;
+}
+
+.section-project-about{
+     background-color: rgba(95, 158, 160, 0);
+    background-image: url("../imgs/unknow-imgs/square-background.png");
+    background-size: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+
+}
+.cont-container-about:nth-child(1) {
+    background-color: rgb(39 48 58 / 92%);
+    width: 100%;
+    height: 100%;
+
+}
+.section-project-about{
+    /* background-image: url("../imgs/unknow-imgs/banner\ Green1\ 1.png");
+    background-size: cover; */
+}
+.cont-project-about-cont-container .section-project-about .text-container{
+    /* background-image: url("../imgs/unknow-imgs/banner\ Green1\ 1.png");
+    background-size: cover; */
+    width: 100%;
+}
+.cont-container-about picture
+{
+    width: 500px;
+}
+
+.cont-container-about img
+{
+    width: 100%;
+}
+
+.cont-container-about{
+    padding: 10vh 5vw;
+}
+
+.section-project-about .cont-container{    
+    padding: 80px 50px 100px;
+    /* background-color: rgb(38, 45, 53); */
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    max-height: 100%;       
+    background-image: url("../imgs/unknow-imgs/square-background.png") ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+}
+@media only screen and (max-width: 1200px){
+
+    .section-project-about .cont-container{        
+        height: 100%;  
+        background-image: url("../imgs/unknow-imgs/square-background-movil.png") ;  
+        background-repeat: repeat;
+
+    }
+    main .blocks{
+        flex-direction: column;
+        padding: 0vw 0vw ; 
+    }
+    
+    main .section-project-about{        
+        /* background-position: center;
+        background-repeat: repeat;
+        background-size: contain; */
+    }
+
+    
+    
+}
+
