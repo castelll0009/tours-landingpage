@@ -29,7 +29,7 @@ main .section-portada{
     margin-bottom: 200px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 6.4vw;
-    letter-spacing: 0px;
+    letter-spacing: -2px;
     line-height: 1em;
 }
 
@@ -68,6 +68,7 @@ h3{
     max-width: 40%;
     overflow-wrap: break-word;
     background: linear-gradient(86deg, rgb(3 4 2 / 0%), transparent);
+    
     padding: 50px;
 }
 
@@ -127,6 +128,7 @@ h3{
     background: linear-gradient(to right,#ffdf0096 40%, #997033a8 60%, #3e2200ad 90%);
     background: linear-gradient(to right,#ffe473 40%, #f1b44d 60%, #ae2503 90%);
     background: linear-gradient(to right,#d76c52 40%, #f66b31 60%, #d76c52 90%);
+    background: linear-gradient(to right,#e3a81d82 40%, #f66b3196 60%, #f66b31b8 90%);
     text-decoration: none;
     border: none;
     color: rgb(255, 255, 255);
