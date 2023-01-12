@@ -5,6 +5,7 @@ header{
   
 }
 
+
 header .bg-dark{
     background-color: #27303a98 !important;
     background-color: #27303a00 !important;
@@ -17,6 +18,9 @@ header .bg-dark{
     align-items: flex-start;
     max-height: fit-content;
     padding: 10px 20px 10px 20px;
+}
+.navbar  .navbar-collapse{
+    justify-content: flex-end;
 }
 .navbar-brand {
     width: auto;    
