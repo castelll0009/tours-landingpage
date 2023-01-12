@@ -1,6 +1,6 @@
-main .blocks{
+/* main .blocks{
     flex-direction: row;        
-}
+} */
 .section-omnitools{
     /* background-image: url("../imgs/unknow-imgs/square-background.png") ; */
     min-height: 100vh;
@@ -95,10 +95,10 @@ main .blocks{
         margin-left: -200px;
         z-index: 0;
     } 
-    main .blocks{
+    /* main .blocks{
         flex-direction: column;
         padding: 0vw 0vw ; 
-    }
+    } */
     
     .cont-omnitools-cont-container
     {

@@ -1,0 +1,86 @@
+.blocks{
+    align-items: center;
+    display: flex !important;
+    position: relative;
+    min-height: 70vh;
+    /* min-height: auto; */
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 5.6vw;
+    flex-direction: row;  
+}
+.blocks-gallery{
+
+    align-items: center;
+    display: flex !important;
+
+    position: relative;        
+    /*min-height: 100vh;*/        
+    min-height: auto;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 5.6vw; 
+    flex-direction: row ;  
+
+}
+
+.blocks-team{
+    align-items: center;
+    display: flex !important;
+    position: relative;
+    /* min-height: 100vh; */
+    min-height: auto;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    padding: 5.6vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    flex-wrap: nowrap;   
+}
+.picture-img-section{
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    padding: 5px;          
+ 
+}
+.picture-img-section img{
+    display: inline-block;
+    max-width: 100%;    
+}
+.text-container{            
+    color: silver;
+    display: inline-block;    
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+.text-container a{
+    margin-top: 15px;
+}
+
+/*Resolucion intermedia tango de resolucion*/
+@media only screen and (min-width: 1200px) and (max-width: 1250px) {    
+    .blocks{
+        padding: 10vw 5vw;	 
+        
+    }    
+}
+/*Resolution Mobil*/
+@media only screen and (max-width: 1200px) { 
+    .picture-img-section{
+      max-width: 100% !important;              
+    }
+    .blocks{        
+        flex-direction: column;                
+        padding: 10vw 5vw;  
+        padding-top: 50vw;
+    }
+}
+

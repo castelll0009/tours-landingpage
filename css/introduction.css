@@ -1,7 +1,7 @@
-main .blocks{
+/* main .blocks{
     flex-direction: row;
     padding: 0vw 0vw ; 
-}
+} */
 main .introduction{
     background-color: #262d35;
     background-image: url("../imgs/unknow-imgs/square-background.png") ;
@@ -24,10 +24,10 @@ main .introduction{
         background-repeat: repeat;
 
     }
-    main .blocks{
+    /* main .blocks{
         flex-direction: column;
         padding: 0vw 0vw ; 
-    }
+    } */
     
     main .introduction{        
         /* background-position: center;

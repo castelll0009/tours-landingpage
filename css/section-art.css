@@ -1,8 +1,8 @@
-main .blocks{
+/* main .blocks{
     flex-direction: row;
     padding: 0vw 0vw ; 
     min-height: 100vh;
-}
+} */
 main .section-art{    
     display: flex;
     flex-direction: column !important;
@@ -92,10 +92,10 @@ main .section-art{
     .cont-container{        
         height: 100%;    
     }
-    main .blocks{
+    /* main .blocks{
         flex-direction: column;
         padding: 0vw 0vw ; 
-    }
+    } */
       
     
 }

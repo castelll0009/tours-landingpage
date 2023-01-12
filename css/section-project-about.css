@@ -1,7 +1,7 @@
-main .blocks{
+/* main .blocks{
     flex-direction: row;
     padding: 0vw 0vw ; 
-}
+} */
 main .section-project-about{
     background-color: #27303a;
 }
@@ -65,10 +65,10 @@ main .section-project-about{
         background-repeat: repeat;
 
     }
-    main .blocks{
+    /* main .blocks{
         flex-direction: column;
         padding: 0vw 0vw ; 
-    }
+    } */
     
     main .section-project-about{        
         /* background-position: center;
