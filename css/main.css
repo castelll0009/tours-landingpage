@@ -144,7 +144,8 @@ width: 100%;
 */
 .circular-gradient-top-bottom{ /*degradado  circular de  arriba hacia abajo*/
 	background: linear-gradient(to top, #000000 0%, #0f0e0e3b 118%);    
-	background: linear-gradient(to top, #000000d6 0%, #0f0e0e3b 118%);		
+	background: linear-gradient(to top, #000000d6 0%, #0f0e0e3b 118%);	
+	background: linear-gradient(to top, #000000bd 0%, #0f0e0e3b 50%);	
 }
 .background-color-blocks{
 	display: flex;
@@ -163,7 +164,7 @@ width: 100%;
 main{	
 	overflow: hidden;
     background-attachment: fixed;
-    background-image: url(../imgs/backgroud-portada.jpg);
+    background-image: url(../imgs/portada-panton.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -476,6 +477,7 @@ span{
 	.circular-gradient-top-bottom{ /*degradado  circular de  arriba hacia abajo*/
 		background-image: radial-gradient(circle at 50% 0, rgb(0 0 0 / 25%) 40%, black 70% );   	
 		background: linear-gradient(to top, #000000d4 0%, #0f0e0e00 118%);	
+		
 	}
 	
 

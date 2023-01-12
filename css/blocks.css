@@ -77,10 +77,11 @@
     .picture-img-section{
       max-width: 100% !important;              
     }
-    .blocks{        
+    body main .blocks{        
         flex-direction: column;                
         padding: 10vw 5vw;  
         padding-top: 50vw;
+        min-height: 70vh;
     }
 }
 

@@ -6,10 +6,17 @@ position: fixed;
 display: block;
 width: 100%;
 }
+
+main .section-portada{
+    min-height: 100vh;
+    align-items: flex-start;
+}
 /* .section-portada{
     position: relative;
     
 } */
+
+
 .div1-main{
     min-height: 10vh;
     max-height: 100vh;
@@ -19,10 +26,10 @@ width: 100%;
 	background-position: center;						
 }
 .text-introduction{
-    margin-bottom: 20px;
+    margin-bottom: 200px;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 5vw;
-    letter-spacing: 2px;
+    font-size: 6.4vw;
+    letter-spacing: 0px;
     line-height: 1em;
 }
 
@@ -40,6 +47,7 @@ h3{
 }
 .slogan{
     color: white;
+    color: #e1eff0;
     font-size: 30px;
     font-size: 1.5vw;
 
@@ -54,14 +62,12 @@ h3{
     word-wrap: break-word;
 */
     border-radius: 5px;
+    border: none;
     text-align: center;
-    min-width: 350px;
-    max-width: 350px;
     min-width: 40%;
     max-width: 40%;
-    word-wrap: break-word;
-    background: #00000063;
-    background: linear-gradient(86deg, #0409158f, transparent);
+    overflow-wrap: break-word;
+    background: linear-gradient(86deg, rgb(3 4 2 / 0%), transparent);
     padding: 50px;
 }
 
@@ -119,6 +125,8 @@ h3{
 .btn-buy:hover{
     background: linear-gradient(to right,#00CCFF 40%, #6E4D95 60%, #AF5CC9 90%);
     background: linear-gradient(to right,#ffdf0096 40%, #997033a8 60%, #3e2200ad 90%);
+    background: linear-gradient(to right,#ffe473 40%, #f1b44d 60%, #ae2503 90%);
+    background: linear-gradient(to right,#d76c52 40%, #f66b31 60%, #d76c52 90%);
     text-decoration: none;
     border: none;
     color: rgb(255, 255, 255);
@@ -126,6 +134,7 @@ h3{
 .link-portada{    
     padding: 0;
     color: #f9f9f9;
+    color: #ffbc1e;
     cursor: pointer;
     background: 0 0;
     border: none;
@@ -181,9 +190,7 @@ h3{
 
     }
     .text-introduction{
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 5vw;
-        letter-spacing: 2px;
+        font-family: 'Josefin Sans', sans-serif;                
         line-height: 1em;
 
     
