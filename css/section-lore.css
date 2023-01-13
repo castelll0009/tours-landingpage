@@ -5,7 +5,7 @@
  
 } */
 main .section-lore{
-    /* background-image: url("../imgs/unknow-imgs/square-background.png") ; */
+    /* background-image: url("../imgs//square-background.png") ; */
     min-height: 100vh;
     z-index: 1;
     
@@ -13,7 +13,7 @@ main .section-lore{
 .cont-lore-cont-container
 {
     background-color: rgba(95, 158, 160, 0);
-    background-image: url("../imgs/unknow-imgs/Imagen\ 1.png");
+    background-image: url("../imgs//Imagen\ 1.png");
     background-size: 200%;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@ main .section-lore{
 .cont-lore-cont-container .cont-container .text-container{
     color: white;
     margin-top: 30px;
-    background-color: rgb(4 0 22 / 57%);
+    background-color: rgba(3, 3, 3, 0.57);
     padding: 20px;
     border-radius: 2%;
     color: silver;
@@ -47,8 +47,8 @@ main .section-lore{
     box-sizing: border-box;
 }
 .h2-lore{
-    color: #56e3b4 !important;
-    font-size: 3.5em; 
+    color: #cf5a20 !important;
+    font-size: 3.5em;
     margin-top: 50px;
 }
 .p-content-lore{
@@ -87,7 +87,7 @@ main .section-lore{
     .cont-lore-cont-container
     {
     background-color: rgb(27 145 125);
-    background-image: url("../imgs/unknow-imgs/Imagen\ 2.png");
+    background-image: url("../imgs//Imagen\ 2.png");
     background-size: 200%;
     background-position: center;
     background-repeat: no-repeat;

@@ -52,13 +52,14 @@ main .blocks{
 */
 
 .theme-color{
-	color: #3ebd94 !important;
+	color: #cf5a20 !important;
 }
 .theme-font-titles{
 	font-family: "Sacred Hertz";
-	color: #3ebd94;
-	color: white;
-	font-size: 4em;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #3ebd94;
+    color: white;
+    font-size: 4em;
 }
 
 
@@ -68,6 +69,7 @@ main .blocks{
 }
 .theme-font-body{
 	font-family: "Sugo-Pro-Classic-ExtraLight-trial";
+	font-family: 'Nunito', sans-serif;
 	font-size: 2em;	
 }
 
@@ -164,7 +166,7 @@ width: 100%;
 main{	
 	overflow: hidden;
     background-attachment: fixed;
-    background-image: url(../imgs/portada-panton.png);
+    background-image: url(../imgs/backgroud-portada.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -215,9 +217,11 @@ a{
 .footnote a{	
 	color: #5765f2;
     color: #3ebe95;
+	color: #f44336;
 }
 #link-about-us{
 	color: #3ebe95 !important;
+	color: #f44336 !important;
 }
 article{	
 	margin-top: 10px;	

@@ -44,12 +44,13 @@
   #section03 a span {
       
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 50%;
     width: 46px;
+    margin-top: 5rem;
     height: 46px;
     margin-left: -23px;
-    border: 1px solid #fff;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 100%;
     box-sizing: border-box;
   }

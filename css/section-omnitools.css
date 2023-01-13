@@ -2,7 +2,7 @@
     flex-direction: row;        
 } */
 .section-omnitools{
-    /* background-image: url("../imgs/unknow-imgs/square-background.png") ; */
+    /* background-image: url("../imgs//square-background.png") ; */
     min-height: 100vh;
     z-index: 1;    
     padding: 10vw 5vw !important; 
@@ -15,7 +15,7 @@
 .cont-omnitools-cont-container
 {
     background-color: rgba(95, 158, 160, 0);
-    background-image: url("../imgs/unknow-imgs/Imagen\ 1.png");
+    background-image: url("../imgs//Imagen\ 1.png");
     background-size: 200%;
     background-position: center;
     background-repeat: no-repeat;
@@ -103,7 +103,7 @@
     .cont-omnitools-cont-container
     {
     background-color: rgb(27 145 125);
-    background-image: url("../imgs/unknow-imgs/Imagen\ 2.png");
+    background-image: url("../imgs//Imagen\ 2.png");
     background-size: 200%;
     background-position: center;
     background-repeat: no-repeat;

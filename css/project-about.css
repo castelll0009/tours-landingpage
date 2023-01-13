@@ -4,7 +4,7 @@ main .blocks-about{
 }
 main .project-about{
     background-color: #262d35;
-    background-image: url("../imgs/unknow-imgs/square-background.png") ;
+    background-image: url("../imgs/item2-picture.png") ;
     
 }
 .cont-container-about{    
@@ -27,7 +27,7 @@ main .project-about{
     }
     
     main .project-about{
-        background-image: url("../imgs/unknow-imgs/square-background-movil.png");
+        background-image: url("../imgs/item2-picture.png");
         background-position: center;
         background-repeat: repeat;
         background-size: contain;
