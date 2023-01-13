@@ -28,6 +28,7 @@
   .float-button-phone{
     position: fixed;
     width: 60px;
+    display: flex;
     height: 60px;
     bottom: 110px;
     right: 40px;
@@ -39,10 +40,12 @@
     font-size: 30px;
     z-index: 100;
     border: 2px solid white;
+    align-items: center;
+    justify-content: center;
   }
-  
-  .float-button-phone-icon {
-    margin-top:13px;
+
+  .float-button-phone-icon { 
+
   }
   .float-button-phone:hover {
     background-color: #ffffff;  
@@ -65,18 +68,16 @@
       right:15px;
     }
     .float-button-phone{    
-    background-color:#25d366;
-    background-color: #086fc1;
+    
     color:#FFF;
     border-radius:50px;    
     font-size:20px;
     z-index:100;          
     }
-    .float-button-phone-icon{
-    margin-top:25%;
+
+    .float-button-phone-icon{    
     }
-    .whatsapp {     
-    background-color:#25d366;
+    .whatsapp {         
     color:#FFF;
     border-radius:50px;
     text-align:center;

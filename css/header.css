@@ -11,6 +11,7 @@ header .bg-dark{
     background-color: #27303a00 !important;
     background: linear-gradient(96deg,transparent,#0b0c0d);
     background: linear-gradient(to left, rgb(0 0 0 / 59%) 0%, rgb(15 14 14 / 0%) 50%);
+    backdrop-filter: blur(6px);
     
 }
 .cont-header{           
