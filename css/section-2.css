@@ -11,6 +11,7 @@
     align-items: flex-end;
     left: 0;
     overflow: visible;
+    display: block;
     position: absolute;
     text-align: left;
     padding-left: 0;
@@ -27,7 +28,7 @@ main .section-2{
     flex-direction: row-reverse;
     max-height: 100%;
     min-height: 100vh;
-    padding-top: 25%;
+    /* padding-top: 25%; */
 }
 .section-2 .item1{
     display: flex;
@@ -47,11 +48,13 @@ main .section-2{
 }
 
 .section-2 .cont-btnbuy-opciones .btn-section2 {
-    /* margin-top: 20vh; */
-    border-radius: 20px;
+    border-radius: 50px;
     font-size: 0.8em;
     width: max-content;
     margin: 0px;
+}
+.section-2 .cont-btnbuy-opciones .btn-section2:hover{
+    background: linear-gradient(to right,#085a00 20%, #9cc501 50%, #3e8102 100%);
 }
 .cont-slider-tours
 {
@@ -60,11 +63,52 @@ main .section-2{
     min-width: auto;
 }
 .cont-data-slide{
+ 
+        display: flex;
+        flex-direction: row;
+        padding-left: 5.6vw;
+        padding-top: 3vw;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        align-content: center;
     
-    padding-right: 5.6vw;
+}
+.vector-subtitle-horizontal {
+    max-width: 100%;
+    padding: 0px 10px 0px 10px;
+    min-width: 10vw;
+    width: 50vw;
+}
+.vector-subtitle-horizontal hr {
+    max-width: 100%;
+    min-width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-width: 1px 0px 0px;
+    border-right-style: initial;
+    border-bottom-style: initial;
+    border-left-style: initial;
+    border-right-color: initial;
+    border-bottom-color: initial;
+    border-left-color: initial;
+    border-image: initial;
+    margin-right: 0.7vw;
+    border-top-style: solid;
+    border-top-color: silver;
+
 }
 .cont-data-slide p {     
     color: white !important;
+}
+.section-2 .cont-data-slide .slogan{    
+    color: white;
+    /* font-size: 30px; */
+    /* font-size: 4vh; */
+    font-size: 1.5vw;
+    margin: 0px;
+    
+    
 }
 .cont-data-slide h3 {     
     color: white !important;
@@ -77,4 +121,15 @@ main .section-2{
         padding: 0 !important;
         min-width: 111%;
     }    
+
+    .section-2 .cont-data-slide .slogan{    
+        color: white;
+        /* font-size: 30px; */
+        /* font-size: 4vh; */
+        font-size: 4vw;
+        padding: 5.6vw;
+        
+        
+        
+    }
 }
