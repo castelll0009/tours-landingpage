@@ -9,10 +9,10 @@
     padding: 50px;
     flex-direction: column;
     align-items: flex-end;
-    right: -2%;
-    position: absolute;
+    right: -2%;    
     overflow: visible;
     text-align: left;
+    
 }
 
 .section-2{
@@ -39,4 +39,9 @@
 }
 .cont-data-slide h3 {     
     color: white !important;
+}
+@media only screen and (max-width: 1200px){
+    .section-2 .item2{
+        position: relative;
+    }
 }
