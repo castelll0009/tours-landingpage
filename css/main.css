@@ -50,6 +50,9 @@ main .blocks{
     min-height: 100vh;
 }
 */
+main .item1{
+	max-width: fit-content;
+}
 
 .theme-color{
 	color: #cf5a20 !important;
