@@ -2,16 +2,17 @@
     border-radius: 5px;
     display: flex;
     border: none;
-    text-align: center;
-    /* margin-top: auto; */
     min-width: 60%;
     max-width: 60%;
     overflow-wrap: break-word;
-    background: linear-gradient(86deg, rgb(3 4 2 / 0%), transparent);
+    background: linear-gradient(86deg, rgba(3, 4, 2, 0), transparent);
     padding: 50px;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: justify;
+    align-items: stretch;
+    right: -2%;
+    position: absolute;
+    overflow: visible;
+    text-align: left;
 }
 
 .section-2{
@@ -26,6 +27,6 @@
 .cont-slider-tours
 {
     position: relative;
-    max-width: 500px;
-    min-width: 500px;
+    max-width: max-content;
+    min-width: auto;
 }

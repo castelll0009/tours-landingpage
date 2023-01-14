@@ -4,11 +4,11 @@
 .item2 section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: fit-content;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  background: #2196f3;
+  background: #2195f300;
   overflow: hidden;
 }
 
@@ -19,6 +19,12 @@
 }
 
 .swiper-slide {
+  max-width: 45%;
+  min-height: 330px;
+  max-width: 15vw;
+    min-width: 10vw;
+    max-height: 10vw;
+    min-height: 22vw;
   width: 300px;
   height: 400px;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
