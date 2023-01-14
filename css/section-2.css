@@ -23,3 +23,9 @@
     background-size: cover;
     z-index: 0;
 }
+.cont-slider-tours
+{
+    position: relative;
+    max-width: 500px;
+    min-width: 500px;
+}
