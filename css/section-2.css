@@ -97,6 +97,9 @@ main .section-2{
     margin-top: -25px;   
     
 }
+.cont-data-slide a{
+    position: relative;
+}
 .vector-subtitle-horizontal {
     max-width: 100%;
     padding: 0px 10px 0px 10px;
