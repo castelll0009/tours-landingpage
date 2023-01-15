@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.swiper {
+.section-2 .swiper {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -91,12 +91,14 @@
 
 .swiper-slide h2 {
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Nunito';
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-align: justify;
   line-height: 1.4;
   margin-bottom: 15px;
-  padding: 25px 45px 0 25px;
+  padding: 25px 25px 25px 25px;
 }
 
 .swiper-slide p {
