@@ -1,5 +1,14 @@
+.section-1 .cont-arrow-down {
+    /* margin-top: 100px; */
+    /* margin-top: -20px; */
+    /* bottom: 10%; */
+    position: absolute;
+}
 
-
+.section-1{
+    background-color: aliceblue;
+    background-color: #809eb8;
+}
 .section-1 .wrapper-playground {
       position: relative;
       top: 0;
@@ -25,15 +34,17 @@
       padding-bottom: 66.66%;
   }
 .section-1  .figure-scroll-down {
-      display: flex;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      line-height: 0;
-      margin: 0;
-      padding: 0;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
   }
   .section-1 .cont-arrow-down{
       bottom: 10%;
@@ -74,4 +85,33 @@
       position: absolute;
       top: 100vh;
   }
+
+@media only screen and (max-width: 1200px)
+{
+    .section-1 .figure-scroll-down img {
+        max-width: 200%;
+        /* max-height: 100%; */
+        width: 200%;
+        min-width: 130%;
+        height: auto;
+        /* margin-top: 50%; */
+        bottom: 50%;
+    }
+    .section-1 .wrapper-playground {
+        
+        min-height: 100vh;        
+    }
+    .section-1 .cont-arrow-down {
+        /* margin-top: 100px; */
+        /* margin-top: -20px; */
+        /* bottom: 10%; */
+        /* position: relative; */
+    }
+    .section-1 .wrapper-playground {
+        background-size: auto;
+        
+        
+        
+    }
+}
   
