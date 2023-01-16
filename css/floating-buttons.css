@@ -28,6 +28,9 @@
     z-index: 100;
     right: 0;
     bottom: 60px;
+    background: #343a4054;
+    border-radius: 3px;
+    backdrop-filter: blur(3px);
     align-items: flex-end;
     justify-content: center;
   }

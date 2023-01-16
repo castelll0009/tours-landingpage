@@ -31,8 +31,10 @@ main .section-portada{
     margin-bottom: 0px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 6.4vw;
-    letter-spacing: -2px;
+    /* letter-spacing: -2px; */
     line-height: 1em;
+    font-family: 'Nunito', sans-serif;    
+    font-weight: 700;
 }
 
 h3{    
@@ -51,15 +53,26 @@ h3{
     color: white;
     color: #e1eff0;
     font-size: 30px;
-    font-size: 1.5vw;
+    font-size: 20px;
 
 }
 .vector-subtitle{
-    color: white;   
+    color: white;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: flex-start;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    /* line-height: 1px; */
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+}
+.vector-subtitle p{
+    color: white !important;
 }
 .vector-subtitle hr {
     max-width: 8vw;
@@ -273,16 +286,15 @@ h3{
 
     }
     .text-introduction{
-        font-family: 'Josefin Sans', sans-serif;                
         line-height: 1em;
-        font-size: 15vw;
-
+        font-size: 12vw;       
+        font-size: 36px;
     
     }
     .slogan{
    
-        font-size: 3vw;
-        font-size: 6vw;
+        font-size: 14px;
+        letter-spacing: 2px;
     
     }
     

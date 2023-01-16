@@ -19,12 +19,10 @@ function sonidoCerrarRefri(){
 var zoom = false;
 function vistaEscritorio(){	
 	if(zoom == false){
-		document.body.style = "zoom: 50%";		
-		beepc.style ="font-size : 3em";		
+		document.body.style = "zoom: 50%";					
 		zoom = true;
 	}else{
-		document.body.style = "zoom: 100%";		
-		beepc.style ="font-size : 1.5em";
+		document.body.style = "zoom: 100%";				
 		zoom = false;
 	}		
 }
