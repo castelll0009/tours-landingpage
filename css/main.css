@@ -23,6 +23,7 @@
 	scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+	
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
@@ -37,6 +38,9 @@ html body{
     background-attachment: fixed;
 	*/
 	color: silver;
+}
+html body p{		
+	font-size: 18px;
 }
 .backgrounds-cover{
 	background-size: cover;
@@ -74,6 +78,7 @@ main .item1{
 	font-family: "Sugo-Pro-Classic-ExtraLight-trial";
 	font-family: 'Nunito', sans-serif;
 	font-size: 2em;	
+	font-size: 18px;
 }
 
 footer{
@@ -472,14 +477,16 @@ span{
 /*movil///////////////////////////////////////////*/
 /*movil///////////////////////////////////////////*/
 @media screen and (max-width: 800px){	
+	html body p{		
+		font-size: 14px;
+	}
 
 	.theme-font-titles{
 		font-size: 36px;
 	}
 	
-	.theme-font-body{
-		font-family: "Sugo-Pro-Classic-ExtraLight-trial";	
-		font-size: 1.3em !important;
+	.theme-font-body{		
+		font-size: 14px;
 	}
 
 	.circular-gradient-top-bottom{ /*degradado  circular de  arriba hacia abajo*/

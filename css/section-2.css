@@ -20,7 +20,17 @@
 .section-2 .swiper-slide .p-ubication{
     display: none;
 }
-
+.section-2 .swiper-wrapper{
+    min-height: inherit;
+    height: 100%;
+}
+.section-2 .swiper-slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+    transition-property: transform;
+}
 
 main .section-2{
     overflow: hidden;
