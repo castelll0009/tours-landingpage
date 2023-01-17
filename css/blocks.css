@@ -1,6 +1,6 @@
 .blocks{
     align-items: center;
-    display: flex !important;
+    display: flex ;
     position: relative;
     min-height: 70vh;
     /* min-height: auto; */

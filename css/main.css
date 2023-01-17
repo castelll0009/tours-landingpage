@@ -61,17 +61,37 @@ main .item1{
 .theme-color{
 	color: #cf5a20 !important;
 }
-.theme-font-titles{
-	
+.theme-font-titles{	
     color: #3ebd94;
     color: white;
     font-size: 60px;
+	margin: 0;
+    /* font-size: 36px; */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 
 
 .theme-font-subtitles{
-	font-family: "Sugo-Pro-Classic-Bold-trial";	
-	font-size: 2em;
+	font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.theme-font-subtitles-only{
+	font-size: 14px;
+    font-weight: 500;
+    padding: 0;    
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 .theme-font-body{
 	font-family: "Sugo-Pro-Classic-ExtraLight-trial";
