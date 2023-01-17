@@ -34,7 +34,7 @@
       padding-bottom: 66.66%;
   }
 .section-1  .figure-scroll-down {
-    display: ;
+    display: flex;
     position: absolute;
     width: 100%;
     height: 100%;

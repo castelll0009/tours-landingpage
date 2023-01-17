@@ -6,8 +6,15 @@
 .section-2 picture{
     position: absolute;
     width: 100%;
+    min-height: 100%;
     background: linear-gradient(86deg, rgba(3, 4, 2, 0), transparent);
-    background: radial-gradient(circle at 90% , #04081412 20%,#0408149c 60% );
+    background: radial-gradient(circle at 70% 70%, #00000000 0% ,#00010236 40%,#000000a3 54% ,#000000d1 68% ,#000102f5 80% );
+    background: radial-gradient(circle at 70% 70%, #121c2700 0% ,#13496c36 40%,#072f41a3 54% ,#073041d1 68% ,#073043f5 80% );
+    background: radial-gradient(circle at 70% 10%, #00000000 0% ,#13496c36 ,#072f41cf ,#073041 ,#073043 );
+    top: 0;
+    background-attachment: fixed;
+    right: 0;
+    z-index: -1;
 }
 .section-2 .item2{
     border-radius: 5px;
@@ -122,7 +129,10 @@ main .section-2{
 }
 .section-2 .cont-btnbuy-opciones .btn-section2:hover{
     background: linear-gradient(to right,#085a00 20%, #9cc501 50%, #3e8102 100%);
-    background: linear-gradient(to right,#1bb00d8f 20%, #9cc50130 50%, #3e8102 100%);    
+    background: linear-gradient(to right,#fbfbfb91 20%, #ffffff 50%, #ffffff85 100%);
+    border: 1px solid #ffffff00;
+    color: #073042;
+    font-weight: bold;
 }
 .cont-slider-tours
 {
