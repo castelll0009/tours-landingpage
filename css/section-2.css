@@ -1,3 +1,14 @@
+.section-2{
+    /* background-image: url("../imgs/back-our2.jpg") !important;*/
+    background-image: url("../imgs/back-our-tours.jpg") !important;  
+    
+}
+.section-2 picture{
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(86deg, rgba(3, 4, 2, 0), transparent);
+    background: radial-gradient(circle at 90% , #04081412 20%,#0408149c 60% );
+}
 .section-2 .item2{
     border-radius: 5px;
     display: flex;
@@ -34,7 +45,7 @@
 
 main .section-2{
     overflow: hidden;
-    background-attachment: fixed;
+    background-attachment: local;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
