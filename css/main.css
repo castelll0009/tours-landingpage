@@ -175,6 +175,8 @@ width: 100%;
 	background: linear-gradient(to top, #000000 0%, #0f0e0e3b 118%);    
 	background: linear-gradient(to top, #000000d6 0%, #0f0e0e3b 118%);	
 	background: linear-gradient(to top, #000000bd 0%, #0f0e0e3b 50%);	
+	background: linear-gradient(to top, rgb(7 48 65) 0%, rgb(8 50 67 / 3%) 50%);
+	background: linear-gradient(to top, rgb(7 48 66 / 52%) 0%, rgb(8 50 67 / 0%) 50%);
 }
 .background-color-blocks{
 	display: flex;

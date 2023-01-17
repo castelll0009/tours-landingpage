@@ -11,8 +11,10 @@
     background: radial-gradient(circle at 70% 70%, #00000000 0% ,#00010236 40%,#000000a3 54% ,#000000d1 68% ,#000102f5 80% );
     background: radial-gradient(circle at 70% 70%, #121c2700 0% ,#13496c36 40%,#072f41a3 54% ,#073041d1 68% ,#073043f5 80% );
     background: radial-gradient(circle at 70% 10%, #00000000 0% ,#13496c36 ,#072f41cf ,#073041 ,#073043 );
+    background: radial-gradient(circle at 70% 90%, #00000000 0% ,#13496c36 ,#072f41cf ,#073041 ,#073043 );
+    background: radial-gradient(circle at 70% 90%, #00000000 0% ,#13496c00 ,#072f418c ,#073041ad ,#073043 );
     top: 0;
-    background-attachment: fixed;
+    background-attachment: local;
     right: 0;
     z-index: -1;
 }
