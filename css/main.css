@@ -46,6 +46,9 @@ html body p{
 	background-repeat: no-repeat;    
 	background-position: center;
 }
+.theme_second_color{
+	background-color: hsl(52.31deg 41.94% 81.76%);
+}
 
 /*
 main .blocks{
