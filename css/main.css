@@ -101,7 +101,7 @@ main .item1{
 }
 
 footer{
-	background-color: black;
+	background-color: #b7aa70;
 	margin-top: 0;
 }
 	/* portada imagen*/
@@ -181,9 +181,9 @@ width: 100%;
 .background-color-blocks{
 	display: flex;
     flex-direction: column;
-    background-image: radial-gradient(circle at 50% 0, black 40%, black 70% );
-    background: linear-gradient(to top, #000000 0%, #000000 118%);  	
-	background: linear-gradient(to top, #000000d4 0%, #000000d4 118%);	
+    background-image: radial-gradient(circle at 50% 0, #b7aa70 40%, #b7aa70 70% );
+    background: linear-gradient(to top, #b7aa70 0%, #b7aa70 118%);  	
+	background: linear-gradient(to top, #b7aa70 0%, #b7aa70 118%);	
     /* margin-top: -50px;*/
 }
 .section-products{

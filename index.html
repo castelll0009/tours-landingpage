@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/introduction.css">
 	<link rel="stylesheet" href="css/portada.css">
 	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/popup.css">
 	<!--font awesome-->
 	<script src="https://kit.fontawesome.com/6797723c8a.js" crossorigin="anonymous"></script>
 	<!-- <link rel="stylesheet" href="css/sections-blocks.css"> -->
@@ -171,15 +172,26 @@
 				</picture>
 
 				<div class="cont-btnbuy-opciones">
-					<a class="btn-buy hover-blue-purple" href="#">Customize your tours <i style="padding-left: 5px;"
-							class="fa-solid fa-angles-right"></i></a>
+					<div class="popup" onclick="popupActive()">
 
-					<div class="cont-links-portada">
-						<a class="link-portada" href="nft-design-creation.html">Meet our guides</a>
-						<span class="smallbar">|</span>
-						<a class="link-portada" href="gallery.html">you love nature?</a>
+						<a  class="btn-buy hover-blue-purple "  >Customize your tours 
+						<i style="padding-left: 5px;" class="fa-solid fa-angles-right">
+						</i>
+						</a>
+						
+						<span class="popuptext" id="myPopup">
+							<div class="ctr-social">
+								<a  class="fa fa-facebook " href="https://www.facebook.com/" style="text-decoration: none;"></a>
+								<a  class="fa fa-instagram " href="https://www.instagram.com/" style="text-decoration: none;"></a>
+							</div>
+						</span>
 					</div>
-
+					
+					<div class="cont-links-portada">							
+						<a class="link-portada" href="nft-design-creation.html" >Meet our destinations</a>
+						<span class="smallbar">|</span>
+						<a class="link-portada" href="gallery.html">Set departure</a>
+					</div>	
 				</div>
 			</div>
 			<div class="item2">
@@ -238,7 +250,7 @@
 					</div>
 					<p>Colombia</p>
 				</div>
-				<h3 class="text-introduction theme-font-titles" style="text-align: left; color: white;">OUR TOURS</h3>
+				<h3 class="text-introduction theme-font-titles" style="text-align: left; color: white;">SET DEPARTURES</h3>
 				<p class="slogan" style="text-align: left;">Tours offered in this region</p>
 		
 				<div class="cont-btnbuy-opciones ">
@@ -387,6 +399,8 @@
 									<div class="member-info">
 										<p class="member-heading">Jose Luna Solarte</p>
 										<span>Founder, Expert guide</span>
+										<span>Region state</span>
+										<span>short description</span>
 										<p class="member-para">English Aut maiores voluptates amet et quis</p>
 										<div class="social">
 											<a href=""><i class="fab fa-twitter team-icon"></i></a>
@@ -404,6 +418,8 @@
 									<div class="member-info">
 										<p class="member-heading">Maria Luisa Castillo</p>
 										<span>Biologist, Expert birder</span>
+										<span>Region state</span>
+										<span>short description</span>
 										<p class="member-para">speaks Portuguese Explicabo voluptatem mollitia et
 											repellat</p>
 										<div class="social">
@@ -424,6 +440,8 @@
 									<div class="member-info">
 										<p class="member-heading">Maria Luisa Castillo</p>
 										<span>Biologist, Expert birder</span>
+										<span>Region state</span>
+										<span>short description</span>
 										<p class="member-para">Quisquam facilis cum velit laborum corrupti</p>
 										<div class="social">
 											<a href=""><i class="fab fa-twitter team-icon"></i></a>
@@ -441,6 +459,8 @@
 									<div class="member-info">
 										<p class="member-heading">Jose Luna Solarte</p>
 										<span>Accountant</span>
+										<span>Region state</span>
+										<span>short description</span>
 										<p class="member-para">Spanish, English, Lorem ipsum dolor sit amet, consectetur
 											adipisicing elit. </p>
 										<div class="social">
@@ -477,11 +497,27 @@
 			
 			<div class="cont-termns-description w-100 bg-white" >
 				<div class="item2-terms container py-5">
-					<p>
-						Tours are operated by Cara represented by Jose Luna Soltarte (whichever you have contacted for travel arrangements), hereafter referred to as ‘the Company’
-					</p>
-	
-					<ul class="tabs">
+					<div class="scroll-terms" style="overflow-y: scroll;height: 150px; ">
+						<p>
+							Tours are operated by Cara represented by Jose Luna Soltarte 
+							asdsadsa
+							asdsadsaadasdas
+							d(whichever you have contacted for travel arrangements), hereafter referred to as ‘the Company’
+							Tours are operated by Cara represented by Jose Luna Soltarte 
+							asdsadsasadas 
+							asdsadsaadasdasasdasdasd
+							d(whichever you have contacted for travel arrangements), hereafter referred to as ‘the Company’
+						</p>
+						<p>
+							Tours are operated by Cara represented by Jose Luna Soltarte 
+							asdsadsa
+							asdsadsaadasdas
+							d(whichever you have contacted for travel arrangements), hereafter referred to as ‘the Company’
+						</p>
+		
+					</div>
+				
+					<!--<ul class="tabs">
 						<li>
 						  <input type="radio" checked name="tabs" id="tab1">
 						  <label class="theme-font-subtitles-only " for="tab1">PRICES </label>
@@ -569,7 +605,7 @@
 								
 							</div>
 						  </li>					 
-				</ul>
+				    </ul>-->
 				<br>
 				<div style="clear:both"></div>
 																												
@@ -607,21 +643,17 @@
 					<a id="link-about-us" href="#section-project-about" data-gv2-element="element" data-gv2-key="button"
 						data-gv2-name="mlp_link" data-gv2-type="button" data-analytics="click"
 						data-analytics-name="Link - About Us - Official" data-testid="mlp_link_footer"><span>About
-							.AIO</span></a>
+							Us</span></a>
 
 				</div>
 
-				<p class="footnote " style="font-size: 1.4em;">To speak to us, join our discord: <a
-						href="https://discord.gg/" data-gv2-element="element" data-gv2-key="button"
-						data-gv2-name="mlp_link" data-gv2-type="button" data-analytics="click"
-						data-analytics-name="Link - About Us - Official"
-						data-testid="mlp_link_footer"><span>https://discord.gg/</span></a>
-				<p class="footnote " style="font-size: 1.4em;">Or DM us on twitter <a href="https://twitter.com/_NFT"
-						data-gv2-element="element" data-gv2-key="button" data-gv2-name="mlp_link" data-gv2-type="button"
-						data-analytics="click" data-analytics-name="Link - About Us - Official"
-						data-testid="mlp_link_footer"><span>@_NFT</span></a>
-					<br><br>
-				<p class="footnote">© 2022 .AIO and its affiliated companies. All rights reserved.
+			
+					
+				<p class="footnote">© 2022  
+					
+				</p>
+				<p class="footnote"> 
+					Year of all right reserved use the year current 2022.
 				</p>
 		</footer>
 
@@ -649,7 +681,7 @@
 	<script src="js/buttom_menu.js"></script>
 	<script src="js/jquery.js"></script>
 	<!-- <script src="js/team2.js"></script> -->
-
+	<script src = "js/popup-button.js"></script>
 	<!-- boostrap-->
 	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  -->
 	<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
