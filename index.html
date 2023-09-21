@@ -21,7 +21,8 @@
 	<link rel="stylesheet" href="css/introduction.css">
 	<link rel="stylesheet" href="css/portada.css">
 	<link rel="stylesheet" href="css/header.css">
-	<link rel="stylesheet" href="css/popup.css">
+	<link rel="stylesheet" href="css/section2/popup.css">
+	<link rel="stylesheet" href="css/section2/msm-emer.css">
 	<!--font awesome-->
 	<script src="https://kit.fontawesome.com/6797723c8a.js" crossorigin="anonymous"></script>
 	<!-- <link rel="stylesheet" href="css/sections-blocks.css"> -->
@@ -172,19 +173,30 @@
 				</picture>
 
 				<div class="cont-btnbuy-opciones">
-					<div class="popup" onclick="popupActive()">
+					
 
-						<a  class="btn-buy hover-blue-purple "  >Customize your tours 
-						<i style="padding-left: 5px;" class="fa-solid fa-angles-right">
-						</i>
-						</a>
+				
 						
+
+						<div class="con-msg">
+							<span class="msg-icn" id="myMsg"> 
+								
+
+							</span> 
+						<span class="msg-icn-a" id="myMsg"> </span> 
 						<span class="popuptext" id="myPopup">
 							<div class="ctr-social">
 								<a  class="fa fa-facebook " href="https://www.facebook.com/" style="text-decoration: none;"></a>
 								<a  class="fa fa-instagram " href="https://www.instagram.com/" style="text-decoration: none;"></a>
 							</div>
-						</span>
+						</span>	
+						
+						<a  class="btn-buy hover-blue-purple " onclick="popupActive()" onmouseenter="msgActive()" ondblclick="msgActive()">Customize your tours 
+						<i style="padding-left: 5px;" class="fa-solid fa-angles-right">
+						</i>
+						</a>
+						
+						
 					</div>
 					
 					<div class="cont-links-portada">							
@@ -682,6 +694,8 @@
 	<script src="js/jquery.js"></script>
 	<!-- <script src="js/team2.js"></script> -->
 	<script src = "js/popup-button.js"></script>
+	<script src = "js/msm-ere.js"></script>
+	<script src = "js/msg-icn.js"></script>
 	<!-- boostrap-->
 	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  -->
 	<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->

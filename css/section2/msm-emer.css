@@ -1,0 +1,131 @@
+.con-msg {
+    position: relative;
+    display: table;
+    cursor: pointer;
+  }
+
+ .msg-icn {
+    visibility: hidden;
+    display: inline-block;
+    position: relative;
+    padding:  10px 20px;
+    color: #fff;
+    box-sizing: border-box;
+    max-width: 300px;
+    min-width: 80px;
+    min-height: 38px;
+   
+    display: table;
+    cursor: pointer;
+ 
+  }
+  .con-msg .msg-icn:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #e5a002;
+    border-radius: 2px;
+    box-sizing: border-box;
+    clip-path: polygon(0% 105%, 0% 0%, 105% 0%, 105% 105%, 43px 105%, 43px 80%, 21px 80%, 21px 105%);
+  }
+  .con-msg .msg-icn:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 20px;
+    background: #e5a002;
+    top: calc(100% - 1px);
+    left: 20px;
+    box-sizing: border-box;
+    clip-path: polygon(0 0, 0% 100%, 100% 0%, calc(100% - 2px) 0, 1px calc(100% - 2px), 1px 0);
+  }
+
+  .con-msg .shows{
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+    
+  }
+  .con-msg .hi{
+    visibility: visible;
+    height: 300px;
+    
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+  .con-msg .popuptext {
+    visibility: hidden;
+    width:65px;
+    background-color: #ddeb21bd;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 1px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 20%;
+    left: 59%;
+    margin-left: 66px;
+    display: flex;
+    
+
+  }
+
+
+ /*  Popup arrow 
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  */
+
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .con-msg .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */
+
+  
+  .ctr-social {
+    display: contents;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .ctr-social a {
+    color: black;
+    padding: 4px 9px;
+    text-decoration: none;
+    display: block;
+    font-size: 17px;
+}
+  .ctr-social a::after {
+    background-color: 
+    #555;
+  }
