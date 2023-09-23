@@ -4,7 +4,7 @@
     cursor: pointer;
   }
 
- .msg-icn {
+  .con-msg .msg-icn {
     visibility: hidden;
     display: inline-block;
     position: relative;
@@ -14,7 +14,7 @@
     max-width: 300px;
     min-width: 80px;
     min-height: 38px;
-   
+    animation-iteration-count: infinite;
     display: table;
     cursor: pointer;
  
@@ -44,6 +44,46 @@
     box-sizing: border-box;
     clip-path: polygon(0 0, 0% 100%, 100% 0%, calc(100% - 2px) 0, 1px calc(100% - 2px), 1px 0);
   }
+  .con-msg .msg-icn-a {
+    visibility: hidden;
+    display: inline-block;
+    position: relative;
+    padding:  10px 20px;
+    color: #fff;
+    box-sizing: border-box;
+    max-width: 300px;
+    min-width: 80px;
+    min-height: 38px;
+    animation-iteration-count: infinite;
+    display: table;
+    cursor: pointer;
+ 
+  }
+  .con-msg .msg-icn-a:before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #e5a002;
+    border-radius: 2px;
+    box-sizing: border-box;
+    clip-path: polygon(0% 105%, 0% 0%, 105% 0%, 105% 105%, 43px 105%, 43px 80%, 21px 80%, 21px 105%);
+  }
+  .con-msg .msg-icn-a:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 25px;
+    height: 20px;
+    background: #e5a002;
+    top: calc(100% - 1px);
+    left: 20px;
+    box-sizing: border-box;
+    clip-path: polygon(0 0, 0% 100%, 100% 0%, calc(100% - 2px) 0, 1px calc(100% - 2px), 1px 0);
+  }
 
   .con-msg .shows{
     visibility: visible;
@@ -51,11 +91,7 @@
     animation: fadeIn 1s
     
   }
-  .con-msg .hi{
-    visibility: visible;
-    height: 300px;
-    
-  }
+
 
   @-webkit-keyframes fadeIn {
     from {opacity: 0;}
@@ -76,9 +112,9 @@
     padding: 1px 0;
     position: absolute;
     z-index: 1;
-    bottom: 20%;
+    bottom: 10.57%;
     left: 59%;
-    margin-left: 66px;
+    margin-left: 53px;
     display: flex;
     
 
@@ -102,7 +138,7 @@
   /* Toggle this class when clicking on the popup container (hide and show the popup) */
   .con-msg .show {
     visibility: visible;
-    -webkit-animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s; 
     animation: fadeIn 1s
   }
   
