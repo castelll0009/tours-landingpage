@@ -16,8 +16,13 @@ var mi = 0;
 function writeString(e, str, i) {
   e.innerHTML = e.innerHTML + str[i];
   
-  if (e.innerHTML.length == str.length && mi != text.length)
+  if (e.innerHTML.length == str.length && mi != text.length){
     setTimeout(slowlyDelete, waitTime, e);
+  }else{
+    
+  }
+   
+
 }
 
 function deleteString(e) {
