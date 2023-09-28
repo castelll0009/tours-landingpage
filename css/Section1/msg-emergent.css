@@ -1,12 +1,9 @@
-.cont-msg-emergente{
-  position: relative;
-  width: 100%;
-  display: contents;
-}
+
 .cont-msg-emergente{ 
   display: flex;
   height: 80px;
-  align-items: center;
+  align-items: flex-start;
+  
 }
 .msg-icn {
     display: inline-block;
@@ -27,7 +24,7 @@
     height: 100%;
     width: 100%;
     word-wrap: break-word;
-    /* border: 1px solid #e5a002; */
+    border: 1px solid white;
     border-radius: 2px;
     box-sizing: border-box;
     clip-path: polygon(0% 105%, 0% 0%, 105% 0%, 105% 105%, 43px 105%, 43px 80%, 21px 80%, 21px 105%);
@@ -39,7 +36,7 @@
     width: 25px;
     word-wrap: break-word;
     height: 20px;
-    /* background: #e5a002; */
+    background: white;
     top: calc(100% - 1px);
     left: 20px;
     box-sizing: border-box;
