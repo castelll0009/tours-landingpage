@@ -1,7 +1,7 @@
 // This isn't necessary but more for demonstration purposes
 
-const typSpd = 70; 
-const waitTime = 500;
+const typSpd = 30; 
+const waitTime = 2000;
 
 const text = [
   "I would like to visit the Amazon",

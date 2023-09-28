@@ -3,6 +3,7 @@ var abrir_refri = document.getElementById("sonido-refri");
 var cerrar_refri = document.getElementById("sonido-cerrar-refri");
 var beepc = document.querySelector("#beepc");
 var var_header= document.querySelector("header");
+var var_imgs_logo= document.querySelector(".navbar-brand");
 
 changeImgResolution();
 
@@ -60,14 +61,20 @@ function changeImgResolution(){
 
 
 /*cambiar la apariencia de la barra superiro al mover la rueda del mouse hacia abajo*/
+
 window.onscroll = function() {
   var y = window.scrollY;
   console.log(y);
   if(y > 225){	  	  
+	
+	var_header.style  =   "background: linear-gradient(to left, rgb(0 0 0 / 37%) 0%, rgb(153 201 243 / 72%) 50%)";
+	var_header.style  =   "background: linear-gradient(to left, rgb(0 0 0 / 20%) 0%, rgb(255 255 255 / 95%) 50%)";
+	var_header.style = "background: linear-gradient(to left, rgb(255 255 255 / 8%) 10%, rgb(255 255 255 / 90%) 90%)";
 	var_header.style  =   "background-color :  rgb(0, 0, 0,0.7);";
+	var_imgs_logo.style = "filter: invert(1)";
   }else{
 	var_header.style  =   "background-color : transparent";
-  }
+	var_imgs_logo.style = "filter: none";  }
   
 };
 
