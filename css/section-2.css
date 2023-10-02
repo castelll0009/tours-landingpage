@@ -44,6 +44,16 @@
     min-height: inherit;
     height: 100%;
 }
+
+.a-e-a{
+   
+    background-color: rgba(0, 0, 0, 0.384);
+    border-radius: 2%;
+    height: 100%;
+}
+.section-2 a{
+    margin: 10%;
+}
 .section-2 .swiper-slide {
     flex-shrink: 0;
     width: 100%;
