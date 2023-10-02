@@ -1,0 +1,16 @@
+div h1 {
+    font-size: large;   
+    color: #00000099;
+}
+div p {
+ font-size: small;
+}
+
+
+.container-text{
+    display: flow;
+}
+
+.cont-article {
+    margin: 1%;
+}
