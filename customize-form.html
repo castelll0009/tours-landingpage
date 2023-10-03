@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Bootstrap con Validación y Barra de Progreso</title>
+    <!-- Agrega los enlaces a los archivos de Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-5">
+    <form id="miFormulario" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" required>
+            <div class="valid-feedback">Correcto</div>
+            <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+        </div>
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" class="form-control" id="email" required>
+            <div class="valid-feedback">Correcto</div>
+            <div class="invalid-feedback">Por favor, ingresa un correo electrónico válido.</div>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <select class="custom-select" id="indicativo">
+                        <option value="+51">+51</option>
+                        <option value="+1">+1</option>
+                        <option value="+57">+57</option>
+                        <!-- Add more country codes as needed -->
+                    </select>
+                </div>
+                <input type="tel" class="form-control" id="telefono" pattern="[0-9]{10}" required>
+            </div>
+            <div class="valid-feedback">Correcto</div>
+            <div class="invalid-feedback">Por favor, ingresa un número de teléfono válido (10 dígitos).</div>
+        </div>
+        <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <textarea class="form-control" id="descripcion" rows="4" required></textarea>
+            <div class="valid-feedback">Correcto</div>
+            <div class="invalid-feedback">Por favor, ingresa una descripción.</div>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <!-- Barra de Progreso -->
+    <div class="progress mt-4">
+        <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</div>
+
+<script>
+    // Agrega la validación de Bootstrap
+    (function () {
+        'use strict';
+
+        var formulario = document.getElementById('miFormulario');
+        var progressBar = document.getElementById('progress-bar');
+
+        formulario.addEventListener('input', function () {
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var telefono = document.getElementById('telefono').value;
+            var descripcion = document.getElementById('descripcion').value;
+
+            // Calcular el progreso basado en la cantidad de campos completados
+            var camposCompletados = 0;
+            if (nombre) camposCompletados++;
+            if (email) camposCompletados++;
+            if (telefono) camposCompletados++;
+            if (descripcion) camposCompletados++;
+
+            var progreso = (camposCompletados / 4) * 100; // 4 es el número total de campos
+
+            // Actualizar la barra de progreso
+            progressBar.style.width = progreso + '%';
+            progressBar.setAttribute('aria-valuenow', progreso);
+        });
+
+        formulario.addEventListener('submit', function (event) {
+            if (!formulario.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+
+            formulario.classList.add('was-validated');
+
+            // Construct WhatsApp and Gmail links
+            var indicativo = document.getElementById('indicativo').value;
+            var telefono = document.getElementById('telefono').value;
+            var nombre = document.getElementById('nombre').value;
+            var descripcion = document.getElementById('descripcion').value;
+            var email = document.getElementById('email').value;
+
+            var whatsappLink = 'https://wa.me/' + indicativo + telefono + '?text=Nombre: ' + nombre + '%0ACorreo: ' + email + '%0ADescripción: ' + descripcion;
+            var gmailLink = 'mailto:castelll0009@gmail.com?subject=Consulta&body=Nombre: ' + nombre + '%0ACorreo: ' + email + '%0ADescripción: ' + descripcion;
+
+            // Open WhatsApp and Gmail links in new tabs
+            window.open(whatsappLink, '_blank');
+            window.open(gmailLink, '_blank');
+        }, false);
+    })();
+</script>
+
+</body>
+</html>
