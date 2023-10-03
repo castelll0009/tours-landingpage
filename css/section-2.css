@@ -61,8 +61,8 @@
 .a-e-a button {
     position: relative;
     color: #000000;
-    left: 4%;
-    width: 125px;
+    left: 33%;
+    width: 84px;
     margin-bottom: 4%;
     font-family: 'FontAwesome';
     text-align: center;
@@ -71,10 +71,12 @@
     background-image: linear-gradient(to right,hwb(64 0% 0%),rgb(78 221 78));
     border-radius: 10px;
     display: block;
+    font-size: 10px;
+    height: 29px;
 }
 .a-e-a button i{
     margin: 4px;
-    font-size: 18px;
+    font-size: 10px;
 }
 .a-e-a button:hover {
     position: relative;
