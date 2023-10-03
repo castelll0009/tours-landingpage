@@ -57,8 +57,7 @@
 </div>
 
 <script>
-    // Agrega la validación de Bootstrap
-    (function () {
+     (function () {
         'use strict';
 
         var formulario = document.getElementById('miFormulario');
@@ -99,12 +98,18 @@
             var descripcion = document.getElementById('descripcion').value;
             var email = document.getElementById('email').value;
 
-            var whatsappLink = 'https://wa.me/' + indicativo + telefono + '?text=Nombre: ' + nombre + '%0ACorreo: ' + email + '%0ADescripción: ' + descripcion;
-            var gmailLink = 'mailto:castelll0009@gmail.com?subject=Consulta&body=Nombre: ' + nombre + '%0ACorreo: ' + email + '%0ADescripción: ' + descripcion;
+            var whatsappLink = 'https://wa.me/' + '57' + '3003000082' + '?text=Nombre: ' + nombre + '%0ACorreo: ' + email + '%0ADescripción: ' + descripcion;
+            var gmailLink = 'mailto:caracaranaturetours@gmail.com?subject=Consulta&body=Nombre: ' + nombre + '%0ACorreo: ' + email + '%0ADescripción: ' + descripcion;
 
-            // Open WhatsApp and Gmail links in new tabs
+            // Open WhatsApp link in a new tab
             window.open(whatsappLink, '_blank');
-            window.open(gmailLink, '_blank');
+
+            // Create a hidden link for Gmail and trigger a click event
+            var gmailHiddenLink = document.createElement('a');
+            gmailHiddenLink.href = gmailLink;
+            gmailHiddenLink.style.display = 'none';
+            document.body.appendChild(gmailHiddenLink);
+            gmailHiddenLink.click();
         }, false);
     })();
 </script>
