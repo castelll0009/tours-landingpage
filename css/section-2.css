@@ -46,16 +46,15 @@
 }
 
 .a-e-a{
-   
-    background-color: rgba(0, 0, 0, 0.253);
-    border-radius: 2%;
-    height: 100%;
-    display: flex;
- 
-    justify-content: space-evenly;
-    filter: blur(0);
-   
-    flex-wrap: wrap; 
+     /* background-color: rgba(0, 0, 0, 0.253); */
+     border-radius: 2%;
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+     /* filter: blur(0); */
+     flex-wrap: wrap;
+     align-items: flex-start;
+     align-content: space-between;
 }
 
 .a-e-a button {
