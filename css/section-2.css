@@ -50,10 +50,12 @@
     background-color: rgba(0, 0, 0, 0.253);
     border-radius: 2%;
     height: 100%;
-    display: grid;
-    align-content: space-between;
-    justify-content: space-around;
-   filter:  blur(0);
+    display: flex;
+ 
+    justify-content: space-evenly;
+    filter: blur(0);
+   
+    flex-wrap: wrap; 
 }
 
 .a-e-a button {
@@ -62,9 +64,17 @@
     left: 4%;
     width: 125px;
     margin-bottom: 4%;
-    margin-left: 20%;
+    font-family: 'FontAwesome';
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0 0 2px #eee;
+    background-image: linear-gradient(to right,hwb(64 0% 0%),rgb(78 221 78));
+    border-radius: 10px;
+    display: block;
 }
-
+.a-e-a button i{
+    margin: 4px;
+}
 .a-e-a button:hover {
     position: relative;
     color: #000000;
@@ -73,6 +83,7 @@
     scale: 1%;
     
 }
+
 .section-2 a{
     margin: 10%;
 }
@@ -260,9 +271,9 @@ main .section-2{
     .a-e-a button {
        
         width: 100px;
+        margin-left: 25%;
       
     }
     
   
   }
-  

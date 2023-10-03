@@ -149,7 +149,7 @@
 
   .swiper-slide{
      
-    max-width: 53%;
+    max-width: 48%;
     min-width: 35%;
     max-height: 100%;
   
@@ -164,8 +164,8 @@
 
   .swiper-slide{
      
-    max-width: 30%;
-    min-width: 29%;
+    max-width: 26%;
+    min-width: 23%;
     max-height: 100%;
   
   }
@@ -180,6 +180,19 @@
      
     max-width: 23%;
     min-width: 16%;
+    max-height: 100%;
+  
+  }
+
+
+}
+@media only screen and (min-width: 1200px){
+
+
+  .swiper-slide{
+     
+    max-width: 35%;
+    min-width: 31%;
     max-height: 100%;
   
   }
