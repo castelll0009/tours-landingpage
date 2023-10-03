@@ -1,10 +1,11 @@
 {
     "tags": [
-      "swiper"
+        "swiper"
     ],
     "name": "Swiper - Slides per view",
     "dependencies": {
-      "swiper": "latest",
-      "parcel-bundler": "^1.6.1"
+        "jquery": "^3.7.1",
+        "parcel-bundler": "^1.6.1",
+        "swiper": "latest"
     }
-  }
+}

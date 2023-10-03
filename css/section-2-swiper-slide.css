@@ -35,9 +35,9 @@
 .swiper-slide {
   max-width: 45%;
   min-height: 330px;
-  max-width: 15vw;
+  max-width: 43vw;
     min-width: 10vw;
-    max-height: 10vw;
+    max-height: 70vw;
     min-height: 22vw;
   width: 300px;
   height: 400px;
@@ -144,33 +144,46 @@
 .swiper-3d .swiper-slide-shadow-right {
   background-image: none;
 }
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 500px){
 
 
   .swiper-slide{
-     max-width: 45%;
-    min-height: 330px;
-    max-width: 100%;
-    min-width: 100%;
+     
+    max-width: 53%;
+    min-width: 35%;
     max-height: 100%;
-    min-height: 100%;
-    width: 300px;
-    height: 400px;
-    box-shadow: 0 15px 50px rgb(0 0 0 / 20%);
-    /* filter: blur(1px); */
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: self-start;
-    max-width: 80%;
-    min-height: 330px;
-    /* max-width: 15vw; */
-    min-width: 45%;
-    /* max-height: 330px; */
-    min-height: 400px;
-    min-width: 80%;
+  
   }
+
+
 }
 
+
+@media only screen and (min-width: 700px){
+
+
+  .swiper-slide{
+     
+    max-width: 30%;
+    min-width: 29%;
+    max-height: 100%;
+  
+  }
+
+
+}
+
+@media only screen and (min-width: 1000px){
+
+
+  .swiper-slide{
+     
+    max-width: 23%;
+    min-width: 16%;
+    max-height: 100%;
+  
+  }
+
+
+}
 

@@ -47,9 +47,31 @@
 
 .a-e-a{
    
-    background-color: rgba(0, 0, 0, 0.384);
+    background-color: rgba(0, 0, 0, 0.253);
     border-radius: 2%;
     height: 100%;
+    display: grid;
+    align-content: space-between;
+    justify-content: space-around;
+   filter:  blur(0);
+}
+
+.a-e-a button {
+    position: relative;
+    color: #000000;
+    left: 4%;
+    width: 125px;
+    margin-bottom: 4%;
+    margin-left: 20%;
+}
+
+.a-e-a button:hover {
+    position: relative;
+    color: #000000;
+    background-color: #ffffff;
+    left: 4%;
+    scale: 1%;
+    
 }
 .section-2 a{
     margin: 10%;
@@ -230,3 +252,17 @@ main .section-2{
         
     }
 }
+
+
+@media only screen and (max-width: 500px){
+
+
+    .a-e-a button {
+       
+        width: 100px;
+      
+    }
+    
+  
+  }
+  
