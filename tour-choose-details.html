@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" style="
+    /* scroll-behavior: auto; */
+"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- boostrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Tour Package Details</title>
     <!-- Agrega tus enlaces a hojas de estilo CSS aquí -->
     <style>
@@ -18,6 +16,10 @@
             margin: 0;
             padding: 0;
         }
+        section{
+            background: white;
+        }
+
 
         /* Clase de estilo para resolución móvil */
         .block {
@@ -50,7 +52,7 @@
 
         /* Sección de descuento */
         section:nth-child(2) {
-            background-image: url("./imgs/bgn-section1.jpeg");
+            
             background-size: cover;
             height: 40vh;
             display: flex;
@@ -73,8 +75,7 @@
 
         /* Sección de detalles */
         section:nth-child(3) {
-            background-color: white;
-            padding: 20px;
+            background-color: white;            
         }
 
         /* Título "Unique Tour" */
@@ -189,6 +190,7 @@
             margin: 10px 0;
         }
     </style>
+
     <!-- Styles de header -->
     <style>
         header {
@@ -373,15 +375,162 @@
             src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
         }
     </style>
-</head>
+<style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style></head>
 <body>
-   <main>
-     <!-- Sección de encabezado -->
+   <main style="
+    background-image: url('https://img.freepik.com/fotos-premium/colombia-naturaleza-hermosos-paisajes_5913-2173.jpg?w=740');
+    /* position: fixed; */
+    background-attachment: fixed;
+    background-size: cover;
+    /* scroll-behavior: auto; */
+    background-repeat: no-repeat;
+">
      <header>        
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="#"><img src="imgs/logo.svg" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -409,10 +558,13 @@
                 </ul>
             </div>
         </nav>
-    </header>
+    </header><!-- Sección de encabezado -->
+     
 
     <!-- Sección de descuento -->
-    <section>
+    <section class="block" style="
+    background-color: transparent;
+">
         <div>
             <h2>Exclusive Offer</h2>
             <p>Book your tour package now and get a <span>30% discount</span> on your first booking!</p>
@@ -420,11 +572,13 @@
     </section>
 
     <!-- Sección de detalles -->
-    <section>
+    <section class="block">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-md-12">
-                    <h1>Region</h1> <!-- Agregamos el nuevo título aquí -->
+                    <h1 style="
+    /* margin-top: 40px; */
+">Region</h1> <!-- Agregamos el nuevo título aquí -->
                     <h3>Unique Tour</h3>
                     <hr>
                     <p>Discover the amazing beauty of nature with our Unique Tour package. Explore breathtaking landscapes, enjoy local cuisines, and create unforgettable memories. Book your adventure today!</p>
@@ -458,9 +612,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-lg-6 col-md-12" id="details">
-                    <img src="https://img.freepik.com/fotos-premium/colombia-naturaleza-hermosos-paisajes_5913-2173.jpg?w=740" alt="Tour Image">
-                </div>
+                
             </div>
         </div>
     </section>
@@ -547,7 +699,7 @@
         <div>
             <img src="imgs/logo-white.svg" alt="Logo White">
         </div>
-        <p>&copy; 2023 Tour Package Details. All rights reserved.</p>
+        <p>© 2023 Tour Package Details. All rights reserved.</p>
         <div>
             <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
             <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
@@ -555,5 +707,82 @@
         </div>
     </footer>
    </main>
-</body>
-</html>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="Si tiene alguna pregunta o necesita ayuda, no dude en ponerse en contacto con nuestro equipo de atenci&amp;#xF3;n al cliente." title="" style="transform: translate(718px, 227px);" dir="ltr"></div><!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="" title="" style="transform: translate(953px, 183px);"></div></body></html>
