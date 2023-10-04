@@ -1,8 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Tour Package Details</title>
     <!-- Agrega tus enlaces a hojas de estilo CSS aquí -->
     <style>
@@ -173,13 +175,243 @@ footer p {
 }
 
     </style>
-</head>
-<body>
+    <!-- Styles de header -->
+    <style>
+        header{
+    position: fixed;
+    z-index: 100;   
+    width: 100%;
+  
+}
+
+
+header .bg-dark{
+    background-color: #27303a98 !important;
+    background-color: #27303a00 !important;
+    background: linear-gradient(96deg,transparent,#0b0c0d);
+    background: linear-gradient(to left, rgb(0 0 0 / 59%) 0%, rgb(15 14 14 / 0%) 50%);
+    background: linear-gradient(to left, rgb(0 0 0 / 0%) 0%, rgb(15 14 14 / 0%) 50%);
+    backdrop-filter: blur(6px);
+    
+}
+.cont-header{           
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-height: fit-content;
+    padding: 10px 20px 10px 20px;
+}
+header .navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    padding: 5px 20px 5px 20px ;
+}
+.navbar  .navbar-collapse{
+    justify-content: flex-end;
+}
+.navbar-brand {
+    width: auto;    
+    max-width: 100px;
+}
+.navbar-brand img{
+    width: 150%;
+   
+}
+.container-logo-title{
+    display: flex;
+    max-height: 50px;
+    align-items: center;
+}
+.short-title{
+    color: #187148;
+}
+
+.container-logo-title span{
+    font-size: 16px;    
+    min-width: initial;
+}
+.contenedor-imagen-logo{
+    max-width:40px;
+    min-width:40px;
+}
+.contenedor-imagen-logo img{
+    display: block;
+    width: 100%;    
+	cursor: pointer;
+}
+.container-logo-title h1{
+    font-weight: 300;
+    margin: 0;
+    font-size: 1.5em;
+}
+.title-quick{
+    font-weight: 500 !important;
+}
+.cont-mesadomicilio-carrito{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    
+}
+.cont-mesadomicilio-carrito h1{
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: 300;
+}
+.icono-carrito-compras{
+    font-size: 1.5em;
+    color: #e5bd5d;    
+	cursor: pointer;
+}
+
+
+
+    </style>
+    <style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style></head><body><styles>
+        
+    </styles>
+
+
     <!-- Sección de encabezado -->
     <header>
-        <h1>Tour Package Details</h1>
-        <div>HOME &gt;&gt; PACKAGES-REGION ANDINA</div>
-    </header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#"><img src="imgs/logo.svg" alt=""></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<!-- <ul class="navbar-nav mr-auto"> -->
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#section-portada-id">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#section-lore-id">Our tours</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#section-art-id">About us</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#section-omnitools-id">Terms &amp; conditions</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#section-project-about">Shop</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Contacts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Instagram</a>
+							<a class="dropdown-item" href="#">Twitter</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#section-products-id">SubMenu</a>
+						</div>
+					</li>
+					<!-- <li class="nav-item">
+					  <a class="nav-link disabled" href="#">Disabled</a>
+					</li> -->
+				</ul>
+				<!-- <form class="form-inline my-2 my-lg-0">
+					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				  </form> -->
+			</div>
+		</nav>
+		<!-- <div class="cont-header" >
+				<div  class="container-logo-title">
+					<span class="contenedor-imagen-logo">
+						<img id="zumbido" src="imgs/imgs/logo.svg" onClick="sonidoLogo()" class=" zumbido animate__animated animate__flash animate__fast"   >
+					</span>
+					<h1 class="title-quick theme-font-titles"></h1><h1 class="theme-color short-title theme-font-titles" >Caracara<div class="Caracara"></div></h1>
+				</div>
+				<div id="icono-carrito-compras-main" class="cont-mesadomicilio-carrito ">
+					<h1></h1>
+					<i class="icono-carrito-compras theme-color fas fa-bars"></i>
+				</div>
+
+			</div>
+		 -->
+
+	</header>
+    <title>
+        &lt;h1&gt;Tour Package Details lore&lt;/h1&gt;
+        &lt;div&gt;HOME &gt;&gt; PACKAGES-REGION ANDINA&lt;/div&gt;
+    </title>
 
     <!-- Sección de descuento -->
     <section style="background-image: url('ruta/a/la/imagen.jpg'); height: 40vh;">
@@ -227,7 +459,9 @@ footer p {
                 <p>Descripción de las actividades para este día.</p>
             </div>
             <div class="day-image">
-                <img src="imagen_dia1.jpg" alt="Imagen del Día 1">
+                <img src="https://images2.alphacoders.com/107/1070004.jpg" alt="Imagen del Día 1" style="
+    padding: 20px;
+">
             </div>
         </div>
 
@@ -254,47 +488,47 @@ footer p {
         <img src="logo_footer.png" alt="Logo del Footer">
         <!-- Enlaces a redes sociales -->
         <!-- Derechos de autor para el año actual -->
-        <p>&copy; Año Actual Tu Empresa. Todos los derechos reservados.</p>
+        <p>© Año Actual Tu Empresa. Todos los derechos reservados.</p>
     </footer>
-</body>
-</html>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 
-<!-- tour-choose-details.html
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalles del Tour</title>
-</head>
-<body>
-    <div id="tour-details">
-        <h1>Detalles del Tour</h1>
-        <div id="tour-name"></div>
-        <div id="tour-region"></div>
-        <div id="tour-description"></div>
-        <div id="tour-img"></div>
-        <div id="tour-precio"></div>
-        <div id="tour-date-departure"></div>
-    </div>
 
-    <script>
-        // Obtener el ID del tour seleccionado (puedes pasarlo como parámetro en la URL)
-
-        // Hacer una solicitud a la API para obtener los detalles del tour
-        fetch('/api/tour?id=ID_DEL_TOUR_SELECCIONADO')
-            .then(response => response.json())
-            .then(data => {
-                // Mostrar los detalles del tour en la página
-                document.getElementById('tour-name').textContent = data.name;
-                document.getElementById('tour-region').textContent = data.region;
-                document.getElementById('tour-description').textContent = data.description;
-                // ... (continuar con otros campos)
-            })
-            .catch(error => {
-                console.error('Error al cargar los detalles del tour:', error);
-            });
-    </script>
-</body>
-</html> -->
+<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="" title="" style="transform: translate(629px, 81px);"></div></body></html>
