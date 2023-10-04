@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Package Details</title>
+    <!-- Agrega tus enlaces a hojas de estilo CSS aquí -->
+    <style>
+        /* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Ruta de ubicación actual */
+header div {
+    color: #ffd700;
+    margin-top: 10px;
+}
+
+/* Sección de descuento */
+section:nth-child(2) {
+    background-image: url('ruta/a/la/imagen.jpg');
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Título del tour y descuento */
+section:nth-child(2) h2 {
+    font-size: 24px;
+}
+
+section:nth-child(2) p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Sección de detalles */
+section:nth-child(3) {
+    background-color: white;
+    padding: 20px;
+}
+
+/* Título "Unique Tour" */
+section:nth-child(3) h3 {
+    font-size: 20px;
+}
+
+/* Línea amarilla debajo del título */
+section:nth-child(3) hr {
+    background-color: #ffd700;
+    height: 2px;
+    border: none;
+    margin: 10px 0;
+}
+
+/* Cuadros clickeables */
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+ul li {
+    text-align: center;
+    cursor: pointer;
+    flex: 1;
+}
+
+ul img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* Cuadros clickeables: Icono por defecto */
+ul img.default-icon {
+    /* Puedes poner aquí una URL de icono por defecto */
+}
+
+/* Detalles al hacer clic */
+#details {
+    padding-top: 20px;
+}
+
+/* Sección "Tour View" */
+section:nth-child(4) .day {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.day-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.day-info {
+    flex: 2;
+    padding-left: 20px;
+}
+
+.day-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Logos de marcas patrocinadoras */
+#sponsors {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#sponsors img {
+    max-width: 100px;
+    margin: 0 10px;
+}
+
+/* Información de contacto */
+#contact {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#contact h4 {
+    font-size: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Enlaces a redes sociales en el footer */
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Derechos de autor en el footer */
+footer p {
+    margin: 10px 0;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Sección de encabezado -->
+    <header>
+        <h1>Tour Package Details</h1>
+        <div>HOME &gt;&gt; PACKAGES-REGION ANDINA</div>
+    </header>
+
+    <!-- Sección de descuento -->
+    <section style="background-image: url('ruta/a/la/imagen.jpg'); height: 40vh;">
+        <h2>REGION ANDINA PACKAGE</h2>
+        <p style="color: yellow;">20% OFF</p>
+    </section>
+
+    <!-- Sección de detalles -->
+    <section style="background-color: white;">
+        <h3>Unique Tour</h3>
+        <hr style="background-color: yellow; height: 2px; margin: 0;">
+        <!-- Cuadros clickeables -->
+        <ul>
+            <li>
+                <img src="icono_agenda.png" alt="Agenda">
+                <p>Schedule</p>
+            </li>
+            <li>
+                <img src="icono_seguro.png" alt="Seguro">
+                <p>Insurance</p>
+            </li>
+            <li>
+                <img src="icono_guia.png" alt="Guía">
+                <p>Tour Guide</p>
+            </li>
+            <li>
+                <img src="icono_comida.png" alt="Comida">
+                <p>Lunch and Restaurant</p>
+            </li>
+        </ul>
+
+        <!-- Detalles al hacer clic en los cuadros -->
+        <div id="details">
+            <!-- Aquí se mostrarán los detalles al hacer clic -->
+        </div>
+    </section>
+
+    <!-- Sección de Tour View -->
+    <section>
+        <!-- Columnas para cada día -->
+        <div class="day">
+            <div class="day-number">DAY 1</div>
+            <div class="day-info">
+                <h4>Residencia del Día 1</h4>
+                <p>Descripción de las actividades para este día.</p>
+            </div>
+            <div class="day-image">
+                <img src="imagen_dia1.jpg" alt="Imagen del Día 1">
+            </div>
+        </div>
+
+        <!-- Repite la estructura para otros días -->
+        <!-- Puedes utilizar un bucle para generar dinámicamente esta sección -->
+    </section>
+
+    <!-- Logos de marcas patrocinadoras -->
+    <div id="sponsors">
+        <img src="logo_marca1.png" alt="Marca 1">
+        <img src="logo_marca2.png" alt="Marca 2">
+        <!-- Agrega más logos de marcas patrocinadoras aquí -->
+    </div>
+
+    <!-- Información de contacto -->
+    <div id="contact">
+        <h4>Contacto</h4>
+        <p>Números de contacto: +1234567890, +9876543210</p>
+        <p>Correo electrónico: info@tudominio.com</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <img src="logo_footer.png" alt="Logo del Footer">
+        <!-- Enlaces a redes sociales -->
+        <!-- Derechos de autor para el año actual -->
+        <p>&copy; Año Actual Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
+
+<!-- tour-choose-details.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Tour</title>
+</head>
+<body>
+    <div id="tour-details">
+        <h1>Detalles del Tour</h1>
+        <div id="tour-name"></div>
+        <div id="tour-region"></div>
+        <div id="tour-description"></div>
+        <div id="tour-img"></div>
+        <div id="tour-precio"></div>
+        <div id="tour-date-departure"></div>
+    </div>
+
+    <script>
+        // Obtener el ID del tour seleccionado (puedes pasarlo como parámetro en la URL)
+
+        // Hacer una solicitud a la API para obtener los detalles del tour
+        fetch('/api/tour?id=ID_DEL_TOUR_SELECCIONADO')
+            .then(response => response.json())
+            .then(data => {
+                // Mostrar los detalles del tour en la página
+                document.getElementById('tour-name').textContent = data.name;
+                document.getElementById('tour-region').textContent = data.region;
+                document.getElementById('tour-description').textContent = data.description;
+                // ... (continuar con otros campos)
+            })
+            .catch(error => {
+                console.error('Error al cargar los detalles del tour:', error);
+            });
+    </script>
+</body>
+</html> -->
