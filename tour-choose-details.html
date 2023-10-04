@@ -1,590 +1,559 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Tour Package Details</title>
     <!-- Agrega tus enlaces a hojas de estilo CSS aquí -->
     <style>
         /* Estilos globales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-/* Encabezado */
-header{
-    position: fixed;
-    z-index: 100;   
-    width: 100%;
-  
-}
+        /* Clase de estilo para resolución móvil */
+        .block {
+            flex-direction: column;
+            padding: 10vw 5vw;
+            min-height: 70vh;
+        }
 
+        /* Clase de estilo para resolución de PC */
+        @media (min-width: 768px) {
+            .block {
+                display: flex;
+                flex-direction: row;
+                padding: 5.6vw;
+            }
+        }
 
+        /* Encabezado */
+        header {
+            position: fixed;
+            z-index: 100;
+            width: 100%;
+        }
 
-/* Ruta de ubicación actual */
-header div {
-    color: #ffd700;
-    margin-top: 10px;
-}
+        /* Ruta de ubicación actual */
+        header div {
+            color: #ffd700;
+            margin-top: 10px;
+        }
 
-/* Sección de descuento */
-section:nth-child(2) {
-    background-image: url("./imgs/bgn-section1.jpeg");
-    background-size: cover;
-    height: 40vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
+        /* Sección de descuento */
+        section:nth-child(2) {
+            background-image: url("./imgs/bgn-section1.jpeg");
+            background-size: cover;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
 
-/* Título del tour y descuento */
-section:nth-child(2) h2 {
-    font-size: 24px;
-}
+        /* Título del tour y descuento */
+        section:nth-child(2) h2 {
+            font-size: 24px;
+        }
 
-section:nth-child(2) p {
-    font-size: 18px;
-    font-weight: bold;
-}
+        section:nth-child(2) p {
+            font-size: 18px;
+            font-weight: bold;
+        }
 
-/* Sección de detalles */
-section:nth-child(3) {
-    background-color: white;
-    padding: 20px;
-}
+        /* Sección de detalles */
+        section:nth-child(3) {
+            background-color: white;
+            padding: 20px;
+        }
 
-/* Título "Unique Tour" */
-section:nth-child(3) h3 {
-    font-size: 20px;
-}
+        /* Título "Unique Tour" */
+        section:nth-child(3) h3 {
+            font-size: 20px;
+        }
 
-/* Línea amarilla debajo del título */
-section:nth-child(3) hr {
-    background-color: #ffd700;
-    height: 2px;
-    border: none;
-    margin: 10px 0;
-}
+        /* Línea amarilla debajo del título */
+        section:nth-child(3) hr {
+            background-color: #ffd700;
+            height: 2px;
+            border: none;
+            margin: 10px 0;
+        }
 
-/* Cuadros clickeables */
-ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-}
+        /* Cuadros clickeables */
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+        }
 
-ul li {
-    text-align: center;
-    cursor: pointer;
-    flex: 1;
-}
+        ul li {
+            text-align: center;
+            cursor: pointer;
+            flex: 1;
+        }
 
-ul img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
+        ul img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
 
-/* Cuadros clickeables: Icono por defecto */
-ul img.default-icon {
-    /* Puedes poner aquí una URL de icono por defecto */
-}
+        /* Cuadros clickeables: Icono por defecto */
+        ul img.default-icon {
+            /* Puedes poner aquí una URL de icono por defecto */
+        }
 
-/* Detalles al hacer clic */
-#details {
-    padding-top: 20px;
-}
+        /* Detalles al hacer clic */
+        #details {
+            padding-top: 20px;
+        }
 
-/* Sección "Tour View" */
-section:nth-child(4) .day {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
-    border-bottom: 1px solid #ddd;
-}
+        /* Sección "Tour View" */
+        section:nth-child(4) .day {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+        }
 
-.day-number {
-    font-size: 24px;
-    font-weight: bold;
-}
+        .day-number {
+            font-size: 24px;
+            font-weight: bold;
+        }
 
-.day-info {
-    flex: 2;
-    padding-left: 20px;
-}
+        .day-info {
+            flex: 2;
+            padding-left: 20px;
+        }
 
-.day-image img {
-    max-width: 100%;
-    height: auto;
-}
+        .day-image img {
+            max-width: 100%;
+            height: auto;
+        }
 
-/* Logos de marcas patrocinadoras */
-#sponsors {
-    text-align: center;
-    padding: 20px 0;
-}
+        /* Logos de marcas patrocinadoras */
+        #sponsors {
+            text-align: center;
+            padding: 20px 0;
+        }
 
-#sponsors img {
-    max-width: 100px;
-    margin: 0 10px;
-}
+        #sponsors img {
+            max-width: 100px;
+            margin: 0 10px;
+        }
 
-/* Información de contacto */
-#contact {
-    text-align: center;
-    padding: 20px 0;
-}
+        /* Información de contacto */
+        #contact {
+            text-align: center;
+            padding: 20px 0;
+        }
 
-#contact h4 {
-    font-size: 20px;
-}
+        #contact h4 {
+            font-size: 20px;
+        }
 
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
 
-footer img {
-    max-width: 100px;
-    height: auto;
-}
+        footer img {
+            max-width: 100px;
+            height: auto;
+        }
 
-/* Enlaces a redes sociales en el footer */
-footer a {
-    color: #ffd700;
-    text-decoration: none;
-    margin: 0 10px;
-}
+        /* Enlaces a redes sociales en el footer */
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 10px;
+        }
 
-/* Derechos de autor en el footer */
-footer p {
-    margin: 10px 0;
-}
-
+        /* Derechos de autor en el footer */
+        footer p {
+            margin: 10px 0;
+        }
     </style>
     <!-- Styles de header -->
     <style>
-        header{
-    position: fixed;
-    z-index: 100;   
-    width: 100%;
-  
-}
+        header {
+            position: fixed;
+            z-index: 100;
+            width: 100%;
+        }
 
+        header .bg-dark {
+            background-color: #27303a98 !important;
+            background-color: #27303a00 !important;
+            background: linear-gradient(96deg, transparent, #0b0c0d);
+            background: linear-gradient(to left, rgb(0 0 0 / 59%) 0%, rgb(15 14 14 / 0%) 50%);
+            background: linear-gradient(to left, rgb(0 0 0 / 0%) 0%, rgb(15 14 14 / 0%) 50%);
+            backdrop-filter: blur(6px);
 
-header .bg-dark{
-    background-color: #27303a98 !important;
-    background-color: #27303a00 !important;
-    background: linear-gradient(96deg,transparent,#0b0c0d);
-    background: linear-gradient(to left, rgb(0 0 0 / 59%) 0%, rgb(15 14 14 / 0%) 50%);
-    background: linear-gradient(to left, rgb(0 0 0 / 0%) 0%, rgb(15 14 14 / 0%) 50%);
-    backdrop-filter: blur(6px);
-    
-}
-.cont-header{           
-    display: flex;
-    flex-wrap: nowrap;
-    align-content: center;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-height: fit-content;
-    padding: 10px 20px 10px 20px;
-}
-header .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-    padding: 5px 20px 5px 20px ;
-}
-.navbar  .navbar-collapse{
-    justify-content: flex-end;
-}
-.navbar-brand {
-    width: auto;    
-    max-width: 100px;
-}
-.navbar-brand img{
-    width: 150%;
-   
-}
-.container-logo-title{
-    display: flex;
-    max-height: 50px;
-    align-items: center;
-}
-.short-title{
-    color: #187148;
-}
+        }
 
-.container-logo-title span{
-    font-size: 16px;    
-    min-width: initial;
-}
-.contenedor-imagen-logo{
-    max-width:40px;
-    min-width:40px;
-}
-.contenedor-imagen-logo img{
-    display: block;
-    width: 100%;    
-	cursor: pointer;
-}
-.container-logo-title h1{
-    font-weight: 300;
-    margin: 0;
-    font-size: 1.5em;
-}
-.title-quick{
-    font-weight: 500 !important;
-}
-.cont-mesadomicilio-carrito{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    
-}
-.cont-mesadomicilio-carrito h1{
-    font-size: 1.5em;
-    margin: 0;
-    font-weight: 300;
-}
-.icono-carrito-compras{
-    font-size: 1.5em;
-    color: #e5bd5d;    
-	cursor: pointer;
-}
+        .cont-header {
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-height: fit-content;
+            padding: 10px 20px 10px 20px;
+        }
 
+        header .navbar-expand-lg .navbar-nav .nav-link {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            padding: 5px 20px 5px 20px;
+        }
 
+        .navbar .navbar-collapse {
+            justify-content: flex-end;
+        }
 
+        .navbar-brand {
+            width: auto;
+            max-width: 100px;
+        }
+
+        .navbar-brand img {
+            width: 150%;
+
+        }
+
+        .container-logo-title {
+            display: flex;
+            max-height: 50px;
+            align-items: center;
+        }
+
+        .short-title {
+            color: #187148;
+        }
+
+        .container-logo-title span {
+            font-size: 16px;
+            min-width: initial;
+        }
+
+        .contenedor-imagen-logo {
+            max-width: 40px;
+            min-width: 40px;
+        }
+
+        .contenedor-imagen-logo img {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .container-logo-title h1 {
+            font-weight: 300;
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .title-quick {
+            font-weight: 500 !important;
+        }
+
+        .cont-mesadomicilio-carrito {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+
+        }
+
+        .cont-mesadomicilio-carrito h1 {
+            font-size: 1.5em;
+            margin: 0;
+            font-weight: 300;
+        }
+
+        .icono-carrito-compras {
+            font-size: 1.5em;
+            color: #e5bd5d;
+            cursor: pointer;
+        }
     </style>
     <style id="mttstyle">
-    #mttContainer {
-      left: 0 !important;
-      top: 0 !important;
-      width: 1000px !important;
-      margin-left: -500px !important;
-      position: fixed !important;
-      z-index: 100000200 !important;
-      background: none !important;
-      pointer-events: none !important;
-      display: inline-block !important;
-    }
-    .bootstrapiso .tooltip {
-      width:auto  !important;
-      height:auto  !important;
-      background: none !important;
-      border:none !important;
-      border-radius: 0px !important;
-      visibility: visible  !important;
-      pointer-events: none !important;
-    }
-    .bootstrapiso  .bs-tooltip-top { 
-      margin-bottom: 15px  !important;
-    }
-    .bootstrapiso  .bs-tooltip-bottom { 
-      margin-top: 15px  !important;
-    }
-    .bootstrapiso .tooltip-inner {
-      font-size: 14px  !important;
-      max-width: 200px  !important;
-      text-align: center !important;
-      backdrop-filter: blur(2px) !important; 
-      background-color: #000000b8 !important;
-      color: #ffffffff !important;
-      pointer-events: auto;
-    }
-    .bootstrapiso .arrow::before {
-      border-top-color: #000000b8 !important;
-    }
-    .bootstrapiso .arrow {
-      font-size: 14px  !important;
-      margin: auto  !important;
-    }
-    .bootstrapiso .arrow::after {
-      display:none !important;
-    }
-    .ocr_text_div{
-      position: absolute;
-      opacity: 0.7;
-      font-size: calc(100% + 1cqw);
-      overflow: hidden;
-      border: 2px solid CornflowerBlue;
-      color: transparent !important;
-      background: none !important;
-    }
+        #mttContainer {
+            left: 0 !important;
+            top: 0 !important;
+            width: 1000px !important;
+            margin-left: -500px !important;
+            position: fixed !important;
+            z-index: 100000200 !important;
+            background: none !important;
+            pointer-events: none !important;
+            display: inline-block !important;
+        }
 
-    </style><style type="text/css">
-@font-face {
-  font-weight: 400;
-  font-style:  normal;
-  font-family: circular;
+        .bootstrapiso .tooltip {
+            width: auto !important;
+            height: auto !important;
+            background: none !important;
+            border: none !important;
+            border-radius: 0px !important;
+            visibility: visible !important;
+            pointer-events: none !important;
+        }
 
-  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
-}
+        .bootstrapiso .bs-tooltip-top {
+            margin-bottom: 15px !important;
+        }
 
-@font-face {
-  font-weight: 700;
-  font-style:  normal;
-  font-family: circular;
+        .bootstrapiso .bs-tooltip-bottom {
+            margin-top: 15px !important;
+        }
 
-  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
-}</style></head><body><styles>
-        
-    </styles>
+        .bootstrapiso .tooltip-inner {
+            font-size: 14px !important;
+            max-width: 200px !important;
+            text-align: center !important;
+            backdrop-filter: blur(2px) !important;
+            background-color: #000000b8 !important;
+            color: #ffffffff !important;
+            pointer-events: auto;
+        }
 
+        .bootstrapiso .arrow::before {
+            border-top-color: #000000b8 !important;
+        }
 
-    <!-- Sección de encabezado -->
-    <header>
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#"><img src="imgs/logo.svg" alt=""></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+        .bootstrapiso .arrow {
+            font-size: 14px !important;
+            margin: auto !important;
+        }
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<!-- <ul class="navbar-nav mr-auto"> -->
-				<ul class="navbar-nav">
-					<li class="nav-item active">
-						<a class="nav-link" href="#section-portada-id">Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#section-lore-id">Our tours</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#section-art-id">About us</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#section-omnitools-id">Terms &amp; conditions</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#section-project-about">Shop</a>
-					</li>
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Contacts
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Instagram</a>
-							<a class="dropdown-item" href="#">Twitter</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#section-products-id">SubMenu</a>
-						</div>
-					</li>
-					<!-- <li class="nav-item">
-					  <a class="nav-link disabled" href="#">Disabled</a>
-					</li> -->
-				</ul>
-				<!-- <form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				  </form> -->
-			</div>
-		</nav>
-		<!-- <div class="cont-header" >
-				<div  class="container-logo-title">
-					<span class="contenedor-imagen-logo">
-						<img id="zumbido" src="imgs/imgs/logo.svg" onClick="sonidoLogo()" class=" zumbido animate_animated animateflash animate_fast"   >
-					</span>
-					<h1 class="title-quick theme-font-titles"></h1><h1 class="theme-color short-title theme-font-titles" >Caracara<div class="Caracara"></div></h1>
-				</div>
-				<div id="icono-carrito-compras-main" class="cont-mesadomicilio-carrito ">
-					<h1></h1>
-					<i class="icono-carrito-compras theme-color fas fa-bars"></i>
-				</div>
+        .bootstrapiso .arrow::after {
+            display: none !important;
+        }
 
-			</div>
-		 -->
+        .ocr_text_div {
+            position: absolute;
+            opacity: 0.7;
+            font-size: calc(100% + 1cqw);
+            overflow: hidden;
+            border: 2px solid CornflowerBlue;
+            color: transparent !important;
+            background: none !important;
+        }
+    </style>
+    <style type="text/css">
+        @font-face {
+            font-weight: 400;
+            font-style: normal;
+            font-family: circular;
 
-	</header>
-    <title>
-        &lt;h1&gt;Tour Package Details lore&lt;/h1&gt;
-        &lt;div&gt;HOME &gt;&gt; PACKAGES-REGION ANDINA&lt;/div&gt;
-    </title>
+            src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-weight: 700;
+            font-style: normal;
+            font-family: circular;
+
+            src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+        }
+    </style>
+</head>
+<body>
+   <main>
+     <!-- Sección de encabezado -->
+     <header>        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><img src="imgs/logo.svg" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- <ul class="navbar-nav mr-auto"> -->
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#section-portada-id">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-lore-id">Our tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-art-id">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-omnitools-id">Terms &amp; conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-lore-id"><span class="short-title">Contact</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section-lore-id"><span class="short-title">Buy now</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
     <!-- Sección de descuento -->
-    <section style="background-image: url('./imgs/bgn-section1.jpeg'); height: 40vh;">
-        <h2>REGION ANDINA PACKAGE</h2>
-        <p style="color: yellow;">20% OFF</p>
+    <section>
+        <div>
+            <h2>Exclusive Offer</h2>
+            <p>Book your tour package now and get a <span>30% discount</span> on your first booking!</p>
+        </div>
     </section>
 
     <!-- Sección de detalles -->
-    <section style="background-color: white;">
-        <h3>Unique Tour</h3>
-        <hr style="background-color: yellow; height: 2px; margin: 0;">
-        <!-- Cuadros clickeables -->
-        <ul>
-            <li>
-                <img src="./imgs/schedule.png" alt="Agenda">
-                <p>Schedule</p>
-            </li>
-            <li>
-                <img src="./imgs/insurance.png" alt="Seguro">
-                <p>Insurance</p>
-            </li>
-            <li>
-                <img src="./imgs/guide.png" alt="Guía">
-                <p>Tour Guide</p>
-            </li>
-            <li>
-                <img src="./imgs/food-restaurants.png" alt="Comida">
-                <p>Lunch and Restaurant</p>
-            </li>
-        </ul>
-
-        <!-- Detalles al hacer clic en los cuadros -->
-        <div id="details">
-            <!-- Aquí se mostrarán los detalles al hacer clic -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <h1>Region</h1> <!-- Agregamos el nuevo título aquí -->
+                    <h3>Unique Tour</h3>
+                    <hr>
+                    <p>Discover the amazing beauty of nature with our Unique Tour package. Explore breathtaking landscapes, enjoy local cuisines, and create unforgettable memories. Book your adventure today!</p>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <img src="imgs/calendar-icon.png" alt="Calendar Icon" class="default-icon">
+                            </div>
+                            <div class="text">
+                                <h4>Duration</h4>
+                                <p>7 days</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img src="imgs/compass-icon.png" alt="Compass Icon" class="default-icon">
+                            </div>
+                            <div class="text">
+                                <h4>Destination</h4>
+                                <p>Mountains, Forests, Beaches</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <img src="imgs/group-icon.png" alt="Group Icon" class="default-icon">
+                            </div>
+                            <div class="text">
+                                <h4>Group Size</h4>
+                                <p>10-15 people</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-12" id="details">
+                    <img src="https://img.freepik.com/fotos-premium/colombia-naturaleza-hermosos-paisajes_5913-2173.jpg?w=740" alt="Tour Image">
+                </div>
+            </div>
         </div>
     </section>
+    
 
-    <!-- Sección de Tour View -->
+    <!-- Sección "Tour View" -->
     <section>
-        <!-- Columnas para cada día -->
-        <div class="day">
-            <div class="day-number">DAY 1</div>
-            <div class="day-info">
-                <h4>Residencia del Día 1</h4>
-                <p>Descripción de las actividades para este día.</p>
+        <div class="container">
+            <h3>Tour View</h3>
+            <div class="day">
+                <div class="day-number">Day 1</div>
+                <div class="day-info">
+                    <h4>Arrival</h4>
+                    <p>Arrive at the airport and transfer to the hotel. Check-in and relax. Explore nearby attractions.</p>
+                </div>
             </div>
-            <div class="day-image">
-                <img src="https://images2.alphacoders.com/107/1070004.jpg" alt="Imagen del Día 1" style="
-    padding: 20px;
-">
+            <div class="day">
+                <div class="day-number">Day 2</div>
+                <div class="day-info">
+                    <h4>Hiking Adventure</h4>
+                    <p>Enjoy a guided hiking tour in the mountains. Experience the stunning natural beauty.</p>
+                </div>
+            </div>
+            <div class="day">
+                <div class="day-number">Day 3</div>
+                <div class="day-info">
+                    <h4>Forest Exploration</h4>
+                    <p>Explore the lush forests and discover the diverse flora and fauna.</p>
+                </div>
+            </div>
+            <div class="day">
+                <div class="day-number">Day 4</div>
+                <div class="day-info">
+                    <h4>Beach Relaxation</h4>
+                    <p>Relax on the sandy beaches and enjoy the tranquil seaside atmosphere.</p>
+                </div>
+            </div>
+            <div class="day">
+                <div class="day-number">Day 5</div>
+                <div class="day-info">
+                    <h4>Cultural Experience</h4>
+                    <p>Immerse yourself in the local culture with visits to villages and cultural sites.</p>
+                </div>
+            </div>
+            <div class="day">
+                <div class="day-number">Day 6</div>
+                <div class="day-info">
+                    <h4>Adventure Activities</h4>
+                    <p>Choose from a variety of adventure activities, such as zip-lining and rafting.</p>
+                </div>
+            </div>
+            <div class="day">
+                <div class="day-number">Day 7</div>
+                <div class="day-info">
+                    <h4>Departure</h4>
+                    <p>Check-out from the hotel and transfer to the airport for your departure.</p>
+                </div>
             </div>
         </div>
-
-        <!-- Repite la estructura para otros días -->
-        <div class="day">
-          <div class="day-number">DAY 2</div>
-          <div class="day-info">
-              <h4>Residencia del Día 2</h4>
-              <p>Descripción de las actividades para este día.</p>
-          </div>
-          <div class="day-image">
-              <img src="https://images2.alphacoders.com/107/1070004.jpg" alt="Imagen del Día 1" style="
-  padding: 20px;
-">
-          </div>
-      </div>
-
-
-      <div class="day">
-        <div class="day-number">DAY 3</div>
-        <div class="day-info">
-            <h4>Residencia del Día 3</h4>
-            <p>Descripción de las actividades para este día.</p>
-        </div>
-        <div class="day-image">
-            <img src="https://c4.wallpaperflare.com/wallpaper/198/23/635/river-panorama-colombia-islands-wallpaper-preview.jpg" alt="Imagen del Día 1" style="
-              padding: 20px;
-              ">
-        </div>
-    </div>
-
-
-    <div class="day">
-      <div class="day-number">DAY 4</div>
-      <div class="day-info">
-          <h4>Residencia del Día 4</h4>
-          <p>Descripción de las actividades para este día.</p>
-      </div>
-      <div class="day-image">
-          <img src="https://c0.wallpaperflare.com/preview/200/576/1023/cartagena-colombia-trip-caribbean.jpg" alt="Imagen del Día 1" style="
-                    padding: 20px;">
-      </div>
-  </div>
-
-
-  <div class="day">
-    <div class="day-number">DAY 5</div>
-    <div class="day-info">
-        <h4>Residencia del Día 5</h4>
-        <p>Descripción de las actividades para este día.</p>
-    </div>
-    <div class="day-image">
-        <img src="https://c4.wallpaperflare.com/wallpaper/85/101/144/medellin-republic-of-colombia-wallpaper-preview.jpg" alt="Imagen del Día 1" style="
-padding: 20px;
-">
-    </div>
-</div>
-
-        <!-- Puedes utilizar un bucle para generar dinámicamente esta sección -->
     </section>
 
     <!-- Logos de marcas patrocinadoras -->
-    <div id="sponsors">
-        <img src="logo_marca1.png" alt="Marca 1">
-        <img src="logo_marca2.png" alt="Marca 2">
-        <!-- Agrega más logos de marcas patrocinadoras aquí -->
-    </div>
+    <section>
+        <div id="sponsors">
+            <h3>Our Sponsors</h3>
+            <img src="imgs/sponsor1.png" alt="Sponsor 1">
+            <img src="imgs/sponsor2.png" alt="Sponsor 2">
+            <img src="imgs/sponsor3.png" alt="Sponsor 3">
+        </div>
+    </section>
 
     <!-- Información de contacto -->
-    <div id="contact">
-        <h4>Contacto</h4>
-        <p>Números de contacto: +1234567890, +9876543210</p>
-        <p>Correo electrónico: info@tudominio.com</p>
-    </div>
+    <section>
+        <div id="contact">
+            <h4>Contact Us</h4>
+            <p>If you have any questions or need assistance, feel free to contact our customer support team.</p>
+            <p>Email: support@example.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-        <img src="logo_footer.png" alt="Logo del Footer">
-        <!-- Enlaces a redes sociales -->
-        <!-- Derechos de autor para el año actual -->
-        <p>© Año Actual Tu Empresa. Todos los derechos reservados.</p>
+        <div>
+            <img src="imgs/logo-white.svg" alt="Logo White">
+        </div>
+        <p>&copy; 2023 Tour Package Details. All rights reserved.</p>
+        <div>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
     </footer>
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-<script src="js/menu.js"></script>
-<script src="js/buttom_menu.js"></script>
-
-
-<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="" title="" style="transform: translate(629px, 81px);"></div></body></html>
+   </main>
+</body>
+</html>
