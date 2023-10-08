@@ -20,13 +20,14 @@
             section {
                 background: white;
             }
-            .title_hr hr{                
-                background-color: #ffd700;
-                height: 2px;
-                border: none;
-                margin: 10px 0;
-
-            }
+            .title_hr hr {
+            background-color: #ffd700;
+            height: 2px;
+            border: none;
+            margin: 10px 0;
+            width: 7vw;
+            min-width: 80px;
+        }
 
             /* Clase de estilo para resolución móvil */
             .block {
@@ -41,6 +42,7 @@
                     display: flex;
                     flex-direction: row;
                     padding: 5.6vw;
+                    padding: 11.6vw;
                 }
             }
 
@@ -131,10 +133,10 @@
             /* Sección "Tour View" */
             section:nth-child(4) .day {
                 display: flex;
-                justify-content: space-between;
                 padding: 20px 0;
                 /* border-bottom: 1px solid #ddd; */
-                /* flex-direction: row-reverse; */
+                align-items: flex-start;
+                justify-content: space-between;
             }
 
             .day-number {
@@ -210,14 +212,52 @@
             .tab-menu input[type="radio"] {
                 display: none;
             }
-
+            
+            .cont_title_description p{
+                text-align: justify;
+                word-wrap: break-word;
+            }
+            .world-wrap {
+                text-align: justify;
+                word-wrap: break-word;
+            }
+            .cont-day-activity {
+                display: flex;
+                align-items: center;
+                flex-wrap: nowrap;
+                margin-left: 3.5vw;
+            }
+            .span_img_day{
+                align-self: center;
+                margin-right: 50px;
+                min-width: 350px;
+                overflow: hidden;
+                max-height: 170px;
+                /* border: 1px solid black; */
+                display: block;
+                max-width: 250px;
+                margin: 0 !important;
+                margin-left: 6vw !important;
+            }
+            .span_img_day img{
+            display: block;
+            min-width: 100%;
+            }
             .tab-menu label {
                 cursor: pointer;
                 text-align: center;
                 padding: 10px;
-                /* background-color: #f0f0f0;
-                border: 1px solid #ccc; */
+                background-color: #c0c0c029;
+                max-height: 95px;
                 flex: 1;
+                margin: 15px;
+            }
+            /* Resolucion movil */
+            @media (max-width:768px){
+                .tab-menu label {
+                margin-left: 2px;
+                margin-right: 2px;
+                }
             }
 
             .tab-menu label:hover {
@@ -274,8 +314,7 @@
 
             .conect_line {
             content: "";
-            position: absolute;
-            top: 50%;
+            position: absolute;  
             /* left: 100%; */
             /* right: 0; */
             width: 4px;
@@ -1369,6 +1408,77 @@
   font-family: circular;
 
   src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
 }</style></head>
 
     <body>
@@ -1502,7 +1612,9 @@
                     <span class="title_hr" style="
     width: 100%;
 ">
-                        <h3>Tour Overview</h3>
+                        <h3 style="
+    margin-top: 2.5vw;
+">Tour Overview</h3>
                         <hr>
                     </span>   
                     <!-- Contenido de las pestañas -->                   
@@ -1524,10 +1636,18 @@
 "></div>
                                 </span>
                                 <div class="cont-day-activity">
-                                    <h2 class="title_activity">Title activity</h2>
-                                    <p class="description_activity">Lorem ipsum dolor sit amet , molestias laudantium quasi
-                                        eum minus recusandae mollitia, aperiam ipsam voluptatibus blanditiis excepturi,
-                                        totam aliquam praesentium ad voluptatum porro labore fugiat odit?</p>
+                                    <div class="cont_title_description">
+                                        <h2 class="title_activity">Title activity</h2>
+                                        <p class="description_activity">Lorem ipsum dolor sit amet , molestias laudantium quasi
+                                            eum minus recusandae mollitia, aperiam ipsam voluptatibus blanditiis excepturi,
+                                            totam aliquam praesentium ad voluptatum porro labore fugiat odit?
+                                        </p>                                       
+                                    </div>
+                                    <span class="span_img_day">
+                                        <img src="https://img.freepik.com/free-photo/beautiful-scenery-chamarel-waterfall-mauritius-cloudy-sky_181624-19823.jpg?w=740&amp;t=st=1696780547~exp=1696781147~hmac=f7efe44cf8d8b30fccd035488395358dd7c5e7bf5070707f0a2e471075ef06bd" alt="">
+                                    </span>
+                                  
+                                    
                                 </div>
                             </div>
                             <div class="day">
@@ -1537,10 +1657,17 @@
                                     <div class="conect_line"></div>
                                 </span>
                                 <div class="cont-day-activity">
-                                    <h2 class="title_activity">Title activity</h2>
-                                    <p class="description_activity">Lorem ipsum dolor sit amet , molestias laudantium quasi
-                                        eum minus recusandae mollitia, aperiam ipsam voluptatibus blanditiis excepturi,
-                                        totam aliquam praesentium ad voluptatum porro labore fugiat odit?</p>
+                                    <div class="cont_title_description">
+                                        <h2 class="title_activity">Title activity</h2>
+                                        <p class="description_activity">Lorem ipsum dolor sit amet , molestias laudantium quasi
+                                            eum minus recusandae mollitia, aperiam ipsam voluptatibus blanditiis excepturi,
+                                            totam aliquam praesentium ad voluptatum porro labore fugiat odit?
+                                        </p>                                       
+                                    </div>
+                                    <span class="span_img_day">
+                                        <img src="https://img.freepik.com/free-photo/beautiful-scenery-chamarel-waterfall-mauritius-cloudy-sky_181624-19823.jpg?w=740&amp;t=st=1696780547~exp=1696781147~hmac=f7efe44cf8d8b30fccd035488395358dd7c5e7bf5070707f0a2e471075ef06bd" alt="">
+                                    </span>
+                                  
                                 </div>
                             </div>
                             <div class="day">
@@ -1550,10 +1677,17 @@
                                     <div class="conect_line"></div>
                                 </span>
                                 <div class="cont-day-activity">
-                                    <h2 class="title_activity">Title activity</h2>
-                                    <p class="description_activity">Lorem ipsum dolor sit amet , molestias laudantium quasi
-                                        eum minus recusandae mollitia, aperiam ipsam voluptatibus blanditiis excepturi,
-                                        totam aliquam praesentium ad voluptatum porro labore fugiat odit?</p>
+                                     <div class="cont_title_description">
+                                        <h2 class="title_activity">Title activity</h2>
+                                        <p class="description_activity">Lorem ipsum dolor sit amet , molestias laudantium quasi
+                                            eum minus recusandae mollitia, aperiam ipsam voluptatibus blanditiis excepturi,
+                                            totam aliquam praesentium ad voluptatum porro labore fugiat odit?
+                                        </p>                                       
+                                    </div>
+                                    <span class="span_img_day">
+                                        <img src="https://img.freepik.com/free-photo/beautiful-scenery-chamarel-waterfall-mauritius-cloudy-sky_181624-19823.jpg?w=740&amp;t=st=1696780547~exp=1696781147~hmac=f7efe44cf8d8b30fccd035488395358dd7c5e7bf5070707f0a2e471075ef06bd" alt="">
+                                    </span>
+                                  
                                 </div>
                             </div>
                             <!-- Agrega más días según sea necesario -->
@@ -2118,4 +2252,42 @@
 	}
 	// ]]>
 </script>
-<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="Cronograma" title="" dir="ltr" style="transform: translate(790px, 452px);"></div></body></html>
+<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="Cronograma" title="" dir="ltr" style="transform: translate(790px, 452px);"></div><!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="" title="" style="transform: translate(948px, 107px);"></div></body></html>
