@@ -277,6 +277,7 @@ p.highlighted {
         }
         .menu-opened {
             background-color: white !important;
+            color: black !important;
         }
         .menu-opened .color-font {
             color: black !important;
@@ -455,7 +456,7 @@ p.highlighted {
             transform: translateY(-100%);
         }
         .transparent-header {
-        background-color: transparent !important;
+        background-color: transparent ;
         backdrop-filter: none !important;
         }
         
@@ -3165,14 +3166,17 @@ p.highlighted {
                         <!-- Logica js                               -->
                         <!-- header{ se esconde con el scroll -->
                         <script> 
-                            window.addEventListener('scroll', function() {
-                        var header = document.querySelector('header');
-                        if (window.scrollY < 300) {
-                            header.classList.add('transparent-header');
-                        } else {
-                            header.classList.remove('transparent-header');
-                        }
-                    });
+                          window.addEventListener('scroll', function() {
+  var header = document.querySelector('header');
+  
+  // Verificar si la clase 'menu-open' está presente en el encabezado
+  if (!header.classList.contains('menu-open') && window.scrollY < 300) {
+    header.classList.add('transparent-header');
+  } else {
+    header.classList.remove('transparent-header');
+  }
+});
+
 
                         </script>
                         <!-- Header se oculta mientras estan bajando el scroll o leyendo -->                        
@@ -3200,7 +3204,7 @@ p.highlighted {
           const menuButton = document.querySelector(".navbar-toggler");
           const header = document.querySelector("header");
 
-          menuButton.addEventListener("click", function () {
+          menuButton.addEventListener("click", function () {          
               if (header.classList.contains("menu-opened")) {
                   header.classList.remove("menu-opened");
               } else {
