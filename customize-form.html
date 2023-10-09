@@ -1,454 +1,110 @@
 <html lang="en"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario de Registro</title>
-       <!-- Agrega los enlaces a los estilos de Bootstrap -->
-       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Agrega los enlaces a los estilos de Bootstrap y jQuery -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro</title>
+     <!-- Agrega los enlaces a los estilos de Bootstrap -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Agrega los enlaces a los estilos de Bootstrap y jQuery -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        /* Estilo para el botón "Contact Us" */
+      
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+      /* Estilo para el botón "Contact Us" */
 .contact-now-button {
-    background: linear-gradient(to bottom, #4bb71b, #368e16);
-    background: rgb(101,251,63);
+  background: linear-gradient(to bottom, #4bb71b, #368e16);
+  background: rgb(101,251,63);
 background: linear-gradient(241deg, rgb(240, 116, 33) 0%, rgba(255,143,87,1) 100%);
 
-    border: none;
-    color: #fff;
+  border: none;
+  color: #fff;
 }
 
 .contact-now-button:hover {
-    background: linear-gradient(to bottom, #368e16, #4bb71b);
-    color: #fff;
+  background: linear-gradient(to bottom, #368e16, #4bb71b);
+  color: #fff;
 }
-        .success-animation { margin:0px auto;}
+      .success-animation { margin:0px auto;}
 
 .checkmark {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: block;
-    stroke-width: 2;
-    stroke: #4bb71b;
-    stroke-miterlimit: 10;
-    box-shadow: inset 0px 0px 0px #4bb71b;
-    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
-    position:relative;
-    top: 5px;
-    right: 5px;
-   margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #4bb71b;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #4bb71b;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  position:relative;
+  top: 5px;
+  right: 5px;
+ margin: 0 auto;
 }
 .checkmark__circle {
-    stroke-dasharray: 166;
-    stroke-dashoffset: 166;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    stroke: #4bb71b;
-    fill: #fff;
-    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
- 
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #4bb71b;
+  fill: #fff;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+
 }
 
 .checkmark__check {
-    transform-origin: 50% 50%;
-    stroke-dasharray: 48;
-    stroke-dashoffset: 48;
-    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
 }
 
 @keyframes stroke {
-    100% {
-        stroke-dashoffset: 0;
-    }
+  100% {
+      stroke-dashoffset: 0;
+  }
 }
 
 @keyframes scale {
-    0%, 100% {
-        transform: none;
-    }
+  0%, 100% {
+      transform: none;
+  }
 
-    50% {
-        transform: scale3d(1.1, 1.1, 1);
-    }
+  50% {
+      transform: scale3d(1.1, 1.1, 1);
+  }
 }
 
 @keyframes fill {
-    100% {
-        box-shadow: inset 0px 0px 0px 30px #4bb71b;
-    }
+  100% {
+      box-shadow: inset 0px 0px 0px 30px #4bb71b;
+  }
 }
-    </style><style>
-      html { font-size: 15px; }
-      html, body { margin: 0; padding: 0; min-height: 100%; }
-      body { height:100%; display: flex; flex-direction: column; }
-      .referer-warning {
-        background: black;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-        padding: 0.75em;
-        color: white;
-        text-align: center;
-        font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, system-ui, Sans-Serif;
-        line-height: 1.2;
-        font-size: 1rem;
-        position: relative;
-        z-index: 2;
-      }
-      .referer-warning span { font-family: initial; }
-      .referer-warning h1 { font-size: 1.2rem; margin: 0; }
-      .referer-warning a { color: #56bcf9; }
-    </style><style id="mttstyle">
-      #mttContainer {
-        left: 0 !important;
-        top: 0 !important;
-        width: 1000px !important;
-        margin-left: -500px !important;
-        position: fixed !important;
-        z-index: 100000200 !important;
-        background: none !important;
-        pointer-events: none !important;
-        display: inline-block !important;
-      }
-      .bootstrapiso .tooltip {
-        width:auto  !important;
-        height:auto  !important;
-        background: none !important;
-        border:none !important;
-        border-radius: 0px !important;
-        visibility: visible  !important;
-        pointer-events: none !important;
-      }
-      .bootstrapiso  .bs-tooltip-top { 
-        margin-bottom: 15px  !important;
-      }
-      .bootstrapiso  .bs-tooltip-bottom { 
-        margin-top: 15px  !important;
-      }
-      .bootstrapiso .tooltip-inner {
-        font-size: 14px  !important;
-        max-width: 200px  !important;
-        text-align: center !important;
-        backdrop-filter: blur(2px) !important; 
-        background-color: #000000b8 !important;
-        color: #ffffffff !important;
-        pointer-events: auto;
-      }
-      .bootstrapiso .arrow::before {
-        border-top-color: #000000b8 !important;
-      }
-      .bootstrapiso .arrow {
-        font-size: 14px  !important;
-        margin: auto  !important;
-      }
-      .bootstrapiso .arrow::after {
-        display:none !important;
-      }
-      .ocr_text_div{
-        position: absolute;
-        opacity: 0.7;
-        font-size: calc(100% + 1cqw);
-        overflow: hidden;
-        border: 2px solid CornflowerBlue;
-        color: transparent !important;
-        background: none !important;
-      }
-  
-      </style><style type="text/css">
-  @font-face {
-    font-weight: 400;
-    font-style:  normal;
-    font-family: circular;
-  
-    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
-  }
-  
-  @font-face {
-    font-weight: 700;
-    font-style:  normal;
-    font-family: circular;
-  
-    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
-  }
   </style><style>
-    
-  body {
-      color: #000;
-      overflow-x: hidden;
-      height: 100%;
-     /* Cambiar el fondo a un gradiente verde */
-    background: linear-gradient(to bottom, #4bb71b, #368e16);
-    background: rgb(207,95,8);
-background: linear-gradient(115deg, rgba(207,95,8,1) 0%, rgba(32,148,0,1) 73%, rgba(8,122,196,1) 97%);
-    background: white;
-    color: #000;
-      background-repeat: no-repeat
-  }
-  
-  .card0 {
-    background-color: #e9e9e9;
-    border-radius: 8px;
-    z-index: 0;
-}
-  
-  .card00 {
-      z-index: 0
-  }
-  
-  .card1 {
-      margin-left: 140px;
-      z-index: 0;
-      border-right: 1px solid #F5F5F5
-  }
-  
-  .card2 {
-      display: none
-  }
-  
-  .card2.show {
-    display: flex;
-    flex-direction: column;
-}
-  .social {
-      border-radius: 50%;
-      background-color: #FFCDD2;
-      color: #E53935;
-      height: 47px;
-      width: 47px;
-      padding-top: 16px;
-      cursor: pointer
-  }
-  
-  input,
-  select {
-      padding: 2px;
-      border-radius: 0px;
-      box-sizing: border-box;
-      color: #9E9E9E;
-      border: 1px solid #BDBDBD;
-      font-size: 16px;
-      letter-spacing: 1px;
-      height: 50px !important
-  }
-  
-  select {
-      width: 100%;
-      margin-bottom: 85px
-  }
-  
-  input:focus,
-  select:focus {
-      -moz-box-shadow: none !important;
-      -webkit-box-shadow: none !important;
-      box-shadow: none !important;
-      border: 1px solid #E53935 !important;
-      outline-width: 0 !important
-  }
-  
-  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-      background-color: #E53935
-  }
-  
-  .form-group {
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, system-ui, Sans-Serif;
+      line-height: 1.2;
+      font-size: 1rem;
       position: relative;
-      margin-bottom: 1.5rem;
-      width: 77%
-  }
-  
-  .form-control-placeholder {
-      position: absolute;
-      top: 0px;
-      padding: 12px 2px 0 2px;
-      transition: all 300ms;
-      opacity: 0.5
-  }
-  
-  .form-control:focus+.form-control-placeholder,
-  .form-control:valid+.form-control-placeholder {
-      font-size: 95%;
-      top: 10px;
-      transform: translate3d(0, -100%, 0);
-      opacity: 1;
-      background-color: #fff
-  }
-  
-  .next-button {
-      width: 18%;
-      height: 50px;
-      background-color: #BDBDBD;
-      color: #fff;
-      border-radius: 6px;
-      padding: 10px;
-      cursor: pointer
-  }
-  
-  .next-button:hover {
-      background-color: #E53935;
-      color: #fff
-  }
-  
-  .get-bonus {
-      margin-left: 154px
-  }
-  
-  .pic {
-      width: 230px;
-      height: 110px
-  }
-  
-  #progressbar {
-      position: absolute;
-      left: 35px;
-      overflow: hidden;
-      color: #E53935
-  }
-  
-  #progressbar li {
-      list-style-type: none;
-      font-size: 8px;
-      font-weight: 400;
-      margin-bottom: 36px
-  }
-  
-  #progressbar li:nth-child(3) {
-      margin-bottom: 88px
-  }
-  
-  #progressbar .step0:before {
-      content: "";
-      color: #fff
-  }
-  
-  #progressbar li:before {
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      display: block;
-      font-size: 20px;
-      background: #fff;
-      border: 2px solid #E53935;
-      border-radius: 50%;
-      margin: auto
-  }
-  
-  #progressbar li:last-child:before {
-      width: 40px;
-      height: 40px
-  }
-  
-  #progressbar li:after {
-      content: '';
-      width: 3px;
-      height: 66px;
-      background: #BDBDBD;
-      position: absolute;
-      left: 58px;
-      top: 15px;
-      z-index: -1
-  }
-  
-  #progressbar li:last-child:after {
-      top: 147px;
-      height: 132px
-  }
-  
-  #progressbar li:nth-child(3):after {
-      top: 81px
-  }
-  
-  #progressbar li:nth-child(2):after {
-      top: 0px
-  }
-  
-  #progressbar li:first-child:after {
-      position: absolute;
-      top: -81px
-  }
-  
-  #progressbar li.active:after {
-      background: #E53935
-  }
-  
-  #progressbar li.active:before {
-      background: #E53935;
-      font-family: FontAwesome;
-      content: "\f00c"
-  }
-  
-  .tick {
-      width: 100px;
-      height: 100px
-  }
-  
-  .prev {
-      display: block;
-      position: absolute;
-      left: 40px;
-      top: 20px;
-      cursor: pointer
-  }
-  
-  .prev:hover {
-      color: #D50000 !important
-  }
-  
-  @media screen and (max-width: 912px) {
-      .card00 {
-          padding-top: 30px
-      }
-  
-      .card1 {
-          border: none;
-          margin-left: 50px
-      }
-  
-      .card2 {
-          border-bottom: 1px solid #F5F5F5;
-          margin-bottom: 25px
-      }
-  
-      .social {
-          height: 30px;
-          width: 30px;
-          font-size: 15px;
-          padding-top: 8px;
-          margin-top: 7px
-      }
-  
-      .get-bonus {
-          margin-top: 40px !important;
-          margin-left: 75px
-      }
-  
-      #progressbar {
-          left: -25px
-      }
-  }
-  </style><style>
-      /* Cambiar el color de fondo del botón "Next" al pasar el mouse */
-      .next-button:hover {
-            background-color: #cf5a20;
-            color: #fff;
-        }
-
-        /* Cambiar el color del botón "Go Back" al pasar el mouse */
-        .prev:hover {
-            color: #087ac4 !important;
-        }
-
-        /* Cambiar el color de fondo del progreso activo */
-        #progressbar li.active:before {
-            background: #cf5a20;
-        }
-  </style><script>
-    window.console = window.console || function(t) {};
-  </script><style id="mttstyle">
+      z-index: 2;
+    }
+    .referer-warning span { font-family: initial; }
+    .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+    .referer-warning a { color: #56bcf9; }
+  </style><style id="mttstyle">
     #mttContainer {
       left: 0 !important;
       top: 0 !important;
@@ -519,341 +175,757 @@ background: linear-gradient(115deg, rgba(207,95,8,1) 0%, rgba(32,148,0,1) 73%, r
   font-family: circular;
 
   src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
-}</style><style id="mttstyle">
-    #mttContainer {
-      left: 0 !important;
-      top: 0 !important;
-      width: 1000px !important;
-      margin-left: -500px !important;
-      position: fixed !important;
-      z-index: 100000200 !important;
-      background: none !important;
-      pointer-events: none !important;
-      display: inline-block !important;
-    }
-    .bootstrapiso .tooltip {
-      width:auto  !important;
-      height:auto  !important;
-      background: none !important;
-      border:none !important;
-      border-radius: 0px !important;
-      visibility: visible  !important;
-      pointer-events: none !important;
-    }
-    .bootstrapiso  .bs-tooltip-top { 
-      margin-bottom: 15px  !important;
-    }
-    .bootstrapiso  .bs-tooltip-bottom { 
-      margin-top: 15px  !important;
-    }
-    .bootstrapiso .tooltip-inner {
-      font-size: 14px  !important;
-      max-width: 200px  !important;
-      text-align: center !important;
-      backdrop-filter: blur(2px) !important; 
-      background-color: #000000b8 !important;
-      color: #ffffffff !important;
-      pointer-events: auto;
-    }
-    .bootstrapiso .arrow::before {
-      border-top-color: #000000b8 !important;
-    }
-    .bootstrapiso .arrow {
-      font-size: 14px  !important;
-      margin: auto  !important;
-    }
-    .bootstrapiso .arrow::after {
-      display:none !important;
-    }
-    .ocr_text_div{
-      position: absolute;
-      opacity: 0.7;
-      font-size: calc(100% + 1cqw);
-      overflow: hidden;
-      border: 2px solid CornflowerBlue;
-      color: transparent !important;
-      background: none !important;
-    }
-
-    </style><style type="text/css">
-@font-face {
-  font-weight: 400;
-  font-style:  normal;
-  font-family: circular;
-
-  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
 }
-
-@font-face {
-  font-weight: 700;
-  font-style:  normal;
-  font-family: circular;
-
-  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
-}</style><style id="mttstyle">
-    #mttContainer {
-      left: 0 !important;
-      top: 0 !important;
-      width: 1000px !important;
-      margin-left: -500px !important;
-      position: fixed !important;
-      z-index: 100000200 !important;
-      background: none !important;
-      pointer-events: none !important;
-      display: inline-block !important;
-    }
-    .bootstrapiso .tooltip {
-      width:auto  !important;
-      height:auto  !important;
-      background: none !important;
-      border:none !important;
-      border-radius: 0px !important;
-      visibility: visible  !important;
-      pointer-events: none !important;
-    }
-    .bootstrapiso  .bs-tooltip-top { 
-      margin-bottom: 15px  !important;
-    }
-    .bootstrapiso  .bs-tooltip-bottom { 
-      margin-top: 15px  !important;
-    }
-    .bootstrapiso .tooltip-inner {
-      font-size: 14px  !important;
-      max-width: 200px  !important;
-      text-align: center !important;
-      backdrop-filter: blur(2px) !important; 
-      background-color: #000000b8 !important;
-      color: #ffffffff !important;
-      pointer-events: auto;
-    }
-    .bootstrapiso .arrow::before {
-      border-top-color: #000000b8 !important;
-    }
-    .bootstrapiso .arrow {
-      font-size: 14px  !important;
-      margin: auto  !important;
-    }
-    .bootstrapiso .arrow::after {
-      display:none !important;
-    }
-    .ocr_text_div{
-      position: absolute;
-      opacity: 0.7;
-      font-size: calc(100% + 1cqw);
-      overflow: hidden;
-      border: 2px solid CornflowerBlue;
-      color: transparent !important;
-      background: none !important;
-    }
-
-    </style><style type="text/css">
-@font-face {
-  font-weight: 400;
-  font-style:  normal;
-  font-family: circular;
-
-  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 700;
-  font-style:  normal;
-  font-family: circular;
-
-  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
-}</style><style id="mttstyle">
-    #mttContainer {
-      left: 0 !important;
-      top: 0 !important;
-      width: 1000px !important;
-      margin-left: -500px !important;
-      position: fixed !important;
-      z-index: 100000200 !important;
-      background: none !important;
-      pointer-events: none !important;
-      display: inline-block !important;
-    }
-    .bootstrapiso .tooltip {
-      width:auto  !important;
-      height:auto  !important;
-      background: none !important;
-      border:none !important;
-      border-radius: 0px !important;
-      visibility: visible  !important;
-      pointer-events: none !important;
-    }
-    .bootstrapiso  .bs-tooltip-top { 
-      margin-bottom: 15px  !important;
-    }
-    .bootstrapiso  .bs-tooltip-bottom { 
-      margin-top: 15px  !important;
-    }
-    .bootstrapiso .tooltip-inner {
-      font-size: 14px  !important;
-      max-width: 200px  !important;
-      text-align: center !important;
-      backdrop-filter: blur(2px) !important; 
-      background-color: #000000b8 !important;
-      color: #ffffffff !important;
-      pointer-events: auto;
-    }
-    .bootstrapiso .arrow::before {
-      border-top-color: #000000b8 !important;
-    }
-    .bootstrapiso .arrow {
-      font-size: 14px  !important;
-      margin: auto  !important;
-    }
-    .bootstrapiso .arrow::after {
-      display:none !important;
-    }
-    .ocr_text_div{
-      position: absolute;
-      opacity: 0.7;
-      font-size: calc(100% + 1cqw);
-      overflow: hidden;
-      border: 2px solid CornflowerBlue;
-      color: transparent !important;
-      background: none !important;
-    }
-
-    </style><style type="text/css">
-@font-face {
-  font-weight: 400;
-  font-style:  normal;
-  font-family: circular;
-
-  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
-}
-
-@font-face {
-  font-weight: 700;
-  font-style:  normal;
-  font-family: circular;
-
-  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
-}</style></head>   
-      
-    
-    
+</style><style>
   
-    
-      
-  
-  
-    
-
-  
-  <body translate="no">    
-    <div class="container-fluid px-1 px-md-4 py-5 mx-auto" style="
+body {
+    color: #000;
+    overflow-x: hidden;
     height: 100%;
+   /* Cambiar el fondo a un gradiente verde */
+  background: linear-gradient(to bottom, #4bb71b, #368e16);
+  background: rgb(207,95,8);
+background: linear-gradient(115deg, rgba(207,95,8,1) 0%, rgba(32,148,0,1) 73%, rgba(8,122,196,1) 97%);
+  background: white;
+  color: #000;
+    background-repeat: no-repeat
+}
+
+.card0 {
+  background-color: #e9e9e9;
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.card00 {
+    z-index: 0
+}
+
+.card1 {
+    margin-left: 140px;
+    z-index: 0;
+    border-right: 1px solid #F5F5F5
+}
+
+.card2 {
+    display: none
+}
+
+.card2.show {
+  display: flex;
+  flex-direction: column;
+}
+.social {
+    border-radius: 50%;
+    background-color: #FFCDD2;
+    color: #E53935;
+    height: 47px;
+    width: 47px;
+    padding-top: 16px;
+    cursor: pointer
+}
+
+input,
+select {
+    padding: 2px;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #9E9E9E;
+    border: 1px solid #BDBDBD;
+    font-size: 16px;
+    letter-spacing: 1px;
+    height: 50px !important
+}
+
+select {
+    width: 100%;
+    margin-bottom: 85px
+}
+
+input:focus,
+select:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #E53935 !important;
+    outline-width: 0 !important
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #E53935
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 77%
+}
+
+.form-control-placeholder {
+    position: absolute;
+    top: 0px;
+    padding: 12px 2px 0 2px;
+    transition: all 300ms;
+    opacity: 0.5
+}
+
+.form-control:focus+.form-control-placeholder,
+.form-control:valid+.form-control-placeholder {
+    font-size: 95%;
+    top: 10px;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+    background-color: #fff
+}
+
+.next-button {
+    width: 18%;
+    height: 50px;
+    background-color: #BDBDBD;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer
+}
+
+.next-button:hover {
+    background-color: #E53935;
+    color: #fff
+}
+
+.get-bonus {
+    margin-left: 154px
+}
+
+.pic {
+    width: 230px;
+    height: 110px
+}
+
+#progressbar {
+    position: absolute;
+    left: 35px;
+    overflow: hidden;
+    color: #E53935
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 8px;
+    font-weight: 400;
+    margin-bottom: 36px
+}
+
+#progressbar li:nth-child(3) {
+    margin-bottom: 88px
+}
+
+#progressbar .step0:before {
+    content: "";
+    color: #fff
+}
+
+#progressbar li:before {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    font-size: 20px;
+    background: #fff;
+    border: 2px solid #E53935;
+    border-radius: 50%;
+    margin: auto
+}
+
+#progressbar li:last-child:before {
+    width: 40px;
+    height: 40px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 3px;
+    height: 66px;
+    background: #BDBDBD;
+    position: absolute;
+    left: 58px;
+    top: 15px;
+    z-index: -1
+}
+
+#progressbar li:last-child:after {
+    top: 147px;
+    height: 132px
+}
+
+#progressbar li:nth-child(3):after {
+    top: 81px
+}
+
+#progressbar li:nth-child(2):after {
+    top: 0px
+}
+
+#progressbar li:first-child:after {
+    position: absolute;
+    top: -81px
+}
+
+#progressbar li.active:after {
+    background: #E53935
+}
+
+#progressbar li.active:before {
+    background: #E53935;
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+.tick {
+    width: 100px;
+    height: 100px
+}
+
+.prev {
+    display: block;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    cursor: pointer
+}
+
+.prev:hover {
+    color: #D50000 !important
+}
+
+@media screen and (max-width: 912px) {
+    .card00 {
+        padding-top: 30px
+    }
+
+    .card1 {
+        border: none;
+        margin-left: 50px
+    }
+
+    .card2 {
+        border-bottom: 1px solid #F5F5F5;
+        margin-bottom: 25px
+    }
+
+    .social {
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        padding-top: 8px;
+        margin-top: 7px
+    }
+
+    .get-bonus {
+        margin-top: 40px !important;
+        margin-left: 75px
+    }
+
+    #progressbar {
+        left: -25px
+    }
+}
+</style><style>
+    /* Cambiar el color de fondo del botón "Next" al pasar el mouse */
+    .next-button:hover {
+          background-color: #cf5a20;
+          color: #fff;
+      }
+
+      /* Cambiar el color del botón "Go Back" al pasar el mouse */
+      .prev:hover {
+          color: #087ac4 !important;
+      }
+
+      /* Cambiar el color de fondo del progreso activo */
+      #progressbar li.active:before {
+          background: #cf5a20;
+      }
+</style><script>
+  window.console = window.console || function(t) {};
+</script><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style></head>   
+    
+  
+  
+
+  
+    
+
+
+  
+
+
+<body translate="no" style="
+  background: #e29b06;
+">    
+  <div class="container-fluid px-1 px-md-4 py-5 mx-auto" style="
+  height: 100%;
 ">
-    <div class="row d-flex justify-content-center">
-      <div class="col-12 col-md-11 col-lg-10 col-xl-9" style="
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 col-md-11 col-lg-10 col-xl-9" style="
 ">
-        <div class="card card0 border-0">
-          <div class="row">
-            <div class="col-12">
-              <div class="card card00 m-2 border-0">
-                <div class="row text-center justify-content-center px-3">
-                  <p class="prev text-danger" style="display: none;"><span class="fa fa-long-arrow-left"> Go Back</span></p>
-                  <h3 class="mt-4" style="color: #ff671c;font-size: xx-large;">let's get going</h3>
-                </div>
-                <div class="d-flex flex-md-row px-3 mt-4 flex-column-reverse">
-                  <div class="col-md-6">
-                    <div class="card1">
-                      <ul id="progressbar" class="text-center">
-                        <li class="active step0"></li>
-                        <li class="step0"></li>
-                        <li class="step0"></li>
-                        <li class="step0"></li>
-                      </ul>
-                      <h6 class="mb-5">Enter names and lastnames</h6>
-                      <h6 class="mb-5">Enter your email &amp; phone</h6>
-                      <h6 class="mb-5">Set departure &amp; short description</h6>                                                           
-                    </div>
+      <div class="card card0 border-0">
+        <div class="row">
+          <div class="col-12">
+            <div class="card card00 m-2 border-0">
+              <div class="row text-center justify-content-center px-3">
+                <p class="prev text-danger" style="display: none;"><span class="fa fa-long-arrow-left"> Go Back</span></p>
+                <h3 class="mt-4" style="color: #ff671c;font-size: xx-large;">let's get going</h3>
+              </div>
+              <div class="d-flex flex-md-row px-3 mt-4 flex-column-reverse">
+                <div class="col-md-6">
+                  <div class="card1">
+                    <ul id="progressbar" class="text-center">
+                      <li class="active step0"></li>
+                      <li class="step0 active"></li>
+                      <li class="step0 active"></li>
+                      <li class="step0 active"></li>
+                    </ul>
+                    <h6 class="mb-5">Enter names and lastnames</h6>
+                    <h6 class="mb-5">Enter your email &amp; phone</h6>
+                    <h6 class="mb-5">Set departure &amp; short description</h6>                                                           
                   </div>
-                  <div class="col-md-6">
-                    <div class="card2 first-screen ml-2 show">
-                      <div class="row text-center px-3 mr-2">
-                        <div class="mb-2 col-2"> <span class="fa fa-reddit social"></span> </div>
-                        <div class="mb-2 col-2"> <span class="fa fa-facebook social"></span> </div>
-                        <div class="mb-2 col-2"> <span class="fa fa-linkedin social"></span> </div>
-                        <div class="mb-2 col-2"> <span class="fa fa-google-plus social"></span> </div>
-                        <div class="mb-2 col-2"> <span class="fa fa-twitter social"></span> </div>
-                        <div class="mb-2 col-2"> <span class="fa fa-dropbox social"></span> </div>
-                      </div>
-                      <div class="row px-3 mt-4">
-                        <div class="form-group mt-1 mb-1"> <input type="text" id="full-name" class="form-control valid" required="" data-step="1"> 
-                        <label class="ml-3 form-control-placeholder" for="full-name">Name</label> </div>
-                        
-                      </div>
-                      
-                      <div class="row px-3 mt-4">
-                        <div class="form-group mt-1 mb-1"> <input type="text" id="full-name" class="form-control" required="" data-step="1"> 
-                            <label class="ml-3 form-control-placeholder" for="full-name">Apellido</label> </div>
-                        <div class="next-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
-                      </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card2 first-screen ml-2">
+                    <div class="row text-center px-3 mr-2">
+                      <div class="mb-2 col-2"> <span class="fa fa-reddit social"></span> </div>
+                      <div class="mb-2 col-2"> <span class="fa fa-facebook social"></span> </div>
+                      <div class="mb-2 col-2"> <span class="fa fa-linkedin social"></span> </div>
+                      <div class="mb-2 col-2"> <span class="fa fa-google-plus social"></span> </div>
+                      <div class="mb-2 col-2"> <span class="fa fa-twitter social"></span> </div>
+                      <div class="mb-2 col-2"> <span class="fa fa-dropbox social"></span> </div>
+                    </div>
+                    <div class="row px-3 mt-4">
+                      <div class="form-group mt-1 mb-1"> <input type="text" id="full-name" class="form-control valid" required="" data-step="1"> 
+                      <label class="ml-3 form-control-placeholder" for="full-name">Name</label> </div>
                       
                     </div>
-                    <div class="card2 ml-2">
-                        <div class="row px-3 mt-4">
-                            <div class="form-group mt-1 mb-1"> <input type="text" id="email" class="form-control" required="" data-step="2"> 
-                                <label class="ml-3 form-control-placeholder" for="email">Email</label> </div>
-                            
+                    
+                    <div class="row px-3 mt-4">
+                      <div class="form-group mt-1 mb-1"> <input type="text" id="full-name" class="form-control" required="" data-step="1"> 
+                          <label class="ml-3 form-control-placeholder" for="full-name">Apellido</label> </div>
+                      <div class="next-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
+                    </div>
+                    
+                  </div>
+                  <div class="card2 ml-2">
+                      <div class="row px-3 mt-4">
+                          <div class="form-group mt-1 mb-1"> <input type="text" id="email" class="form-control" required="" data-step="2"> 
+                              <label class="ml-3 form-control-placeholder" for="email">Email</label> </div>
+                          
+                        </div>
+                      <div class="row px-3 mt-3">
+                          <div class="form-group mt-1 mb-1"> <input type="tel" id="phone" class="form-control" required="" data-step="2">
+                               <label class="ml-3 form-control-placeholder" for="phone">Phone Number</label> </div>
+                          <div class="next-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
+                        </div>                                              
+                  </div>
+
+                  <div class="card2 ml-2" id="id-preview">
+                      <div class="row px-3 mt-3">
+                          <div class="form-group mt-1 mb-1">
+                              <input type="date" id="tour-date" class="form-control" required="" data-step="3">
+                              <label class="ml-3 form-control-placeholder" for="tour-date">Tour Date</label>
+                             
                           </div>
-                        <div class="row px-3 mt-3">
-                            <div class="form-group mt-1 mb-1"> <input type="tel" id="phone" class="form-control" required="" data-step="2">
-                                 <label class="ml-3 form-control-placeholder" for="phone">Phone Number</label> </div>
-                            <div class="next-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
-                          </div>                                              
-                    </div>
-
-                    <div class="card2 ml-2" id="id-preview">
-                        <div class="row px-3 mt-3">
-                            <div class="form-group mt-1 mb-1">
-                                <input type="date" id="tour-date" class="form-control" required="" data-step="3">
-                                <label class="ml-3 form-control-placeholder" for="tour-date">Tour Date</label>
-                               
-                            </div>
-                        </div>
-                        <div class="row px-3 mt-3">
-                            <div class="form-group mt-1 mb-1">
-                                <textarea id="description" class="form-control" required="" data-step="3" rows="4"></textarea>
-                                <label class="ml-3 form-control-placeholder" for="description">Description</label>
-                                <div class="next-button final-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
-                            </div> 
-                        </div>
-                        
-                        
-                    </div>
-
-                    <div class="card2 ml-2 " id="final-step-id">
-                      <div class="row px-3 mt-2 mb-4 text-center">
-                        <h2 class="col-12 text-danger"><strong>Success !</strong></h2>
-                        <div class="col-12 text-center">
-                            <div class="success-animation">
-                                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
-                                </div>
-                                
-                        </div>
-                        <h6 class="col-12 mt-2">
-                            <i>
-                            now you can write to us by Whatsapp and E-mail
-                            </i>
-                        </h6>
                       </div>
-                      <button type="button" class="btn btn-primary contact-now-button final-button text-center mt-1 ml-2">Contact Us</button>
+                      <div class="row px-3 mt-3">
+                          <div class="form-group mt-1 mb-1">
+                              <textarea id="description" class="form-control" required="" data-step="3" rows="4"></textarea>
+                              <label class="ml-3 form-control-placeholder" for="description">Description</label>
+                              <div class="next-button final-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
+                          </div> 
+                      </div>
+                      
+                      
+                  </div>
 
+                  <div class="card2 ml-2 show" id="final-step-id">
+                    <div class="row px-3 mt-2 mb-4 text-center">
+                      <h2 class="col-12 text-danger"><strong>Success !</strong></h2>
+                      <div class="col-12 text-center">
+                          <div class="success-animation">
+                              <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+                              </div>
+                              
+                      </div>
+                      <h6 class="col-12 mt-2">
+                          <i>
+                          now you can write to us by Whatsapp and E-mail
+                          </i>
+                      </h6>
                     </div>
+                    <button type="button" class="btn btn-primary contact-now-button final-button text-center mt-1 ml-2">Contact Us</button>
+
                   </div>
                 </div>
               </div>
-              <div class="col-12">
-                <div class="row px-3">
-                    <h2 class="text-muted get-bonus mt-4 mb-5">You're Getting ready <span id="user-name" class="text-danger">Jose</span> Congratulations.</h2>
+            </div>
+            <div class="col-12">
+              <div class="row px-3">
+                  <h2 class="text-muted get-bonus mt-4 mb-5">You're Getting ready <span id="user-name" class="text-danger">Adventuress</span> Congratulations.</h2>
 
-                </div>
               </div>
             </div>
           </div>
@@ -861,264 +933,303 @@ background: linear-gradient(115deg, rgba(207,95,8,1) 0%, rgba(32,148,0,1) 73%, r
       </div>
     </div>
   </div>
+</div>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-        
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+      
 <script id="rendered-js">
- $(document).ready(function () {    
-    // Maneja el clic en el botón "Contact Us"
-    $(".contact-now-button").click(function () {
-        // Obtiene los valores de los campos necesarios
-        var userName = "Name: " + $("#full-name").val();
-        var userEmail = "E-mail: " + $("#email").val();
-        var userPhone = "Phone: " + $("#phone").val();
-        var tourDate = "Tour Date: " + $("#tour-date").val();
-        var description = "Description: " + $("#description").val();
+$(document).ready(function () {    
+  // Maneja el clic en el botón "Contact Us"
+  $(".contact-now-button").click(function () {
+      // Obtiene los valores de los campos necesarios
+      var userName = "Name: " + $("#full-name").val();
+      var userEmail = "E-mail: " + $("#email").val();
+      var userPhone = "Phone: " + $("#phone").val();
+      var tourDate = "Tour Date: " + $("#tour-date").val();
+      var description = "Description: " + $("#description").val();
 
-        // Crea el mensaje de WhatsApp con la información
-        var whatsappMessage = userName + "\n" + userEmail + "\n" + userPhone + "\n" + tourDate + "\n" + description;
+      // Crea el mensaje de WhatsApp con la información
+      var whatsappMessage = userName + "\n" + userEmail + "\n" + userPhone + "\n" + tourDate + "\n" + description;
 
-        // Crea el enlace de WhatsApp
-        var whatsappLink = "https://api.whatsapp.com/send?phone=+573202486769&text=" + encodeURIComponent(whatsappMessage);
+      // Crea el enlace de WhatsApp
+      var whatsappLink = "https://api.whatsapp.com/send?phone=+573202486769&text=" + encodeURIComponent(whatsappMessage);
 
-        // Crea el enlace de Gmail (mailto)
-        var emailSubject = "Tour Inquiry from " + $("#full-name").val();
-        var emailBody = userName + "\n" + userEmail + "\n" + userPhone + "\n" + tourDate + "\n" + description;
-        var emailLink = "mailto:castelll0009@gmail.com?subject=" + encodeURIComponent(emailSubject) + "&body=" + encodeURIComponent(emailBody);
+      // Crea el enlace de Gmail (mailto)
+      var emailSubject = "Tour Inquiry from " + $("#full-name").val();
+      var emailBody = userName + "\n" + userEmail + "\n" + userPhone + "\n" + tourDate + "\n" + description;
+      var emailLink = "mailto:castelll0009@gmail.com?subject=" + encodeURIComponent(emailSubject) + "&body=" + encodeURIComponent(emailBody);
 
-        // Abre ambas ventanas de enlace en simultáneo
-        window.open(whatsappLink, "_blank");
-        window.open(emailLink, "_blank");
-    });
+      // Abre ambas ventanas de enlace en simultáneo
+      window.open(whatsappLink, "_blank");
+      window.open(emailLink, "_blank");
+  });
 
-    $(".final-button").click(function() {
-      // Oculta el div con id "id-preview"
-      $("#id-preview").removeClass("show");
-      // Muestra el div con id "final-step-id"
-      $("#final-step-id").addClass("show");
-    });
-  // Función para verificar los campos en el paso actual
-  function checkFields(step) {
-    var allFieldsFilled = true;
+  $(".final-button").click(function() {
+    // Oculta el div con id "id-preview"
+    $("#id-preview").removeClass("show");
+    // Muestra el div con id "final-step-id"
+    $("#final-step-id").addClass("show");
+  });
+// Función para verificar los campos en el paso actual
+function checkFields(step) {
+  var allFieldsFilled = true;
 
-    // Verifica los campos de entrada requeridos en el paso actual
-    $(".form-control[data-step='" + step + "'][required]").each(function () {
-      if ($(this).val() === "") {
-        allFieldsFilled = false;
-        return false; // Rompe el bucle si se encuentra un campo vacío
-      }
-    });
-
-    return allFieldsFilled;
-  }
-
-  // Maneja el clic en el botón "Next"
-  $(".next-button").click(function () {
-    current_fs = $(this).parent().parent();
-    var currentStep = current_fs.find(".form-control").first().data("step");
-    var nextStep = currentStep + 1;
-
-    if (checkFields(currentStep)) {
-      // Obtener el valor del campo de entrada de nombre
-      var userName = $("#full-name").val();
-      // Actualizar el contenido del <span> con el nombre del usuario
-      $("#user-name").text(userName);
-
-      next_fs = $(this).parent().parent().next();
-      $(current_fs).removeClass("show");
-      $(next_fs).addClass("show");
-      $("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
-
-      // Oculta el paso 3 y muestra el paso 4 si el próximo paso es 4
-      if (nextStep === 4) {
-        $(".card2[data-step='3']").removeClass("show");
-        $(".card2[data-step='4']").addClass("show");
-      }
+  // Verifica los campos de entrada requeridos en el paso actual
+  $(".form-control[data-step='" + step + "'][required]").each(function () {
+    if ($(this).val() === "") {
+      allFieldsFilled = false;
+      return false; // Rompe el bucle si se encuentra un campo vacío
     }
   });
 
-  // Maneja el clic en el botón "Prev"
-  $(".prev").click(function () {
-    current_fs = $(".show");
-    previous_fs = $(".show").prev();
+  return allFieldsFilled;
+}
 
+// Maneja el clic en el botón "Next"
+$(".next-button").click(function () {
+  current_fs = $(this).parent().parent();
+  var currentStep = current_fs.find(".form-control").first().data("step");
+  var nextStep = currentStep + 1;
+
+  if (checkFields(currentStep)) {
+    // Obtener el valor del campo de entrada de nombre
+    var userName = $("#full-name").val();
+    // Actualizar el contenido del <span> con el nombre del usuario
+    $("#user-name").text(userName);
+
+    next_fs = $(this).parent().parent().next();
     $(current_fs).removeClass("show");
-    $(previous_fs).addClass("show");
+    $(next_fs).addClass("show");
+    $("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
 
-    var currentStep = current_fs.find(".form-control").first().data("step");
-    $("#progressbar li").eq($(".card2").index(current_fs)).removeClass("active");
-
-    if ($(".show").hasClass("first-screen")) {
-      $(".prev").css({ display: "none" });
+    // Oculta el paso 3 y muestra el paso 4 si el próximo paso es 4
+    if (nextStep === 4) {
+      $(".card2[data-step='3']").removeClass("show");
+      $(".card2[data-step='4']").addClass("show");
     }
-  });
+  }
+});
 
-  // Ejecuta la función de verificación al cargar la página
-  checkFields(1);
+// Maneja el clic en el botón "Prev"
+$(".prev").click(function () {
+  current_fs = $(".show");
+  previous_fs = $(".show").prev();
 
-  // Verifica campos cuando cambian
-  $(".form-control").on("input", function () {
-    var currentStep = $(this).data("step");
-    checkFields(currentStep);
-  });
+  $(current_fs).removeClass("show");
+  $(previous_fs).addClass("show");
+
+  var currentStep = current_fs.find(".form-control").first().data("step");
+  $("#progressbar li").eq($(".card2").index(current_fs)).removeClass("active");
+
+  if ($(".show").hasClass("first-screen")) {
+    $(".prev").css({ display: "none" });
+  }
+});
+
+// Ejecuta la función de verificación al cargar la página
+checkFields(1);
+
+// Verifica campos cuando cambian
+$(".form-control").on("input", function () {
+  var currentStep = $(this).data("step");
+  checkFields(currentStep);
+});
 });
 
 </script>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-  <!-- Code injected by live-server -->
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<!-- Code injected by live-server -->
 <script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
+// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+  (function () {
+    function refreshCSS() {
+      var sheets = [].slice.call(document.getElementsByTagName("link"));
+      var head = document.getElementsByTagName("head")[0];
+      for (var i = 0; i < sheets.length; ++i) {
+        var elem = sheets[i];
+        var parent = elem.parentElement || head;
+        parent.removeChild(elem);
+        var rel = elem.rel;
+        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+          var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+          elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+        }
+        parent.appendChild(elem);
+      }
+    }
+    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+    var address = protocol + window.location.host + window.location.pathname + '/ws';
+    var socket = new WebSocket(address);
+    socket.onmessage = function (msg) {
+      if (msg.data == 'reload') window.location.reload();
+      else if (msg.data == 'refreshcss') refreshCSS();
+    };
+    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+      console.log('Live reload enabled.');
+      sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+    }
+  })();
+}
+else {
+  console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
 </script>
 
-  <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="" title="" style="transform: translate(902px, 127px);"></div><!-- Code injected by live-server -->
+<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="" title="" style="transform: translate(902px, 127px);"></div><!-- Code injected by live-server -->
 <script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
+// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+  (function () {
+    function refreshCSS() {
+      var sheets = [].slice.call(document.getElementsByTagName("link"));
+      var head = document.getElementsByTagName("head")[0];
+      for (var i = 0; i < sheets.length; ++i) {
+        var elem = sheets[i];
+        var parent = elem.parentElement || head;
+        parent.removeChild(elem);
+        var rel = elem.rel;
+        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+          var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+          elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+        }
+        parent.appendChild(elem);
+      }
+    }
+    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+    var address = protocol + window.location.host + window.location.pathname + '/ws';
+    var socket = new WebSocket(address);
+    socket.onmessage = function (msg) {
+      if (msg.data == 'reload') window.location.reload();
+      else if (msg.data == 'refreshcss') refreshCSS();
+    };
+    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+      console.log('Live reload enabled.');
+      sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+    }
+  })();
+}
+else {
+  console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
 </script>
 <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="Regresa" title="" style="transform: translate(907px, 154px);" dir="ltr"></div><!-- Code injected by live-server -->
 <script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
+// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+  (function () {
+    function refreshCSS() {
+      var sheets = [].slice.call(document.getElementsByTagName("link"));
+      var head = document.getElementsByTagName("head")[0];
+      for (var i = 0; i < sheets.length; ++i) {
+        var elem = sheets[i];
+        var parent = elem.parentElement || head;
+        parent.removeChild(elem);
+        var rel = elem.rel;
+        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+          var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+          elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+        }
+        parent.appendChild(elem);
+      }
+    }
+    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+    var address = protocol + window.location.host + window.location.pathname + '/ws';
+    var socket = new WebSocket(address);
+    socket.onmessage = function (msg) {
+      if (msg.data == 'reload') window.location.reload();
+      else if (msg.data == 'refreshcss') refreshCSS();
+    };
+    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+      console.log('Live reload enabled.');
+      sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+    }
+  })();
+}
+else {
+  console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
 </script>
 <div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="Correo electr&amp;#xF3;nico" title="" style="transform: translate(910px, 16px);" dir="ltr"></div><!-- Code injected by live-server -->
 <script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
+// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+  (function () {
+    function refreshCSS() {
+      var sheets = [].slice.call(document.getElementsByTagName("link"));
+      var head = document.getElementsByTagName("head")[0];
+      for (var i = 0; i < sheets.length; ++i) {
+        var elem = sheets[i];
+        var parent = elem.parentElement || head;
+        parent.removeChild(elem);
+        var rel = elem.rel;
+        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+          var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+          elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+        }
+        parent.appendChild(elem);
+      }
+    }
+    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+    var address = protocol + window.location.host + window.location.pathname + '/ws';
+    var socket = new WebSocket(address);
+    socket.onmessage = function (msg) {
+      if (msg.data == 'reload') window.location.reload();
+      else if (msg.data == 'refreshcss') refreshCSS();
+    };
+    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+      console.log('Live reload enabled.');
+      sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+    }
+  })();
+}
+else {
+  console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
 </script>
-<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="" title="" style="transform: translate(650px, 421px);"></div></body></html>
+<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="" title="" style="transform: translate(650px, 421px);"></div><!-- Code injected by live-server -->
+<script>
+// <![CDATA[  <-- For SVG support
+if ('WebSocket' in window) {
+  (function () {
+    function refreshCSS() {
+      var sheets = [].slice.call(document.getElementsByTagName("link"));
+      var head = document.getElementsByTagName("head")[0];
+      for (var i = 0; i < sheets.length; ++i) {
+        var elem = sheets[i];
+        var parent = elem.parentElement || head;
+        parent.removeChild(elem);
+        var rel = elem.rel;
+        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+          var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+          elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+        }
+        parent.appendChild(elem);
+      }
+    }
+    var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+    var address = protocol + window.location.host + window.location.pathname + '/ws';
+    var socket = new WebSocket(address);
+    socket.onmessage = function (msg) {
+      if (msg.data == 'reload') window.location.reload();
+      else if (msg.data == 'refreshcss') refreshCSS();
+    };
+    if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+      console.log('Live reload enabled.');
+      sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+    }
+  })();
+}
+else {
+  console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+}
+// ]]>
+</script>
+<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="ahora puedes escribirnos por Whatsapp y E-mail" title="" style="transform: translate(978px, 453px);" dir="ltr"></div></body></html>
