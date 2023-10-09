@@ -273,7 +273,13 @@ p.highlighted {
     <!-- Header style -->
     <style>
          header{
-            background-color: white;
+            background-color: white; 
+        }
+        .menu-opened {
+            background-color: white !important;
+        }
+        .menu-opened .color-font {
+            color: black !important;
         }
         @media (max-width: 768px){
         header{
@@ -2842,42 +2848,39 @@ p.highlighted {
                                             /* scroll-behavior: auto; */
                                             background-repeat: no-repeat;
                                             ">
-                                            <header class="">
-                                                <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="
-    display: flex;
-    justify-content: center;
-">
-                                                    <a class="navbar-brand" href="#"><img src="imgs/logo.svg" alt=""></a>
-                                                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="/* border: 2px solid #ffd702; *//* border-color: rgb(255 215 2); */position: absolute !important;right: 0;/* top: 20px; */">
-                                                        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
-                                                    </button>
-                                                    
-                                                    <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
-                                                        <!-- <ul class="navbar-nav mr-auto"> -->
-                                                            <ul class="navbar-nav">
-                                                                <li class="nav-item active">
-                                                                    <a class="color-font " href="#section-portada-id">Home <span class="sr-only">(current)</span></a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="color-font " href="#section-lore-id">Our tours</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="color-font " href="#section-art-id">About us</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="color-font " href="#section-omnitools-id">Terms &amp; conditions</a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class=" color-font " href="#section-lore-id"><span class="short-title">Contact</span></a>
-                                                                </li>
-                                                                <li class="nav-item">
-                                                                    <a class="color-font" href="#section-lore-id"><span class="short-title">Buy now</span></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </nav>
-                                                </header><!-- Sección de encabezado -->
-                                                
+                                           <header class="">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: flex; justify-content: center;">
+            <a class="navbar-brand" href="#"><img src="imgs/logo.svg" alt=""></a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute !important;right: 0;">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="color-font" href="#section-portada-id">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="color-font" href="#section-lore-id">Our tours</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="color-font" href="#section-art-id">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="color-font" href="#section-omnitools-id">Terms &amp; conditions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="color-font" href="#section-lore-id"><span class="short-title">Contact</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="color-font" href="#section-lore-id"><span class="short-title">Buy now</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header><!-- Sección de encabezado -->
+
+                                        
                                                 
                                                 <!-- Sección de descuento -->
                                                 <section class="block" style="
@@ -3160,7 +3163,7 @@ p.highlighted {
                             </footer>
                         </main>  
                         <!-- Logica js                               -->
-                        <!-- header se esconde con el scroll -->
+                        <!-- header{ se esconde con el scroll -->
                         <script> 
                             window.addEventListener('scroll', function() {
                         var header = document.querySelector('header');
@@ -3191,6 +3194,23 @@ p.highlighted {
             lastScrollTop = scrollTop;
         });
     </script>
+    <!--Efecto de cambio background blaco a negro del header -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const menuButton = document.querySelector(".navbar-toggler");
+          const header = document.querySelector("header");
+
+          menuButton.addEventListener("click", function () {
+              if (header.classList.contains("menu-opened")) {
+                  header.classList.remove("menu-opened");
+              } else {
+                  header.classList.add("menu-opened");
+              }
+          });
+      });
+  </script>
     <!-- cod basura -->
+
+   
                                         </body>
 </html>
