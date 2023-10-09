@@ -1,12 +1,12 @@
 
-  .cont-arrow-down{
-    position: absolute;
+  .cont-arrow-down{    
     z-index: 1;
+    position: absolute;
     /* margin-bottom: 100px; */
     display: block;
     width: 100%;
     bottom: 20%;
-    right: 0;
+    right: 0
   }
   .div-btn-arrow-next{        
     position: relative;
@@ -47,7 +47,7 @@
     top: 0px;
     left: 50%;
     width: 46px;
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     height: 46px;
     margin-left: -23px;
     border: 1px solid rgb(255, 255, 255);
@@ -117,8 +117,11 @@
     /*margin-top: 100px;   */
     margin-top: -20px;  
     bottom: 10%;    
+    position: relative;
   }
-    .div-btn-arrow-next{         
+    .div-btn-arrow-next{  
+      margin-top: -30px;
+             
     }
     @-webkit-keyframes sdb03 {
         0% {
