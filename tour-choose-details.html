@@ -30,12 +30,17 @@
       font-weight: 700;
       margin: 0;
       }
+      h2, h3, h4, h5{
+        font-family: 'Lato', sans-serif;
+      }
+      
 
       main{
           background-size: cover;
       }
-      @media (max-width:768px) {            
+      @media (max-width:1000px) {            
           main{
+            background-size: auto !important;
               background-size: inherit;
           }
       }
@@ -393,9 +398,8 @@ p.highlighted {
       }
       #tab2:checked~#content-tab2{
           flex-wrap: wrap;
-          display: flex;
- 
-         
+          display: flex;        
+         justify-content: center;
       }
 
   </style>
@@ -2792,7 +2796,7 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
     display:none !important;
   }
   .color-font  {
-    color: #000;
+    color: #ffffff;
   padding: 24px;
   font-weight: bold;
   font-size: medium;
@@ -2800,17 +2804,20 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
   }
   .color-font:hover  {
     text-decoration: none;
-    color: #90a2c9;
+    color: #ffffff;;
+    border-bottom: 4px solid #ffd702;
     
   }
   .color-font span  {
     color: #000;
    
   text-align: center;
+  color: #ffd702;
+    text-align: center;
   }
-  .color-font span:hover  {
+  .color-font span:hover  {    
     text-decoration: none;
-    color: #636363;
+    
   }
   
   .ocr_text_div{
@@ -3193,14 +3200,85 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
   font-family: circular;
 
   src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
 }</style></head>
                                       
                                       <body>
                                           <main style="
-                                          background-image: url('https://img.freepik.com/fotos-premium/colombia-naturaleza-hermosos-paisajes_5913-2173.jpg?w=740');
+                                          background-image: url(imgs/portada.jpg);
                                           /* position: fixed; */
                                           background-attachment: fixed;
-                                          /* background-size: cover; */
+                                          background-size: contain;
                                           /* scroll-behavior: auto; */
                                           background-repeat: no-repeat;
                                           ">
@@ -3295,7 +3373,7 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                                                           margin-bottom: 5vh;
                                                           padding-left: 0;
                                                           margin-left: 0px;
-                                                          ">Purace Cauca</h1> <!-- Agregamos el nuevo título aquí -->
+                                                          ">Parque Nacional Natural Puracé</h1> <!-- Agregamos el nuevo título aquí -->
                                                           <!-- <h3>Unique Tour</h3>
                                                           <hr style="
   width: 8vw;
@@ -3388,11 +3466,11 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                                                   </span>
                                                   <div class="cont-day-activity">
                                                       <div class="cont_title_description">
-                                                          <h2 class="title_activity">Jungle Adventure Tour</h2>
-                                                          <p class="description_activity">Explore the beauty of the rainforest in this exciting tour. Enjoy activities like hiking, kayaking, and wildlife observation.</p>                                       
+                                                          <h2 class="title_activity">Puracé hot springs</h2>
+                                                          <p class="description_activity">Explorhe beauty of the rainforest in this exciting tour. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis soluta hic deserunt in, pariatur nesciunt distinctio voluptas. Distinctio ipsa voluptatum aliquam deleniti, dignissimos harum repellendus unde numquam temporibus. Deserunt, illo.</p>                                       
                                                       </div>
                                                       <span class="span_img_day">
-                                                          <img src="https://images2.alphacoders.com/107/1070004.jpg" alt="">
+                                                          <img src="imgs/pic1.jpg" alt="">
                                                       </span>
                                                   </div>
                                               </div>
@@ -3404,11 +3482,11 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                                                   </span>
                                                   <div class="cont-day-activity">
                                                       <div class="cont_title_description">
-                                                          <h2 class="title_activity">City Historical Tour</h2>
-                                                          <p class="description_activity">Immerse yourself in the city's rich history as you visit monuments and museums. This tour will take you through centuries of culture and heritage.</p>                                      
+                                                          <h2 class="title_activity">Condor Sightinhg</h2>
+                                                          <p class="description_activity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequatur deleniti, vitae eius, vel facere molestiae eaque, pariatur sequi laboriosam inventore quaerat officia in recusandae laudantium est. Sunt, dolor recusandae.</p>                                      
                                                       </div>
                                                       <span class="span_img_day">
-                                                          <img src="https://c4.wallpaperflare.com/wallpaper/198/23/635/river-panorama-colombia-islands-wallpaper-preview.jpg" alt="">
+                                                          <img src="imgs/pic2.jpg" alt="">
                                                       </span>
                                                   </div>
                                               </div>
@@ -3582,4 +3660,42 @@ if (!header.classList.contains('menu-open') && window.scrollY < 300) {
 </script>
   <!-- cod basura -->
 
-     </body></html>
+     <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="" title="" style="transform: translate(966px, 605px);"></div></body></html>
