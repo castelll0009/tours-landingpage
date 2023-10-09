@@ -3498,11 +3498,11 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                                                   </span>
                                                   <div class="cont-day-activity">
                                                       <div class="cont_title_description">
-                                                          <h2 class="title_activity">Beach Relaxation Tour</h2>
-                                                          <p class="description_activity">Relax on beautiful white sandy beaches with crystal-clear waters. This tour is perfect for those seeking peace and tranquility.</p>                                     
+                                                          <h2 class="title_activity">Share photos and experiences</h2>
+                                                          <p class="description_activity">Everybody wanna see pictures sandy beaches with crystal-clear waters. This tour is perfect for those seeking peace and tranquility.</p>                                     
                                                       </div>
                                                       <span class="span_img_day">
-                                                          <img src="https://c0.wallpaperflare.com/preview/200/576/1023/cartagena-colombia-trip-caribbean.jpg " alt="">
+                                                          <img src="imgs/pic3.jpeg" alt="">
                                                       </span>
                                                   </div>
                                               </div>
@@ -3658,44 +3658,30 @@ if (!header.classList.contains('menu-open') && window.scrollY < 300) {
         });
     });
 </script>
-  <!-- cod basura -->
+ 
+<!-- Screen Shot all tab :) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 
-     <!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
-<div id="loom-companion-mv3" ext-id="liecbddmkiiihnedobmlmillhodjkdmb"><section id="shadow-host-companion"></section></div><div id="mttContainer" class="bootstrapiso notranslate" data-html="true" data-original-title="" title="" style="transform: translate(966px, 605px);"></div></body></html>
+    <button id="capture">Capturar Página</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#capture").click(function() {
+                html2canvas(document.body, {
+                    onrendered: function(canvas) {
+                        var imgData = canvas.toDataURL('image/png');
+                        var img = new Image();
+                        img.src = imgData;
+                        document.body.appendChild(img);
+                    }
+                });
+            });
+        });
+    </script> -->
+
+     <!-- cod basura -->
+  
+
+
+</body></html>
