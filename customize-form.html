@@ -14,7 +14,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-      
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!--font google lato-->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,15 +35,33 @@
     padding: 5.6vw 14vw;
   }
   p{
+    font-family: 'Lato', sans-serif; /* Fuente Lato */
+    font-weight: lighter;
+    font-size: 16px; /* Tamaño de fuente para párrafos */
     color: white;
   }
-  h6,h2{
+  h6,h2,h3{
+    font-family: 'Lato', sans-serif; /* Fuente Lato */
+    
+    font-weight: bold; /* Peso de fuente en negrita */
+    font-size: 24px; /* Tamaño de fuente para h2 */
     color: white;
   }
   .text-danger-cara{
     color: #e4a808;
   }
   
+ 
+
+  
+  /* Estilos para etiquetas de formulario (labels) */
+  label {
+    font-family: 'Lato', sans-serif; /* Fuente Lato */
+    font-weight: bold; /* Peso de fuente en negrita */
+    font-size: 18px; /* Tamaño de fuente para etiquetas */
+    color: #333; /* Color de fuente para etiquetas */
+  }
+
 </style>
 <!-- Stylo de botones -->
 <style>
@@ -2067,11 +2089,10 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                         <li class="step0 "></li>
                         <li class="step0 "></li>
                       </ul>
-                      <h6 class="mb-5" style="
-    width: 100%;
-">Enter names and lastnames</h6>
-                      <h6 class="mb-5">Enter your email &amp; phone</h6>
-                      <h6 class="mb-5">Set departure &amp; short description</h6>                                                           
+                      <p class="mb-5" style="width: 100%;
+                        ">Enter names and lastnames</p>
+                      <p class="mb-5">Enter your email &amp; phone</p>
+                      <p class="mb-5">Set departure &amp; short description</p>                                                           
                     </div>
     
                   </div>
@@ -2100,8 +2121,12 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                       <div class="mb-2 col-2">  </div>
                     </div>
                     <div class="row px-3 mt-4">
-                      <div class="form-group mt-1 mb-1"> <input type="text" id="full-name" class="form-control valid" required="" data-step="1"> 
-                      <label class="ml-3 form-control-placeholder" for="full-name">Name</label> </div>
+                      <div class="form-group mt-1 mb-1">
+                      
+
+                        
+                      <input type="text" id="full-name" class="form-control valid" required="" data-step="1"> 
+                      <label class="ml-3 form-control-placeholder" for="full-name">   Name</label> </div>
                       
                     </div>
                     
