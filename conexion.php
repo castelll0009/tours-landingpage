@@ -1,8 +1,11 @@
 <?php
 // Configuración de la base de datos
+
+// $host = 'castell'; // Puede ser una dirección IP o un nombre de dominio
 $host = '162.241.61.135'; // Puede ser una dirección IP o un nombre de dominio
 $database = 'caracar1_caracara_db';
-$username = 'caracar1_castelll0009';
+// $username = 'caracar1_castelll0009';
+$username = 'caracar1_castell';
 $password = 'castell1997';
 
 try {
