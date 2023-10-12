@@ -1,6 +1,6 @@
 <?php
 
-include ('conexion.php');
+include ('database.php');
 
 $search = $_POST['search'];
 if(!empty($search)) {

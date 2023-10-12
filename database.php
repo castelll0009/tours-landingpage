@@ -1,10 +1,23 @@
 <?php
 // Configuración de la base de datos
 
-$connection = mysqli_connect(
-    '162.241.61.135', 'caracar1_castell', 'castell1997', 'caracar1_caracara_db'
-  ); 
+// $connection = mysqli_connect(
+//     '162.241.61.135', 'caracar1_castell', 'castell1997', 'caracar1_caracara_db'
+//   ); 
   
+
+
+$connection = mysqli_connect(
+  'localhost', 'root', 'password', 'caracara_db'
+);
+
+// for testing connection
+#if($connection) {
+#  echo 'database is connected';
+#}
+
+?>
+
 // $host = '162.241.61.135'; // Puede ser una dirección IP o un nombre de dominio
 // $database = 'caracar1_caracara_db';
 // $username = 'caracar1_castell';
@@ -12,11 +25,11 @@ $connection = mysqli_connect(
 
 // // Crear una conexión a la base de datos
 // $connection = mysqli_connect($host, $username, $password, $database);
-// if (!$connection) {
-//     die('Error de conexión: ' . mysqli_connect_error());
-// } else {
-//     echo 'Database is connected';
-// }
+if (!$connection) {
+    die('Error de conexión: ' . mysqli_connect_error());
+} else {
+    echo 'Database is connected';
+}
 
 // try {
 //     // Crear una conexión PDO a la base de datos
