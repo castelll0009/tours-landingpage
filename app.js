@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  $('#toggle-view').click(function() {
+    $('#tour-form, #tour-result').toggle();
+});
+
     // Configuraciones globales
     let edit = false;
   
