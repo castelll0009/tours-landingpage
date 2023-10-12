@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Tasks App</a>
+        <a class="navbar-brand" href="#">Manage tours</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,6 +27,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Eliminar Tarea</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Tours List</a>
+                </li>
                 <form class="form-inline my-2 my-lg-0">
                     <input name="search" id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
@@ -34,107 +37,77 @@
             </ul>
         </div>
     </nav>
+    <div class="container">
+        <div class="row p-4">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <!-- FORM TO ADD TOUR -->
+                        <form id="tour-form">
+                            <div class="form-group">
+                                <input type="text" id="title" placeholder="Title" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Description"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="price" placeholder="Price" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" id="group_size" placeholder="Group Size" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="duration" placeholder="Duration" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="date" id="date_departure" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="region" placeholder="Region" class="form-control">
+                            </div>
+                            <input type="hidden" id="tourId">
+                            <button type="submit" class="btn btn-primary btn-block text-center">
+                                Save Tour
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
     
-<div class="container">
-    <h1>Gestión de Tours</h1>
-    <ul class="nav nav-tabs" id="myTabs" role="tablist">
-        <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="create-tab" data-bs-toggle="tab" href="#create" role="tab" aria-controls="create" aria-selected="true">Crear Tour</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" id="edit-tab" data-bs-toggle="tab" href="#edit" role="tab" aria-controls="edit" aria-selected="false">Editar Tour</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class a="nav-link" id="delete-tab" data-bs-toggle="tab" href="#delete" role="tab" aria-controls="delete" aria-selected="false">Eliminar Tour</a>
-        </li>
-        <li class="nav-item" role="presentation">
-            <a class="nav-link" id="list-tab" data-bs-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false">Lista de Tours</a>
-        </li>
-    </ul>
-
-    <div class="tab-content" id="myTabContent">
-        <!-- Crear Tour -->
-        <div class="tab-pane fade show active" id="create" role="tabpanel" aria-labelledby="create-tab">
-            <form id="create-form" action="create_tour.php" method="post">
-                <div class="mb-3">
-                    <label for="title">Título</label>
-                    <input type="text" class="form-control" id="title" name="title" required>
+            <!-- TABLE  -->
+            <div class="col-md-7">
+                <div class="card my-4" id="tour-result" style="display: none;">
+                    <div class="card-body">
+                        <!-- SEARCH -->
+                        <ul id="container"></ul>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="description">Descripción</label>
-                    <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="price">Precio</label>
-                    <input type="number" class="form-control" id="price" name="price" required>
-                </div>
-                <div class="mb-3">
-                    <label for="group_size">Tamaño del grupo</label>
-                    <input type="number" class="form-control" id="group_size" name="group_size" required>
-                </div>
-                <div class="mb-3">
-                    <label for="duration">Duración</label>
-                    <input type="text" class="form-control" id="duration" name="duration" required>
-                </div>
-                <div class="mb-3">
-                    <label for="date_departure">Fecha de Salida</label>
-                    <input type="date" class="form-control" id="date_departure" name="date_departure" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Crear</button>
-            </form>
-        </div>
-
-        <!-- Editar Tour -->
-        <div class="tab-pane fade" id="edit" role="tabpanel" aria-labelledby="edit-tab">
-            <form id="edit-form" action="edit_tour.php" method="post">
-                <div class="mb-3">
-                    <label for="edit-tour-id">ID del Tour a Editar</label>
-                    <input type="number" class="form-control" id="edit-tour-id" name="edit-tour-id" required>
-                </div>
-                <!-- Campos de edición aquí -->
-                <!-- ... -->
-                <button type="submit" class="btn btn-primary">Editar</button>
-            </form>
-        </div>
-
-        <!-- Eliminar Tour -->
-        <div class="tab-pane fade" id="delete" role="tabpanel" aria-labelledby="delete-tab">
-            <form id="delete-form" action="delete_tour.php" method="post">
-                <div class="mb-3">
-                    <label for="delete-tour-id">ID del Tour a Eliminar</label>
-                    <input type="number" class="form-control" id="delete-tour-id" name="delete-tour-id" required>
-                </div>
-                <button type="submit" class="btn btn-danger">Eliminar</button>
-            </form>
-        </div>
-
-        <!-- Lista de Tours -->
-        <div class="tab-pane fade" id="list" role="tabpanel" aria-labelledby="list-tab">
-            <h2>Lista de Tours</h2>
-            <table id="tour-table" class="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Título</th>
-                        <th>Descripción</th>
-                        <th>Precio</th>
-                        <th>Tamaño del Grupo</th>
-                        <th>Duración</th>
-                        <th>Fecha de Salida</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Filas de tours se cargarán aquí mediante AJAX -->
-                </tbody>
-            </table>
+    
+                <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Title</td>
+                            <td>Description</td>
+                            <td>Price</td>
+                            <td>Group Size</td>
+                            <td>Duration</td>
+                            <td>Date Departure</td>
+                            <td>Region</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tours"></tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+  <!-- Jqury Ajax -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="app.js"></script>
 </body>
 </html>
 
