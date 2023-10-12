@@ -7,10 +7,11 @@ $username = 'caracar1_castell';
 $password = 'castell1997';
 
 // Crear una conexión a la base de datos
-$connection = mysqli_connect($host, $database, $username, $password);
-
-if($connection){
-    echo"Database is conected";
+$connection = mysqli_connect($host, $username, $password, $database);
+if (!$connection) {
+    die('Error de conexión: ' . mysqli_connect_error());
+} else {
+    echo 'Database is connected';
 }
 
 // try {

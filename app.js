@@ -8,12 +8,15 @@ $(document).ready(function() {
     $('#search').keyup(function() {
      
         let search = $('#search').val();
+        console.log(search);
         $.ajax({
+            
             url: 'task-search.php',
-            data: {search},
             type: 'POST',
+            data: {search: search},        
             success: function (response) {
-                console.log(responde);
+                
+                console.log(response);
             }
             })
         })     
