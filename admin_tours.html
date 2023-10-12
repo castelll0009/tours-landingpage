@@ -44,33 +44,35 @@
                 <div class="card">
                     <div class="card-body">
                         <!-- FORM TO ADD TOUR -->
-                        <form id="tour-form">
-                            <div class="form-group">
-                                <input type="text" id="title" placeholder="Title" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Description"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <input type="number" id="price" placeholder="Price" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="number" id="group_size" placeholder="Group Size" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="duration" placeholder="Duration" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="date" id="date_departure" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="region" placeholder="Region" class="form-control">
-                            </div>
-                            <input type="hidden" id="tourId">
-                            <button type="submit" class="btn btn-primary btn-block text-center">
-                                Save Tour
-                            </button>
-                        </form>
+                       <!-- FORM TO ADD TOUR -->
+<form id="tour-form">
+    <div class="form-group">
+        <input type="text" id="title" placeholder="Title" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Description" required></textarea>
+    </div>
+    <div class="form-group">
+        <input type="number" id="price" placeholder="Price" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <input type="number" id="group_size" placeholder="Group Size" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <input type="text" id="duration" placeholder="Duration" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <input type="date" id="date_departure" class="form-control" required>
+    </div>
+    <div class="form-group">
+        <input type="text" id="region" placeholder="Region" class="form-control" required>
+    </div>
+    <input type="hidden" id="tourId">
+    <button type="submit" class="btn btn-primary btn-block text-center">
+        Save Tour
+    </button>
+</form>
+
                     </div>
                 </div>
             </div>
