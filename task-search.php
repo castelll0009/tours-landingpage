@@ -13,15 +13,15 @@ if(!empty($search)) {
   
   $json = array();
   while ($row = mysqli_fetch_array($result)) {
-      $json[] = array(
-          'id' => $row['id'],
+      $json[] = array(        
           'title' => $row['title'],
           'description' => $row['description'],
           'price' => $row['price'],
           'group_size' => $row['group_size'],
           'duration' => $row['duration'],
           'date_departure' => $row['date_departure'],
-          'region' => $row['region']
+          'region' => $row['region'],
+          'id' => $row['id']
       );
   }
   $jsonstring = json_encode($json);
