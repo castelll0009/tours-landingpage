@@ -14,8 +14,8 @@ $connection = mysqli_connect($host, $username, $password, $database);
 
 
 //for testing connection
-if($connection) {
-  echo 'database is connected';
- }
+// if($connection) {
+//   echo 'database is connected';
+//  }
  
 ?>
