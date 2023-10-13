@@ -10,15 +10,15 @@ margin: 0px;
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <!-- Agrega los enlaces a los estilos de Bootstrap y jQuery -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><style type="text/css" id="operaUserStyle"></style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
 <!--font google lato-->
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&amp;display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -542,7 +542,7 @@ margin: 0px;
   
   /* Cambiar el color del botón "Go Back" al pasar el mouse */
   .prev:hover {
-    color: #ffffff !important;
+    color: #e5a007 !important;
   }
   
   /* Cambiar el color de fondo del progreso activo */
@@ -551,7 +551,7 @@ margin: 0px;
   }
 </style><script>
   window.console = window.console || function(t) {};
-</script><style id="mttstyle">
+</script><style type="text/css" id="operaUserStyle"></style><style id="mttstyle">
   #mttContainer {
     left: 0 !important;
     top: 0 !important;
@@ -2094,8 +2094,7 @@ margin: 0px;
                                             ">
                                             <div class="row text-center justify-content-center px-3" style="
                                             padding: 0px;
-                                            ">
-                                            <p class="prev text-danger-cara" style="display: block;"><span class="fa fa-long-arrow-left"> Go Back</span></p>
+                                            ">                                            
                                             <h3 class="mt-4" style="margin: 0px !important;padding-bottom: 30px;color: #e4a808;font-size: xx-large;width: 100%;text-align: left;">let's get going</h3>
                                           </div>
                                           <div class="col-md-6" style="
@@ -2112,7 +2111,7 @@ margin: 0px;
                                           <div class="card1" style="/* margin-left: 50px; */border: none;margin-left: 100px;">
                                             <ul id="progressbar" class="text-center" style="z-index: 1;margin-left: 0px;position: absolute;left: 0px;">
                                               <li class="active step0"></li>
-                                              <li class="step0 "></li>
+                                              <li class="step0"></li>
                                               <li class="step0 "></li>
                                               <li class="step0 "></li>
                                             </ul>
@@ -2132,16 +2131,16 @@ margin: 0px;
                                         position: relative;
                                         border: 0;
                                         margin-bottom: 0px !important;
-                                        ">You're Getting ready <span id="user-name" class="text-danger-cara">Adventuress</span> Congratulations.</h2>
+                                        ">You're Getting ready <span id="user-name" class="text-danger-cara">Jane doe</span> Congratulations.</h2>
                                       </div>
                                       
                                       <div class="cont_rigth" style="flex: 1; /* Hace que cada elemento ocupe el 50% del ancho disponible */display: inline-flex;background: white;padding: 5vw;/* text-align: left; */flex-direction: column;height: -webkit-fill-available;min-width: 300px;/* justify-content: space-between; */border-radius: 5px;">
+                                        <p id="btn-goback" class="prev text-danger-cara" style="color: rgb(73, 80, 87); position: relative; display: none; left: 0px; top: 0px; text-align: left; font-size: smaller;"><span class="fa fa-long-arrow-left"> Go Back</span></p>
                                         <!-- <button type="button" class="btn btn-secondary prev" style="position: absolute; top: 10px; right: 10px;">Atrás</button> -->
-                                        <div class="card2 show first-screen ml-2" style="
+                                        <div data-step="1" class="card2 first-screen ml-2 show" style="
                                         min-width: 70px !important;
                                         ">
-                                        <div class="row text-center px-3 mr-2" style="">
-                                          <p class="prev text-danger-cara" style="display: block; color: black;"><span class="fa fa-long-arrow-left"> Go Back</span></p>
+                                        <div class="row text-center px-3 mr-2" style="">                                          
                                           <div class="mb-2 col-2">  </div>
                                           <div class="mb-2 col-2"> <span class="fa fa-facebook social"></span> </div>
                                           <div class="mb-2 col-2"> <span class="fa fa-linkedin social"></span> </div>
@@ -2162,7 +2161,7 @@ margin: 0px;
                                             </div>
                                             <input type="text" id="full-name" class="form-control valid" placeholder="Name" required="" data-step="1">
                                             <!-- <label class="ml-3 form-control-placeholder" for="full-name">Name</label> -->
-                                          </input>
+                                          
                                           
                                         </div>
                                         
@@ -2184,7 +2183,7 @@ margin: 0px;
                                       </div>
                                       
                                     </div>
-                                    <div class="card2 ml-2">
+                                    <div data-step="2" class="card2 ml-2">
                                       
                                       <div class="row px-3 mt-4">
                                         <div class="form-group mt-1 mb-1"> 
@@ -2193,7 +2192,7 @@ margin: 0px;
                                               <i class="fa fa-envelope"></i>
                                             </span>
                                           </div>
-                                          <input type="text" id="email" class="form-control" placeholder="Email" required data-step="2">
+                                          <input type="text" id="email" class="form-control" placeholder="Email" required="" data-step="2">
                                           
                                           <!-- <label class="ml-3 form-control-placeholder" for="email">Email</label>  -->
                                         </div>
@@ -2213,7 +2212,7 @@ margin: 0px;
                                       </div>                                              
                                     </div>
                                     
-                                    <div class="card2 ml-2" id="id-preview">
+                                    <div data-step="3" class="card2 ml-2" id="id-preview">
                                       <div class="row px-3 mt-3">
                                         
                                         <div class="form-group mt-1 mb-1">
@@ -2237,7 +2236,7 @@ margin: 0px;
                                           </div>
                                           <textarea id="description" class="form-control" placeholder="Description" required="" data-step="3" rows="4"></textarea>
                                           <!-- <label class="ml-3 form-control-placeholder" for="description">Description</label> -->
-                                          <div  class="next-button final-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
+                                          <div class="next-button final-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
                                         </div> 
                                       </div>
                                       
@@ -2245,7 +2244,7 @@ margin: 0px;
                                     </div>
                                     
                                     <!-- Date departure  and description -->
-                                    <div class=" card2 ml-2 " id="final-step-id" style="background:white;">
+                                    <div data-step="4" class="card2 ml-2" id="final-step-id" style="background:white;">
                                       
                                       <div class="row px-3 mt-2 mb-4 text-center">
                                         <h2 class="col-12 text-danger-cara"><strong>Success !</strong></h2>
@@ -2318,12 +2317,12 @@ margin: 0px;
                                   }
                                   
                                   // Maneja el clic en el botón "Next"
-                                  $(".next-button").click(function () {
-                                    current_fs = $(this).parent().parent();
-                                    var currentStep = current_fs.find(".form-control").first().data("step");
-                                    var nextStep = currentStep + 1;
+                                  $(".next-button").click(function () {  
+                                                                                                      
+                                    current_fs = $(this).parent().parent();                                   
+                                    var nextStep = mostrarPasoActual() + 1;
                                     
-                                    if (checkFields(currentStep)) {
+                                    if ( checkFields(mostrarPasoActual()) ) {
                                       // Obtener el valor del campo de entrada de nombre
                                       var userName = $("#full-name").val();
                                       // Actualizar el contenido del <span> con el nombre del usuario
@@ -2334,7 +2333,7 @@ margin: 0px;
                                         $(next_fs).addClass("show");
                                         $("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
                                         
-                                        mostrarPasoActual();
+                                        configurarGoBack();  
                                       }else{
                                         
                                       }
@@ -2352,14 +2351,9 @@ margin: 0px;
                                       }
                                     });
                                     
-                                    // Ejecuta la función de verificación al cargar la página
-                                    checkFields(1);
+                                   
                                     
-                                    // Verifica campos cuando cambian
-                                    $(".form-control").on("input", function () {
-                                      var currentStep = $(this).data("step");
-                                      checkFields(currentStep);
-                                    });
+                                   
                                   });
                                   
                                   // control de pasos adelante y atras
@@ -2376,49 +2370,41 @@ margin: 0px;
                                       else{
                                         break;
                                       }
-                                    }
+                                    }                                  
                                     
                                     console.log("El paso actual es: " + pasoActual);
                                     return pasoActual;                                    
                                   }
 
-                                  mostrarPasoActual();
-                                  mostrarGoBack();
-                                  function mostrarGoBack(){
-                                    if (mostrarPasoActual() ===1 ) {    
-                                    
-                                    $(document).ready(function() {
-                                      $("p.prev").css("display", "none");
-                                    });
-                                    
-                                  }else{
-                                    $(document).ready(function() {
-                                      $("p.prev").css("display", "block");
-                                    });
-                                  }
-                                  }
+                                  mostrarPasoActual();  
+                                  configurarGoBack(); 
+                                  function configurarGoBack(){
+                                    if(mostrarPasoActual() ===1 || mostrarPasoActual() ===4){
+                                      $(document).ready(function() {
+                                        $("p.prev").css("display", "none");
+                                      });
+                                    }else{
+                                      $(document).ready(function() {
+                                        $("p.prev").css("display", "block");
+                                      });
+                                    }                                         
+                                  }                        
                              
                                   // Maneja el clic en el botón "Prev" (incluyendo el botón "Go Back")
-                                  $(".prev").click(function () {
-                                    current_fs = $(this).closest(".card2");
-                                    currentStep = current_fs.find(".form-control").first().data("step");
-                                    previous_fs = current_fs.prev();
-                                    prevStep = currentStep - 1;
-                                    
-                                    
-                                    // Oculta el div con id "id-preview"
-                                    $("#id-preview").removeClass("show");
-                                    
-                                    
-                                    
-                                    if (current_fs.hasClass("final-step")) {
-                                      // Estamos en la última sección
-                                      $(".next-button").css({ display: "block" });
-                                    }
-                                    
-                                    $(current_fs).removeClass("show");
-                                    $(previous_fs).addClass("show");
-                                    $("#progressbar li").eq(prevStep - 1).removeClass("active");
+                                  $(".prev").click(function () {     
+                                    var pasoActual = mostrarPasoActual();  
+                                    pasoActual = pasoActual -1;                                      
+                                     // Actualiza el indicador de progreso
+                                    // $("#progressbar li").removeClass("active");
+                                    $("#progressbar li:eq(" + pasoActual + ")").removeClass("active");
+                                    $("#progressbar li:eq(" + (pasoActual-1) + ")").addClass("active");
+
+                                    // Oculta todas las tarjetas
+                                    $(".card2").removeClass("show");                                    
+                                    // // Muestra solo la tarjeta correspondiente al data-step
+                                    $(".card2[data-step=" + (mostrarPasoActual() ) + "]").addClass("show");
+                                                                                                                                              
+                                    configurarGoBack();                                                           
                                   });
                                   
                                   
@@ -2429,4 +2415,6 @@ margin: 0px;
                                 
                                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
                                 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-                              </body></html>
+                              
+
+</body></html>
