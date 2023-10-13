@@ -25,6 +25,9 @@
 
 <!-- global Styles -->
 <style>
+  #description{
+    min-width: 100%;
+  }
   @media (max-width: 768px) {
     main{
       padding: 5.6vw 5vw !important; 
@@ -539,7 +542,7 @@ select:focus {
 
       /* Cambiar el color del botón "Go Back" al pasar el mouse */
       .prev:hover {
-          color: #087ac4 !important;
+          color: #ffffff !important;
       }
 
       /* Cambiar el color de fondo del progreso activo */
@@ -2133,10 +2136,12 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                 </div>
 
                 <div class="cont_rigth" style="flex: 1; /* Hace que cada elemento ocupe el 50% del ancho disponible */display: inline-flex;background: white;padding: 5vw;/* text-align: left; */flex-direction: column;height: -webkit-fill-available;min-width: 300px;/* justify-content: space-between; */border-radius: 5px;">
+                  <!-- <button type="button" class="btn btn-secondary prev" style="position: absolute; top: 10px; right: 10px;">Atrás</button> -->
                   <div class="card2 show first-screen ml-2" style="
     min-width: 70px !important;
 ">
                     <div class="row text-center px-3 mr-2" style="">
+                      <p class="prev text-danger-cara" style="display: none;"><span class="fa fa-long-arrow-left"> Go Back</span></p>
                       <div class="mb-2 col-2">  </div>
                       <div class="mb-2 col-2"> <span class="fa fa-facebook social"></span> </div>
                       <div class="mb-2 col-2"> <span class="fa fa-linkedin social"></span> </div>
@@ -2180,6 +2185,7 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                     
                   </div>
                   <div class="card2 ml-2">
+                    
                       <div class="row px-3 mt-4">
                           <div class="form-group mt-1 mb-1"> 
                             <div class="input-group-prepend ">
@@ -2187,7 +2193,8 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                                 <i class="fa fa-envelope"></i>
                               </span>
                             </div>
-                            <input type="text" id="email" class="form-control" placeholder="Email" required="" data-step="2"> 
+                            <input type="text" id="email" class="form-control" placeholder="Email" required data-step="2">
+
                               <!-- <label class="ml-3 form-control-placeholder" for="email">Email</label>  -->
                             </div>
                         </div>
@@ -2230,16 +2237,16 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                             </div>
                               <textarea id="description" class="form-control" placeholder="Description" required="" data-step="3" rows="4"></textarea>
                               <!-- <label class="ml-3 form-control-placeholder" for="description">Description</label> -->
-                              <div class="next-button final-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
+                              <div  class="next-button final-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
                           </div> 
                       </div>
                       
                       
                   </div>
 
-                  <div class="card2 ml-2 " id="final-step-id" style="
-    background: white;
-">
+                  <!-- Date departure  and description -->
+                  <div class=" card2 ml-2 " id="final-step-id" style="background:white;">
+
                     <div class="row px-3 mt-2 mb-4 text-center">
                       <h2 class="col-12 text-danger-cara"><strong>Success !</strong></h2>
                       <div class="col-12 text-center">
@@ -2292,10 +2299,8 @@ $(document).ready(function () {
   });
 
   $(".final-button").click(function() {
-    // Oculta el div con id "id-preview"
-    $("#id-preview").removeClass("show");
-    // Muestra el div con id "final-step-id"
-    $("#final-step-id").addClass("show");
+  
+    
   });
 // Función para verificar los campos en el paso actual
 function checkFields(step) {
@@ -2329,29 +2334,49 @@ $(".next-button").click(function () {
     $(next_fs).addClass("show");
     $("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
 
-    // Oculta el paso 3 y muestra el paso 4 si el próximo paso es 4
-    if (nextStep === 4) {
-      $(".card2[data-step='3']").removeClass("show");
-      $(".card2[data-step='4']").addClass("show");
-    }
+   
+  }else{
+
   }
+    // Oculta el div con id "id-preview"
+    var lastStepActive = $("#progressbar li:last").hasClass("active");
+
+    // Muestra la última card2 solo si el último círculo de step0 tiene la clase 'active'
+    if (lastStepActive) {
+      $("#id-preview").removeClass("show");
+        // Muestra el div con id "final-step-id"
+        $("#final-step-id").addClass("show");
+    } else {
+      
+      
+    }
 });
 
-// Maneja el clic en el botón "Prev"
+// Maneja el clic en el botón "Prev" (incluyendo el botón "Go Back")
 $(".prev").click(function () {
-  current_fs = $(".show");
-  previous_fs = $(".show").prev();
+  current_fs = $(this).closest(".card2");
+  currentStep = current_fs.find(".form-control").first().data("step");
+  previous_fs = current_fs.prev();
+  prevStep = currentStep - 1;
+
+  // Oculta el div con id "id-preview"
+  $("#id-preview").removeClass("show");
+
+  if (prevStep === 1) {
+    // Estamos en la primera sección, oculta el botón "Go Back"
+    $(this).css({ display: "none" });
+  }
+
+  if (current_fs.hasClass("final-step")) {
+    // Estamos en la última sección
+    $(".next-button").css({ display: "block" });
+  }
 
   $(current_fs).removeClass("show");
   $(previous_fs).addClass("show");
-
-  var currentStep = current_fs.find(".form-control").first().data("step");
-  $("#progressbar li").eq($(".card2").index(current_fs)).removeClass("active");
-
-  if ($(".show").hasClass("first-screen")) {
-    $(".prev").css({ display: "none" });
-  }
+  $("#progressbar li").eq(prevStep - 1).removeClass("active");
 });
+
 
 // Ejecuta la función de verificación al cargar la página
 checkFields(1);
@@ -2362,6 +2387,9 @@ $(".form-control").on("input", function () {
   checkFields(currentStep);
 });
 });
+
+// validacion gmail
+
 
 </script>
       
