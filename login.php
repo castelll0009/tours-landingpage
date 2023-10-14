@@ -1,3 +1,22 @@
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    
+    // Verifica las credenciales del usuario (debes usar una base de datos para esto)
+    if ($username === 'aaa' && $password === '111') {
+        $_SESSION['user'] = $username;
+        header('Location: admin_tour.php');
+        exit();
+    } else {
+        $error = "Credenciales incorrectas. Inténtalo de nuevo.";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,18 +88,18 @@ span.psw {
 <body>
 
 <h2>Login Form</h2>
-
+<?php if (isset($error)) { echo "<p>$error</p>"; } ?>
 <form id="login-form" method="post" action="login.php">
   <!-- <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
   </div> -->
   
   <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" id="login_username" placeholder="Enter Username" name="uname" required>
+    <label for="username"><b>Username</b></label>
+    <input type="text" id="username" placeholder="Enter Username" name="username" required>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" id="login_password" name="psw" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" id="password" name="password" required>
         
     <button type="submit">Login</button>
     <!-- <label>
