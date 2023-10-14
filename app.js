@@ -147,50 +147,32 @@ $(document).ready(function() {
     });
   }
   
-  // Obtener un Tour individual por su ID
-  // $(document).on('click', '.tour-item', function(e) {
-  //     const tourId = $(this).data('tourid'); // Usar 'data-tourid' en lugar de 'tourId'
-  //     $.post('tour-single.php', { id: tourId }, (response) => {
-  //         const tour = (response);
-  //         console.log(tour);
-  //         console.log(tour.title);
-  
-  //         $('#title').val(tour.title);
-  //         $('#description').val(tour.description);
-  //         $('#price').val(tour.price);
-  //         $('#group_size').val(tour.group_size);
-  //         $('#duration').val(tour.duration);
-  //         $('#date_departure').val(tour.date_departure);
-  //         $('#region').val(tour.region);
-  //         $('#tourId').val(tourId);
-  //         edit = true;
-  //     });
-  //     e.preventDefault();
-  // });
-  // Obtener un Tour individual por su ID y llenar el formulario
-  $(document).on('click', '.tour-item', function(e) {
-    e.preventDefault();
-    const tourId = $(this).data('tourid'); // Obtén el ID del atributo data-tourid
-    const row = $(this).closest('tr'); // Encuentra la fila padre
-    const title = row.find('td:eq(1)').text().trim();
-    const description = row.find('td:eq(2)').text(); // Obtiene la descripción de la tercera columna
-    const price = row.find('td:eq(3)').text(); // Obtiene el precio de la cuarta columna
-    const group_size = row.find('td:eq(4)').text(); // Obtiene el tamaño del grupo de la quinta columna
-    const duration = row.find('td:eq(5)').text(); // Obtiene la duración de la sexta columna
-    const date_departure = row.find('td:eq(6)').text(); // Obtiene la fecha de salida de la séptima columna
-    const region = row.find('td:eq(7)').text(); // Obtiene la región de la octava columna
-    
-    // Llena los campos del formulario con los valores recuperados
-    $('#title').val(title);
-    $('#description').val(description);
-    $('#price').val(price);
-    $('#group_size').val(group_size);
-    $('#duration').val(duration);
-    $('#date_departure').val(date_departure);
-    $('#region').val(region);
-    $('#tourId').val(tourId);
-    edit = true;
+// Obtener un Tour individual por su ID
+$(document).on('click', '.tour-item', function(e) {
+  const tourId = $(this).data('tourid'); // Usar 'data-tourid' en lugar de 'tourId'
+  $.post('tour-single.php', { id: tourId }, (response) => {
+      const tour = (response);
+      console.log(tour);
+      console.log(tour.title);
+
+      $('#title').val(tour.title);
+      $('#description').val(tour.description);
+      $('#price').val(tour.price);
+      $('#group_size').val(tour.group_size);
+      $('#duration').val(tour.duration);
+      $('#date_departure').val(tour.date_departure);
+      $('#region').val(tour.region);
+      $('#tourId').val(tourId);
+      
+      // Add the image element with the image path
+      const image = $('<img>').attr('src', tour.image_path); // Replace 'image_path' with the actual property name for your image path in the 'tour' object
+      $('#image-container').empty().append(image); // Replace 'image-container' with the ID of the container where you want to display the image
+      
+      edit = true;
   });
+  e.preventDefault();
+});
+
   
   
   
@@ -275,6 +257,7 @@ function fetchTourPackageDetails(tourId) {
 
     // Now, populate the placeholders with the retrieved tour details
     $('#tour-title').text(tour.title);
+    $('main').css('background-image', `url(${tour.image_path})`);
     $('#tour-description').text(tour.description);    
     // Add similar lines for other elements
   });

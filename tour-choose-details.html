@@ -41,8 +41,8 @@
       }
       @media (max-width:1000px) {            
           main{
-            background-size: auto !important;
-              background-size: inherit;
+            /* background-size: auto !important;
+              background-size: inherit; */
           }
       }
       /* Importa la fuente "Lato" desde Google Fonts */
@@ -3276,13 +3276,13 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                                       
                                       <body>
                                           <main style="
-                                          background-image: url(imgs/portada.jpg);
-                                          /* position: fixed; */
-                                          background-attachment: fixed;
-                                          background-size: contain;
-                                          /* scroll-behavior: auto; */
+                                          background-image: url(imgs/portada.jpg); 
+                                          background-attachment: fixed;background-size: cover;
+                                          background-position: center center;
                                           background-repeat: no-repeat;
-                                          ">
+                                          min-height: 100vh;
+                                          width: 100%;
+                                      ">
                                          <header class="transparent-header">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: flex; justify-content: center;">
           <a class="navbar-brand" href="#"><img src="imgs/logo.svg" alt=""></a>
