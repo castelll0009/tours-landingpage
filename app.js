@@ -125,6 +125,7 @@ $('#search').keyup(function() {
 										</svg>
 										${tour.region}
 									</p>
+                  <a href="tour-choose-details.html?tourId=${tour.id}">View Details</a>
 								</div>
 							<div class="swiper-slide-shadow-left swiper-slide-shadow-coverflow" style="opacity: 0; transition-duration: 0ms;"></div><div class="swiper-slide-shadow-right swiper-slide-shadow-coverflow" style="opacity: 0.00208217; transition-duration: 0ms;"></div></div>`;
           });
