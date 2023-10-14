@@ -34,10 +34,16 @@ $(document).ready(function() {
               </td>
               <td>${tour.description}</td>
               <td>${tour.price}</td>
+              <td>
+              <span class="img-form" style="display: block; min-width: 150px;">
+              <img src="${tour.image_path}" alt="Tour Image" style="display:block; width:100%"> 
+              </span>
+             </td>
               <td>${tour.group_size}</td>
               <td>${tour.duration}</td>
               <td>${tour.date_departure}</td>
               <td>${tour.region}</td>
+              
               <td>
               <button class="tour-delete btn btn-danger" data-tourid="${tour.id}">
               Delete
@@ -56,27 +62,27 @@ $(document).ready(function() {
     }
   });
   
-  
-  $('#tour-form').submit(e => {
-    e.preventDefault();
-    const postData = {
-      title: $('#title').val(),
-      description: $('#description').val(),
-      price: $('#price').val(),
-      group_size: $('#group_size').val(),
-      duration: $('#duration').val(),
-      date_departure: $('#date_departure').val(),
-      region: $('#region').val(),
-      id: $('#tourId').val()
-    };
-    const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
-    $.post(url, postData, (response) => {
-      console.log(response);
-      $('#tour-form').trigger('reset');
-      fetchTours();
-      edit = false; // Restablecer el modo de edición a falso
-    });
-  });
+  //OLD TOUR FORM
+  // $('#tour-form').submit(e => {
+  //   e.preventDefault();
+  //   const postData = {
+  //     title: $('#title').val(),
+  //     description: $('#description').val(),
+  //     price: $('#price').val(),
+  //     group_size: $('#group_size').val(),
+  //     duration: $('#duration').val(),
+  //     date_departure: $('#date_departure').val(),
+  //     region: $('#region').val(),
+  //     id: $('#tourId').val()
+  //   };
+  //   const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
+  //   $.post(url, postData, (response) => {
+  //     console.log(response);
+  //     $('#tour-form').trigger('reset');
+  //     fetchTours();
+  //     edit = false; // Restablecer el modo de edición a falso
+  //   });
+  // });
   
   // Recuperar la lista de Tours
   function fetchTours() {
@@ -100,10 +106,16 @@ $(document).ready(function() {
           </td>
           <td>${tour.description}</td>
           <td>${tour.price}</td>
+          <td>
+            <span class="img-form" style="display: block; min-width: 150px;">
+            <img src="${tour.image_path}" alt="Tour Image" style="display:block; width:100%"> 
+            <span>
+          </td>
           <td>${tour.group_size}</td>
           <td>${tour.duration}</td>
           <td>${tour.date_departure}</td>
           <td>${tour.region}</td>
+          
           <td>
           <button class="tour-delete btn btn-danger" data-tourid="${tour.id}">
           Delete
@@ -112,20 +124,20 @@ $(document).ready(function() {
           </tr>
           `;
           
-          // Insertar Swiper Slider
+          // Insertar Swiper Slider          
+													
           template_index_tours +=`
-          <div tour-id='${tour.id}' class="swiper-slide swiper-slide--five swiper-slide-visible swiper-slide-active" role="group" aria-label="5 / 5" data-swiper-slide-index="4" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -0.208217px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; margin-right: 60px;">								
+          <div tour-id='${tour.id}' 
+          style="background: linear-gradient(to top, rgb(15, 32, 39), rgba(32, 58, 67, 0), rgba(44, 83, 100, 0)), url(${tour.image_path}) 50% 50% / cover no-repeat !important;"
+           class="swiper-slide   swiper-slide-visible swiper-slide-active" role="group" aria-label="5 / 5" data-swiper-slide-index="4" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -0.208217px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; margin-right: 60px;">								       
           <span>${tour.title}</span>
           <div>
-          <h2>${tour.description}</h2>
-          <p class="p-ubication">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path>
-          </svg>
-          ${tour.region}
-          </p>
-          <a href="tour-choose-details.html?tourId=${tour.id}">View Details</a>
+            <h2>${tour.description}</h2>
+            <p class="p-ubication">
+              <span><img src="${tour.image_path}" alt=""></span>                              
+            ${tour.region}
+            </p>
+            <a href="tour-choose-details.html?tourId=${tour.id}">View Details</a>
           </div>
           <div class="swiper-slide-shadow-left swiper-slide-shadow-coverflow" style="opacity: 0; transition-duration: 0ms;"></div><div class="swiper-slide-shadow-right swiper-slide-shadow-coverflow" style="opacity: 0.00208217; transition-duration: 0ms;"></div></div>`;
         });
@@ -205,6 +217,47 @@ $(document).ready(function() {
     console.error('No valid tourId found in the URL.');
   }
   
+  // ... Form  Data 
+
+$('#tour-form').submit(e => {
+  e.preventDefault();
+
+  const formData = new FormData(); // Create a FormData object
+
+  // Add form data to the FormData object
+  formData.append('title', $('#title').val());
+  formData.append('description', $('#description').val());
+  formData.append('price', $('#price').val());
+  formData.append('group_size', $('#group_size').val());
+  formData.append('duration', $('#duration').val());
+  formData.append('date_departure', $('#date_departure').val());
+  formData.append('region', $('#region').val());
+  formData.append('id', $('#tourId').val());
+
+  // Add the image to the FormData object
+  const imageInput = document.getElementById('image');
+  formData.append('image', imageInput.files[0]);
+
+  const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
+
+  // Send the FormData object instead of postData
+  $.ajax({
+      url: url,
+      type: 'POST',
+      data: formData,
+      contentType: false,
+      processData: false, // Set processData to false when sending FormData
+      success: function (response) {
+          console.log(response);
+          $('#tour-form').trigger('reset');
+          fetchTours();
+          edit = false;
+      },
+  });
+});
+
+// ...
+
   
 });
 

@@ -82,7 +82,7 @@
                     <div class="card-body">
                         <!-- FORM TO ADD TOUR -->
                        <!-- FORM TO ADD TOUR -->
-<form id="tour-form">
+<!-- <form id="tour-form">
     <div class="form-group">
         <input type="text" id="title" placeholder="Title" class="form-control" required="">
     </div>
@@ -108,6 +108,37 @@
     <button type="submit" class="btn btn-primary btn-block text-center">
         Save Tour
     </button>
+</form> -->
+<form id="tour-form" enctype="multipart/form-data">
+  <div class="form-group">
+      <input type="text" id="title" placeholder="Title" class="form-control" required>
+  </div>
+  <div class="form-group">
+      <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Description" required></textarea>
+  </div>
+  <div class="form-group">
+      <input type="number" id="price" placeholder="Price" class="form-control" required>
+  </div>
+  <div class="form-group">
+      <input type="number" id="group_size" placeholder="Group Size" class a="form-control" required>
+  </div>
+  <div class="form-group">
+      <input type="text" id="duration" placeholder="Duration" class="form-control" required>
+  </div>
+  <div class="form-group">
+      <input type="date" id="date_departure" class="form-control" required>
+  </div>
+  <div class="form-group">
+      <input type="text" id="region" placeholder="Region" class="form-control" required>
+  </div>
+  <div class="form-group">
+      <label for="image">Upload Image:</label>
+      <input type="file" id="image" class="form-control" accept="image/*" required>
+  </div>
+  <input type="hidden" id="tourId" value="4">
+  <button type="submit" class="btn btn-primary btn-block text-center">
+      Save Tour
+  </button>
 </form>
 
                     </div>
@@ -139,132 +170,16 @@
     font-family: 'Lato';
 ">Description</td>
                                 <td>Price</td>
+                                <td>Image</td> <!-- New column for the image -->
                                 <td>Group Size</td>
                                 <td>Duration</td>
                                 <td>Date Departure</td>
                                 <td>Region</td>
+                             
                             </tr>
                         </thead>
                         <tbody id="tours" style="min-height: 100vh;border: 1px solid #dbdbdb !important;">
-              <tr data-tourid="4">
-                <td>4</td>
-                <td>
-                  <a href="#" class="tour-item" data-tourid="4">
-                    Tour de Playaa
-                  </a>
-                </td>
-                <td>Relájate en las hermosas playas de la costa</td>
-                <td>70.00</td>
-                <td>30</td>
-                <td>5</td>
-                <td>2023-11-30</td>
-                <td>Costa</td>
-                <td>
-                  <button class="tour-delete btn btn-danger" data-tourid="4">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            
-              <tr data-tourid="14">
-                <td>14</td>
-                <td>
-                  <a href="#" class="tour-item" data-tourid="14">
-                    nueva
-                  </a>
-                </td>
-                <td>dasd</td>
-                <td>11.00</td>
-                <td>1</td>
-                <td>1</td>
-                <td>0001-01-01</td>
-                <td>1</td>
-                <td>
-                  <button class="tour-delete btn btn-danger" data-tourid="14">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            
-              <tr data-tourid="15">
-                <td>15</td>
-                <td>
-                  <a href="#" class="tour-item" data-tourid="15">
-                    Nuevo
-                  </a>
-                </td>
-                <td>12</td>
-                <td>2.00</td>
-                <td>2</td>
-                <td>2</td>
-                <td>0323-02-03</td>
-                <td>2</td>
-                <td>
-                  <button class="tour-delete btn btn-danger" data-tourid="15">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            
-              <tr data-tourid="16">
-                <td>16</td>
-                <td>
-                  <a href="#" class="tour-item" data-tourid="16">
-                    El desierto de la Tatacoa
-                  </a>
-                </td>
-                <td>Lugar Magico de Neiva Huila</td>
-                <td>1000.00</td>
-                <td>10</td>
-                <td>2</td>
-                <td>0002-02-01</td>
-                <td>Huila</td>
-                <td>
-                  <button class="tour-delete btn btn-danger" data-tourid="16">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            
-              <tr data-tourid="17">
-                <td>17</td>
-                <td>
-                  <a href="#" class="tour-item" data-tourid="17">
-                    Finca el altico
-                  </a>
-                </td>
-                <td>es el mejor lugar de la Argentina Huila cuenta con comida, hospedaje y recreacion acuatica.</td>
-                <td>50000.00</td>
-                <td>1000</td>
-                <td>1</td>
-                <td>1112-11-12</td>
-                <td>112</td>
-                <td>
-                  <button class="tour-delete btn btn-danger" data-tourid="17">
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            
-              <tr data-tourid="18">
-                <td>18</td>
-                <td>
-                  <a href="#" class="tour-item" data-tourid="18">
-                    1
-                  </a>
-                </td>
-                <td>1</td>
-                <td>1.00</td>
-                <td>1</td>
-                <td>1</td>
-                <td>0001-01-01</td>
-                <td>11</td>
-                <td>
-                  <button class="tour-delete btn btn-danger" data-tourid="18">
-                    Delete
-                  </button>
-                </td>
-              </tr>
+                                      
             </tbody></table>
                 </div>
              

@@ -20,6 +20,7 @@ if (isset($_POST['id'])) {
             'duration' => $row['duration'],
             'date_departure' => $row['date_departure'],
             'region' => $row['region'],
+            'image_path' => $row['image_path'], // Add image_path to the JSON response
             'id' => $row['id']
         );
     } else {
