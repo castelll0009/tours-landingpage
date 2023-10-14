@@ -88,6 +88,7 @@ $('#search').keyup(function() {
           console.log(tours);
           console.log(tours.title);
           let template = '';
+          let template_index_tours = '';
           tours.forEach(tour => {
             template += `
               <tr data-tourid="${tour.id}">
@@ -110,8 +111,25 @@ $('#search').keyup(function() {
                 </td>
               </tr>
             `;
+
+            // Insertar Swiper Slider
+            template_index_tours +=`
+            <div tour-id='${tour.id}' class="swiper-slide swiper-slide--five swiper-slide-visible swiper-slide-active" role="group" aria-label="5 / 5" data-swiper-slide-index="4" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -0.208217px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; margin-right: 60px;">								
+								<span>${tour.title}</span>
+								<div>
+									<h2>${tour.description}</h2>
+									<p class="p-ubication">
+										<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+											<path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
+											<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path>
+										</svg>
+										${tour.region}
+									</p>
+								</div>
+							<div class="swiper-slide-shadow-left swiper-slide-shadow-coverflow" style="opacity: 0; transition-duration: 0ms;"></div><div class="swiper-slide-shadow-right swiper-slide-shadow-coverflow" style="opacity: 0.00208217; transition-duration: 0ms;"></div></div>`;
           });
           $('#tours').html(template);
+          $('.swiper-wrapper').html(template_index_tours);
         }
       });
     }

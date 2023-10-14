@@ -83,6 +83,8 @@
 }
 
 .swiper-slide h2 {
+  bottom: 0;
+    position: absolute;
   color: #fff;
   font-family: 'Nunito';
   font-weight: 400;
