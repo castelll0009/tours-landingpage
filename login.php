@@ -12,16 +12,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     } else {
         $error = "Credenciales incorrectas. Inténtalo de nuevo.";
+        header('Location: login.php');
+        exit();
     }
 }
 ?>
 
 
 <!DOCTYPE html>
-<html>
-<head>
+<html style="
+    height: 100vh;
+"><head>
  <!--font google lato-->
- <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&amp;display=swap" rel="stylesheet">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
@@ -85,11 +88,24 @@ span.psw {
   }
 }
 </style>
-</head>
-<body>
-
+<style type="text/css" id="operaUserStyle"></style></head>
+<body style="
+    background: #ddac1b;
+    background: linear-gradient(45deg, #ddac1b, #fab526);
+">
+<main style="
+    border-radius: 5px;
+    padding: 5.6vw;
+    margin: 12vw 12vw;
+    background: aliceblue;
+">
 <h2>Login Form</h2>
-<?php if (isset($error)) { echo "<p>$error</p>"; } ?>
+
+<?php
+if (isset($error)) {
+    echo '<p>Credenciales incorrectas. Inténtalo de nuevo.</p>';
+}
+?>
 <form id="login-form" method="post" action="login.php">
   <!-- <div class="imgcontainer">
     <img src="img_avatar2.png" alt="Avatar" class="avatar">
@@ -97,10 +113,10 @@ span.psw {
   
   <div class="container">
     <label for="username"><b>Username</b></label>
-    <input type="text" id="username" placeholder="Enter Username" name="username" required>
+    <input type="text" id="username" placeholder="Enter Username" name="username" required="">
 
     <label for="password"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" id="password" name="password" required>
+    <input type="password" placeholder="Enter Password" id="password" name="password" required="">
         
     <button type="submit">Login</button>
     <!-- <label>
@@ -144,6 +160,6 @@ span.psw {
         return (username === "usuario" && password === "contrasena");
     }
     </script> -->
-  </body>
-
-</html>
+  
+</main>
+</body></html>
