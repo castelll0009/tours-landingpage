@@ -1,0 +1,2370 @@
+<html lang="en"><head style="
+    position: revert;
+    width: 100%;
+    margin: 0px;
+">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Registro</title>
+     <!-- Agrega los enlaces a los estilos de Bootstrap -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Agrega los enlaces a los estilos de Bootstrap y jQuery -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!--font google lato-->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- global Styles -->
+<style>
+  @media (max-width: 768px) {
+    main{
+      padding: 5.6vw 5vw !important; 
+    }
+    
+  }
+  main{
+    padding: 5.6vw 14vw;
+  }
+  p{
+    font-family: 'Lato', sans-serif; /* Fuente Lato */
+    font-weight: lighter;
+    font-size: 16px; /* Tamaño de fuente para párrafos */
+    color: white;
+  }
+  h6,h2,h3{
+    font-family: 'Lato', sans-serif; /* Fuente Lato */
+    
+    font-weight: bold; /* Peso de fuente en negrita */
+    font-size: 24px; /* Tamaño de fuente para h2 */
+    color: white;
+  }
+  .text-danger-cara{
+    color: #e4a808;
+  }
+  
+ 
+
+  
+  /* Estilos para etiquetas de formulario (labels) */
+  label {
+    font-family: 'Lato', sans-serif; /* Fuente Lato */
+    font-weight: bold; /* Peso de fuente en negrita */
+    font-size: 18px; /* Tamaño de fuente para etiquetas */
+    color: #333; /* Color de fuente para etiquetas */
+  }
+
+</style>
+<!-- Stylo de botones -->
+<style>
+   
+</style>
+
+<!-- Resolucion movil -->
+<style>
+  @media (max-width: 768px) {
+    .cont_left_rigth{
+      /* Cambio en resoluciones móviles */      
+      flex-direction: column-reverse; /* Invierte la dirección horizontal */
+    }
+      
+    }
+    body > div.container-fluid.px-1.px-md-4.py-5.mx-auto{
+      padding: 5vw !important;
+    }
+    body > div.container-fluid.px-1.px-md-4.py-5.mx-auto > div > div > div > div > div{
+      padding: 0;
+    }
+    .card00 {
+     padding-top: 0px;
+  }
+    
+  
+</style>
+  <style>
+      /* Estilo para el botón "Contact Us" */
+.contact-now-button {
+  background: linear-gradient(to bottom, #4bb71b, #368e16);
+  background: rgb(101,251,63);
+background: linear-gradient(241deg, rgb(240, 116, 33) 0%, rgba(255,143,87,1) 100%);
+background: linear-gradient(241deg, #28a745 0%, rgb(135 249 3) 100%);
+
+  border: none;
+  color: #fff;
+}
+
+.contact-now-button:hover {
+  background: linear-gradient(to bottom, #368e16, #4bb71b);
+  color: #fff;
+}
+      .success-animation { margin:0px auto;}
+
+.checkmark {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #4bb71b;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #4bb71b;
+  animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+  position:relative;
+  top: 5px;
+  right: 5px;
+ margin: 0 auto;
+}
+.checkmark__circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #4bb71b;
+  fill: #fff;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+
+}
+
+.checkmark__check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% {
+      stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale {
+  0%, 100% {
+      transform: none;
+  }
+
+  50% {
+      transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+@keyframes fill {
+  100% {
+      box-shadow: inset 0px 0px 0px 30px #4bb71b;
+  }
+}
+  </style><style>
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, system-ui, Sans-Serif;
+      line-height: 1.2;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .referer-warning span { font-family: initial; }
+    .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+    .referer-warning a { color: #56bcf9; }
+  </style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}
+
+  
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+   /* Cambiar el fondo a un gradiente verde */
+  background: linear-gradient(to bottom, #4bb71b, #368e16);
+  background: rgb(207,95,8);
+background: linear-gradient(115deg, rgba(207,95,8,1) 0%, rgba(32,148,0,1) 73%, rgba(8,122,196,1) 97%);
+  background: white;
+  color: #000;
+    background-repeat: no-repeat
+}
+
+.card0 {
+  background-color: #e9e9e9;
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.card00 {
+    z-index: 0
+}
+
+.card1 {
+    margin-left: 140px;
+    z-index: 0;
+    border-right: 1px solid #F5F5F5
+}
+
+.card2 {
+    display: none
+}
+
+.card2.show {
+  display: flex;
+  flex-direction: column;
+}
+.social {
+    border-radius: 50%;
+    background-color: #FFCDD2;
+    color: #e5a007;
+    height: 47px;
+    width: 47px;
+    padding-top: 16px;
+    cursor: pointer
+}
+
+input,
+select {
+    padding: 2px;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #9E9E9E;
+    border: 1px solid #BDBDBD;
+    font-size: 16px;
+    letter-spacing: 1px;
+    height: 50px !important
+}
+
+select {
+    width: 100%;
+    margin-bottom: 85px
+}
+.text-conf{
+  display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+}
+input:focus,
+select:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #e5a007 !important;
+    outline-width: 0 !important
+}
+
+.form-control {
+  
+    border: none; 
+    border-bottom: 1px solid #ced4da;
+    
+}
+
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #e5a007
+}
+
+.form-group {
+  display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 77%
+}
+
+.form-control-placeholder {
+    position: absolute;
+    top: 0px;
+    padding: 12px 2px 0 2px;
+    transition: all 300ms;
+    opacity: 0.5
+}
+
+.form-control:focus+.form-control-placeholder,
+.form-control:valid+.form-control-placeholder {
+    font-size: 95%;
+    top: 10px;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+    background-color: #fff
+}
+
+.next-button {
+    width: 18%;
+    height: 50px;
+    background-color: #fab526;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    
+    min-width: 50px;
+}
+
+.next-button:hover {
+    background-color: #e5a007;
+    color: #fff
+}
+
+.get-bonus {
+    margin-left: 154px
+}
+
+.pic {
+    width: 230px;
+    height: 110px
+}
+
+#progressbar {
+    position: absolute;
+    left: 35px;
+    overflow: hidden;
+    color: #e5a007
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 8px;
+    font-weight: 400;
+    margin-bottom: 36px
+}
+
+#progressbar li:nth-child(3) {
+    margin-bottom: 88px
+}
+
+#progressbar .step0:before {
+    content: "";
+    color: #fff
+}
+
+#progressbar li:before {
+  width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    font-size: 20px;
+    background: #424242;
+    border: 2px solid #e39c06;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#progressbar li:last-child:before {
+    width: 40px;
+    height: 40px
+}
+
+#progressbar li:after {
+    content: '';
+    width: 3px;
+    height: 66px;
+    background: #BDBDBD;
+    position: absolute;
+    left: 58px;
+    top: 15px;
+    z-index: -1
+}
+
+#progressbar li:last-child:after {
+    top: 147px;
+    height: 132px
+}
+
+#progressbar li:nth-child(3):after {
+    top: 81px
+}
+
+#progressbar li:nth-child(2):after {
+    top: 0px
+}
+
+#progressbar li:first-child:after {
+    position: absolute;
+    top: -81px
+}
+
+#progressbar li.active:after {
+    background: #e5a007;
+}
+
+#progressbar li.active:before {
+    background: #e5a007;
+    font-family: FontAwesome;
+    content: "\f00c"
+}
+
+.tick {
+    width: 100px;
+    height: 100px
+}
+
+.prev {
+    display: block;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    cursor: pointer
+}
+
+.prev:hover {
+    color: #D50000 !important
+}
+
+@media screen and (max-width: 912px) {
+    .card00 {
+        
+    }
+
+    .card1 {
+        border: none;
+        margin-left: 50px
+    }
+
+    .card2 {
+        border-bottom: 1px solid #F5F5F5;
+        margin-bottom: 25px
+    }
+
+    .social {
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        padding-top: 8px;
+        margin-top: 7px
+    }
+
+    .get-bonus {
+        margin-top: 40px !important;
+        margin-left: 75px
+    }
+
+    #progressbar {
+        left: -25px
+    }
+}
+</style><style>
+    /* Cambiar el color de fondo del botón "Next" al pasar el mouse */
+    .next-button:hover {
+          background-color: #e5a007;
+          color: #fff;
+      }
+
+      /* Cambiar el color del botón "Go Back" al pasar el mouse */
+      .prev:hover {
+          color: #087ac4 !important;
+      }
+
+      /* Cambiar el color de fondo del progreso activo */
+      #progressbar li.active:before {
+          background: #e5a007;
+      }
+</style><script>
+  window.console = window.console || function(t) {};
+</script><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style></head>   
+            
+
+<body translate="no" style="
+  background: #ffffff;
+  /* text-align: center; */
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+">
+<main style="/* text-align: center; */background: linear-gradient(50deg, rgba(229,171,8,1) 0%, rgba(229,159,8,1) 14%, rgba(226,155,6,1) 79%);/* padding: 5.6vw; *//* margin-top: 10vh !important; */display: block;width: 100%;position: relative;height: fit-content;padding: 5.6vw 14vw;">
+
+
+<div class="cont_left_rigth" style="
+    padding: 0px;
+    padding-left: 0 !important;
+    padding-right: 0px !important;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+">
+                
+<div class="cont_left" style="
+    text-align: left !important;
+    padding: 5vw;
+    flex: 1; /* Hace que cada elemento ocupe el 50% del ancho disponible */
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    background: gray;
+    /* min-width: 20vw; */
+    min-height: 50vh;
+    height: -webkit-fill-available;
+    background-image: url(./imgs/form-back.JPG);
+    background-attachment: fixed;
+    /* backdrop-filter: grayscale(1); */
+    background-blend-mode: soft-light;
+    background-blend-mode: luminosity;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: -webkit-fill-available;
+    min-width: 300px;
+">
+                  <div class="row text-center justify-content-center px-3" style="
+    padding: 0px;
+">
+                    <p class="prev text-danger-cara" style="display: none;"><span class="fa fa-long-arrow-left"> Go Back</span></p>
+                    <h3 class="mt-4" style="margin: 0px !important;padding-bottom: 30px;color: #e4a808;font-size: xx-large;width: 100%;text-align: left;">let's get going</h3>
+                  </div>
+                  <div class="col-md-6" style="
+    min-width: fit-content;
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-around;
+    height: inherit;
+    max-height: 40vh;
+    min-height: inherit;
+">
+                    <div class="card1" style="/* margin-left: 50px; */border: none;margin-left: 100px;">
+                      <ul id="progressbar" class="text-center" style="z-index: 1;margin-left: 0px;position: absolute;left: 0px;">
+                        <li class="active step0"></li>
+                        <li class="step0 "></li>
+                        <li class="step0 "></li>
+                        <li class="step0 "></li>
+                      </ul>
+                      <p class="mb-5" style="width: 100%;
+                        ">Enter names and lastnames</p>
+                      <p class="mb-5">Enter your email &amp; phone</p>
+                      <p class="mb-5">Set departure &amp; short description</p>                                                           
+                    </div>
+    
+                  </div>
+    <h2 class=" get-bonus mt-4 mb-5" style="
+    color: silver;
+    font-size: 1.5rem;
+    text-wrap: balance;
+    margin: 0px;
+    text-align: start;
+    position: relative;
+    border: 0;
+    margin-bottom: 0px !important;
+">You're Getting ready <span id="user-name" class="text-danger-cara">Adventuress</span> Congratulations.</h2>
+                </div>
+
+                <div class="cont_rigth" style="flex: 1; /* Hace que cada elemento ocupe el 50% del ancho disponible */display: inline-flex;background: white;padding: 5vw;/* text-align: left; */flex-direction: column;height: -webkit-fill-available;min-width: 300px;/* justify-content: space-between; */border-radius: 5px;">
+                  <div class="card2 show first-screen ml-2" style="
+    min-width: 70px !important;
+">
+                    <div class="row text-center px-3 mr-2" style="">
+                      <div class="mb-2 col-2">  </div>
+                      <div class="mb-2 col-2"> <span class="fa fa-facebook social"></span> </div>
+                      <div class="mb-2 col-2"> <span class="fa fa-linkedin social"></span> </div>
+                      <div class="mb-2 col-2"> <span class="fa fa-google-plus social"></span> </div>
+                      <div class="mb-2 col-2"> <span class="fa fa-twitter social"></span> </div>
+                      <div class="mb-2 col-2">  </div>
+                    </div>
+                    <div class="row px-3 mt-4">
+                     
+                     
+
+                      
+                      <div class="form-group mt-1 mb-1">
+                        <div class="input-group-prepend">
+                          <span class="text-conf">
+                            <i class="fa fa-user"></i>
+                          </span>
+                        </div>
+                        <input type="text" id="full-name" class="form-control valid" placeholder="Name" required="" data-step="1">
+                        <!-- <label class="ml-3 form-control-placeholder" for="full-name">Name</label> -->
+                        </input>
+                       
+                      </div>
+                        
+                     
+                      
+                    </div>
+                    
+                    <div class="row px-3 mt-4">
+                      <div class="form-group mt-1 mb-1"> 
+                        <div class="input-group-prepend">
+                          <span class="text-conf">
+                            <i class="fa fa-pencil"></i>
+                          </span>
+                        </div>
+                        <input type="text" id="full-name" class="form-control" placeholder="Second Name" required="" data-step="1"> 
+                          <!-- <label class="ml-3 form-control-placeholder" for="full-name">Apellido</label>  -->
+                        </div>
+                           <div class="next-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
+                    </div>
+                    
+                  </div>
+                  <div class="card2 ml-2">
+                      <div class="row px-3 mt-4">
+                          <div class="form-group mt-1 mb-1"> 
+                            <div class="input-group-prepend ">
+                              <span class="text-conf ">
+                                <i class="fa fa-envelope"></i>
+                              </span>
+                            </div>
+                            <input type="text" id="email" class="form-control" placeholder="Email" required="" data-step="2"> 
+                              <!-- <label class="ml-3 form-control-placeholder" for="email">Email</label>  -->
+                            </div>
+                        </div>
+                      <div class="row px-3 mt-3">
+                          <div class="form-group mt-1 mb-1"> 
+                            <div class="input-group-prepend">
+                              <span class="text-conf">
+                                <i class="fa fa-phone"></i>
+                              </span>
+                            </div>
+                            <input type="tel" id="phone" class="form-control" placeholder="Telefono" required="" data-step="2">
+                               <!-- <label class="ml-3 form-control-placeholder" for="phone">Phone Number</label> -->
+                            </div>
+                          <div class="next-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> 
+                          </div>
+                        </div>                                              
+                  </div>
+
+                  <div class="card2 ml-2" id="id-preview">
+                      <div class="row px-3 mt-3">
+                        
+                          <div class="form-group mt-1 mb-1">
+                            <div class="input-group-prepend">
+                              <span class="text-conf">
+                                <i class="fa fa-calendar"></i>
+                              </span>
+                            </div>
+                              <input type="date" id="tour-date" class="form-control" required="" data-step="3">
+                              <!-- <label class="ml-3 form-control-placeholder" for="tour-date"></label> -->
+                              
+                          </div>
+                      </div>
+                      <div class="row px-3 mt-3">
+                     
+                          <div class="form-group mt-1 mb-1">
+                            <div class="input-group-prepend">
+                              <span class="text-conf">
+                                <i class="fa fa-pencil"></i>
+                              </span>
+                            </div>
+                              <textarea id="description" class="form-control" placeholder="Description" required="" data-step="3" rows="4"></textarea>
+                              <!-- <label class="ml-3 form-control-placeholder" for="description">Description</label> -->
+                              <div class="next-button final-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
+                          </div> 
+                      </div>
+                      
+                      
+                  </div>
+
+                  <div class="card2 ml-2 " id="final-step-id" style="
+    background: white;
+">
+                    <div class="row px-3 mt-2 mb-4 text-center">
+                      <h2 class="col-12 text-danger-cara"><strong>Success !</strong></h2>
+                      <div class="col-12 text-center">
+                          <div class="success-animation">
+                              <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+                              </div>
+                              
+                      </div>
+                      <h6 class="col-12 mt-2">
+                          <i>
+                          now you can write to us by Whatsapp and E-mail
+                          </i>
+                      </h6>
+                    </div>
+                    <button type="button" class="btn btn-primary contact-now-button final-button text-center mt-1 ml-2">Contact Us</button>
+
+                  </div>
+                </div>
+              </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+      
+<script id="rendered-js">
+$(document).ready(function () {    
+  // Maneja el clic en el botón "Contact Us"
+  $(".contact-now-button").click(function () {
+      // Obtiene los valores de los campos necesarios
+      var userName = "Name: " + $("#full-name").val();
+      var userEmail = "E-mail: " + $("#email").val();
+      var userPhone = "Phone: " + $("#phone").val();
+      var tourDate = "Tour Date: " + $("#tour-date").val();
+      var description = "Description: " + $("#description").val();
+
+      // Crea el mensaje de WhatsApp con la información
+      var whatsappMessage = userName + "\n" + userEmail + "\n" + userPhone + "\n" + tourDate + "\n" + description;
+
+      // Crea el enlace de WhatsApp
+      var whatsappLink = "https://api.whatsapp.com/send?phone=+573202486769&text=" + encodeURIComponent(whatsappMessage);
+
+      // Crea el enlace de Gmail (mailto)
+      var emailSubject = "Tour Inquiry from " + $("#full-name").val();
+      var emailBody = userName + "\n" + userEmail + "\n" + userPhone + "\n" + tourDate + "\n" + description;
+      var emailLink = "mailto:castelll0009@gmail.com?subject=" + encodeURIComponent(emailSubject) + "&body=" + encodeURIComponent(emailBody);
+
+      // Abre ambas ventanas de enlace en simultáneo
+      window.open(whatsappLink, "_blank");
+      window.open(emailLink, "_blank");
+  });
+
+  $(".final-button").click(function() {
+    // Oculta el div con id "id-preview"
+    $("#id-preview").removeClass("show");
+    // Muestra el div con id "final-step-id"
+    $("#final-step-id").addClass("show");
+  });
+// Función para verificar los campos en el paso actual
+function checkFields(step) {
+  var allFieldsFilled = true;
+
+  // Verifica los campos de entrada requeridos en el paso actual
+  $(".form-control[data-step='" + step + "'][required]").each(function () {
+    if ($(this).val() === "") {
+      allFieldsFilled = false;
+      return false; // Rompe el bucle si se encuentra un campo vacío
+    }
+  });
+
+  return allFieldsFilled;
+}
+
+// Maneja el clic en el botón "Next"
+$(".next-button").click(function () {
+  current_fs = $(this).parent().parent();
+  var currentStep = current_fs.find(".form-control").first().data("step");
+  var nextStep = currentStep + 1;
+
+  if (checkFields(currentStep)) {
+    // Obtener el valor del campo de entrada de nombre
+    var userName = $("#full-name").val();
+    // Actualizar el contenido del <span> con el nombre del usuario
+    $("#user-name").text(userName);
+
+    next_fs = $(this).parent().parent().next();
+    $(current_fs).removeClass("show");
+    $(next_fs).addClass("show");
+    $("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
+
+    // Oculta el paso 3 y muestra el paso 4 si el próximo paso es 4
+    if (nextStep === 4) {
+      $(".card2[data-step='3']").removeClass("show");
+      $(".card2[data-step='4']").addClass("show");
+    }
+  }
+});
+
+// Maneja el clic en el botón "Prev"
+$(".prev").click(function () {
+  current_fs = $(".show");
+  previous_fs = $(".show").prev();
+
+  $(current_fs).removeClass("show");
+  $(previous_fs).addClass("show");
+
+  var currentStep = current_fs.find(".form-control").first().data("step");
+  $("#progressbar li").eq($(".card2").index(current_fs)).removeClass("active");
+
+  if ($(".show").hasClass("first-screen")) {
+    $(".prev").css({ display: "none" });
+  }
+});
+
+// Ejecuta la función de verificación al cargar la página
+checkFields(1);
+
+// Verifica campos cuando cambian
+$(".form-control").on("input", function () {
+  var currentStep = $(this).data("step");
+  checkFields(currentStep);
+});
+});
+
+</script>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body></html>
