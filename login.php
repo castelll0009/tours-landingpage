@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Verifica las credenciales del usuario (debes usar una base de datos para esto)
     if ($username === 'aaa' && $password === '111') {
         $_SESSION['user'] = $username;
-        header('Location: admin_tour.php');
+        header('Location: admin_tours.php');
         exit();
     } else {
         $error = "Credenciales incorrectas. Inténtalo de nuevo.";
@@ -20,11 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
-
+ <!--font google lato-->
+ <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&display=swap" rel="stylesheet">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {font-family: Lato, Helvetica, sans-serif;}
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -35,7 +36,7 @@ input[type=text], input[type=password] {
 }
 
 button {
-  background-color: #04AA6D;
+  background-color: #fab526;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
