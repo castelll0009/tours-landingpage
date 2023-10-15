@@ -57,16 +57,16 @@
 
 .swiper-slide span {
   text-transform: uppercase;
-  color: #fff;
-  background: #1b7402;
-  padding: 7px 18px 7px 25px;
-  display: inline-block;
-  border-radius: 0 50px 50px 0px;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
-  font-family: "Open Sans", sans-serif;
-  max-width: 50%;
-  border-top-left-radius: 5px;
+    color: #fff;
+    background: #00000026;
+    padding: 7px 18px 7px 25px;
+    display: inline-block;
+    border-radius: 0 50px 50px 0px;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-family: "Open Sans", sans-serif;
+    max-width: 70%;
+    border-top-left-radius: 5px;
 }
 .custom-button{
   text-transform: uppercase;
@@ -127,14 +127,19 @@
   text-align: right;
   width: 100%;
   z-index: -1;
-  color: silver;
+  color: white;
   background: gray;
-  background: linear-gradient(45deg, #00000000, #00000069);
+  background: linear-gradient(58deg, #00000000 69%, #00000029 30%);
   padding: 5px;
   outline: none;
   font-size: small;
   font-weight: 300;
   text-decoration: none;
+  transition: all 2s;
+}
+.swiper-wrapper div a:hover{
+  background: linear-gradient(58deg, #00000000 69%, #0000007d 30%);
+  transition: all 2s;
 }
 
 
