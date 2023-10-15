@@ -121,11 +121,20 @@
 }
 .swiper-wrapper div a{
  
-position: absolute;
-    top: 0;
-    right: 0;
-    color: rgb(255, 255, 255);
-    margin-right: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  width: 100%;
+  z-index: -1;
+  color: silver;
+  background: gray;
+  background: linear-gradient(45deg, #00000000, #00000069);
+  padding: 5px;
+  outline: none;
+  font-size: small;
+  font-weight: 300;
+  text-decoration: none;
 }
 
 
@@ -134,7 +143,7 @@ position: absolute;
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: large;
+  font-size: medium;
   align-items: flex-start;
   padding: 0 25px 0px 25px;
   backdrop-filter: blur(1px);

@@ -247,7 +247,7 @@ $('#tour-form').submit(e => {
 // Enlist the tour in tour package details
 function fetchTourPackageDetails(tourId) {
   // Use tourId directly, no need to create another variable
-  alert('fetching ' + tourId);
+  
   $.post('tour-single.php', { id: tourId }, (response) => {
     console.log(response);
 
