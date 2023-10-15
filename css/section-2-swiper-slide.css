@@ -135,11 +135,11 @@
   font-size: small;
   font-weight: 300;
   text-decoration: none;
-  transition: all 2s;
+  transition: all 2s ease 0s;
 }
 .swiper-wrapper div a:hover{
   background: linear-gradient(58deg, #00000000 69%, #0000007d 30%);
-  transition: all 2s;
+  
 }
 
 
