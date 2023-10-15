@@ -65,6 +65,8 @@
   letter-spacing: 2px;
   font-size: 0.8rem;
   font-family: "Open Sans", sans-serif;
+  max-width: 50%;
+  border-top-left-radius: 5px;
 }
 
 .swiper-slide--one span {
