@@ -50,6 +50,10 @@
     height: auto;
     position: relative;
     transition-property: transform;
+    min-width: 300px;
+    min-height: 350px;
+    max-width: 300px;
+    max-height: 450px;
 }
 
 main .section-2{

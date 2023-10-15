@@ -6,12 +6,12 @@ var swiper = new Swiper(".swiper", {
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
-      depth: 100,
+      depth: 200,
       modifier: 2,
       slideShadows: true
     },
-    spaceBetween: 60,
-    loop: true,
+    spaceBetween: 100,
+    loop: false,
     pagination: {
       el: ".swiper-pagination"
     }

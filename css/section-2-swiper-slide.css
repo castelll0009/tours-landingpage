@@ -16,6 +16,7 @@
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  
 }
 .cont-slider-tours .swiper::before {
   content: "";
@@ -41,8 +42,8 @@
     min-height: 22vw;
   width: 300px;
   height: 400px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
-  filter: blur(1px);
+  /* box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2); */
+  
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -51,7 +52,7 @@
 }
 
 .swiper-slide-active {
-  filter: blur(0px);
+  /* filter: blur(0px); */
 }
 
 .swiper-slide span {
@@ -95,15 +96,42 @@
   margin-bottom: 15px;
   padding: 25px 25px 25px 25px;
 }
+.swiper-wrapper{
+  max-height: 400px;
+  max-width: fit-content;
+}
+.swiper-wrapper div{
+  display: flex;
+    justify-content: space-between;
+}
+.swiper-wrapper div a{
+ 
+position: absolute;
+    top: 0;
+    right: 0;
+    color: orange;
+    margin-right: 10px;
+}
+
+
 
 .swiper-slide p {
   color: #fff;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  display: flex;
-  align-items: center;
-  padding: 0 25px 35px 25px;
+  font-size: large;
+  align-items: flex-start;
+  padding: 0 25px 0px 25px;
+  backdrop-filter: blur(1px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  justify-content: center;
+  align-content: center;
 }
+
 
 .swiper-slide svg {
   color: #fff;

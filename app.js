@@ -132,11 +132,11 @@ $(document).ready(function() {
            class="swiper-slide   swiper-slide-visible swiper-slide-active" role="group" aria-label="5 / 5" data-swiper-slide-index="4" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -0.208217px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; margin-right: 60px;">								       
           <span>${tour.title}</span>
           <div>
-            <h2>${tour.description}</h2>
-            <p class="p-ubication">
+            <p>${tour.description}</p>
+            <h6 class="p-ubication">
               <span><img src="${tour.image_path}" alt=""></span>                              
             ${tour.region}
-            </p>
+            </h6>
             <a href="tour-choose-details.html?tourId=${tour.id}">View Details</a>
           </div>
           <div class="swiper-slide-shadow-left swiper-slide-shadow-coverflow" style="opacity: 0; transition-duration: 0ms;"></div><div class="swiper-slide-shadow-right swiper-slide-shadow-coverflow" style="opacity: 0.00208217; transition-duration: 0ms;"></div></div>`;
