@@ -62,27 +62,6 @@ $(document).ready(function() {
     }
   });
   
-  //OLD TOUR FORM
-  // $('#tour-form').submit(e => {
-  //   e.preventDefault();
-  //   const postData = {
-  //     title: $('#title').val(),
-  //     description: $('#description').val(),
-  //     price: $('#price').val(),
-  //     group_size: $('#group_size').val(),
-  //     duration: $('#duration').val(),
-  //     date_departure: $('#date_departure').val(),
-  //     region: $('#region').val(),
-  //     id: $('#tourId').val()
-  //   };
-  //   const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
-  //   $.post(url, postData, (response) => {
-  //     console.log(response);
-  //     $('#tour-form').trigger('reset');
-  //     fetchTours();
-  //     edit = false; // Restablecer el modo de edición a falso
-  //   });
-  // });
   
   // Recuperar la lista de Tours
   function fetchTours() {
@@ -93,37 +72,77 @@ $(document).ready(function() {
         const tours = JSON.parse(response);
         console.log(tours);
         console.log(tours.title);
+        console.log(response.title);
         let template = '';
+        let template_inventario= '';
+        let template_dias = '';
         let template_index_tours = '';
         tours.forEach(tour => {
           template += `
-          <tr data-tourid="${tour.id}">
+        <tr data-tourid="${tour.id}">
           <td>${tour.id}</td>
           <td>
-          <a href="#" class="tour-item" data-tourid="${tour.id}">
-          ${tour.title}
-          </a>
+            <a href="#" class="tour-item" data-tourid="${tour.id}">
+              ${tour.title}
+            </a>
           </td>
           <td>${tour.description}</td>
           <td>${tour.price}</td>
           <td>
             <span class="img-form" style="display: block; min-width: 150px;">
-            <img src="${tour.image_path}" alt="Tour Image" style="display:block; width:100%"> 
-            <span>
+              <img src="${tour.image_path}" alt="Tour Image" style="display:block; width:100%"> 
+            </span>
           </td>
           <td>${tour.group_size}</td>
           <td>${tour.duration}</td>
           <td>${tour.date_departure}</td>
           <td>${tour.region}</td>
-          
+         
           <td>
-          <button class="tour-delete btn btn-danger" data-tourid="${tour.id}">
-          Delete
-          </button>
+            <button class="tour-delete btn btn-danger" data-tourid="${tour.id}">
+              Delete
+            </button>
           </td>
+        </tr>
+        `;
+
+        //insertar la info de inventario en la talba de inventario
+          template_inventario+=`        
+          <tr data-tourid="${tour.id}">
+            <td>${tour.id}</td>
+            <td>
+              <a href="#" class="tour-item" data-tourid="${tour.id}">
+                ${tour.title}
+              </a>
+            </td>           
+            <td>${tour.pax}</td> <!-- Nuevo campo PAX -->
+            <td>${tour.include}</td> <!-- Nuevo campo Include -->
+            <td>${tour.not_include}</td> <!-- Nuevo campo Not Include -->
+            <td>${tour.single_supplement}</td> <!-- Nuevo campo Single Supplement -->          
+            <td>
+              <button class="tour-delete btn btn-danger" data-tourid="${tour.id}">
+                Delete
+              </button>
+            </td>
+          </tr>          
+          `;
+          // Insertar la información de días en la tabla de días
+          template_dias += `
+          <tr data-dayid="${tour.id}">
+            <td>${tour.id}</td>
+            <td>${tour.title}</td>
+            <td>${tour.number}</td> <!-- Nuevo campo 'number' de días -->
+            <td>${tour.title_day}</td> <!-- Nuevo campo 'day_title' de días -->
+            <td>${tour.description_day}</td> <!-- Nuevo campo 'day_description' de días -->
+            <!-- Agregar más campos de días según sea necesario -->
+            <td>
+              <button class="day-delete btn btn-danger" data-dayid="${tour.id}">
+                Delete
+              </button>
+            </td>
           </tr>
           `;
-          
+
           // Insertar Swiper Slider          
 													
           template_index_tours +=`
@@ -142,6 +161,8 @@ $(document).ready(function() {
           <div class="swiper-slide-shadow-left swiper-slide-shadow-coverflow" style="opacity: 0; transition-duration: 0ms;"></div><div class="swiper-slide-shadow-right swiper-slide-shadow-coverflow" style="opacity: 0.00208217; transition-duration: 0ms;"></div></div>`;
         });
         $('#tours').html(template);
+        $('#inventory').html(template_inventario);
+        $('#days').html(template_dias);
         $('.swiper-wrapper').html(template_index_tours);
       }
     });
