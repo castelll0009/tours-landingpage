@@ -170,7 +170,7 @@
     
 <!-- container form inventario tour -->
 <!-- Add a new container for the inventory -->
-<div class="container " id="second-inventory-container">
+<div class="container " id="second-inventory-container" style="display: none;">
     <div class="row p-4">
         <div class="col-md-5">
             <div class="card">
@@ -233,16 +233,19 @@
     const inventoryLink = document.getElementById("inventory-link");
 
     // Get a reference to the second inventory container.
-    const secondInventoryContainer = document.querySelector("#second-inventory-container");
+    const secondInventoryContainer = document.getElementById("second-inventory-container");
 
     // Add a click event listener to the "Inventario" link.
     inventoryLink.addEventListener("click", function (event) {
         event.preventDefault(); // Prevent the default link behavior.
 
-        // Show the second inventory container by adding a class (e.g., "active") to it.
-        secondInventoryContainer.classList.add("active");
+        // Toggle the visibility of the second inventory container by changing its style display property.
+        if (secondInventoryContainer.style.display === "none") {
+            secondInventoryContainer.style.display = "block";
+        } else {
+            secondInventoryContainer.style.display = "none";
+        }
     });
 </script>
-
                        
 </body></html>
