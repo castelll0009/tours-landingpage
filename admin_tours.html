@@ -68,78 +68,59 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Tours List</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#inventory-tab">Inventario</a>
+                </li>
+                
                 <form class="form-inline my-2 my-lg-0">
                     <input name="search" id="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+
+               
+                
             </ul>
         </div>
     </nav>
+
+    <!-- container form tours -->
     <div class="container">
         <div class="row p-4">
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-body">
-                        <!-- FORM TO ADD TOUR -->
-                       <!-- FORM TO ADD TOUR -->
-<!-- <form id="tour-form">
-    <div class="form-group">
-        <input type="text" id="title" placeholder="Title" class="form-control" required="">
-    </div>
-    <div class="form-group">
-        <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Description" required=""></textarea>
-    </div>
-    <div class="form-group">
-        <input type="number" id="price" placeholder="Price" class="form-control" required="">
-    </div>
-    <div class="form-group">
-        <input type="number" id="group_size" placeholder="Group Size" class="form-control" required="">
-    </div>
-    <div class="form-group">
-        <input type="text" id="duration" placeholder="Duration" class="form-control" required="">
-    </div>
-    <div class="form-group">
-        <input type="date" id="date_departure" class="form-control" required="">
-    </div>
-    <div class="form-group">
-        <input type="text" id="region" placeholder="Region" class="form-control" required="">
-    </div>
-    <input type="hidden" id="tourId" value="4">
-    <button type="submit" class="btn btn-primary btn-block text-center">
-        Save Tour
-    </button>
-</form> -->
-<form id="tour-form" enctype="multipart/form-data">
-  <div class="form-group">
-      <input type="text" id="title" placeholder="Title" class="form-control" required>
-  </div>
-  <div class="form-group">
-      <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Description" required></textarea>
-  </div>
-  <div class="form-group">
-      <input type="number" id="price" placeholder="Price" class="form-control" required>
-  </div>
-  <div class="form-group">
-      <input type="number" id="group_size" placeholder="Group Size" class a="form-control" required>
-  </div>
-  <div class="form-group">
-      <input type="text" id="duration" placeholder="Duration" class="form-control" required>
-  </div>
-  <div class="form-group">
-      <input type="date" id="date_departure" class="form-control" required>
-  </div>
-  <div class="form-group">
-      <input type="text" id="region" placeholder="Region" class="form-control" required>
-  </div>
-  <div class="form-group">
-      <label for="image">Upload Image:</label>
-      <input type="file" id="image" class="form-control" accept="image/*" required>
-  </div>
-  <input type="hidden" id="tourId" value="4">
-  <button type="submit" class="btn btn-primary btn-block text-center">
-      Save Tour
-  </button>
-</form>
+    
+                        <form id="tour-form" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input type="text" id="title" placeholder="Title" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Description" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="price" placeholder="Price" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="group_size" placeholder="Group Size" class a="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="duration" placeholder="Duration" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" id="date_departure" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="region" placeholder="Region" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="image">Upload Image:</label>
+                            <input type="file" id="image" class="form-control" accept="image/*" required>
+                        </div>
+                        <input type="hidden" id="tourId" value="4">
+                        <button type="submit" class="btn btn-primary btn-block text-center">
+                            Save Tour
+                        </button>
+                        </form>
 
                     </div>
                 </div>
@@ -187,6 +168,44 @@
         </div>
     </div>
     
+<!-- container form inventario tour -->
+<!-- Add a new container for the inventory -->
+<div class="container">
+    <div class="row p-4">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <!-- Inventory Form -->
+                    <form id="inventory-form">
+                        <div class="form-group">
+                            <input type="number" id="pax" placeholder="PAX" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="include" cols="30" rows="5" class="form-control" placeholder="Include"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="not_include" cols="30" rows="5" class="form-control" placeholder="Not Include"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="single_supplement" placeholder="Single Supplement" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block text-center">
+                            Save Inventory
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="card my-4" id="inventory-result" style="display: none;">
+                <div class="card-body">
+                    <!-- Inventory Listing -->
+                    <!-- Create a table or list to display the inventory information here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
   <!-- Jqury Ajax -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
