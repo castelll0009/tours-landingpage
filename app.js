@@ -196,7 +196,7 @@ $(document).on('click', '.tour-item', function(e) {
     fetchTourPackageDetails(tourId);
   } else {
     // Handle the case where tourId is missing or invalid
-    console.error('No valid tourId found in the URL.');
+    console.error('No valid tourId, tour package found in the URL.');
   }
   
   // ... Form  Data 
