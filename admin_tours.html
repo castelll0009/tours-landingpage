@@ -197,13 +197,28 @@
             </div>
         </div>
         <div class="col-md-7">
-            <div class="card my-4" id="inventory-result" style="display: none;">
+            <div class="card my-4" id="inventory-result" style="display: block !important;">
                 <div class="card-body">
                     <!-- Inventory Listing -->
-                    <!-- Create a table or list to display the inventory information here -->
+                    <table class="table table-bordered table-sm" style="font-weight: 300;">
+                        <thead style="background: #6c757d; color: white;">
+                            <tr>
+                                <td>ID</td>
+                                <td>Title</td>
+                                <td>PAX</td>
+                                <td>Include</td>
+                                <td>Not Include</td>
+                                <td>Single Supplement</td>
+                            </tr>
+                        </thead>
+                        <tbody id="inventory" style="min-height: 100vh; border: 1px solid #dbdbdb !important;">
+                            <!-- Add rows for inventory data here -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+        
     </div>
 </div>
 
