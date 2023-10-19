@@ -1,0 +1,2968 @@
+<html lang="en"><head><style type="text/css" id="operaUserStyle"></style></head><body translate="no" style="
+                                          background: #ffffff;
+                                          /* text-align: center; */
+                                          position: relative;
+                                          display: block;
+                                          width: 100%;
+                                          height: 100%;
+                                          justify-content: center;
+                                          "><head-header>
+    <!-- funtes google Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&amp;display=swap" rel="stylesheet">
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+    <!-- Agrega tus enlaces a hojas de estilo CSS aquí -->
+    <style id="styles-header-unique">        
+       
+        /* Encabezado */
+        #styles-header-unique  header {
+            position: fixed;
+            z-index: 100;
+            width: 100%;
+        }
+        
+        /* Ruta de ubicación actual */
+        #styles-header-unique  header div {
+            color: #ffd700;
+            margin-top: 10px;
+        }
+        
+        /* Sección de descuento */
+        #styles-header-unique  section:nth-child(2) {
+            
+            background-size: cover;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        
+        /* Título del tour y descuento */
+        #styles-header-unique  section:nth-child(2) h2 {
+            font-size: 24px;
+        }
+        
+        #styles-header-unique  section:nth-child(2) p {
+            font-size: 18px;
+            
+        }
+        
+        /* Sección de detalles */
+        #styles-header-unique  section:nth-child(3) {
+            background-color: white;
+        }
+        
+        /* Título "Unique Tour" */
+        #styles-header-unique  section:nth-child(3) h3 {
+            font-size: 20px;
+        }
+        
+        /* Línea amarilla debajo del título */
+        #styles-header-unique  section:nth-child(3) hr {
+            background-color: #ffd700;
+            height: 2px;
+            border: none;
+            margin: 10px 0;
+        }
+        
+        /* Cuadros clickeables */
+        #styles-header-unique  ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+        }
+        
+        #styles-header-unique  ul li {
+            text-align: center;
+            cursor: pointer;
+            /*flex: 1;*/
+        }
+        
+        #styles-header-unique  ul img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        
+        /* Cuadros clickeables: Icono por defecto */
+        #styles-header-unique  ul img.default-icon {
+            /* Puedes poner aquí una URL de icono por defecto */
+        }
+        
+        /* Detalles al hacer clic */
+        #styles-header-unique  #details {
+            padding-top: 20px;
+        }
+        
+        /* Sección "Tour View" */
+        #styles-header-unique  section:nth-child(4) .day {
+            display: flex;
+            padding: 20px 0;
+            /* border-bottom: 1px solid #ddd; */
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        
+        #styles-header-unique  .day-number {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        #styles-header-unique  .day-info {
+            flex: 2;
+            padding-left: 20px;
+        }
+        
+        #styles-header-unique  .day-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Logos de marcas patrocinadoras */
+        #styles-header-unique  #sponsors {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        #styles-header-unique  #sponsors img {
+            max-width: 100px;
+            margin: 0 10px;
+        }
+        
+        /* Información de contacto */
+        #styles-header-unique  #contact {
+            text-align: center;
+            padding: 20px 0;
+        }
+        
+        #styles-header-unique  #contact h4 {
+            font-size: 20px;
+        }
+        
+        /* Footer */
+        #styles-header-unique  footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        #styles-header-unique  footer img {
+            max-width: 100px;
+            height: auto;
+        }
+        
+        /* Enlaces a redes sociales en el footer */
+        #styles-header-unique  footer a {
+            color: #ffd700;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        /* Derechos de autor en el footer */
+        #styles-header-unique  footer p {
+            margin: 10px 0;
+        }
+    /* <!-- comentario Header style --> */
+  
+         #styles-header-unique  header{
+            background-color: rgb(255, 255, 255); 
+        }
+        #styles-header-unique  .menu-opened {
+            background-color: rgb(0, 0, 0) !important;
+            color: black !important;
+        }
+        #styles-header-unique  .menu-opened .color-font {
+            color: black !important;
+        }
+         @media (max-width: 768px){
+        #styles-header-unique  header{
+                
+        align-items: flex-start;
+        justify-content: center;
+  
+        }
+        #styles-header-unique  .navbar-brand img {
+        width: 110% !important;
+        }
+        #styles-header-unique  .navbar-toggler-icon{
+         
+        }
+    }
+
+    /* <!-- estilos para el tabed content --> */
+
+        /* Estilos para las pestañas/tab */
+        #styles-header-unique  .tab-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }            
+        #styles-header-unique  .tab-menu input[type="radio"] {
+            display: none;
+        }
+        
+        #styles-header-unique  .cont_title_description p{
+            text-align: justify;
+            word-wrap: break-word;
+        }
+        #styles-header-unique  .world-wrap {
+            text-align: justify;
+            word-wrap: break-word;
+        }
+        #styles-header-unique  .cont_title_description{
+            margin-right:  6vw;
+        }
+        
+        #styles-header-unique  .cont-day-activity {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            width: inherit;                    
+        }
+        
+        
+          @media (max-width: 768px) {
+            #styles-header-unique  .cont-day-activity {
+                align-items: center;
+                flex-wrap: wrap;    
+                width: 70vw;   
+            }         
+        }
+        #styles-header-unique  .span_img_day{
+            align-self: center;
+            margin-right: 50px;
+            min-width: 350px;
+            overflow: hidden;
+            max-height: 170px;
+            /* border: 1px solid black; */
+            display: block;
+            max-width: 250px;
+            margin: 0 !important;            
+        }
+        #styles-header-unique  .span_img_day img{
+            display: block;
+            min-width: 100%;
+        }
+        #styles-header-unique  .tab-menu label {
+            cursor: pointer;
+            text-align: center;
+            padding: 10px;
+            background-color: #c0c0c029;
+            max-height: 95px;
+            flex: 1;
+            margin: 15px;
+        }
+        /* Resolucion movil */
+          @media (max-width:768px){
+            #styles-header-unique  .tab-menu label {
+                margin-left: 2px;
+                margin-right: 2px;
+            }
+        }
+        
+        #styles-header-unique  .tab-menu label:hover {
+            background-color: #e0e0e0;
+        }
+        #styles-header-unique  span img{
+            width: 50%;
+            max-width: 50px;
+        }
+        
+        /* Estilos para el contenido de las pestañas */
+        #styles-header-unique  .tab-content {
+            width: 100%;
+            display: none;                
+            /* border: 1px solid #ccc; */
+        }
+        
+        /* Mostrar contenido de la pestaña seleccionada */
+        #tab1:checked~#content-tab1,
+        #tab2:checked~#content-tab2,
+        #tab3:checked~#content-tab3,
+        #styles-header-unique  #tab4:checked~#content-tab4 {
+            display: block;
+        }
+        #styles-header-unique  #tab2:checked~#content-tab2{
+            flex-wrap: wrap;
+            display: flex;        
+           justify-content: center;
+        }
+
+    /* <!-- schedule linetime  --> */
+
+        #styles-header-unique  .timeline {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            flex-direction: column;
+        }
+        
+        #styles-header-unique  .day {
+            box-sizing: content-box;
+            display: flex;
+            align-items: center;
+            position: relative;
+            /* width: 100px; */
+            /* margin-right: 20px; */
+        }
+        
+        #styles-header-unique  .day span {
+            margin: 2vw;
+        }
+        
+        #styles-header-unique  .diamond {
+            width: 20px;
+            height: 20px;
+            background-color: yellow;
+            background-color: #ffd702;                
+            transform: rotate(45deg);
+        }
+        
+        #styles-header-unique  .conect_line {
+            content: "";
+            position: absolute;  
+            /* left: 100%; */
+            /* right: 0; */
+            width: 4px;
+            height: 100%;
+            margin-right: 10px;
+            margin-left: 8px;
+            background: linear-gradient(to right, transparent 50%, #ffd702 50%);
+            transform: translateY(0%);
+        }
+        
+        #styles-header-unique  /* p {
+            margin: 0;
+            text-align: left; Alinea el texto a la izquierda 
+        } 
+        */
+        
+
+    /* <!-- Styles de header --> */
+    
+       #styles-header-unique  .header-display-none {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        #styles-header-unique  .transparent-header {
+        background-color: transparent ;
+        backdrop-filter: none !important;
+        }
+        
+  
+        #styles-header-unique  header {
+            position: fixed;
+            z-index: 100;
+            width: 100%;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave */
+        }
+        
+        #styles-header-unique  header .bg-dark {
+            background-color: #27303a98 !important;
+            background-color: #27303a00 !important;
+            background: linear-gradient(96deg, transparent, #0b0c0d);
+            background: linear-gradient(to left, rgb(0 0 0 / 59%) 0%, rgb(15 14 14 / 0%) 50%);
+            background: linear-gradient(to left, rgb(0 0 0 / 0%) 0%, rgb(15 14 14 / 0%) 50%);
+            backdrop-filter: blur(1px);
+            
+        }
+        
+        #styles-header-unique  .cont-header {
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-height: fit-content;
+            padding: 10px 20px 10px 20px;
+        }
+        
+        #styles-header-unique  header .navbar-expand-lg .navbar-nav .nav-link {
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            padding: 5px 20px 5px 20px;
+        }
+        
+        #styles-header-unique  .navbar .navbar-collapse {
+            justify-content: flex-end;
+        }
+        
+        #styles-header-unique  .navbar-brand {
+            width: auto;
+            max-width: 100px;
+        }
+        
+        #styles-header-unique  .navbar-brand img {
+            width: 150%;
+            
+        }
+        
+        #styles-header-unique  .container-logo-title {
+            display: flex;
+            max-height: 50px;
+            align-items: center;
+        }
+        
+        #styles-header-unique  .short-title {
+            color: #187148;
+        }
+        
+        #styles-header-unique  .container-logo-title span {
+            font-size: 16px;
+            min-width: initial;
+        }
+        
+        #styles-header-unique  .contenedor-imagen-logo {
+            max-width: 40px;
+            min-width: 40px;
+        }
+        
+        #styles-header-unique  .contenedor-imagen-logo img {
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+        
+        #styles-header-unique  .container-logo-title h1 {
+            font-weight: 300;
+            margin: 0;
+            font-size: 1.5em;
+        }
+        
+        #styles-header-unique  .title-quick {
+            font-weight: 500 !important;
+        }
+        
+        #styles-header-unique  .cont-mesadomicilio-carrito {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            
+        }
+        
+        #styles-header-unique  .cont-mesadomicilio-carrito h1 {
+            font-size: 1.5em;
+            margin: 0;
+            font-weight: 300;
+        }
+        
+        #styles-header-unique  .icono-carrito-compras {
+            font-size: 1.5em;
+            color: #e5bd5d;
+            cursor: pointer;
+        }
+   
+    
+    
+    
+                               
+    
+    #styles-header-unique  .color-font  {
+      color: #000000;
+    padding: 24px;
+    
+    font-size: medium;
+  
+    }
+    #styles-header-unique  .color-font:hover  {
+      text-decoration: none;
+      color: #ffffff;;
+      border-bottom: 4px solid #ffd702;
+      
+    }
+    #styles-header-unique  .color-font span  {
+      color: #000;
+     
+    text-align: center;
+    color: #ffd702;
+      text-align: center;
+    }
+    #styles-header-unique  .color-font span:hover  {    
+      text-decoration: none;
+      
+    }
+    
+    
+  
+    </style>
+</head-header>
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Registro</title>
+        <!-- boostrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+<!-- Agrega los enlaces a los estilos de Bootstrap y jQuery -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><style type="text/css" id="operaUserStyle"></style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
+<!--font google lato-->
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100;1,700&amp;display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- global Styles -->
+<style>
+  #description{
+    min-width: 100%;
+  }
+  @media (max-width: 768px) {
+    main{
+      padding: 5.6vw 5vw !important; 
+    }
+    
+  }
+  main{
+    padding: 5.6vw 14vw;
+  }
+  p{
+    font-family: 'Lato', sans-serif; /* Fuente Lato */
+    font-weight: lighter;
+    font-size: 16px; /* Tamaño de fuente para párrafos */
+    color: white;
+  }
+  h6,h2,h3{
+    font-family: 'Lato', sans-serif; /* Fuente Lato */
+    
+    font-weight: bold; /* Peso de fuente en negrita */
+    font-size: 24px; /* Tamaño de fuente para h2 */
+    color: white;
+  }
+  .text-danger-cara{
+    color: #e4a808;
+  }
+  
+  
+  
+  
+  /* Estilos para etiquetas de formulario (labels) */
+  label {
+    font-family: 'Lato', sans-serif; /* Fuente Lato */
+    font-weight: bold; /* Peso de fuente en negrita */
+    font-size: 18px; /* Tamaño de fuente para etiquetas */
+    color: #333; /* Color de fuente para etiquetas */
+  }
+  
+</style>
+<!-- Stylo de botones -->
+<style>
+  
+</style>
+
+<!-- Resolucion movil -->
+<style>
+  @media (max-width: 768px) {
+    .cont_left_rigth{
+      /* Cambio en resoluciones móviles */      
+      flex-direction: column; /* Invierte la dirección horizontal */
+    }
+    
+  }
+  body > div.container-fluid.px-1.px-md-4.py-5.mx-auto{
+    padding: 5vw !important;
+  }
+  body > div.container-fluid.px-1.px-md-4.py-5.mx-auto > div > div > div > div > div{
+    padding: 0;
+  }
+  .card00 {
+    padding-top: 0px;
+  }
+  
+  
+</style>
+<style>
+  /* Estilo para el botón "Contact Us" */
+  .contact-now-button {
+    background: linear-gradient(to bottom, #4bb71b, #368e16);
+    background: rgb(101,251,63);
+    background: linear-gradient(241deg, rgb(240, 116, 33) 0%, rgba(255,143,87,1) 100%);
+    background: linear-gradient(241deg, #28a745 0%, rgb(135 249 3) 100%);
+    
+    border: none;
+    color: #fff;
+  }
+  
+  .contact-now-button:hover {
+    background: linear-gradient(to bottom, #368e16, #4bb71b);
+    color: #fff;
+  }
+  .success-animation { margin:0px auto;}
+  
+  .checkmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #4bb71b;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4bb71b;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    position:relative;
+    top: 5px;
+    right: 5px;
+    margin: 0 auto;
+  }
+  .checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #4bb71b;
+    fill: #fff;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+    
+  }
+  
+  .checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+  }
+  
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes scale {
+    0%, 100% {
+      transform: none;
+    }
+    
+    50% {
+      transform: scale3d(1.1, 1.1, 1);
+    }
+  }
+  
+  @keyframes fill {
+    100% {
+      box-shadow: inset 0px 0px 0px 30px #4bb71b;
+    }
+  }
+</style><style>
+  html { font-size: 15px; }
+  html, body { margin: 0; padding: 0; min-height: 100%; }
+  body { height:100%; display: flex; flex-direction: column; }
+  .referer-warning {
+    background: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 0.75em;
+    color: white;
+    text-align: center;
+    font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, system-ui, Sans-Serif;
+    line-height: 1.2;
+    font-size: 1rem;
+    position: relative;
+    z-index: 2;
+  }
+  .referer-warning span { font-family: initial; }
+  .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+  .referer-warning a { color: #56bcf9; }
+</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+  
+</style><style type="text/css">
+  @font-face {
+    font-weight: 400;
+    font-style:  normal;
+    font-family: circular;
+    
+    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-weight: 700;
+    font-style:  normal;
+    font-family: circular;
+    
+    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+  }
+  
+  
+  body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    /* Cambiar el fondo a un gradiente verde */
+    background: linear-gradient(to bottom, #4bb71b, #368e16);
+    background: rgb(207,95,8);
+    background: linear-gradient(115deg, rgba(207,95,8,1) 0%, rgba(32,148,0,1) 73%, rgba(8,122,196,1) 97%);
+    background: white;
+    color: #000;
+    background-repeat: no-repeat
+  }
+  
+  .card0 {
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    z-index: 0;
+  }
+  
+  .card00 {
+    z-index: 0
+  }
+  
+  .card1 {
+    margin-left: 140px;
+    z-index: 0;
+    border-right: 1px solid #F5F5F5
+  }
+  
+  .card2 {
+    display: none
+  }
+  
+  .card2.show {
+    display: flex;
+    flex-direction: column;
+  }
+  .social {
+    border-radius: 50%;
+    background-color: #FFCDD2;
+    color: #e5a007;
+    height: 47px;
+    width: 47px;
+    padding-top: 16px;
+    cursor: pointer
+  }
+  
+  input,
+  select {
+    padding: 2px;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #9E9E9E;
+    border: 1px solid #BDBDBD;
+    font-size: 16px;
+    letter-spacing: 1px;
+    height: 50px !important
+  }
+  
+  select {
+    width: 100%;
+    margin-bottom: 85px
+  }
+  .text-conf{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+  }
+  input:focus,
+  select:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #e5a007 !important;
+    outline-width: 0 !important
+  }
+  
+  .form-control {
+    
+    border: none; 
+    border-bottom: 1px solid #ced4da;
+    
+  }
+  
+  
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #e5a007
+  }
+  
+  .form-group {
+    display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 77%
+  }
+  
+  .form-control-placeholder {
+    position: absolute;
+    top: 0px;
+    padding: 12px 2px 0 2px;
+    transition: all 300ms;
+    opacity: 0.5
+  }
+  
+  .form-control:focus+.form-control-placeholder,
+  .form-control:valid+.form-control-placeholder {
+    font-size: 95%;
+    top: 10px;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+    background-color: #fff
+  }
+  
+  .next-button {
+    width: 18%;
+    height: 50px;
+    background-color: #fab526;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    
+    min-width: 50px;
+  }
+  
+  .next-button:hover {
+    background-color: #e5a007;
+    color: #fff
+  }
+  
+  .get-bonus {
+    margin-left: 154px
+  }
+  
+  .pic {
+    width: 230px;
+    height: 110px
+  }
+  
+  #progressbar {
+    position: absolute;
+    left: 35px;
+    overflow: hidden;
+    color: #e5a007
+  }
+  
+  #progressbar li {
+    list-style-type: none;
+    font-size: 8px;
+    font-weight: 400;
+    margin-bottom: 36px
+  }
+  
+  #progressbar li:nth-child(3) {
+    margin-bottom: 88px
+  }
+  
+  #progressbar .step0:before {
+    content: "";
+    color: #fff
+  }
+  
+  #progressbar li:before {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    font-size: 20px;
+    background: #424242;
+    border: 2px solid #e39c06;
+    border-radius: 50%;
+    margin: auto;
+  }
+  
+  #progressbar li:last-child:before {
+    width: 40px;
+    height: 40px
+  }
+  
+  #progressbar li:after {
+    content: '';
+    width: 3px;
+    height: 66px;
+    background: #BDBDBD;
+    position: absolute;
+    left: 58px;
+    top: 15px;
+    z-index: -1
+  }
+  
+  #progressbar li:last-child:after {
+    top: 147px;
+    height: 132px
+  }
+  
+  #progressbar li:nth-child(3):after {
+    top: 81px
+  }
+  
+  #progressbar li:nth-child(2):after {
+    top: 0px
+  }
+  
+  #progressbar li:first-child:after {
+    position: absolute;
+    top: -81px
+  }
+  
+  #progressbar li.active:after {
+    background: #e5a007;
+  }
+  
+  #progressbar li.active:before {
+    background: #e5a007;
+    font-family: FontAwesome;
+    content: "\f00c"
+  }
+  
+  .tick {
+    width: 100px;
+    height: 100px
+  }
+  
+  .prev {
+    display: block;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    cursor: pointer
+  }
+  
+  .prev:hover {
+    color: #D50000 !important
+  }
+  
+  @media screen and (max-width: 912px) {
+    .card00 {
+      
+    }
+    
+    .card1 {
+      border: none;
+      margin-left: 50px
+    }
+    
+    .card2 {
+      border-bottom: 1px solid #F5F5F5;
+      margin-bottom: 25px
+    }
+    
+    .social {
+      height: 30px;
+      width: 30px;
+      font-size: 15px;
+      padding-top: 8px;
+      margin-top: 7px
+    }
+    
+    .get-bonus {
+      margin-top: 40px !important;
+      margin-left: 75px
+    }
+    
+    #progressbar {
+      left: -25px
+    }
+  }
+</style><style>
+  /* Cambiar el color de fondo del botón "Next" al pasar el mouse */
+  .next-button:hover {
+    background-color: #e5a007;
+    color: #fff;
+  }
+  
+  /* Cambiar el color del botón "Go Back" al pasar el mouse */
+  .prev:hover {
+    color: #e5a007 !important;
+  }
+  
+  /* Cambiar el color de fondo del progreso activo */
+  #progressbar li.active:before {
+    background: #e5a007;
+  }
+</style><script>
+  window.console = window.console || function(t) {};
+</script><style type="text/css" id="operaUserStyle"></style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+  
+</style><style type="text/css">
+  @font-face {
+    font-weight: 400;
+    font-style:  normal;
+    font-family: circular;
+    
+    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-weight: 700;
+    font-style:  normal;
+    font-family: circular;
+    
+    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+  }</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+    
+  </style><style type="text/css">
+    @font-face {
+      font-weight: 400;
+      font-style:  normal;
+      font-family: circular;
+      
+      src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+    }
+    
+    @font-face {
+      font-weight: 700;
+      font-style:  normal;
+      font-family: circular;
+      
+      src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+    }</style><style id="mttstyle">
+      #mttContainer {
+        left: 0 !important;
+        top: 0 !important;
+        width: 1000px !important;
+        margin-left: -500px !important;
+        position: fixed !important;
+        z-index: 100000200 !important;
+        background: none !important;
+        pointer-events: none !important;
+        display: inline-block !important;
+      }
+      .bootstrapiso .tooltip {
+        width:auto  !important;
+        height:auto  !important;
+        background: none !important;
+        border:none !important;
+        border-radius: 0px !important;
+        visibility: visible  !important;
+        pointer-events: none !important;
+      }
+      .bootstrapiso  .bs-tooltip-top { 
+        margin-bottom: 15px  !important;
+      }
+      .bootstrapiso  .bs-tooltip-bottom { 
+        margin-top: 15px  !important;
+      }
+      .bootstrapiso .tooltip-inner {
+        font-size: 14px  !important;
+        max-width: 200px  !important;
+        text-align: center !important;
+        backdrop-filter: blur(2px) !important; 
+        background-color: #000000b8 !important;
+        color: #ffffffff !important;
+        pointer-events: auto;
+      }
+      .bootstrapiso .arrow::before {
+        border-top-color: #000000b8 !important;
+      }
+      .bootstrapiso .arrow {
+        font-size: 14px  !important;
+        margin: auto  !important;
+      }
+      .bootstrapiso .arrow::after {
+        display:none !important;
+      }
+      .ocr_text_div{
+        position: absolute;
+        opacity: 0.7;
+        font-size: calc(100% + 1cqw);
+        overflow: hidden;
+        border: 2px solid CornflowerBlue;
+        color: transparent !important;
+        background: none !important;
+      }
+      
+    </style><style type="text/css">
+      @font-face {
+        font-weight: 400;
+        font-style:  normal;
+        font-family: circular;
+        
+        src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+      }
+      
+      @font-face {
+        font-weight: 700;
+        font-style:  normal;
+        font-family: circular;
+        
+        src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+      }</style><style id="mttstyle">
+        #mttContainer {
+          left: 0 !important;
+          top: 0 !important;
+          width: 1000px !important;
+          margin-left: -500px !important;
+          position: fixed !important;
+          z-index: 100000200 !important;
+          background: none !important;
+          pointer-events: none !important;
+          display: inline-block !important;
+        }
+        .bootstrapiso .tooltip {
+          width:auto  !important;
+          height:auto  !important;
+          background: none !important;
+          border:none !important;
+          border-radius: 0px !important;
+          visibility: visible  !important;
+          pointer-events: none !important;
+        }
+        .bootstrapiso  .bs-tooltip-top { 
+          margin-bottom: 15px  !important;
+        }
+        .bootstrapiso  .bs-tooltip-bottom { 
+          margin-top: 15px  !important;
+        }
+        .bootstrapiso .tooltip-inner {
+          font-size: 14px  !important;
+          max-width: 200px  !important;
+          text-align: center !important;
+          backdrop-filter: blur(2px) !important; 
+          background-color: #000000b8 !important;
+          color: #ffffffff !important;
+          pointer-events: auto;
+        }
+        .bootstrapiso .arrow::before {
+          border-top-color: #000000b8 !important;
+        }
+        .bootstrapiso .arrow {
+          font-size: 14px  !important;
+          margin: auto  !important;
+        }
+        .bootstrapiso .arrow::after {
+          display:none !important;
+        }
+        .ocr_text_div{
+          position: absolute;
+          opacity: 0.7;
+          font-size: calc(100% + 1cqw);
+          overflow: hidden;
+          border: 2px solid CornflowerBlue;
+          color: transparent !important;
+          background: none !important;
+        }
+        
+      </style><style type="text/css">
+        @font-face {
+          font-weight: 400;
+          font-style:  normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+        }
+        
+        @font-face {
+          font-weight: 700;
+          font-style:  normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+        }</style><style id="mttstyle">
+          #mttContainer {
+            left: 0 !important;
+            top: 0 !important;
+            width: 1000px !important;
+            margin-left: -500px !important;
+            position: fixed !important;
+            z-index: 100000200 !important;
+            background: none !important;
+            pointer-events: none !important;
+            display: inline-block !important;
+          }
+          .bootstrapiso .tooltip {
+            width:auto  !important;
+            height:auto  !important;
+            background: none !important;
+            border:none !important;
+            border-radius: 0px !important;
+            visibility: visible  !important;
+            pointer-events: none !important;
+          }
+          .bootstrapiso  .bs-tooltip-top { 
+            margin-bottom: 15px  !important;
+          }
+          .bootstrapiso  .bs-tooltip-bottom { 
+            margin-top: 15px  !important;
+          }
+          .bootstrapiso .tooltip-inner {
+            font-size: 14px  !important;
+            max-width: 200px  !important;
+            text-align: center !important;
+            backdrop-filter: blur(2px) !important; 
+            background-color: #000000b8 !important;
+            color: #ffffffff !important;
+            pointer-events: auto;
+          }
+          .bootstrapiso .arrow::before {
+            border-top-color: #000000b8 !important;
+          }
+          .bootstrapiso .arrow {
+            font-size: 14px  !important;
+            margin: auto  !important;
+          }
+          .bootstrapiso .arrow::after {
+            display:none !important;
+          }
+          .ocr_text_div{
+            position: absolute;
+            opacity: 0.7;
+            font-size: calc(100% + 1cqw);
+            overflow: hidden;
+            border: 2px solid CornflowerBlue;
+            color: transparent !important;
+            background: none !important;
+          }
+          
+        </style><style type="text/css">
+          @font-face {
+            font-weight: 400;
+            font-style:  normal;
+            font-family: circular;
+            
+            src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+          }
+          
+          @font-face {
+            font-weight: 700;
+            font-style:  normal;
+            font-family: circular;
+            
+            src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+          }</style><style id="mttstyle">
+            #mttContainer {
+              left: 0 !important;
+              top: 0 !important;
+              width: 1000px !important;
+              margin-left: -500px !important;
+              position: fixed !important;
+              z-index: 100000200 !important;
+              background: none !important;
+              pointer-events: none !important;
+              display: inline-block !important;
+            }
+            .bootstrapiso .tooltip {
+              width:auto  !important;
+              height:auto  !important;
+              background: none !important;
+              border:none !important;
+              border-radius: 0px !important;
+              visibility: visible  !important;
+              pointer-events: none !important;
+            }
+            .bootstrapiso  .bs-tooltip-top { 
+              margin-bottom: 15px  !important;
+            }
+            .bootstrapiso  .bs-tooltip-bottom { 
+              margin-top: 15px  !important;
+            }
+            .bootstrapiso .tooltip-inner {
+              font-size: 14px  !important;
+              max-width: 200px  !important;
+              text-align: center !important;
+              backdrop-filter: blur(2px) !important; 
+              background-color: #000000b8 !important;
+              color: #ffffffff !important;
+              pointer-events: auto;
+            }
+            .bootstrapiso .arrow::before {
+              border-top-color: #000000b8 !important;
+            }
+            .bootstrapiso .arrow {
+              font-size: 14px  !important;
+              margin: auto  !important;
+            }
+            .bootstrapiso .arrow::after {
+              display:none !important;
+            }
+            .ocr_text_div{
+              position: absolute;
+              opacity: 0.7;
+              font-size: calc(100% + 1cqw);
+              overflow: hidden;
+              border: 2px solid CornflowerBlue;
+              color: transparent !important;
+              background: none !important;
+            }
+            
+          </style><style type="text/css">
+            @font-face {
+              font-weight: 400;
+              font-style:  normal;
+              font-family: circular;
+              
+              src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+            }
+            
+            @font-face {
+              font-weight: 700;
+              font-style:  normal;
+              font-family: circular;
+              
+              src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+            }</style><style id="mttstyle">
+              #mttContainer {
+                left: 0 !important;
+                top: 0 !important;
+                width: 1000px !important;
+                margin-left: -500px !important;
+                position: fixed !important;
+                z-index: 100000200 !important;
+                background: none !important;
+                pointer-events: none !important;
+                display: inline-block !important;
+              }
+              .bootstrapiso .tooltip {
+                width:auto  !important;
+                height:auto  !important;
+                background: none !important;
+                border:none !important;
+                border-radius: 0px !important;
+                visibility: visible  !important;
+                pointer-events: none !important;
+              }
+              .bootstrapiso  .bs-tooltip-top { 
+                margin-bottom: 15px  !important;
+              }
+              .bootstrapiso  .bs-tooltip-bottom { 
+                margin-top: 15px  !important;
+              }
+              .bootstrapiso .tooltip-inner {
+                font-size: 14px  !important;
+                max-width: 200px  !important;
+                text-align: center !important;
+                backdrop-filter: blur(2px) !important; 
+                background-color: #000000b8 !important;
+                color: #ffffffff !important;
+                pointer-events: auto;
+              }
+              .bootstrapiso .arrow::before {
+                border-top-color: #000000b8 !important;
+              }
+              .bootstrapiso .arrow {
+                font-size: 14px  !important;
+                margin: auto  !important;
+              }
+              .bootstrapiso .arrow::after {
+                display:none !important;
+              }
+              .ocr_text_div{
+                position: absolute;
+                opacity: 0.7;
+                font-size: calc(100% + 1cqw);
+                overflow: hidden;
+                border: 2px solid CornflowerBlue;
+                color: transparent !important;
+                background: none !important;
+              }
+              
+            </style><style type="text/css">
+              @font-face {
+                font-weight: 400;
+                font-style:  normal;
+                font-family: circular;
+                
+                src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+              }
+              
+              @font-face {
+                font-weight: 700;
+                font-style:  normal;
+                font-family: circular;
+                
+                src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+              }</style><style id="mttstyle">
+                #mttContainer {
+                  left: 0 !important;
+                  top: 0 !important;
+                  width: 1000px !important;
+                  margin-left: -500px !important;
+                  position: fixed !important;
+                  z-index: 100000200 !important;
+                  background: none !important;
+                  pointer-events: none !important;
+                  display: inline-block !important;
+                }
+                .bootstrapiso .tooltip {
+                  width:auto  !important;
+                  height:auto  !important;
+                  background: none !important;
+                  border:none !important;
+                  border-radius: 0px !important;
+                  visibility: visible  !important;
+                  pointer-events: none !important;
+                }
+                .bootstrapiso  .bs-tooltip-top { 
+                  margin-bottom: 15px  !important;
+                }
+                .bootstrapiso  .bs-tooltip-bottom { 
+                  margin-top: 15px  !important;
+                }
+                .bootstrapiso .tooltip-inner {
+                  font-size: 14px  !important;
+                  max-width: 200px  !important;
+                  text-align: center !important;
+                  backdrop-filter: blur(2px) !important; 
+                  background-color: #000000b8 !important;
+                  color: #ffffffff !important;
+                  pointer-events: auto;
+                }
+                .bootstrapiso .arrow::before {
+                  border-top-color: #000000b8 !important;
+                }
+                .bootstrapiso .arrow {
+                  font-size: 14px  !important;
+                  margin: auto  !important;
+                }
+                .bootstrapiso .arrow::after {
+                  display:none !important;
+                }
+                .ocr_text_div{
+                  position: absolute;
+                  opacity: 0.7;
+                  font-size: calc(100% + 1cqw);
+                  overflow: hidden;
+                  border: 2px solid CornflowerBlue;
+                  color: transparent !important;
+                  background: none !important;
+                }
+                
+              </style><style type="text/css">
+                @font-face {
+                  font-weight: 400;
+                  font-style:  normal;
+                  font-family: circular;
+                  
+                  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                }
+                
+                @font-face {
+                  font-weight: 700;
+                  font-style:  normal;
+                  font-family: circular;
+                  
+                  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                }</style><style id="mttstyle">
+                  #mttContainer {
+                    left: 0 !important;
+                    top: 0 !important;
+                    width: 1000px !important;
+                    margin-left: -500px !important;
+                    position: fixed !important;
+                    z-index: 100000200 !important;
+                    background: none !important;
+                    pointer-events: none !important;
+                    display: inline-block !important;
+                  }
+                  .bootstrapiso .tooltip {
+                    width:auto  !important;
+                    height:auto  !important;
+                    background: none !important;
+                    border:none !important;
+                    border-radius: 0px !important;
+                    visibility: visible  !important;
+                    pointer-events: none !important;
+                  }
+                  .bootstrapiso  .bs-tooltip-top { 
+                    margin-bottom: 15px  !important;
+                  }
+                  .bootstrapiso  .bs-tooltip-bottom { 
+                    margin-top: 15px  !important;
+                  }
+                  .bootstrapiso .tooltip-inner {
+                    font-size: 14px  !important;
+                    max-width: 200px  !important;
+                    text-align: center !important;
+                    backdrop-filter: blur(2px) !important; 
+                    background-color: #000000b8 !important;
+                    color: #ffffffff !important;
+                    pointer-events: auto;
+                  }
+                  .bootstrapiso .arrow::before {
+                    border-top-color: #000000b8 !important;
+                  }
+                  .bootstrapiso .arrow {
+                    font-size: 14px  !important;
+                    margin: auto  !important;
+                  }
+                  .bootstrapiso .arrow::after {
+                    display:none !important;
+                  }
+                  .ocr_text_div{
+                    position: absolute;
+                    opacity: 0.7;
+                    font-size: calc(100% + 1cqw);
+                    overflow: hidden;
+                    border: 2px solid CornflowerBlue;
+                    color: transparent !important;
+                    background: none !important;
+                  }
+                  
+                </style><style type="text/css">
+                  @font-face {
+                    font-weight: 400;
+                    font-style:  normal;
+                    font-family: circular;
+                    
+                    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                  }
+                  
+                  @font-face {
+                    font-weight: 700;
+                    font-style:  normal;
+                    font-family: circular;
+                    
+                    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                  }</style><style id="mttstyle">
+                    #mttContainer {
+                      left: 0 !important;
+                      top: 0 !important;
+                      width: 1000px !important;
+                      margin-left: -500px !important;
+                      position: fixed !important;
+                      z-index: 100000200 !important;
+                      background: none !important;
+                      pointer-events: none !important;
+                      display: inline-block !important;
+                    }
+                    .bootstrapiso .tooltip {
+                      width:auto  !important;
+                      height:auto  !important;
+                      background: none !important;
+                      border:none !important;
+                      border-radius: 0px !important;
+                      visibility: visible  !important;
+                      pointer-events: none !important;
+                    }
+                    .bootstrapiso  .bs-tooltip-top { 
+                      margin-bottom: 15px  !important;
+                    }
+                    .bootstrapiso  .bs-tooltip-bottom { 
+                      margin-top: 15px  !important;
+                    }
+                    .bootstrapiso .tooltip-inner {
+                      font-size: 14px  !important;
+                      max-width: 200px  !important;
+                      text-align: center !important;
+                      backdrop-filter: blur(2px) !important; 
+                      background-color: #000000b8 !important;
+                      color: #ffffffff !important;
+                      pointer-events: auto;
+                    }
+                    .bootstrapiso .arrow::before {
+                      border-top-color: #000000b8 !important;
+                    }
+                    .bootstrapiso .arrow {
+                      font-size: 14px  !important;
+                      margin: auto  !important;
+                    }
+                    .bootstrapiso .arrow::after {
+                      display:none !important;
+                    }
+                    .ocr_text_div{
+                      position: absolute;
+                      opacity: 0.7;
+                      font-size: calc(100% + 1cqw);
+                      overflow: hidden;
+                      border: 2px solid CornflowerBlue;
+                      color: transparent !important;
+                      background: none !important;
+                    }
+                    
+                  </style><style type="text/css">
+                    @font-face {
+                      font-weight: 400;
+                      font-style:  normal;
+                      font-family: circular;
+                      
+                      src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                    }
+                    
+                    @font-face {
+                      font-weight: 700;
+                      font-style:  normal;
+                      font-family: circular;
+                      
+                      src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                    }</style><style id="mttstyle">
+                      #mttContainer {
+                        left: 0 !important;
+                        top: 0 !important;
+                        width: 1000px !important;
+                        margin-left: -500px !important;
+                        position: fixed !important;
+                        z-index: 100000200 !important;
+                        background: none !important;
+                        pointer-events: none !important;
+                        display: inline-block !important;
+                      }
+                      .bootstrapiso .tooltip {
+                        width:auto  !important;
+                        height:auto  !important;
+                        background: none !important;
+                        border:none !important;
+                        border-radius: 0px !important;
+                        visibility: visible  !important;
+                        pointer-events: none !important;
+                      }
+                      .bootstrapiso  .bs-tooltip-top { 
+                        margin-bottom: 15px  !important;
+                      }
+                      .bootstrapiso  .bs-tooltip-bottom { 
+                        margin-top: 15px  !important;
+                      }
+                      .bootstrapiso .tooltip-inner {
+                        font-size: 14px  !important;
+                        max-width: 200px  !important;
+                        text-align: center !important;
+                        backdrop-filter: blur(2px) !important; 
+                        background-color: #000000b8 !important;
+                        color: #ffffffff !important;
+                        pointer-events: auto;
+                      }
+                      .bootstrapiso .arrow::before {
+                        border-top-color: #000000b8 !important;
+                      }
+                      .bootstrapiso .arrow {
+                        font-size: 14px  !important;
+                        margin: auto  !important;
+                      }
+                      .bootstrapiso .arrow::after {
+                        display:none !important;
+                      }
+                      .ocr_text_div{
+                        position: absolute;
+                        opacity: 0.7;
+                        font-size: calc(100% + 1cqw);
+                        overflow: hidden;
+                        border: 2px solid CornflowerBlue;
+                        color: transparent !important;
+                        background: none !important;
+                      }
+                      
+                    </style><style type="text/css">
+                      @font-face {
+                        font-weight: 400;
+                        font-style:  normal;
+                        font-family: circular;
+                        
+                        src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                      }
+                      
+                      @font-face {
+                        font-weight: 700;
+                        font-style:  normal;
+                        font-family: circular;
+                        
+                        src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                      }</style><style id="mttstyle">
+                        #mttContainer {
+                          left: 0 !important;
+                          top: 0 !important;
+                          width: 1000px !important;
+                          margin-left: -500px !important;
+                          position: fixed !important;
+                          z-index: 100000200 !important;
+                          background: none !important;
+                          pointer-events: none !important;
+                          display: inline-block !important;
+                        }
+                        .bootstrapiso .tooltip {
+                          width:auto  !important;
+                          height:auto  !important;
+                          background: none !important;
+                          border:none !important;
+                          border-radius: 0px !important;
+                          visibility: visible  !important;
+                          pointer-events: none !important;
+                        }
+                        .bootstrapiso  .bs-tooltip-top { 
+                          margin-bottom: 15px  !important;
+                        }
+                        .bootstrapiso  .bs-tooltip-bottom { 
+                          margin-top: 15px  !important;
+                        }
+                        .bootstrapiso .tooltip-inner {
+                          font-size: 14px  !important;
+                          max-width: 200px  !important;
+                          text-align: center !important;
+                          backdrop-filter: blur(2px) !important; 
+                          background-color: #000000b8 !important;
+                          color: #ffffffff !important;
+                          pointer-events: auto;
+                        }
+                        .bootstrapiso .arrow::before {
+                          border-top-color: #000000b8 !important;
+                        }
+                        .bootstrapiso .arrow {
+                          font-size: 14px  !important;
+                          margin: auto  !important;
+                        }
+                        .bootstrapiso .arrow::after {
+                          display:none !important;
+                        }
+                        .ocr_text_div{
+                          position: absolute;
+                          opacity: 0.7;
+                          font-size: calc(100% + 1cqw);
+                          overflow: hidden;
+                          border: 2px solid CornflowerBlue;
+                          color: transparent !important;
+                          background: none !important;
+                        }
+                        
+                      </style><style type="text/css">
+                        @font-face {
+                          font-weight: 400;
+                          font-style:  normal;
+                          font-family: circular;
+                          
+                          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                        }
+                        
+                        @font-face {
+                          font-weight: 700;
+                          font-style:  normal;
+                          font-family: circular;
+                          
+                          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                        }</style><style id="mttstyle">
+                          #mttContainer {
+                            left: 0 !important;
+                            top: 0 !important;
+                            width: 1000px !important;
+                            margin-left: -500px !important;
+                            position: fixed !important;
+                            z-index: 100000200 !important;
+                            background: none !important;
+                            pointer-events: none !important;
+                            display: inline-block !important;
+                          }
+                          .bootstrapiso .tooltip {
+                            width:auto  !important;
+                            height:auto  !important;
+                            background: none !important;
+                            border:none !important;
+                            border-radius: 0px !important;
+                            visibility: visible  !important;
+                            pointer-events: none !important;
+                          }
+                          .bootstrapiso  .bs-tooltip-top { 
+                            margin-bottom: 15px  !important;
+                          }
+                          .bootstrapiso  .bs-tooltip-bottom { 
+                            margin-top: 15px  !important;
+                          }
+                          .bootstrapiso .tooltip-inner {
+                            font-size: 14px  !important;
+                            max-width: 200px  !important;
+                            text-align: center !important;
+                            backdrop-filter: blur(2px) !important; 
+                            background-color: #000000b8 !important;
+                            color: #ffffffff !important;
+                            pointer-events: auto;
+                          }
+                          .bootstrapiso .arrow::before {
+                            border-top-color: #000000b8 !important;
+                          }
+                          .bootstrapiso .arrow {
+                            font-size: 14px  !important;
+                            margin: auto  !important;
+                          }
+                          .bootstrapiso .arrow::after {
+                            display:none !important;
+                          }
+                          .ocr_text_div{
+                            position: absolute;
+                            opacity: 0.7;
+                            font-size: calc(100% + 1cqw);
+                            overflow: hidden;
+                            border: 2px solid CornflowerBlue;
+                            color: transparent !important;
+                            background: none !important;
+                          }
+                          
+                        </style><style type="text/css">
+                          @font-face {
+                            font-weight: 400;
+                            font-style:  normal;
+                            font-family: circular;
+                            
+                            src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                          }
+                          
+                          @font-face {
+                            font-weight: 700;
+                            font-style:  normal;
+                            font-family: circular;
+                            
+                            src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                          }</style><style id="mttstyle">
+                            #mttContainer {
+                              left: 0 !important;
+                              top: 0 !important;
+                              width: 1000px !important;
+                              margin-left: -500px !important;
+                              position: fixed !important;
+                              z-index: 100000200 !important;
+                              background: none !important;
+                              pointer-events: none !important;
+                              display: inline-block !important;
+                            }
+                            .bootstrapiso .tooltip {
+                              width:auto  !important;
+                              height:auto  !important;
+                              background: none !important;
+                              border:none !important;
+                              border-radius: 0px !important;
+                              visibility: visible  !important;
+                              pointer-events: none !important;
+                            }
+                            .bootstrapiso  .bs-tooltip-top { 
+                              margin-bottom: 15px  !important;
+                            }
+                            .bootstrapiso  .bs-tooltip-bottom { 
+                              margin-top: 15px  !important;
+                            }
+                            .bootstrapiso .tooltip-inner {
+                              font-size: 14px  !important;
+                              max-width: 200px  !important;
+                              text-align: center !important;
+                              backdrop-filter: blur(2px) !important; 
+                              background-color: #000000b8 !important;
+                              color: #ffffffff !important;
+                              pointer-events: auto;
+                            }
+                            .bootstrapiso .arrow::before {
+                              border-top-color: #000000b8 !important;
+                            }
+                            .bootstrapiso .arrow {
+                              font-size: 14px  !important;
+                              margin: auto  !important;
+                            }
+                            .bootstrapiso .arrow::after {
+                              display:none !important;
+                            }
+                            .ocr_text_div{
+                              position: absolute;
+                              opacity: 0.7;
+                              font-size: calc(100% + 1cqw);
+                              overflow: hidden;
+                              border: 2px solid CornflowerBlue;
+                              color: transparent !important;
+                              background: none !important;
+                            }
+                            
+                          </style><style type="text/css">
+                            @font-face {
+                              font-weight: 400;
+                              font-style:  normal;
+                              font-family: circular;
+                              
+                              src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                            }
+                            
+                            @font-face {
+                              font-weight: 700;
+                              font-style:  normal;
+                              font-family: circular;
+                              
+                              src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                            }</style><style id="mttstyle">
+                              #mttContainer {
+                                left: 0 !important;
+                                top: 0 !important;
+                                width: 1000px !important;
+                                margin-left: -500px !important;
+                                position: fixed !important;
+                                z-index: 100000200 !important;
+                                background: none !important;
+                                pointer-events: none !important;
+                                display: inline-block !important;
+                              }
+                              .bootstrapiso .tooltip {
+                                width:auto  !important;
+                                height:auto  !important;
+                                background: none !important;
+                                border:none !important;
+                                border-radius: 0px !important;
+                                visibility: visible  !important;
+                                pointer-events: none !important;
+                              }
+                              .bootstrapiso  .bs-tooltip-top { 
+                                margin-bottom: 15px  !important;
+                              }
+                              .bootstrapiso  .bs-tooltip-bottom { 
+                                margin-top: 15px  !important;
+                              }
+                              .bootstrapiso .tooltip-inner {
+                                font-size: 14px  !important;
+                                max-width: 200px  !important;
+                                text-align: center !important;
+                                backdrop-filter: blur(2px) !important; 
+                                background-color: #000000b8 !important;
+                                color: #ffffffff !important;
+                                pointer-events: auto;
+                              }
+                              .bootstrapiso .arrow::before {
+                                border-top-color: #000000b8 !important;
+                              }
+                              .bootstrapiso .arrow {
+                                font-size: 14px  !important;
+                                margin: auto  !important;
+                              }
+                              .bootstrapiso .arrow::after {
+                                display:none !important;
+                              }
+                              .ocr_text_div{
+                                position: absolute;
+                                opacity: 0.7;
+                                font-size: calc(100% + 1cqw);
+                                overflow: hidden;
+                                border: 2px solid CornflowerBlue;
+                                color: transparent !important;
+                                background: none !important;
+                              }
+                              
+                            </style><style type="text/css">
+                              @font-face {
+                                font-weight: 400;
+                                font-style:  normal;
+                                font-family: circular;
+                                
+                                src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                              }
+                              
+                              @font-face {
+                                font-weight: 700;
+                                font-style:  normal;
+                                font-family: circular;
+                                
+                                src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                              }</style><style id="mttstyle">
+                                #mttContainer {
+                                  left: 0 !important;
+                                  top: 0 !important;
+                                  width: 1000px !important;
+                                  margin-left: -500px !important;
+                                  position: fixed !important;
+                                  z-index: 100000200 !important;
+                                  background: none !important;
+                                  pointer-events: none !important;
+                                  display: inline-block !important;
+                                }
+                                .bootstrapiso .tooltip {
+                                  width:auto  !important;
+                                  height:auto  !important;
+                                  background: none !important;
+                                  border:none !important;
+                                  border-radius: 0px !important;
+                                  visibility: visible  !important;
+                                  pointer-events: none !important;
+                                }
+                                .bootstrapiso  .bs-tooltip-top { 
+                                  margin-bottom: 15px  !important;
+                                }
+                                .bootstrapiso  .bs-tooltip-bottom { 
+                                  margin-top: 15px  !important;
+                                }
+                                .bootstrapiso .tooltip-inner {
+                                  font-size: 14px  !important;
+                                  max-width: 200px  !important;
+                                  text-align: center !important;
+                                  backdrop-filter: blur(2px) !important; 
+                                  background-color: #000000b8 !important;
+                                  color: #ffffffff !important;
+                                  pointer-events: auto;
+                                }
+                                .bootstrapiso .arrow::before {
+                                  border-top-color: #000000b8 !important;
+                                }
+                                .bootstrapiso .arrow {
+                                  font-size: 14px  !important;
+                                  margin: auto  !important;
+                                }
+                                .bootstrapiso .arrow::after {
+                                  display:none !important;
+                                }
+                                .ocr_text_div{
+                                  position: absolute;
+                                  opacity: 0.7;
+                                  font-size: calc(100% + 1cqw);
+                                  overflow: hidden;
+                                  border: 2px solid CornflowerBlue;
+                                  color: transparent !important;
+                                  background: none !important;
+                                }
+                                
+                              </style><style type="text/css">
+                                @font-face {
+                                  font-weight: 400;
+                                  font-style:  normal;
+                                  font-family: circular;
+                                  
+                                  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                                }
+                                
+                                @font-face {
+                                  font-weight: 700;
+                                  font-style:  normal;
+                                  font-family: circular;
+                                  
+                                  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                                }</style><style id="mttstyle">
+                                  #mttContainer {
+                                    left: 0 !important;
+                                    top: 0 !important;
+                                    width: 1000px !important;
+                                    margin-left: -500px !important;
+                                    position: fixed !important;
+                                    z-index: 100000200 !important;
+                                    background: none !important;
+                                    pointer-events: none !important;
+                                    display: inline-block !important;
+                                  }
+                                  .bootstrapiso .tooltip {
+                                    width:auto  !important;
+                                    height:auto  !important;
+                                    background: none !important;
+                                    border:none !important;
+                                    border-radius: 0px !important;
+                                    visibility: visible  !important;
+                                    pointer-events: none !important;
+                                  }
+                                  .bootstrapiso  .bs-tooltip-top { 
+                                    margin-bottom: 15px  !important;
+                                  }
+                                  .bootstrapiso  .bs-tooltip-bottom { 
+                                    margin-top: 15px  !important;
+                                  }
+                                  .bootstrapiso .tooltip-inner {
+                                    font-size: 14px  !important;
+                                    max-width: 200px  !important;
+                                    text-align: center !important;
+                                    backdrop-filter: blur(2px) !important; 
+                                    background-color: #000000b8 !important;
+                                    color: #ffffffff !important;
+                                    pointer-events: auto;
+                                  }
+                                  .bootstrapiso .arrow::before {
+                                    border-top-color: #000000b8 !important;
+                                  }
+                                  .bootstrapiso .arrow {
+                                    font-size: 14px  !important;
+                                    margin: auto  !important;
+                                  }
+                                  .bootstrapiso .arrow::after {
+                                    display:none !important;
+                                  }
+                                  .ocr_text_div{
+                                    position: absolute;
+                                    opacity: 0.7;
+                                    font-size: calc(100% + 1cqw);
+                                    overflow: hidden;
+                                    border: 2px solid CornflowerBlue;
+                                    color: transparent !important;
+                                    background: none !important;
+                                  }
+                                  
+                                </style><style type="text/css">
+                                  @font-face {
+                                    font-weight: 400;
+                                    font-style:  normal;
+                                    font-family: circular;
+                                    
+                                    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                                  }
+                                  
+                                  @font-face {
+                                    font-weight: 700;
+                                    font-style:  normal;
+                                    font-family: circular;
+                                    
+                                    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                                  }</style><style id="mttstyle">
+                                    #mttContainer {
+                                      left: 0 !important;
+                                      top: 0 !important;
+                                      width: 1000px !important;
+                                      margin-left: -500px !important;
+                                      position: fixed !important;
+                                      z-index: 100000200 !important;
+                                      background: none !important;
+                                      pointer-events: none !important;
+                                      display: inline-block !important;
+                                    }
+                                    .bootstrapiso .tooltip {
+                                      width:auto  !important;
+                                      height:auto  !important;
+                                      background: none !important;
+                                      border:none !important;
+                                      border-radius: 0px !important;
+                                      visibility: visible  !important;
+                                      pointer-events: none !important;
+                                    }
+                                    .bootstrapiso  .bs-tooltip-top { 
+                                      margin-bottom: 15px  !important;
+                                    }
+                                    .bootstrapiso  .bs-tooltip-bottom { 
+                                      margin-top: 15px  !important;
+                                    }
+                                    .bootstrapiso .tooltip-inner {
+                                      font-size: 14px  !important;
+                                      max-width: 200px  !important;
+                                      text-align: center !important;
+                                      backdrop-filter: blur(2px) !important; 
+                                      background-color: #000000b8 !important;
+                                      color: #ffffffff !important;
+                                      pointer-events: auto;
+                                    }
+                                    .bootstrapiso .arrow::before {
+                                      border-top-color: #000000b8 !important;
+                                    }
+                                    .bootstrapiso .arrow {
+                                      font-size: 14px  !important;
+                                      margin: auto  !important;
+                                    }
+                                    .bootstrapiso .arrow::after {
+                                      display:none !important;
+                                    }
+                                    .ocr_text_div{
+                                      position: absolute;
+                                      opacity: 0.7;
+                                      font-size: calc(100% + 1cqw);
+                                      overflow: hidden;
+                                      border: 2px solid CornflowerBlue;
+                                      color: transparent !important;
+                                      background: none !important;
+                                    }
+                                    
+                                  </style><style type="text/css">
+                                    @font-face {
+                                      font-weight: 400;
+                                      font-style:  normal;
+                                      font-family: circular;
+                                      
+                                      src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                                    }
+                                    
+                                    @font-face {
+                                      font-weight: 700;
+                                      font-style:  normal;
+                                      font-family: circular;
+                                      
+                                      src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                                    }</style><style id="mttstyle">
+                                      #mttContainer {
+                                        left: 0 !important;
+                                        top: 0 !important;
+                                        width: 1000px !important;
+                                        margin-left: -500px !important;
+                                        position: fixed !important;
+                                        z-index: 100000200 !important;
+                                        background: none !important;
+                                        pointer-events: none !important;
+                                        display: inline-block !important;
+                                      }
+                                      .bootstrapiso .tooltip {
+                                        width:auto  !important;
+                                        height:auto  !important;
+                                        background: none !important;
+                                        border:none !important;
+                                        border-radius: 0px !important;
+                                        visibility: visible  !important;
+                                        pointer-events: none !important;
+                                      }
+                                      .bootstrapiso  .bs-tooltip-top { 
+                                        margin-bottom: 15px  !important;
+                                      }
+                                      .bootstrapiso  .bs-tooltip-bottom { 
+                                        margin-top: 15px  !important;
+                                      }
+                                      .bootstrapiso .tooltip-inner {
+                                        font-size: 14px  !important;
+                                        max-width: 200px  !important;
+                                        text-align: center !important;
+                                        backdrop-filter: blur(2px) !important; 
+                                        background-color: #000000b8 !important;
+                                        color: #ffffffff !important;
+                                        pointer-events: auto;
+                                      }
+                                      .bootstrapiso .arrow::before {
+                                        border-top-color: #000000b8 !important;
+                                      }
+                                      .bootstrapiso .arrow {
+                                        font-size: 14px  !important;
+                                        margin: auto  !important;
+                                      }
+                                      .bootstrapiso .arrow::after {
+                                        display:none !important;
+                                      }
+                                      .ocr_text_div{
+                                        position: absolute;
+                                        opacity: 0.7;
+                                        font-size: calc(100% + 1cqw);
+                                        overflow: hidden;
+                                        border: 2px solid CornflowerBlue;
+                                        color: transparent !important;
+                                        background: none !important;
+                                      }
+                                      
+                                    </style><style type="text/css">
+                                      @font-face {
+                                        font-weight: 400;
+                                        font-style:  normal;
+                                        font-family: circular;
+                                        
+                                        src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                                      }
+                                      
+                                      @font-face {
+                                        font-weight: 700;
+                                        font-style:  normal;
+                                        font-family: circular;
+                                        
+                                        src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                                      }</style><style id="mttstyle">
+                                        #mttContainer {
+                                          left: 0 !important;
+                                          top: 0 !important;
+                                          width: 1000px !important;
+                                          margin-left: -500px !important;
+                                          position: fixed !important;
+                                          z-index: 100000200 !important;
+                                          background: none !important;
+                                          pointer-events: none !important;
+                                          display: inline-block !important;
+                                        }
+                                        .bootstrapiso .tooltip {
+                                          width:auto  !important;
+                                          height:auto  !important;
+                                          background: none !important;
+                                          border:none !important;
+                                          border-radius: 0px !important;
+                                          visibility: visible  !important;
+                                          pointer-events: none !important;
+                                        }
+                                        .bootstrapiso  .bs-tooltip-top { 
+                                          margin-bottom: 15px  !important;
+                                        }
+                                        .bootstrapiso  .bs-tooltip-bottom { 
+                                          margin-top: 15px  !important;
+                                        }
+                                        .bootstrapiso .tooltip-inner {
+                                          font-size: 14px  !important;
+                                          max-width: 200px  !important;
+                                          text-align: center !important;
+                                          backdrop-filter: blur(2px) !important; 
+                                          background-color: #000000b8 !important;
+                                          color: #ffffffff !important;
+                                          pointer-events: auto;
+                                        }
+                                        .bootstrapiso .arrow::before {
+                                          border-top-color: #000000b8 !important;
+                                        }
+                                        .bootstrapiso .arrow {
+                                          font-size: 14px  !important;
+                                          margin: auto  !important;
+                                        }
+                                        .bootstrapiso .arrow::after {
+                                          display:none !important;
+                                        }
+                                        .ocr_text_div{
+                                          position: absolute;
+                                          opacity: 0.7;
+                                          font-size: calc(100% + 1cqw);
+                                          overflow: hidden;
+                                          border: 2px solid CornflowerBlue;
+                                          color: transparent !important;
+                                          background: none !important;
+                                        }
+                                        
+                                      </style><style type="text/css">
+                                        @font-face {
+                                          font-weight: 400;
+                                          font-style:  normal;
+                                          font-family: circular;
+                                          
+                                          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                                        }
+                                        
+                                        @font-face {
+                                          font-weight: 700;
+                                          font-style:  normal;
+                                          font-family: circular;
+                                          
+                                          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                                        }</style><style id="mttstyle">
+                                          #mttContainer {
+                                            left: 0 !important;
+                                            top: 0 !important;
+                                            width: 1000px !important;
+                                            margin-left: -500px !important;
+                                            position: fixed !important;
+                                            z-index: 100000200 !important;
+                                            background: none !important;
+                                            pointer-events: none !important;
+                                            display: inline-block !important;
+                                          }
+                                          .bootstrapiso .tooltip {
+                                            width:auto  !important;
+                                            height:auto  !important;
+                                            background: none !important;
+                                            border:none !important;
+                                            border-radius: 0px !important;
+                                            visibility: visible  !important;
+                                            pointer-events: none !important;
+                                          }
+                                          .bootstrapiso  .bs-tooltip-top { 
+                                            margin-bottom: 15px  !important;
+                                          }
+                                          .bootstrapiso  .bs-tooltip-bottom { 
+                                            margin-top: 15px  !important;
+                                          }
+                                          .bootstrapiso .tooltip-inner {
+                                            font-size: 14px  !important;
+                                            max-width: 200px  !important;
+                                            text-align: center !important;
+                                            backdrop-filter: blur(2px) !important; 
+                                            background-color: #000000b8 !important;
+                                            color: #ffffffff !important;
+                                            pointer-events: auto;
+                                          }
+                                          .bootstrapiso .arrow::before {
+                                            border-top-color: #000000b8 !important;
+                                          }
+                                          .bootstrapiso .arrow {
+                                            font-size: 14px  !important;
+                                            margin: auto  !important;
+                                          }
+                                          .bootstrapiso .arrow::after {
+                                            display:none !important;
+                                          }
+                                          .ocr_text_div{
+                                            position: absolute;
+                                            opacity: 0.7;
+                                            font-size: calc(100% + 1cqw);
+                                            overflow: hidden;
+                                            border: 2px solid CornflowerBlue;
+                                            color: transparent !important;
+                                            background: none !important;
+                                          }
+                                          
+                                        </style><style type="text/css">
+                                          @font-face {
+                                            font-weight: 400;
+                                            font-style:  normal;
+                                            font-family: circular;
+                                            
+                                            src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                                          }
+                                          
+                                          @font-face {
+                                            font-weight: 700;
+                                            font-style:  normal;
+                                            font-family: circular;
+                                            
+                                            src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                                          }</style>   
+                                          
+                                          
+                                          
+                                          <header id="styles-header-unique" class="transparent-header menu-opened">
+                                            
+                                            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: flex;justify-content: center;font-family: 'Lato';font-weight: 300;background-color: white !important;">
+                                                <a class="navbar-brand" href="#"><img src="imgs/logo.svg" alt=""></a>
+                                                <button id="toggleMenuButton" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation" style="position: absolute !important; right: 0; bottom: 10;">
+                                                  <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+                                              </button>
+                                              
+                                        
+                                                <div class="navbar-collapse collapse show" id="navbarSupportedContent" style="display: none;">
+                                                    <ul class="navbar-nav" style="
+                                        font-family: lato;
+                                        font-size: xx-large;
+                                        ">
+                                                        <li class="nav-item active" style="
+                                        font-family: lato;
+                                        ">
+                                                            <a class="color-font" href="#section-portada-id">Home <span class="sr-only">(current)</span></a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="color-font" href="#section-lore-id">Our tours</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="color-font" href="#section-art-id">About us</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="color-font" href="#section-omnitools-id">Terms &amp; conditions</a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="color-font" href="#section-lore-id"><span class="short-title">Contact</span></a>
+                                                        </li>
+                                                        <li class="nav-item">
+                                                            <a class="color-font" href="#section-lore-id"><span class="short-title">Buy now</span></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </nav>
+                                        </header>    
+                                          <main style="/* text-align: center; */background: linear-gradient(50deg, rgba(229,171,8,1) 0%, rgba(229,159,8,1) 14%, rgba(226,155,6,1) 79%);/* padding: 5.6vw; *//* margin-top: 10vh !important; */display: block;width: 100%;position: relative;height: fit-content;padding: 5.6vw 14vw;">
+                                           
+                                            
+                                            
+                                            <div class="cont_left_rigth" style="
+                                            padding: 0px;
+                                            padding-left: 0 !important;
+                                            padding-right: 0px !important;
+                                            background: white;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            flex-wrap: wrap;
+                                            border-radius: 5px;
+                                            ">
+                                            
+                                            <div class="cont_left" style="
+                                            text-align: left !important;
+                                            padding: 5vw;
+                                            flex: 1; /* Hace que cada elemento ocupe el 50% del ancho disponible */
+                                            display: flex;
+                                            text-align: left;
+                                            flex-direction: column;
+                                            background: gray;
+                                            /* min-width: 20vw; */
+                                            min-height: 50vh;
+                                            height: -webkit-fill-available;
+                                            background-image: url(./imgs/form-back.JPG);
+                                            background-attachment: fixed;
+                                            /* backdrop-filter: grayscale(1); */
+                                            background-blend-mode: soft-light;
+                                            background-blend-mode: luminosity;
+                                            background-size: cover;
+                                            background-repeat: no-repeat;
+                                            justify-content: space-between;
+                                            align-items: flex-start;
+                                            max-width: -webkit-fill-available;
+                                            min-width: 300px;
+                                            ">
+                                            <div class="row text-center justify-content-center px-3" style="
+                                            padding: 0px;
+                                            ">                                            
+                                            <h3 class="mt-4" style="margin: 0px !important;padding-bottom: 30px;color: #e4a808;font-size: xx-large;width: 100%;text-align: left;">let's get going</h3>
+                                          </div>
+                                          <div class="col-md-6" style="
+                                          min-width: fit-content;
+                                          display: flex;
+                                          text-align: left;
+                                          flex-direction: row;
+                                          position: relative;
+                                          justify-content: space-around;
+                                          height: inherit;
+                                          max-height: 40vh;
+                                          min-height: inherit;
+                                          ">
+                                          <div class="card1" style="/* margin-left: 50px; */border: none;margin-left: 100px;">
+                                            <ul id="progressbar" class="text-center" style="z-index: 1;margin-left: 0px;position: absolute;left: 0px;">
+                                              <li class="active step0"></li>
+                                              <li class="step0"></li>
+                                              <li class="step0 "></li>
+                                              <li class="step0 "></li>
+                                            </ul>
+                                            <p class="mb-5" style="width: 100%;
+                                            ">Enter names and lastnames</p>
+                                            <p class="mb-5">Enter your email &amp; phone</p>
+                                            <p class="mb-5">Set departure &amp; short description</p>                                                           
+                                          </div>
+                                          
+                                        </div>
+                                        <h2 class=" get-bonus mt-4 mb-5" style="
+                                        color: silver;
+                                        font-size: 1.5rem;
+                                        text-wrap: balance;
+                                        margin: 0px;
+                                        text-align: start;
+                                        position: relative;
+                                        border: 0;
+                                        margin-bottom: 0px !important;
+                                        margin-top: 0px !important;
+                                        ">You're Getting ready <span id="user-name" class="text-danger-cara">Jane Doe</span> Congratulations.</h2>
+                                      </div>
+                                      
+                                      <div class="cont_rigth" style="flex: 1; /* Hace que cada elemento ocupe el 50% del ancho disponible */display: inline-flex;background: white;padding: 5vw;/* text-align: left; */flex-direction: column;height: -webkit-fill-available;min-width: 300px;/* justify-content: space-between; */border-radius: 5px;">
+                                        <p id="btn-goback" class="prev text-danger-cara" style="color: rgb(73, 80, 87); position: relative; display: none; left: 0px; top: 0px; text-align: left; font-size: smaller;"><span class="fa fa-long-arrow-left"> Go Back</span></p>
+                                        <!-- <button type="button" class="btn btn-secondary prev" style="position: absolute; top: 10px; right: 10px;">Atrás</button> -->
+                                        <div data-step="1" class="card2 first-screen ml-2 show" style="
+                                        min-width: 70px !important;
+                                        ">
+                                        <div class="row text-center px-3 mr-2" style="">                                          
+                                          <div class="mb-2 col-2">  </div>
+                                          <div class="mb-2 col-2"> <span class="fa fa-facebook social"></span> </div>
+                                          <div class="mb-2 col-2"> <span class="fa fa-linkedin social"></span> </div>
+                                          <div class="mb-2 col-2"> <span class="fa fa-google-plus social"></span> </div>
+                                          <div class="mb-2 col-2"> <span class="fa fa-twitter social"></span> </div>
+                                          <div class="mb-2 col-2">  </div>
+                                        </div>
+                                        <div class="row px-3 mt-4">
+                                          
+                                          
+                                          
+                                          
+                                          <div class="form-group mt-1 mb-1">
+                                            <div class="input-group-prepend">
+                                              <span class="text-conf">
+                                                <i class="fa fa-user"></i>
+                                              </span>
+                                            </div>
+                                            <input type="text" id="full-name" class="form-control valid" placeholder="Name" required="" data-step="1">
+                                            <!-- <label class="ml-3 form-control-placeholder" for="full-name">Name</label> -->
+                                          
+                                          
+                                        </div>
+                                        
+                                        
+                                        
+                                      </div>
+                                      
+                                      <div class="row px-3 mt-4">
+                                        <div class="form-group mt-1 mb-1"> 
+                                          <div class="input-group-prepend">
+                                            <span class="text-conf">
+                                              <i class="fa fa-pencil"></i>
+                                            </span>
+                                          </div>
+                                          <input type="text" id="full-name" class="form-control" placeholder="Second Name" required="" data-step="1"> 
+                                          <!-- <label class="ml-3 form-control-placeholder" for="full-name">Apellido</label>  -->
+                                        </div>
+                                        <div class="next-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
+                                      </div>
+                                      
+                                    </div>
+                                    <div data-step="2" class="card2 ml-2">
+                                      
+                                      <div class="row px-3 mt-4">
+                                        <div class="form-group mt-1 mb-1"> 
+                                          <div class="input-group-prepend ">
+                                            <span class="text-conf ">
+                                              <i class="fa fa-envelope"></i>
+                                            </span>
+                                          </div>
+                                          <input type="text" id="email" class="form-control" placeholder="Email" required="" data-step="2">
+                                          
+                                          <!-- <label class="ml-3 form-control-placeholder" for="email">Email</label>  -->
+                                        </div>
+                                      </div>
+                                      <div class="row px-3 mt-3">
+                                        <div class="form-group mt-1 mb-1"> 
+                                          <div class="input-group-prepend">
+                                            <span class="text-conf">
+                                              <i class="fa fa-phone"></i>
+                                            </span>
+                                          </div>
+                                          <input type="tel" id="phone" class="form-control" placeholder="Telefono" required="" data-step="2">
+                                          <!-- <label class="ml-3 form-control-placeholder" for="phone">Phone Number</label> -->
+                                        </div>
+                                        <div class="next-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> 
+                                        </div>
+                                      </div>                                              
+                                    </div>
+                                    
+                                    <div data-step="3" class="card2 ml-2" id="id-preview">
+                                      <div class="row px-3 mt-3">
+                                        
+                                        <div class="form-group mt-1 mb-1">
+                                          <div class="input-group-prepend">
+                                            <span class="text-conf">
+                                              <i class="fa fa-calendar"></i>
+                                            </span>
+                                          </div>
+                                          <input type="date" id="tour-date" class="form-control" required="" data-step="3">
+                                          <!-- <label class="ml-3 form-control-placeholder" for="tour-date"></label> -->
+                                          
+                                        </div>
+                                      </div>
+                                      <div class="row px-3 mt-3">
+                                        
+                                        <div class="form-group mt-1 mb-1">
+                                          <div class="input-group-prepend">
+                                            <span class="text-conf">
+                                              <i class="fa fa-pencil"></i>
+                                            </span>
+                                          </div>
+                                          <textarea id="description" class="form-control" placeholder="Description" required="" data-step="3" rows="4"></textarea>
+                                          <!-- <label class="ml-3 form-control-placeholder" for="description">Description</label> -->
+                                          <div class="next-button final-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
+                                        </div> 
+                                      </div>
+                                      
+                                      
+                                    </div>
+                                    
+                                    <!-- Date departure  and description -->
+                                    <div data-step="4" class="card2 ml-2" id="final-step-id" style="background:white;">
+                                      
+                                      <div class="row px-3 mt-2 mb-4 text-center">
+                                        <h2 class="col-12 text-danger-cara"><strong>Success !</strong></h2>
+                                        <div class="col-12 text-center">
+                                          <div class="success-animation">
+                                            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+                                          </div>
+                                          
+                                        </div>
+                                        <h6 class="col-12 mt-2">
+                                          <i>
+                                            now you can write to us by Whatsapp and E-mail
+                                          </i>
+                                        </h6>
+                                      </div>
+                                      <button type="button" class="btn btn-primary contact-now-button final-button text-center mt-1 ml-2">Contact Us</button>
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                              </main>
+                              
+                              <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+                              
+                              <script id="rendered-js">
+                                $(document).ready(function () {    
+                                  // Maneja el clic en el botón "Contact Us"
+                                  $(".contact-now-button").click(function () {
+                                    // Obtiene los valores de los campos necesarios
+                                    var userName = "Name: " + $("#full-name").val();
+                                    var userEmail = "E-mail: " + $("#email").val();
+                                    var userPhone = "Phone: " + $("#phone").val();
+                                    var tourDate = "Tour Date: " + $("#tour-date").val();
+                                    var description = "Description: " + $("#description").val();
+                                    
+                                    // Crea el mensaje de WhatsApp con la información
+                                    var whatsappMessage = userName + "\n" + userEmail + "\n" + userPhone + "\n" + tourDate + "\n" + description;
+                                    
+                                    // Crea el enlace de WhatsApp
+                                    var whatsappLink = "https://api.whatsapp.com/send?phone=+573202486769&text=" + encodeURIComponent(whatsappMessage);
+                                    
+                                    // Crea el enlace de Gmail (mailto)
+                                    var emailSubject = "Tour Inquiry from " + $("#full-name").val();
+                                    var emailBody = userName + "\n" + userEmail + "\n" + userPhone + "\n" + tourDate + "\n" + description;
+                                    var emailLink = "mailto:castelll0009@gmail.com?subject=" + encodeURIComponent(emailSubject) + "&body=" + encodeURIComponent(emailBody);
+                                    
+                                    // Abre ambas ventanas de enlace en simultáneo
+                                    window.open(whatsappLink, "_blank");
+                                    window.open(emailLink, "_blank");
+                                  });
+                                  
+                                  $(".final-button").click(function() {
+                                    
+                                    
+                                  });
+                                  // Función para verificar los campos en el paso actual
+                                  function checkFields(step) {
+                                    var allFieldsFilled = true;
+                                    
+                                    // Verifica los campos de entrada requeridos en el paso actual
+                                    $(".form-control[data-step='" + step + "'][required]").each(function () {
+                                      if ($(this).val() === "") {
+                                        allFieldsFilled = false;
+                                        return false; // Rompe el bucle si se encuentra un campo vacío
+                                      }
+                                    });
+                                    
+                                    return allFieldsFilled;
+                                  }
+                                  
+                                  // Maneja el clic en el botón "Next"
+                                  $(".next-button").click(function () {  
+                                                                                                      
+                                    current_fs = $(this).parent().parent();                                   
+                                    var nextStep = mostrarPasoActual() + 1;
+                                    
+                                    if ( checkFields(mostrarPasoActual()) ) {
+                                      // Obtener el valor del campo de entrada de nombre
+                                      var userName = $("#full-name").val();
+                                      // Actualizar el contenido del <span> con el nombre del usuario
+                                        $("#user-name").text(userName);
+                                        
+                                        next_fs = $(this).parent().parent().next();
+                                        $(current_fs).removeClass("show");
+                                        $(next_fs).addClass("show");
+                                        $("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
+                                        
+                                        configurarGoBack();  
+                                      }else{
+                                        
+                                      }
+                                      // Oculta el div con id "id-preview"
+                                      var lastStepActive = $("#progressbar li:last").hasClass("active");
+                                      
+                                      // Muestra la última card2 solo si el último círculo de step0 tiene la clase 'active'
+                                      if (lastStepActive) {
+                                        $("#id-preview").removeClass("show");
+                                        // Muestra el div con id "final-step-id"
+                                        $("#final-step-id").addClass("show");
+                                      } else {
+                                        
+                                        
+                                      }
+                                    });
+                                    
+                                   
+                                    
+                                   
+                                  });
+                                  
+                                  // control de pasos adelante y atras
+                                  var pasoActual = 0;
+                                  function mostrarPasoActual(){
+                                    pasoActual = 0; // Inicializa pasoActual a 0 por defecto
+                                    
+                                    var elementosLi = document.querySelectorAll("#progressbar li");
+                                    
+                                    for (var i = 0; i < elementosLi.length; i++) {
+                                      if (elementosLi[i].classList.contains("active")) {
+                                        pasoActual = i + 1; // Suma 1 porque los índices comienzan en 0    
+                                      }
+                                      else{
+                                        break;
+                                      }
+                                    }                                  
+                                    
+                                    console.log("El paso actual es: " + pasoActual);
+                                    return pasoActual;                                    
+                                  }
+
+                                  mostrarPasoActual();  
+                                  configurarGoBack(); 
+                                  function configurarGoBack(){
+                                    if(mostrarPasoActual() ===1 || mostrarPasoActual() ===4){
+                                      $(document).ready(function() {
+                                        $("p.prev").css("display", "none");
+                                      });
+                                    }else{
+                                      $(document).ready(function() {
+                                        $("p.prev").css("display", "block");
+                                      });
+                                    }                                         
+                                  }                        
+                             
+                                  // Maneja el clic en el botón "Prev" (incluyendo el botón "Go Back")
+                                  $(".prev").click(function () {     
+                                    var pasoActual = mostrarPasoActual();  
+                                    pasoActual = pasoActual -1;                                      
+                                     // Actualiza el indicador de progreso
+                                    // $("#progressbar li").removeClass("active");
+                                    $("#progressbar li:eq(" + pasoActual + ")").removeClass("active");
+                                    $("#progressbar li:eq(" + (pasoActual-1) + ")").addClass("active");
+
+                                    // Oculta todas las tarjetas
+                                    $(".card2").removeClass("show");                                    
+                                    // // Muestra solo la tarjeta correspondiente al data-step
+                                    $(".card2[data-step=" + (mostrarPasoActual() ) + "]").addClass("show");
+                                                                                                                                              
+                                    configurarGoBack();                                                           
+                                  });
+                                  
+                                  
+                                  
+    document.addEventListener('DOMContentLoaded', function () {
+        var menuCollapsed = false;
+        var toggleMenuButton = document.getElementById('toggleMenuButton');
+        var menuContent = document.getElementById('navbarSupportedContent');
+
+        toggleMenuButton.addEventListener('click', function () {
+            if (menuCollapsed) {
+                // Si el menú está colapsado, lo despliega
+                menuContent.style.display = 'block';
+                menuCollapsed = false;
+            } else {
+                // Si el menú está desplegado, lo colapsa
+                menuContent.style.display = 'none';
+                menuCollapsed = true;
+            }
+        });
+    });
+
+
+                                  
+                                  
+                                </script>
+                                
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+                              
+
+
+</body></html>
