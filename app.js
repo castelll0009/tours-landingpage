@@ -175,6 +175,7 @@ $(document).on('click', '.tour-item', function(e) {
       const tour = (response);
       console.log(tour);
       console.log(tour.title);
+      alert(tour.include);
 
       $('#title').val(tour.title);
       $('#description').val(tour.description);
@@ -189,10 +190,17 @@ $(document).on('click', '.tour-item', function(e) {
       const image = $('<img>').attr('src', tour.image_path); // Replace 'image_path' with the actual property name for your image path in the 'tour' object
       $('#image-container').empty().append(image); // Replace 'image-container' with the ID of the container where you want to display the image
       
+      // Access the fields from 'inventario'
+      $('#pax').val(tour.pax); // Replace 'include' with the actual property name for 'include' from 'inventario'
+      $('#include').val(tour.include); // Replace 'include' with the actual property name for 'include' from 'inventario'
+      $('#not_include').val(tour.not_include); // Replace 'not_include' with the actual property name for 'not_include' from 'inventario'
+      $('#single_supplement').val(tour.single_supplement); // Replace 'single_supplement' with the actual property name for 'single_supplement' from 'inventario'
+      
       edit = true;
   });
   e.preventDefault();
 });
+
 
   
   

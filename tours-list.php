@@ -1,7 +1,7 @@
 <?php
 include('database.php');
 
-$query = "SELECT tour.*, inventario.include, inventario.not_include, inventario.single_supplement, dias.number, dias.title_day, dias.description_day
+$query = "SELECT tour.*, inventario.pax, inventario.include, inventario.not_include, inventario.single_supplement, dias.number, dias.title_day, dias.description_day
           FROM tour
           LEFT JOIN inventario ON tour.inventory_id = inventario.id
           LEFT JOIN dias ON inventario.dias_id = dias.id";
@@ -23,6 +23,7 @@ while ($row = mysqli_fetch_array($result)) {
     'date_departure' => $row['date_departure'],
     'region' => $row['region'],
     'image_path' => $row['image_path'],
+    'pax' => $row['pax'],
     'include' => $row['include'], // Nuevo campo Include de la tabla inventario
     'not_include' => $row['not_include'], // Nuevo campo Not Include de la tabla inventario
     'single_supplement' => $row['single_supplement'], // Nuevo campo Single Supplement de la tabla inventario
