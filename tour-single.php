@@ -4,11 +4,19 @@ include('database.php');
 if (isset($_POST['id'])) {
     $id = mysqli_real_escape_string($connection, $_POST['id']);
     
-    $query = "SELECT tour.*, inventario.pax, inventario.include, inventario.not_include, inventario.single_supplement, dias.number, dias.title_day, dias.description_day
-              FROM tour
-              LEFT JOIN inventario ON tour.inventory_id = inventario.id
-              LEFT JOIN dias ON inventario.dias_id = dias.id
-              WHERE tour.id = {$id}";
+    $query = "SELECT 
+        tour.*, 
+        inventario.pax, 
+        inventario.include, 
+        inventario.not_include, 
+        inventario.single_supplement, 
+        dias.number, 
+        dias.title_day, 
+        dias.description_day
+        FROM tour
+        LEFT JOIN inventario ON tour.id = inventario.tour_id
+        LEFT JOIN dias ON tour.id = dias.tour_id
+        WHERE tour.id = {$id}";
 
     $result = mysqli_query($connection, $query);
     if (!$result) {
