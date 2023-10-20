@@ -63,111 +63,113 @@ $(document).ready(function() {
   });
   
   
-  // Recuperar la lista de Tours
-  function fetchTours() {
-    $.ajax({
-      url: 'tours-list.php',
-      type: 'GET',
-      success: function(response) {
-        const tours = JSON.parse(response);
-        console.log(tours);
-        console.log(tours.title);
-        console.log(response.title);
-        let template = '';
-        let template_inventario= '';
-        let template_dias = '';
-        let template_index_tours = '';
-        tours.forEach(tour => {
-          template += `
-        <tr data-tourid="${tour.id}">
-          <td>${tour.id}</td>
-          <td>
-            <a href="#" class="tour-item" data-tourid="${tour.id}">
-              ${tour.title}
-            </a>
-          </td>
-          <td>${tour.description}</td>
-          <td>${tour.price}</td>
-          <td>
-            <span class="img-form" style="display: block; min-width: 150px;">
-              <img src="${tour.image_path}" alt="Tour Image" style="display:block; width:100%"> 
-            </span>
-          </td>
-          <td>${tour.group_size}</td>
-          <td>${tour.duration}</td>
-          <td>${tour.date_departure}</td>
-          <td>${tour.region}</td>
-         
-          <td>
-            <button class="tour-delete btn btn-danger" data-tourid="${tour.id}">
-              Delete
-            </button>
-          </td>
-        </tr>
-        `;
-
-        //insertar la info de inventario en la talba de inventario
-          template_inventario+=`        
+// Recuperar la lista de Tours
+function fetchTours() {
+  $.ajax({
+    url: 'tours-list.php',
+    type: 'GET',
+    success: function (response) {
+      const tours = JSON.parse(response);
+      let template = '';
+      let template_inventario = '';
+      let template_dias = '';
+      let template_index_tours = '';
+      tours.forEach(tour => {
+        template += `
           <tr data-tourid="${tour.id}">
             <td>${tour.id}</td>
             <td>
               <a href="#" class="tour-item" data-tourid="${tour.id}">
                 ${tour.title}
               </a>
-            </td>           
+            </td>
+            <td>${tour.description}</td>
+            <td>${tour.price}</td>
+            <td>
+              <span class="img-form" style="display: block; min-width: 150px;">
+                <img src="${tour.image_path}" alt="Tour Image" style="display:block; width:100%">
+              </span>
+            </td>
+            <td>${tour.group_size}</td>
+            <td>${tour.duration}</td>
+            <td>${tour.date_departure}</td>
+            <td>${tour.region}</td>
             <td>${tour.pax}</td> <!-- Nuevo campo PAX -->
             <td>${tour.include}</td> <!-- Nuevo campo Include -->
             <td>${tour.not_include}</td> <!-- Nuevo campo Not Include -->
-            <td>${tour.single_supplement}</td> <!-- Nuevo campo Single Supplement -->          
+            <td>${tour.single_supplement}</td> <!-- Nuevo campo Single Supplement -->
             <td>
               <button class="tour-delete btn btn-danger" data-tourid="${tour.id}">
                 Delete
               </button>
             </td>
-          </tr>          
-          `;
-          // Insertar la información de días en la tabla de días
-          template_dias += `
+          </tr>
+        `;
+
+        template_inventario +=`
+        <tr data-tourid="${tour.id}">
+        <td>${tour.id}</td>
+        <td>
+          <a href="#" class="tour-item" data-tourid="${tour.id}">
+            ${tour.title}
+          </a>
+        </td>   
+        <td>${tour.pax}</td> <!-- Nuevo campo PAX -->
+        <td>${tour.include}</td> <!-- Nuevo campo Include -->
+        <td>${tour.not_include}</td> <!-- Nuevo campo Not Include -->
+        <td>${tour.single_supplement}</td> <!-- Nuevo campo Single Supplement -->
+        <td>
+          <button class="tour-delete btn btn-danger" data-tourid="${tour.id}">
+            Delete
+          </button>
+        </td>
+      </tr>
+    `;
+        
+
+        // Insertar la información de días en la tabla de días
+        template_dias += `
           <tr data-dayid="${tour.id}">
             <td>${tour.id}</td>
             <td>${tour.title}</td>
-            <td>${tour.number}</td> <!-- Nuevo campo 'number' de días -->
-            <td>${tour.title_day}</td> <!-- Nuevo campo 'day_title' de días -->
-            <td>${tour.description_day}</td> <!-- Nuevo campo 'day_description' de días -->
+            <td>${tour.number_day}</td> <!-- Nuevo campo 'number_day' de días -->
+            <td>${tour.title_day}</td> <!-- Nuevo campo 'title_day' de días -->
+            <td>${tour.description_day}</td> <!-- Nuevo campo 'description_day' de días -->
             <!-- Agregar más campos de días según sea necesario -->
             <td>
-              <button class="day-delete btn btn-danger" data-dayid="${tour.id}">
+              <button class "day-delete btn btn-danger" data-dayid="${tour.id}">
                 Delete
               </button>
             </td>
           </tr>
-          `;
+        `;
 
-          // Insertar Swiper Slider          
-													
-          template_index_tours +=`
-          <div tour-id='${tour.id}' 
-          style="background: linear-gradient(to top, rgb(15, 32, 39), rgba(32, 58, 67, 0), rgba(44, 83, 100, 0)), url(${tour.image_path}) 50% 50% / cover no-repeat !important;"
-           class="swiper-slide   swiper-slide-visible swiper-slide-active" role="group" aria-label="5 / 5" data-swiper-slide-index="4" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -0.208217px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; margin-right: 60px;">								       
-          <span>${tour.title}</span>
-          <div>
-            <p>${tour.description}</p>
-            <h6 class="p-ubication">
-              <span><img src="${tour.image_path}" alt=""></span>                              
-            ${tour.region}
-            </h6>
-            <a href="tour-choose-details.html?tourId=${tour.id}">View Details</a>
-          </div>
-          <div class="swiper-slide-shadow-left swiper-slide-shadow-coverflow" style="opacity: 0; transition-duration: 0ms;"></div><div class="swiper-slide-shadow-right swiper-slide-shadow-coverflow" style="opacity: 0.00208217; transition-duration: 0ms;"></div></div>`;
-        });
-        $('#tours').html(template);
-        $('#inventory').html(template_inventario);
-        $('#days').html(template_dias);
-        $('.swiper-wrapper').html(template_index_tours);
-      }
-    });
-  }
-  
+        // Insertar Swiper Slider
+        template_index_tours += `
+          <div tour-id='${tour.id}'
+            style="background: linear-gradient(to top, rgb(15, 32, 39), rgba(32, 58, 67, 0), rgba(44, 83, 100, 0)), url(${tour.image_path}) 50% 50% / cover no-repeat !important;"
+            class="swiper-slide   swiper-slide-visible swiper-slide-active" role="group" aria-label="5 / 5" data-swiper-slide-index="4" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -0.208217px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1; margin-right: 60px;">
+            <span>${tour.title}</span>
+            <div>
+              <p>${tour.description}</p>
+              <h6 class="p-ubication">
+                <span><img src="${tour.image_path}" alt=""></span>
+                ${tour.region}
+              </h6>
+              <a href="tour-choose-details.html?tourId=${tour.id}">View Details</a>
+            </div>
+            <div class="swiper-slide-shadow-left swiper-slide-shadow-coverflow" style="opacity: 0; transition-duration: 0ms;"></div><div class="swiper-slide-shadow-right swiper-slide-shadow-coverflow" style="opacity: 0.00208217; transition-duration: 0ms;"></div>
+          </div>`;
+      });
+
+      $('#tours').html(template);
+      $('#inventory').html(template_inventario);
+      $('#days').html(template_dias);
+      $('.swiper-wrapper').html(template_index_tours);
+    }
+  });
+}
+
 // Obtener un Tour individual por su ID
 $(document).on('click', '.tour-item', function(e) {
   const tourId = $(this).data('tourid'); // Usar 'data-tourid' en lugar de 'tourId'
@@ -230,41 +232,51 @@ $(document).on('click', '.tour-item', function(e) {
   
   // ... Form  Data 
 
-$('#tour-form').submit(e => {
-  e.preventDefault();
+  $('#tour-form').submit(e => {
+    e.preventDefault();
 
-  const formData = new FormData(); // Create a FormData object
+    const formData = new FormData();
 
-  // Add form data to the FormData object
-  formData.append('title', $('#title').val());
-  formData.append('description', $('#description').val());
-  formData.append('price', $('#price').val());
-  formData.append('group_size', $('#group_size').val());
-  formData.append('duration', $('#duration').val());
-  formData.append('date_departure', $('#date_departure').val());
-  formData.append('region', $('#region').val());
-  formData.append('id', $('#tourId').val());
+    // Add form data to the FormData object
+    formData.append('title', $('#title').val());
+    formData.append('description', $('#description').val());
+    formData.append('price', $('#price').val());
+    formData.append('group_size', $('#group_size').val());
+    formData.append('duration', $('#duration').val());
+    formData.append('date_departure', $('#date_departure').val());
+    formData.append('region', $('#region').val());
+    formData.append('id', $('#tourId').val());
 
-  // Add the image to the FormData object
-  const imageInput = document.getElementById('image');
-  formData.append('image', imageInput.files[0]);
+    // Add the image to the FormData object
+    const imageInput = document.getElementById('image');
+    formData.append('image', imageInput.files[0]);
 
-  const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
+    // Add inventario data
+    formData.append('pax', $('#pax').val());
+    formData.append('include', $('#include').val());
+    formData.append('not_include', $('#not_include').val());
+    formData.append('single_supplement', $('#single_supplement').val());
 
-  // Send the FormData object instead of postData
-  $.ajax({
-      url: url,
-      type: 'POST',
-      data: formData,
-      contentType: false,
-      processData: false, // Set processData to false when sending FormData
-      success: function (response) {
-          console.log(response);
-          $('#tour-form').trigger('reset');
-          fetchTours();
-          edit = false;
-      },
-  });
+    // Add días data
+    formData.append('number_day', $('#number_day').val());
+    formData.append('title_day', $('#title_day').val());
+    formData.append('description_day', $('#description_day').val());
+
+    const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
+
+    $.ajax({
+        url: url,
+        type: 'POST',
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+            console.log(response);
+            $('#tour-form').trigger('reset');
+            fetchTours();
+            edit = false;
+        },
+    });
 });
 
 // ...

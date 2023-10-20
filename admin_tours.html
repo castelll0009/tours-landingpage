@@ -1,10 +1,9 @@
 <html><head>
-    <title>GestiÃƒÂ³n de Tours</title>
+    <title>Manage de Tours</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GestiÃƒÂ³n de Tours</title>
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">        
      <!-- Incluye Bootstrap CSS -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/css/bootstrap.min.css">
@@ -90,37 +89,63 @@
                 <div class="card">
                     <div class="card-body">
     
-                        <form id="tour-form" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <input type="text" id="title" placeholder="Title" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Description" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" id="price" placeholder="Price" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" id="group_size" placeholder="Group Size" class a="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="duration" placeholder="Duration" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="date" id="date_departure" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="region" placeholder="Region" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="image">Upload Image:</label>
-                            <input type="file" id="image" class="form-control" accept="image/*" required>
-                        </div>
-                        <input type="hidden" id="tourId" value="4">
-                        <button type="submit" class="btn btn-primary btn-block text-center">
-                            Save Tour
-                        </button>
-                        </form>
+                        <!-- Formulario para agregar un nuevo Tour -->
+<form id="tour-form" enctype="multipart/form-data">
+    <div class="form-group">
+      <input type="text" id="title" placeholder="Title" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Description" required></textarea>
+    </div>
+    <div class="form-group">
+      <input type="number" id="price" placeholder="Price" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <input type="number" id="group_size" placeholder="Group Size" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <input type="text" id="duration" placeholder="Duration" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <input type="date" id="date_departure" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <input type="text" id="region" placeholder="Region" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <input type="file" id="image" class="form-control" accept="image/*" required>
+    </div>
+  
+    <!-- Campos de la tabla 'inventario' -->
+    <div class="form-group">
+      <input type="number" id="pax" placeholder="PAX" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <textarea id="include" cols="30" rows="5" class="form-control" placeholder="Include" required></textarea>
+    </div>
+    <div class="form-group">
+      <textarea id="not_include" cols="30" rows="5" class="form-control" placeholder="Not Include" required></textarea>
+    </div>
+    <div class="form-group">
+      <input type="number" id="single_supplement" placeholder="Single Supplement" class="form-control" required>
+    </div>
+  
+    <!-- Campos de la tabla 'dias' -->
+    <div class="form-group">
+      <input type="number" id="number_day" placeholder="Number Day" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <input type="text" id="title_day" placeholder="Title Day" class="form-control" required>
+    </div>
+    <div class="form-group">
+      <textarea id="description_day" cols="30" rows="5" class="form-control" placeholder="Description Day" required></textarea>
+    </div>
+  
+    <button type="submit" class="btn btn-primary btn-block text-center">
+      Save Tour
+    </button>
+  </form>
+  
 
                     </div>
                 </div>
@@ -163,51 +188,8 @@
                                       
             </tbody></table>
                 </div>
-             
-            </div>
-        </div>
-    </div>
-    
-<!-- container form inventario tour -->
-<div class="container">
-    <div class="row p-4">
-        <div class="col-md-5">
-            <div class="card">
-                <div class="card-body">
-                    <!-- Inventory Form -->
-                    <form id="inventory-form">
-                        <div class="form-group">
-                            <input type="number" id="pax" placeholder="PAX" class="form-control" required>
-                        </div>
-                     
-                        <div class="form-group">
-                            <textarea id="include" cols="30" rows="5" class="form-control" placeholder="Include" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="not_include" cols="30" rows="5" class="form-control" placeholder="Not Include" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" id="single_supplement" placeholder="Single Supplement" class="form-control" required>
-                        </div>
-                        <!-- Add Days Input -->
-                        <!-- <div class="form-group">
-                            <input type="text" id="day-title" placeholder="Day Title" class="form-control">
-                            <textarea id="day-description" cols="30" rows="5" class="form-control" placeholder="Day Description" required></textarea>
-                        </div> -->
-                        <!-- Days List -->
-                        <!-- <div class="form-group">
-                            <div id="days-list"> -->
-                                <!-- Days will be added here dynamically -->
-                            <!-- </div>
-                        </div> -->
-                        <!-- <button type="button" id="add-day" class="btn btn-success">+ Add Day</button> -->
-                        <input type="hidden" id="inventarioId" value="4">
-                        <button type="submit" class="btn btn-primary btn-block text-center">Save Inventory</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <!-- tabla inventario -->
+
+                  <!-- tabla inventario -->
         <div class="col-md-7">
             <div class="card my-4" id="inventory-result" style="display: block !important;">
                 <div class="card-body">
@@ -257,7 +239,12 @@
         </div>
         </div>
       
+             
+            </div>
+        </div>
     </div>
+          
+
 </div>
 
 
@@ -268,8 +255,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="app.js"></script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
+<!-- <script>
+    document.addEventLi stener('DOMContentLoaded', function () {
     const daysList = document.getElementById('days-list');
     const dayTitleInput = document.getElementById('day-title');
     const dayDescriptionInput = document.getElementById('day-description');
@@ -346,7 +333,7 @@
     });
 });
 
-</script>
+</script> -->
 
 
                        

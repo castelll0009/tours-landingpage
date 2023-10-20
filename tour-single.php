@@ -29,7 +29,7 @@ if (isset($_POST['id'])) {
             'include' => $row['include'],
             'not_include' => $row['not_include'],
             'single_supplement' => $row['single_supplement'],
-            'number' => $row['number'],
+            'number_day' => $row['number'],
             'title_day' => $row['title_day'],
             'description_day' => $row['description_day'],
             'id' => $row['id']
