@@ -131,15 +131,21 @@
     </div>
   
     <!-- Campos de la tabla 'dias' -->
-    <div class="form-group">
-      <input type="number" id="number_day" placeholder="Number Day" class="form-control" required>
-    </div>
-    <div class="form-group">
-      <input type="text" id="title_day" placeholder="Title Day" class="form-control" required>
-    </div>
-    <div class="form-group">
-      <textarea id="description_day" cols="30" rows="5" class="form-control" placeholder="Description Day" required></textarea>
-    </div>
+    <div id="days-container">
+        <h2>Tour Days</h2>
+        <ul id="days-list">
+          <!-- Aquí se mostrarán los días -->
+        </ul>
+        <div>
+          <input type="number" id="number_day" placeholder="number Day" class="form-control" required>
+          <input type="text" id="title_day" placeholder="Title Day" class="form-control" required>
+          <textarea id="description_day" cols="30" rows="5" class="form-control" placeholder="Description Day" required></textarea>
+          <button id="add-day-btn" class="btn btn-primary">Add Day</button>
+        </div>
+      </div>
+      
+    <input type="hidden" id="tourId" name="tourId" value="1"> <!-- Aquí, 1 es un valor de ejemplo; debes reemplazarlo con el valor correcto del tour que estás editando -->
+
   
     <button type="submit" class="btn btn-primary btn-block text-center">
       Save Tour
@@ -255,8 +261,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="app.js"></script>
-<!-- <script>
-    document.addEventLi stener('DOMContentLoaded', function () {
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
     const daysList = document.getElementById('days-list');
     const dayTitleInput = document.getElementById('day-title');
     const dayDescriptionInput = document.getElementById('day-description');
@@ -333,7 +340,8 @@
     });
 });
 
-</script> -->
+
+</script>
 
 
                        
