@@ -279,6 +279,8 @@ $(document).on('click', '.tour-item', function(e) {
             edit = false;
         },
     });
+
+    
 });
 
 // ...
