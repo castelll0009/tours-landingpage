@@ -1,3 +1,4 @@
+let days;
 $(document).ready(function() {
   $('#toggle-view').click(function() {
     $('#tour-form, #tour-result').toggle();
@@ -195,10 +196,11 @@ $(document).on('click', '.tour-item', function(e) {
     $('#not_include').val(tour.not_include);
     $('#single_supplement').val(tour.single_supplement);
 
-    // Acceder a los campos de 'dias'
-    $('#number_day').val(tour.number_day);
-    $('#title_day').val(tour.title_day);
-    $('#description_day').val(tour.description_day);
+    // // Acceder a los campos de 'dias'
+    // $('#number_day').val(tour.number_day);
+    // $('#title_day').val(tour.title_day);
+    // $('#description_day').val(tour.description_day);
+    days: JSON.stringify(days) // Envía los días como un JSON
     
     edit = true;
   });
@@ -260,9 +262,10 @@ $(document).on('click', '.tour-item', function(e) {
     formData.append('single_supplement', $('#single_supplement').val());
 
     // Add días data
-    formData.append('number_day', $('#number_day').val());
-    formData.append('title_day', $('#title_day').val());
-    formData.append('description_day', $('#description_day').val());
+    // formData.append('number_day', $('#number_day').val());
+    // formData.append('title_day', $('#title_day').val());
+    // formData.append('description_day', $('#description_day').val());    
+    formData.append('days', JSON.stringify(days));
 
     const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
 
@@ -274,6 +277,15 @@ $(document).on('click', '.tour-item', function(e) {
         processData: false,
         success: function (response) {
             console.log(response);
+              // Limpia la lista de días y el arreglo de días
+              $daysList.empty();
+              days.length = 0;
+  
+              // Limpia los campos de entrada
+              $('#number_day').val('');
+              $('#title_day').val('');
+              $('#description_day').val('');
+              
             $('#tour-form').trigger('reset');
             fetchTours();
             edit = false;

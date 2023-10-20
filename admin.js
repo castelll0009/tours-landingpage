@@ -1,6 +1,7 @@
-$(document).ready(function() {
+
+
     // Lista de días
-    const days = [];
+    days = [];
 
     // Referencias a los elementos HTML
     const $daysList = $('#days-list');
@@ -42,23 +43,23 @@ console.log(JSON.stringify(days));
 console.log(days);
 
 
-    // Al hacer clic en el botón "Add" (agregar el tour)
-    $('#add-day-btn').click(function() {
+    // // Al hacer clic en el botón "Add" (agregar el tour)
+    // $('#add-day-btn').click(function() {
         
-        // Realizar una solicitud AJAX para enviar los datos del tour al servidor
-         // Obtener el tourId del formulario
-        const tourId = $('#tourId').val();
-        $.post('tour-days-add.php', {
-            tourId: tourId, // Agrega el tourId al objeto enviado
-            // Otros datos del tour aquí
-            days: JSON.stringify(days) // Envía los días como un JSON
-        }, function(response) {
-            console.log(response); // Muestra la respuesta del servidor
+    //     // Realizar una solicitud AJAX para enviar los datos del tour al servidor
+    //      // Obtener el tourId del formulario
+    //     const tourId = $('#tourId').val();
+    //     $.post('tour-days-add.php', {
+    //         tourId: tourId, // Agrega el tourId al objeto enviado
+    //         // Otros datos del tour aquí
+    //         days: JSON.stringify(days) // Envía los días como un JSON
+    //     }, function(response) {
+    //         console.log(response); // Muestra la respuesta del servidor
 
-            // Limpia la lista de días y el arreglo de días
-            $daysList.empty();
-            days.length = 0;
-        });
-    });
+    //         // Limpia la lista de días y el arreglo de días
+    //         $daysList.empty();
+    //         days.length = 0;
+    //     });
+    // });
 
-});
+

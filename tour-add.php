@@ -16,11 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $not_include = $_POST['not_include'];
     $single_supplement = $_POST['single_supplement'];
 
-    // Campos de la tabla 'dias'
-    $number_day = $_POST['number_day'];
-    $title_day = $_POST['title_day'];
-    $description_day = $_POST['description_day'];
-
     // Handle image upload
     $image = $_FILES['image'];
     $image_name = $image['name'];
@@ -40,14 +35,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $query_inventario = "INSERT INTO inventario (tour_id, pax, include, not_include, single_supplement) VALUES ('$new_tour_id', '$pax', '$include', '$not_include', '$single_supplement')";
             $result_inventario = mysqli_query($connection, $query_inventario);
 
-            // Insertar datos en la tabla 'dias'
-            $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day) VALUES ('$new_tour_id', '$number_day', '$title_day', '$description_day')";
-            $result_dias = mysqli_query($connection, $query_dias);
+            // Procesar y agregar los días a la tabla 'dias'
+            $jsonDays = $_POST['days'];
+            $days = json_decode($jsonDays, true); // Decodificar el JSON en un array asociativo
 
-            if ($result_inventario && $result_dias) {
+            foreach ($days as $day) {
+                $number_day = $day['number'];
+                $title_day = $day['title'];
+                $description_day = $day['description'];
+
+                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day) VALUES ('$new_tour_id', '$number_day', '$title_day', '$description_day')";
+                $result_dias = mysqli_query($connection, $query_dias);
+
+                if (!$result_dias) {
+                    // Manejar errores si es necesario
+                }
+            }
+
+            if ($result_inventario) {
                 echo json_encode(["message" => "Tour Added Successfully"]);
             } else {
-                echo json_encode(["error" => "Failed to insert data into inventory or days table"]);
+                echo json_encode(["error" => "Failed to insert data into inventory table"]);
             }
         } else {
             echo json_encode(["error" => "Failed to insert data into the tour table"]);
