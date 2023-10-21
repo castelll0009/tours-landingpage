@@ -234,7 +234,7 @@ $(document).on('click', '.tour-item', function(e) {
     console.error('No valid tourId, tour package found in the URL.');
   }
   
-  // ... Form  Data 
+  // ...ADD Form  Data 
 
   $('#tour-form').submit(e => {
     e.preventDefault();
