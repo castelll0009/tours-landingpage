@@ -24,24 +24,28 @@ if (isset($_POST['id'])) {
     }
 
     if ($row = mysqli_fetch_array($result)) {
-        $json = array(
-            'title' => $row['title'],
-            'description' => $row['description'],
-            'price' => $row['price'],
-            'group_size' => $row['group_size'],
-            'duration' => $row['duration'],
-            'date_departure' => $row['date_departure'],
-            'region' => $row['region'],
-            'image_path' => $row['image_path'],
-            'pax' => $row['pax'],
-            'include' => $row['include'],
-            'not_include' => $row['not_include'],
-            'single_supplement' => $row['single_supplement'],
-            'number_day' => $row['number'],
-            'title_day' => $row['title_day'],
-            'description_day' => $row['description_day'],
-            'id' => $row['id']
-        );
+           
+            $json = array(
+                'title' => $row['title'],
+                'description' => $row['description'],
+                'price' => $row['price'],
+                'group_size' => $row['group_size'],
+                'duration' => $row['duration'],
+                'date_departure' => $row['date_departure'],
+                'region' => $row['region'],
+                'image_path' => $row['image_path'],
+                'pax' => $row['pax'],
+                'include' => $row['include'],
+                'not_include' => $row['not_include'],
+                'single_supplement' => $row['single_supplement'],
+                 array(
+                    'number_day' => $row['number'],
+                    'title_day' => $row['title_day'],
+                    'description_day' => $row['description_day']
+                ),
+                // 'dias'[]=$days,
+                'id' => $row['id']
+            );
     } else {
         // Handle the case where no record is found, for example, set $json to an empty object.
         $json = array();

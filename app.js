@@ -1,11 +1,18 @@
-let days;
+
 $(document).ready(function() {
   $('#toggle-view').click(function() {
     $('#tour-form, #tour-result').toggle();
   });
-  
+  const days = []; // Almacena los días en un arreglo
   // Configuraciones globales
   let edit = false;
+      // Selector de elementos
+      const $numberDayInput = $('#number_day');
+      const $titleDayInput = $('#title_day');
+      const $descriptionDayInput = $('#description_day');
+      const $daysList = $('#days-list');
+      const $addDayBtn = $('#add-day-btn');
+      const $tourIdInput = $('#tourId');
   
   // Testing jQuery
   console.log('jQuery is working!');
@@ -206,13 +213,7 @@ $(document).on('click', '.tour-item', function(e) {
   });
   e.preventDefault();
 });
-
-
-  
-  
-  
-  
-  // Eliminar un Tour individual
+// Eliminar un Tour individual
   $(document).on('click', '.tour-delete', function(e) {
     if (confirm('¿Seguro que desea eliminarlo?')) {
       const tourId = $(this).data('tourid');
@@ -234,10 +235,42 @@ $(document).on('click', '.tour-item', function(e) {
     console.error('No valid tourId, tour package found in the URL.');
   }
   
-  // ...ADD Form  Data 
+  // Función para agregar un día a la lista
+  function addDayToList() {
+    const numberDay = $numberDayInput.val();
+    const titleDay = $titleDayInput.val();
+    const descriptionDay = $descriptionDayInput.val();
 
+    if (numberDay && titleDay && descriptionDay) {
+      // Crear un objeto de día
+      const day = {
+        number_day: numberDay,
+        title_day: titleDay,
+        description_day: descriptionDay,
+      };
+
+      // Agregar el día al arreglo de días
+      days.push(day);
+
+      // Agregar el día a la lista
+      const listItem = `<li>${numberDay} - ${titleDay}</li>`;
+      $daysList.append(listItem);
+
+      // Limpiar los campos de entrada
+      $numberDayInput.val('');
+      $titleDayInput.val('');
+      $descriptionDayInput.val('');
+    }
+  }
+
+  
+   // Manejar clic en el botón "Add Day"
+   $addDayBtn.on('click', addDayToList);
+  // ...ADD Form  Data 
   $('#tour-form').submit(e => {
     e.preventDefault();
+    // Agregar los días al formulario
+    $tourIdInput.val(1); // Reemplaza 1 con el valor correcto
 
     const formData = new FormData();
 
@@ -266,7 +299,7 @@ $(document).on('click', '.tour-item', function(e) {
     // formData.append('title_day', $('#title_day').val());
     // formData.append('description_day', $('#description_day').val());    
     formData.append('days', JSON.stringify(days));
-
+      console.log(JSON.stringify(days));
     const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
 
     $.ajax({
