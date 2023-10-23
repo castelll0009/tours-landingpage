@@ -71,6 +71,7 @@ function fetchTours() {
     type: 'GET',
     success: function (response) {
       const tours = JSON.parse(response);
+      
       let template = '';
       let template_inventario = '';
       let template_dias = '';

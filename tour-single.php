@@ -5,19 +5,32 @@ if (isset($_POST['id'])) {
     $id = mysqli_real_escape_string($connection, $_POST['id']);
     
     $query = "SELECT 
-    tour.*, 
-    inventario.pax, 
-    inventario.include, 
-    inventario.not_include, 
-    inventario.single_supplement, 
-    GROUP_CONCAT(DISTINCT dias.number ORDER BY dias.number ASC) AS days_numbers,
-    GROUP_CONCAT(DISTINCT dias.title_day ORDER BY dias.number ASC) AS days_titles,
-    GROUP_CONCAT(DISTINCT dias.description_day ORDER BY dias.number ASC) AS days_descriptions
+    tour.id AS tour_id,
+    tour.title,
+    tour.description,
+    tour.price,
+    tour.group_size,
+    tour.duration,
+    tour.date_departure,
+    tour.region,
+    tour.image_path,
+    GROUP_CONCAT(DISTINCT inventario.pax) AS pax,
+    GROUP_CONCAT(DISTINCT inventario.include) AS include,
+    GROUP_CONCAT(DISTINCT inventario.not_include) AS not_include,
+    GROUP_CONCAT(DISTINCT inventario.single_supplement) AS single_supplement,
+    JSON_ARRAYAGG(
+        JSON_OBJECT(
+            'number', dias.number,
+            'title', dias.title_day,
+            'description', dias.description_day
+        )
+        ORDER BY dias.number ASC
+    ) AS days
 FROM tour
 LEFT JOIN inventario ON tour.id = inventario.tour_id
 LEFT JOIN dias ON tour.id = dias.tour_id
-WHERE tour.id = {$id}
-GROUP BY tour.id;
+GROUP BY tour.id, tour.title, tour.description, tour.price, tour.group_size, tour.duration, tour.date_departure, tour.region, tour.image_path;
+;
 ";
 
     $result = mysqli_query($connection, $query);

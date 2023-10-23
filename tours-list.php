@@ -2,17 +2,23 @@
 include('database.php');
 
 $query = "SELECT 
-    tour.*, 
-    inventario.pax, 
-    inventario.include, 
-    inventario.not_include, 
-    inventario.single_supplement, 
-    dias.number, 
-    dias.title_day, 
-    dias.description_day
+tour.id AS tour_id,
+tour.title,
+tour.description,
+tour.price,
+tour.group_size,
+tour.duration,
+tour.date_departure,
+tour.region,
+tour.image_path,
+GROUP_CONCAT(DISTINCT dias.number) AS days_numbers,
+GROUP_CONCAT(DISTINCT dias.title_day) AS days_titles,
+GROUP_CONCAT(DISTINCT dias.description_day) AS days_descriptions
 FROM tour
-LEFT JOIN inventario ON tour.id = inventario.tour_id
-LEFT JOIN dias ON tour.id = dias.tour_id";
+LEFT JOIN dias ON tour.id = dias.tour_id
+GROUP BY tour.id, tour.title, tour.description, tour.price, tour.group_size, tour.duration, tour.date_departure, tour.region, tour.image_path;
+
+";
 $result = mysqli_query($connection, $query);
 
 if (!$result) {
@@ -21,23 +27,22 @@ if (!$result) {
 
 $json = array();
 while ($row = mysqli_fetch_array($result)) {
+  $days = json_decode($row['days'], true); // Parse the 'days' JSON string
   $json[] = array(
-    'id' => $row['id'],
-    'title' => $row['title'],
-    'description' => $row['description'],
-    'price' => $row['price'],
-    'group_size' => $row['group_size'],
-    'duration' => $row['duration'],
-    'date_departure' => $row['date_departure'],
-    'region' => $row['region'],
-    'image_path' => $row['image_path'],
-    'pax' => $row['pax'],
-    'include' => $row['include'],
-    'not_include' => $row['not_include'],
-    'single_supplement' => $row['single_supplement'],
-    'number_day' => $row['number'],
-    'title_day' => $row['title_day'],
-    'description_day' => $row['description_day']
+      'id' => $row['tour_id'], // Use 'tour_id' instead of 'id'
+      'title' => $row['title'],
+      'description' => $row['description'],
+      'price' => $row['price'],
+      'group_size' => $row['group_size'],
+      'duration' => $row['duration'],
+      'date_departure' => $row['date_departure'],
+      'region' => $row['region'],
+      'image_path' => $row['image_path'],
+      'pax' => $row['pax'],
+      'include' => $row['include'],
+      'not_include' => $row['not_include'],
+      'single_supplement' => $row['single_supplement'],
+      'days' => $days // Include 'days' as an array
   );
 }
 
