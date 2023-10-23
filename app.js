@@ -176,6 +176,7 @@ $(document).on('click', '.tour-item', function(e) {
   const tourId = $(this).data('tourid');
   $.post('tour-single.php', { id: tourId }, (response) => {
     const tour = response; // Asegúrate de que el objeto 'tour' contiene todos los campos que esperas
+    console.log('Json recuperado single: ' + JSON.stringify(response, null, 2));
 
     $('#title').val(tour.title);
     $('#description').val(tour.description);
@@ -200,7 +201,24 @@ $(document).on('click', '.tour-item', function(e) {
     // $('#number_day').val(tour.number_day);
     // $('#title_day').val(tour.title_day);
     // $('#description_day').val(tour.description_day);
-    days: JSON.stringify(days) // Envía los días como un JSON
+   // Assuming response contains the JSON data you provided
+
+// Get a reference to the "days-list" ul element
+var ul = document.getElementById("days-list");
+// Loop through the 'days' array in the response
+response.days.forEach(function(day) {
+    // Create a new list item for each day
+    var li = document.createElement("li");
+    // Populate the list item with day information
+    li.innerHTML = `
+        <strong>Number:</strong> ${day.number}<br>
+        <strong>Title:</strong> ${day.title}<br>
+        <strong>Description:</strong> ${day.description}
+    `;
+    // Append the list item to the "days-list" ul
+    ul.appendChild(li);
+});
+
     
     edit = true;
   });
