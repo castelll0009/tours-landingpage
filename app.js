@@ -70,6 +70,7 @@ function fetchTours() {
     url: 'tours-list.php',
     type: 'GET',
     success: function (response) {
+      console.log(response);
       const tours = JSON.parse(response);
       
       let template = '';
