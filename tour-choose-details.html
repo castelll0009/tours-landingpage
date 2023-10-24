@@ -1,5 +1,4 @@
-<html lang="en" style="/* scroll-behavior: auto; */">
-<head>
+<html lang="en" style="/* scroll-behavior: auto; */"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- funtes google Lato -->
@@ -8,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&amp;display=swap" rel="stylesheet">
   <!-- boostrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <title>Tour Package Details</title>
   <!-- Agrega tus enlaces a hojas de estilo CSS aquí -->
@@ -3283,7 +3282,7 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                                           min-height: 100vh;
                                           width: 100%;
                                       ">
-                                         <header class="transparent-header">
+                                         <header class="">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: flex; justify-content: center;">
           <a class="navbar-brand" href="#"><img src="imgs/logo.svg" alt=""></a>
           <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute !important;right: 0;bottom: 10;">
@@ -3380,7 +3379,7 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
   width: 8vw;
 "> -->
                                               <span class="title_hr" style="  width: 100%; ">                                                                                          
-                                                  <h3 style="margin-top: 2.5vw;">Tour Overview</h3>                                                                                                 
+                                                  <h3 style="margin-top: 2.5vw;">Overview</h3>                                                                                                 
                                                   <hr>
                                               </span>   
                                                        
@@ -3419,21 +3418,23 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
   margin-left: 0px;
 ">
                                                   <span>
-                                                      <img src="./imgs/cronograma.png" alt="Schedule">                                                                                    
+                                                                                                                                          
                                                   </span>                                                                            
-                                                  <p>Schedule</p>
+                                                  <p>Tour overview</p>
                                               </label>
                                               
                                               <input type="radio" name="tab-group" id="tab2">
                                               <label for="tab2">
                                                   <span>
-                                                      <img src="./imgs/info.png" alt="Region Overview">
+                                                      
                                                   </span>                                                    
-                                                  <p>Region Overview</p>
+                                                  <p>Itinerary</p>
                                               </label>
                                               
                                               <input type="radio" name="tab-group" id="tab3">
-                                              <label for="tab3">
+                                              <label for="tab3" style="
+    display: none;
+">
                                                   <span>
                                                       <img src="./imgs/guide.png" alt="Tour Guide">
                                                   </span>                                                    
@@ -3441,7 +3442,9 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                                               </label>
                                               
                                               <input type="radio" name="tab-group" id="tab4">
-                                              <label for="tab4">
+                                              <label for="tab4" style="
+    display: none;
+">
                                                   <span>
                                                       <img src="./imgs/gallery.png" alt="Gallery">
                                                   </span>                                                    
@@ -3573,19 +3576,39 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                               <section>
                                   <div id="sponsors">
                                       <h3>Our Sponsors</h3>
-                                      <img src="imgs/sponsor1.jpeg" alt="Sponsor 1">
-                                      <img src="imgs/sponsor2.png" alt="Sponsor 2">
-                                      <img src="imgs/sponsor3.jpeg" alt="Sponsor 3">
+                                      <img src="imgs/sponsor1.jpeg" alt="Sponsor 1" style="
+    max-width: 70px;
+">
+                                      <img src="imgs/sponsor2.png" alt="Sponsor 2" style="max-width: 70px;">
+                                      <img src="imgs/sponsor3.jpeg" alt="Sponsor 3" style="max-width: 70px;">
                                   </div>
                               </section>
                               
                               <!-- Información de contacto -->
-                              <section>
-                                  <div id="contact">
-                                      <h4>Contact Us</h4>
-                                      <p>If you have any questions or need assistance, feel free to contact our customer support team.</p>
-                                      <p>Email: support@example.com</p>
-                                      <p>Phone: +1 (123) 456-7890</p>
+                              <section style="
+    color: white;
+">
+                                  <div id="contact" style="
+    text-align: center;
+    background: #212121;
+    color: silver;
+    padding: 20px 20px;
+">
+                                      <h4 style="
+    font-size: 16px;
+">Contact Us</h4>
+                                      <p style="
+    color: silver;
+    font-size: medium;
+">If you have any questions or need assistance, feel free to contact our customer support team.</p>
+                                      <p style="
+    color: silver;
+    font-size: medium;
+">Email: support@example.com</p>
+                                      <p style="
+    color: silver;
+    font-size: medium;
+">Phone: +1 (123) 456-7890</p>
                                   </div>
                               </section>
                               
@@ -3600,7 +3623,8 @@ src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWe
                                   <img src="imgs/logo.svg" alt="Logo White">
                               </div>
                               <p style="
-    color: white;
+    font-size: small;
+    color: silver;
 ">© 2023 Tour Package Details. All rights reserved.</p>
                               <div>
                                   <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>

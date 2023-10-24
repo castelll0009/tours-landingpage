@@ -33,6 +33,7 @@
     backdrop-filter: blur(3px);
     align-items: flex-end;
     justify-content: center;
+    padding: 0px 15px 0px 0px;
   }
   .cont-floating-btns a{
     display: flex;
