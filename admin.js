@@ -134,10 +134,17 @@ $(document).ready(function() {
     isEditing = !isEditing; // Invierte el estado de edición
   });
 
-  // Maneja el clic en el botón "Delete" mediante la delegación de eventos
-  $('#days-list').on('click', '.delete-day-button', function() {
-    $(this).closest('li').remove(); // Elimina el <li> actual
-  });
+// Maneja el clic en el botón "Delete" mediante la delegación de eventos
+$('#days-list').on('click', '.delete-day-button', function() {
+  var li = $(this).closest('li');
+
+  if (li.is(':last-child')) {
+    li.remove(); // Elimina el <li> actual si es el último
+  } else {
+    alert("No puedes eliminar elementos anteriores al último.");
+  }
+});
+
 
   // Otros manejadores de eventos, como el botón "Add Day"
 });

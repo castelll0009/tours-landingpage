@@ -299,9 +299,9 @@ response.days.forEach(function(day) {
     // Check if the 'daysToAdd' array is empty and add a default day if it is
     if (daysToAdd.length === 0) {
       daysToAdd.push({
-          number: '0',
+          number: '1',
           title: 'Default Day',
-          description: 'This is a default day.',
+          description: 'This is a default day description.',
       });
   }
 
