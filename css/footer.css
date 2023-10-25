@@ -113,13 +113,22 @@ footer .fine{
 .img-footer {
         display: contents;
 }
+footer img{
+    
+    max-width: 27%;
+    margin: auto
+}
 @media only screen and (max-width: 768px){
     .container-footer{
     flex-direction: column;
 }
     .img-footer {
         display: block;
-    }}
+    }
+    footer img{
+        max-width: 50%;
+    }
+}
 /* @media only screen and (max-width: 768px){
 
 
