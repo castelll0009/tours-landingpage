@@ -7,10 +7,25 @@ footer{
     position: relative;
     text-align: center;
     /*background-color: #040714;*/
+    background: black !important;
+    font-weight: 300;
+}
+main footer p, h1, h2, a, i, span, h2, h3 {
+    color: white ;
+
+   
+}
+body main footer picture .footnote{
+    color: white !important ;
+
+   
+}
+footer p{
+    background-color: black !important;
 }
 
 .footer-word{
-    color: black;
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 footer picture{
