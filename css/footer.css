@@ -18,7 +18,7 @@ footer picture{
     margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
-    width: 100px;
+    width: 254px
 }
 .picture-logo  img{
     display: block;  
@@ -115,6 +115,11 @@ footer .fine{
 }
 footer img{
     
+    max-width: 47%;
+    margin: auto
+}
+
+.footer-guide-i{
     max-width: 27%;
     margin: auto
 }
@@ -125,7 +130,7 @@ footer img{
     .img-footer {
         display: block;
     }
-    footer img{
+    .footer-guide-i{
         max-width: 50%;
     }
 }
