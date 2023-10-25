@@ -8,6 +8,11 @@ footer{
     text-align: center;
     /*background-color: #040714;*/
 }
+
+.footer-word{
+    color: black;
+    text-align: center;
+}
 footer picture{
     display: block;
     margin-bottom: 10px;
@@ -79,3 +84,43 @@ footer a.link:hover{
     color: white;
 
 }
+
+p{
+    padding: 2px 12px;
+    color: black;
+    font-size: 14px;
+}
+
+footer a{
+    padding: 8px 12px;
+    font-size: 30px;
+    color: black;
+}
+
+footer span{
+    
+    font-size: 18px;
+}
+.container-footer{
+    display: flex;
+    flex-direction: row
+}
+
+footer .fine{
+    flex-direction: column;
+    display: flex;
+}
+.img-footer {
+        display: contents;
+}
+@media only screen and (max-width: 768px){
+    .container-footer{
+    flex-direction: column;
+}
+    .img-footer {
+        display: block;
+    }}
+/* @media only screen and (max-width: 768px){
+
+
+} */
