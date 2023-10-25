@@ -38,6 +38,9 @@ html body{
 	*/
 	color: silver;
 }
+.item2 p{
+	color: rgb(255, 255, 255);
+}
 html body p{		
 	font-size: 18px;
 }

@@ -3,7 +3,11 @@
   display: flex;
   height: 80px;
   align-items: flex-start;
-  
+  opacity: 0;
+  transition: 0.2s;
+}
+.cont-msg-emergente:hover{ 
+  opacity: 1;
 }
 .msg-icn {
     display: inline-block;

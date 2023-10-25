@@ -4,7 +4,9 @@ header{
     width: 100%;
   
 }
-
+.dropdown-menu .dropdown-item{
+    color: black !important;
+}
 
 header .bg-dark{
     background-color: #27303a98 !important;
