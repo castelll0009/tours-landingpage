@@ -31,27 +31,32 @@ if (!$result) {
 
 $json = array();
 while ($row = mysqli_fetch_array($result)) {
-  $json[] = array(
-    'id' => $row['tour_id'],
-    'title' => $row['title'],
-    'description' => $row['description'],
-    'price' => $row['price'],
-    'group_size' => $row['group_size'],
-    'duration' => $row['duration'],
-    'date_departure' => $row['date_departure'],
-    'region' => $row['region'],
-    'image_path' => $row['image_path'],
-    'pax' => $row['pax'],
-    'include' => $row['include'],
-    'not_include' => $row['not_include'],
-    'single_supplement' => $row['single_supplement'],
-    'days' => array(
-      'numbers' => explode(',', $row['days_numbers']),
-      'titles' => explode(',', $row['days_titles']),
-      'descriptions' => explode(',', $row['days_descriptions'])
-    )
-  );
+    $daysNumbers = empty($row['days_numbers']) ? array() : explode(',', $row['days_numbers']);
+    $daysTitles = empty($row['days_titles']) ? array() : explode(',', $row['days_titles']);
+    $daysDescriptions = empty($row['days_descriptions']) ? array() : explode(',', $row['days_descriptions']);
+
+    $json[] = array(
+        'id' => $row['tour_id'],
+        'title' => $row['title'],
+        'description' => $row['description'],
+        'price' => $row['price'],
+        'group_size' => $row['group_size'],
+        'duration' => $row['duration'],
+        'date_departure' => $row['date_departure'],
+        'region' => $row['region'],
+        'image_path' => $row['image_path'],
+        'pax' => $row['pax'],
+        'include' => $row['include'],
+        'not_include' => $row['not_include'],
+        'single_supplement' => $row['single_supplement'],
+        'days' => array(
+            'numbers' => $daysNumbers,
+            'titles' => $daysTitles,
+            'descriptions' => $daysDescriptions
+        )
+    );
 }
+
 
 $jsonstring = json_encode($json);
 echo $jsonstring;

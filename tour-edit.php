@@ -2,11 +2,11 @@
 include('database.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Initialize an array to store error messages
+    // Initialize an array to store the response
     $response = array();
 
     // Ensure that required fields are provided
-    $requiredFields = ['title', 'description', 'price', 'group_size', 'duration', 'date_departure', 'region', 'image', 'pax', 'include', 'not_include', 'single_supplement', 'days'];
+    $requiredFields = ['id', 'title', 'description', 'price', 'group_size', 'duration', 'date_departure', 'region', 'image', 'pax', 'include', 'not_include', 'single_supplement', 'days'];
 
     foreach ($requiredFields as $field) {
         if (empty($_POST[$field])) {
@@ -15,6 +15,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
     }
+
+    $tour_id = $_POST['id']; // The ID of the tour to update
 
     $tour_title = $_POST['title'];
     $tour_description = $_POST['description'];
@@ -30,66 +32,66 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $not_include = $_POST['not_include'];
     $single_supplement = $_POST['single_supplement'];
 
-    // Handle image upload
-    $image = $_FILES['image'];
-    $image_name = $image['name'];
-    $image_tmp = $image['tmp_name'];
-    $image_path = 'imgs/' . $image_name;
+    // Handle image update (if a new image is provided)
+    if (!empty($_FILES['image']['name'])) {
+        $image = $_FILES['image'];
+        $image_name = $image['name'];
+        $image_tmp = $image['tmp_name'];
+        $image_path = 'imgs/' . $image_name;
 
-    if (move_uploaded_file($image_tmp, $image_path)) {
-        // Image moved successfully, now insert other data into the database
-        $query = "INSERT INTO tour (title, description, price, group_size, duration, date_departure, region, image_path) VALUES ('$tour_title', '$tour_description', '$price', '$group_size', '$duration', '$date_departure', '$region', '$image_path')";
+        if (move_uploaded_file($image_tmp, $image_path)) {
+            // Update the 'tour' table with the new image path and other fields
+            $update_tour_query = "UPDATE tour SET 
+                title = '$tour_title',
+                description = '$tour_description',
+                price = '$price',
+                group_size = '$group_size',
+                duration = '$duration',
+                date_departure = '$date_departure',
+                region = '$region',
+                image_path = '$image_path'
+                WHERE tour_id = $tour_id";
 
-        $result = mysqli_query($connection, $query);
+            $result_update_tour = mysqli_query($connection, $update_tour_query);
 
-        if ($result) {
-            // Obtain the ID of the new tour inserted
-            $new_tour_id = mysqli_insert_id($connection);
-
-            // Insert data into the 'inventory' table
-            $query_inventario = "INSERT INTO inventario (tour_id, pax, include, not_include, single_supplement) VALUES ('$new_tour_id', '$pax', '$include', '$not_include', '$single_supplement')";
-
-            $result_inventario = mysqli_query($connection, $query_inventario);
-
-            if ($result_inventario) {
-                // Process and add the days to the 'dias' table
-                $jsonDays = $_POST['days'];
-                $days = json_decode($jsonDays, true); // Decode the JSON into an associative array
-
-                foreach ($days as $day) {
-                    $number_day = $day['number'];
-                    $title_day = $day['title'];
-                    $description_day = $day['description'];
-
-                    // Print the values to the screen for debugging
-                    echo "AQUIIIINumber: $number_day, Title: $title_day, Description: $description_day\n";
-
-                    // You should check if the day already exists and update it, or insert a new one if it doesn't exist.
-                    $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day) VALUES ('$new_tour_id', '$number_day', '$title_day', '$description_day') ON DUPLICATE KEY UPDATE title_day = VALUES(title_day), description_day = VALUES(description_day)";
-
-                    $result_dias = mysqli_query($connection, $query_dias);
-
-                    if (!$result_dias) {
-                        // Handle errors if necessary
-                        $response['error'] = "Failed to insert/update data into dias table";
-                        echo json_encode($response);
-                        exit;
-                    }
-                }
-
-                $response['message'] = "Tour Added Successfully";
+            if (!$result_update_tour) {
+                $response['error'] = "Failed to update the tour: " . mysqli_error($connection);
                 echo json_encode($response);
-            } else {
-                $response['error'] = "Failed to insert data into inventory table";
-                echo json_encode($response);
+                exit;
             }
         } else {
-            $response['error'] = "Failed to insert data into the tour table";
+            $response['error'] = "Image upload failed";
             echo json_encode($response);
+            exit;
         }
-    } else {
-        $response['error'] = "Image upload failed";
-        echo json_encode($response);
     }
+
+// Process and update the days in the 'dias' table
+$jsonDays = $_POST['days'];
+$days = json_decode($jsonDays, true); // Decode the JSON into an associative array
+
+foreach ($days as $day) {
+    $number_day = $day['number'];
+    $title_day = $day['title'];
+    $description_day = $day['description'];
+
+    // Check if the day already exists for the tour
+    $day_exists_query = "SELECT * FROM dias WHERE tour_id = $tour_id AND number = $number_day";
+    $result_day_exists = mysqli_query($connection, $day_exists_query);
+
+    if (mysqli_num_rows($result_day_exists) > 0) {
+        // Day exists, update it
+        $update_day_query = "UPDATE dias SET title_day = '$title_day', description_day = '$description_day' WHERE tour_id = $tour_id AND number = $number_day";
+        $result_update_day = mysqli_query($connection, $update_day_query);
+    } else {
+        // Day doesn't exist, insert a new record
+        $insert_day_query = "INSERT INTO dias (tour_id, number, title_day, description_day) VALUES ('$tour_id', '$number_day', '$title_day', '$description_day')";
+        $result_insert_day = mysqli_query($connection, $insert_day_query);
+    }
+}
+
+$response['message'] = "Tour Updated Successfully";
+echo json_encode($response);
+
 }
 ?>

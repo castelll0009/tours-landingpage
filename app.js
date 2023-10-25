@@ -296,21 +296,36 @@ response.days.forEach(function(day) {
 
     let  daysToAdd = [];
     daysToAdd  = getDays();
+    // Check if the 'daysToAdd' array is empty and add a default day if it is
+    if (daysToAdd.length === 0) {
+      daysToAdd.push({
+          number: '0',
+          title: 'Default Day',
+          description: 'This is a default day.',
+      });
+  }
 
     showAllDays();
+    
     // Add días data
     // formData.append('number_day', $('#number_day').val());
     // formData.append('title_day', $('#title_day').val());
     // formData.append('description_day', $('#description_day').val());    
     formData.append('days', JSON.stringify(daysToAdd));
     // Display the details of each day in the console
-    console.log('Deisplayiong sendedd');
+    console.log('sended');
     for (const pair of formData.entries()) {
       console.log(pair[0] + ', ' + pair[1]);
     }
 
     const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
 
+    if(url == 'tour-edit.php'){
+alert('Editing ');
+    }else{
+alert('adding ');
+    }
+    
     $.ajax({
         url: url,
         type: 'POST',
