@@ -1,0 +1,3714 @@
+<html lang="en" style="/* scroll-behavior: auto; */"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- funtes google Lato -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&amp;display=swap" rel="stylesheet">
+  <!-- boostrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <title>Tour Package Details</title>
+  <!-- Agrega tus enlaces a hojas de estilo CSS aquí -->
+  <style>
+      /* Estilos globales */
+      body{
+          font-family: Arial, sans-serif;
+          
+          margin: 0;
+          padding: 0;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -khtml-user-select: none;
+          -ms-user-select: none;
+      }
+      h1{
+      font-family: 'Lato', sans-serif;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin: 0;
+      }
+      h2, h3, h4, h5{
+        font-family: 'Lato', sans-serif;
+      }
+      
+
+      main{
+          background-size: cover;
+      }
+      @media (max-width:1000px) {            
+          main{
+            /* background-size: auto !important;
+              background-size: inherit; */
+          }
+      }
+      /* Importa la fuente "Lato" desde Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+      p {
+      font-size: medium;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      color: #000000;
+      line-height: 26px;
+      font-weight: 1000;        
+      font-family: sans-serif;
+      font-family: 'Lato', sans-serif; /* Usar Lato como fuente principal */
+      overflow-x: hidden!important;
+      -webkit-font-smoothing: antialiased;
+      }
+      p {
+  font-family: 'Lato', sans-serif; /* Usar Lato como fuente principal */
+  font-size: 16px; /* Tamaño de fuente */
+  color: #000; /* Color de texto */
+  line-height: 1.5; /* Espaciado entre líneas */
+  font-weight: 300; /* Grosor de fuente (ligero) */
+  margin: 0 0 20px; /* Márgenes superior e inferior para separar párrafos */
+}
+
+/* Estilos adicionales para una mejor legibilidad */
+p.description_activity {
+  margin-top: 0; /* Elimina el margen superior predeterminado */
+}
+
+/* Estilos adicionales para resaltar los párrafos importantes si es necesario */
+p.highlighted {
+  font-weight: 400; /* Puedes aumentar el grosor de fuente para destacar */
+  color: #007bff; /* Cambiar el color del texto para resaltar */
+}
+      
+      h2{
+          font-size: x-large;
+      }
+      
+      section {
+          background: white;
+      }
+      hr {
+          background-color: #ffd700;
+          height: 2px;
+          border: none;
+          margin: 10px 0;
+          width: 7vw;
+          min-width: 80px;
+      }
+      .title_hr hr {
+          background-color: #ffd700;
+          height: 2px;
+          border: none;
+          margin: 10px 0;
+          width: 7vw;
+          min-width: 80px;
+      }
+      
+      /* Clase de estilo para resolución móvil */
+      .block {
+          flex-direction: column;
+          padding: 10vw 5vw;
+          /* min-height: 70vh; */
+      }
+      
+      /* Clase de estilo para resolución de PC */
+      @media (min-width: 768px) {
+          .block {
+              display: flex;
+              flex-direction: row;
+              padding: 5.6vw;
+              padding: 15.6vw;
+              padding: 5.6vw 15.6vw 5.6vw 15.6vw;
+          }
+      }
+      
+      /* Encabezado */
+      header {
+          position: fixed;
+          z-index: 100;
+          width: 100%;
+      }
+      
+      /* Ruta de ubicación actual */
+      header div {
+          color: #ffd700;
+          margin-top: 10px;
+      }
+      
+      /* Sección de descuento */
+      section:nth-child(2) {
+          
+          background-size: cover;
+          height: 40vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          text-align: center;
+      }
+      
+      /* Título del tour y descuento */
+      section:nth-child(2) h2 {
+          font-size: 24px;
+      }
+      
+      section:nth-child(2) p {
+          font-size: 18px;
+          font-weight: bold;
+      }
+      
+      /* Sección de detalles */
+      section:nth-child(3) {
+          background-color: white;
+      }
+      
+      /* Título "Unique Tour" */
+      section:nth-child(3) h3 {
+          font-size: 20px;
+      }
+      
+      /* Línea amarilla debajo del título */
+      section:nth-child(3) hr {
+          background-color: #ffd700;
+          height: 2px;
+          border: none;
+          margin: 10px 0;
+      }
+      
+      /* Cuadros clickeables */
+      ul {
+          list-style-type: none;
+          display: flex;
+          justify-content: space-between;
+          padding: 0;
+      }
+      
+      ul li {
+          text-align: center;
+          cursor: pointer;
+          /*flex: 1;*/
+      }
+      
+      ul img {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 10px;
+      }
+      
+      /* Cuadros clickeables: Icono por defecto */
+      ul img.default-icon {
+          /* Puedes poner aquí una URL de icono por defecto */
+      }
+      
+      /* Detalles al hacer clic */
+      #details {
+          padding-top: 20px;
+      }
+      
+      /* Sección "Tour View" */
+      section:nth-child(4) .day {
+          display: flex;
+          padding: 20px 0;
+          /* border-bottom: 1px solid #ddd; */
+          align-items: flex-start;
+          justify-content: space-between;
+      }
+      
+      .day-number {
+          font-size: 24px;
+          font-weight: bold;
+      }
+      
+      .day-info {
+          flex: 2;
+          padding-left: 20px;
+      }
+      
+      .day-image img {
+          max-width: 100%;
+          height: auto;
+      }
+      
+      /* Logos de marcas patrocinadoras */
+      #sponsors {
+          text-align: center;
+          padding: 20px 0;
+      }
+      
+      #sponsors img {
+          max-width: 100px;
+          margin: 0 10px;
+      }
+      
+      /* Información de contacto */
+      #contact {
+          text-align: center;
+          padding: 20px 0;
+      }
+      
+      #contact h4 {
+          font-size: 20px;
+      }
+      
+      /* Footer */
+      footer {
+          background-color: #333;
+          color: white;
+          text-align: center;
+          padding: 20px;
+      }
+      
+      footer img {
+          max-width: 100px;
+          height: auto;
+      }
+      
+      /* Enlaces a redes sociales en el footer */
+      footer a {
+          color: #ffd700;
+          text-decoration: none;
+          margin: 0 10px;
+      }
+      
+      /* Derechos de autor en el footer */
+      footer p {
+          margin: 10px 0;
+      }
+  </style>
+  <!-- comentario Header style -->
+  <style>
+       header{
+          background-color: white; 
+      }
+      .menu-opened {
+          background-color: white !important;
+          color: black !important;
+      }
+      .menu-opened .color-font {
+          color: black !important;
+      }
+      @media (max-width: 768px){
+      header{
+              
+      align-items: flex-start;
+      justify-content: center;
+
+      }
+      .navbar-brand img {
+      width: 110% !important;
+      }
+      .navbar-toggler-icon{
+       
+      }
+  }
+  </style>
+  <!-- estilos para el tabed content -->
+  <style>
+      /* Estilos para las pestañas/tab */
+      .tab-menu {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+      }            
+      .tab-menu input[type="radio"] {
+          display: none;
+      }
+      
+      .cont_title_description p{
+          text-align: justify;
+          word-wrap: break-word;
+      }
+      .world-wrap {
+          text-align: justify;
+          word-wrap: break-word;
+      }
+      .cont_title_description{
+          margin-right:  6vw;
+      }
+      
+      .cont-day-activity {
+          display: flex;
+          align-items: center;
+          flex-wrap: nowrap;
+          width: inherit;                    
+      }
+      
+      
+      @media (max-width: 768px) {
+          .cont-day-activity {
+              align-items: center;
+              flex-wrap: wrap;    
+              width: 70vw;   
+          }         
+      }
+      .span_img_day{
+          align-self: center;
+          margin-right: 50px;
+          min-width: 350px;
+          overflow: hidden;
+          max-height: 170px;
+          /* border: 1px solid black; */
+          display: block;
+          max-width: 250px;
+          margin: 0 !important;            
+      }
+      .span_img_day img{
+          display: block;
+          min-width: 100%;
+      }
+      .tab-menu label {
+          cursor: pointer;
+          text-align: center;
+          padding: 10px;
+          background-color: #c0c0c029;
+          max-height: 95px;
+          flex: 1;
+          margin: 15px;
+      }
+      /* Resolucion movil */
+      @media (max-width:768px){
+          .tab-menu label {
+              margin-left: 2px;
+              margin-right: 2px;
+          }
+      }
+      
+      .tab-menu label:hover {
+          background-color: #e0e0e0;
+      }
+      span img{
+          width: 50%;
+          max-width: 50px;
+      }
+      
+      /* Estilos para el contenido de las pestañas */
+      .tab-content {
+          width: 100%;
+          display: none;                
+          /* border: 1px solid #ccc; */
+      }
+      
+      /* Mostrar contenido de la pestaña seleccionada */
+      #tab1:checked~#content-tab1,
+      #tab2:checked~#content-tab2,
+      #tab3:checked~#content-tab3,
+      #tab4:checked~#content-tab4 {
+          display: block;
+      }
+      #tab2:checked~#content-tab2{
+          flex-wrap: wrap;
+          display: flex;        
+         justify-content: center;
+      }
+
+  </style>
+  <!-- schedule linetime  -->
+  <style>
+      .timeline {
+          display: flex;
+          align-items: flex-start;
+          width: 100%;
+          flex-direction: column;
+      }
+      
+      .day {
+          box-sizing: content-box;
+          display: flex;
+          align-items: center;
+          position: relative;
+          /* width: 100px; */
+          /* margin-right: 20px; */
+      }
+      
+      .day span {
+          margin: 2vw;
+      }
+      
+      .diamond {
+          width: 20px;
+          height: 20px;
+          background-color: yellow;
+          background-color: #ffd702;                
+          transform: rotate(45deg);
+      }
+      
+      .conect_line {
+          content: "";
+          position: absolute;  
+          /* left: 100%; */
+          /* right: 0; */
+          width: 4px;
+          height: 100%;
+          margin-right: 10px;
+          margin-left: 8px;
+          background: linear-gradient(to right, transparent 50%, #ffd702 50%);
+          transform: translateY(0%);
+      }
+      
+      /* p {
+          margin: 0;
+          text-align: left; Alinea el texto a la izquierda 
+      } 
+      */
+      
+  </style>
+  <!-- Styles de header -->
+  <style>
+     .header-display-none {
+          opacity: 0;
+          transform: translateY(-100%);
+      }
+      .transparent-header {
+      background-color: transparent ;
+      backdrop-filter: none !important;
+      }
+      
+
+      header {
+          position: fixed;
+          z-index: 100;
+          width: 100%;
+          opacity: 1;
+          transform: translateY(0);
+          transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave */
+      }
+      
+      header .bg-dark {
+          background-color: #27303a98 !important;
+          background-color: #27303a00 !important;
+          background: linear-gradient(96deg, transparent, #0b0c0d);
+          background: linear-gradient(to left, rgb(0 0 0 / 59%) 0%, rgb(15 14 14 / 0%) 50%);
+          background: linear-gradient(to left, rgb(0 0 0 / 0%) 0%, rgb(15 14 14 / 0%) 50%);
+          backdrop-filter: blur(1px);
+          
+      }
+      
+      .cont-header {
+          display: flex;
+          flex-wrap: nowrap;
+          align-content: center;
+          justify-content: space-between;
+          align-items: flex-start;
+          max-height: fit-content;
+          padding: 10px 20px 10px 20px;
+      }
+      
+      header .navbar-expand-lg .navbar-nav .nav-link {
+          padding-right: 0.5rem;
+          padding-left: 0.5rem;
+          padding: 5px 20px 5px 20px;
+      }
+      
+      .navbar .navbar-collapse {
+          justify-content: flex-end;
+      }
+      
+      .navbar-brand {
+          width: auto;
+          max-width: 100px;
+      }
+      
+      .navbar-brand img {
+          width: 150%;
+          
+      }
+      
+      .container-logo-title {
+          display: flex;
+          max-height: 50px;
+          align-items: center;
+      }
+      
+      .short-title {
+          color: #187148;
+      }
+      
+      .container-logo-title span {
+          font-size: 16px;
+          min-width: initial;
+      }
+      
+      .contenedor-imagen-logo {
+          max-width: 40px;
+          min-width: 40px;
+      }
+      
+      .contenedor-imagen-logo img {
+          display: block;
+          width: 100%;
+          cursor: pointer;
+      }
+      
+      .container-logo-title h1 {
+          font-weight: 300;
+          margin: 0;
+          font-size: 1.5em;
+      }
+      
+      .title-quick {
+          font-weight: 500 !important;
+      }
+      
+      .cont-mesadomicilio-carrito {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          
+      }
+      
+      .cont-mesadomicilio-carrito h1 {
+          font-size: 1.5em;
+          margin: 0;
+          font-weight: 300;
+      }
+      
+      .icono-carrito-compras {
+          font-size: 1.5em;
+          color: #e5bd5d;
+          cursor: pointer;
+      }
+  </style>
+  <style id="mttstyle">
+      #mttContainer {
+          left: 0 !important;
+          top: 0 !important;
+          width: 1000px !important;
+          margin-left: -500px !important;
+          position: fixed !important;
+          z-index: 100000200 !important;
+          background: none !important;
+          pointer-events: none !important;
+          display: inline-block !important;
+      }
+      
+      .bootstrapiso .tooltip {
+          width: auto !important;
+          height: auto !important;
+          background: none !important;
+          border: none !important;
+          border-radius: 0px !important;
+          visibility: visible !important;
+          pointer-events: none !important;
+      }
+      
+      .bootstrapiso .bs-tooltip-top {
+          margin-bottom: 15px !important;
+      }
+      
+      .bootstrapiso .bs-tooltip-bottom {
+          margin-top: 15px !important;
+      }
+      
+      .bootstrapiso .tooltip-inner {
+          font-size: 14px !important;
+          max-width: 200px !important;
+          text-align: center !important;
+          backdrop-filter: blur(2px) !important;
+          background-color: #000000b8 !important;
+          color: #ffffffff !important;
+          pointer-events: auto;
+      }
+      
+      .bootstrapiso .arrow::before {
+          border-top-color: #000000b8 !important;
+      }
+      
+      .bootstrapiso .arrow {
+          font-size: 14px !important;
+          margin: auto !important;
+      }
+      
+      .bootstrapiso .arrow::after {
+          display: none !important;
+      }
+      
+      .ocr_text_div {
+          position: absolute;
+          opacity: 0.7;
+          font-size: calc(100% + 1cqw);
+          overflow: hidden;
+          border: 2px solid CornflowerBlue;
+          color: transparent !important;
+          background: none !important;
+      }
+  </style>
+  <style type="text/css">
+      @font-face {
+          font-weight: 400;
+          font-style: normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+      }
+      
+      @font-face {
+          font-weight: 700;
+          font-style: normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+      }
+  </style>
+  <style id="mttstyle">
+      #mttContainer {
+          left: 0 !important;
+          top: 0 !important;
+          width: 1000px !important;
+          margin-left: -500px !important;
+          position: fixed !important;
+          z-index: 100000200 !important;
+          background: none !important;
+          pointer-events: none !important;
+          display: inline-block !important;
+      }
+      
+      .bootstrapiso .tooltip {
+          width: auto !important;
+          height: auto !important;
+          background: none !important;
+          border: none !important;
+          border-radius: 0px !important;
+          visibility: visible !important;
+          pointer-events: none !important;
+      }
+      
+      .bootstrapiso .bs-tooltip-top {
+          margin-bottom: 15px !important;
+      }
+      
+      .bootstrapiso .bs-tooltip-bottom {
+          margin-top: 15px !important;
+      }
+      
+      .bootstrapiso .tooltip-inner {
+          font-size: 14px !important;
+          max-width: 200px !important;
+          text-align: center !important;
+          backdrop-filter: blur(2px) !important;
+          background-color: #000000b8 !important;
+          color: #ffffffff !important;
+          pointer-events: auto;
+      }
+      
+      .bootstrapiso .arrow::before {
+          border-top-color: #000000b8 !important;
+      }
+      
+      .bootstrapiso .arrow {
+          font-size: 14px !important;
+          margin: auto !important;
+      }
+      
+      .bootstrapiso .arrow::after {
+          display: none !important;
+      }
+      
+      .ocr_text_div {
+          position: absolute;
+          opacity: 0.7;
+          font-size: calc(100% + 1cqw);
+          overflow: hidden;
+          border: 2px solid CornflowerBlue;
+          color: transparent !important;
+          background: none !important;
+      }
+  </style>
+  <style type="text/css">
+      @font-face {
+          font-weight: 400;
+          font-style: normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+      }
+      
+      @font-face {
+          font-weight: 700;
+          font-style: normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+      }
+  </style>
+  <style id="mttstyle">
+      #mttContainer {
+          left: 0 !important;
+          top: 0 !important;
+          width: 1000px !important;
+          margin-left: -500px !important;
+          position: fixed !important;
+          z-index: 100000200 !important;
+          background: none !important;
+          pointer-events: none !important;
+          display: inline-block !important;
+      }
+      
+      .bootstrapiso .tooltip {
+          width: auto !important;
+          height: auto !important;
+          background: none !important;
+          border: none !important;
+          border-radius: 0px !important;
+          visibility: visible !important;
+          pointer-events: none !important;
+      }
+      
+      .bootstrapiso .bs-tooltip-top {
+          margin-bottom: 15px !important;
+      }
+      
+      .bootstrapiso .bs-tooltip-bottom {
+          margin-top: 15px !important;
+      }
+      
+      .bootstrapiso .tooltip-inner {
+          font-size: 14px !important;
+          max-width: 200px !important;
+          text-align: center !important;
+          backdrop-filter: blur(2px) !important;
+          background-color: #000000b8 !important;
+          color: #ffffffff !important;
+          pointer-events: auto;
+      }
+      
+      .bootstrapiso .arrow::before {
+          border-top-color: #000000b8 !important;
+      }
+      
+      .bootstrapiso .arrow {
+          font-size: 14px !important;
+          margin: auto !important;
+      }
+      
+      .bootstrapiso .arrow::after {
+          display: none !important;
+      }
+      
+      .ocr_text_div {
+          position: absolute;
+          opacity: 0.7;
+          font-size: calc(100% + 1cqw);
+          overflow: hidden;
+          border: 2px solid CornflowerBlue;
+          color: transparent !important;
+          background: none !important;
+      }
+  </style>
+  <style type="text/css">
+      @font-face {
+          font-weight: 400;
+          font-style: normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+      }
+      
+      @font-face {
+          font-weight: 700;
+          font-style: normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+      }
+  </style>
+  <style id="mttstyle">
+      #mttContainer {
+          left: 0 !important;
+          top: 0 !important;
+          width: 1000px !important;
+          margin-left: -500px !important;
+          position: fixed !important;
+          z-index: 100000200 !important;
+          background: none !important;
+          pointer-events: none !important;
+          display: inline-block !important;
+      }
+      
+      .bootstrapiso .tooltip {
+          width: auto !important;
+          height: auto !important;
+          background: none !important;
+          border: none !important;
+          border-radius: 0px !important;
+          visibility: visible !important;
+          pointer-events: none !important;
+      }
+      
+      .bootstrapiso .bs-tooltip-top {
+          margin-bottom: 15px !important;
+      }
+      
+      .bootstrapiso .bs-tooltip-bottom {
+          margin-top: 15px !important;
+      }
+      
+      .bootstrapiso .tooltip-inner {
+          font-size: 14px !important;
+          max-width: 200px !important;
+          text-align: center !important;
+          backdrop-filter: blur(2px) !important;
+          background-color: #000000b8 !important;
+          color: #ffffffff !important;
+          pointer-events: auto;
+      }
+      
+      .bootstrapiso .arrow::before {
+          border-top-color: #000000b8 !important;
+      }
+      
+      .bootstrapiso .arrow {
+          font-size: 14px !important;
+          margin: auto !important;
+      }
+      
+      .bootstrapiso .arrow::after {
+          display: none !important;
+      }
+      
+      .ocr_text_div {
+          position: absolute;
+          opacity: 0.7;
+          font-size: calc(100% + 1cqw);
+          overflow: hidden;
+          border: 2px solid CornflowerBlue;
+          color: transparent !important;
+          background: none !important;
+      }
+  </style>
+  <style type="text/css">
+      @font-face {
+          font-weight: 400;
+          font-style: normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+      }
+      
+      @font-face {
+          font-weight: 700;
+          font-style: normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+      }
+  </style>
+  <style id="mttstyle">
+      #mttContainer {
+          left: 0 !important;
+          top: 0 !important;
+          width: 1000px !important;
+          margin-left: -500px !important;
+          position: fixed !important;
+          z-index: 100000200 !important;
+          background: none !important;
+          pointer-events: none !important;
+          display: inline-block !important;
+      }
+      
+      .bootstrapiso .tooltip {
+          width: auto !important;
+          height: auto !important;
+          background: none !important;
+          border: none !important;
+          border-radius: 0px !important;
+          visibility: visible !important;
+          pointer-events: none !important;
+      }
+      
+      .bootstrapiso .bs-tooltip-top {
+          margin-bottom: 15px !important;
+      }
+      
+      .bootstrapiso .bs-tooltip-bottom {
+          margin-top: 15px !important;
+      }
+      
+      .bootstrapiso .tooltip-inner {
+          font-size: 14px !important;
+          max-width: 200px !important;
+          text-align: center !important;
+          backdrop-filter: blur(2px) !important;
+          background-color: #000000b8 !important;
+          color: #ffffffff !important;
+          pointer-events: auto;
+      }
+      
+      .bootstrapiso .arrow::before {
+          border-top-color: #000000b8 !important;
+      }
+      
+      .bootstrapiso .arrow {
+          font-size: 14px !important;
+          margin: auto !important;
+      }
+      
+      .bootstrapiso .arrow::after {
+          display: none !important;
+      }
+      
+      .ocr_text_div {
+          position: absolute;
+          opacity: 0.7;
+          font-size: calc(100% + 1cqw);
+          overflow: hidden;
+          border: 2px solid CornflowerBlue;
+          color: transparent !important;
+          background: none !important;
+      }
+  </style>
+  <style type="text/css">
+      @font-face {
+          font-weight: 400;
+          font-style: normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+      }
+      
+      @font-face {
+          font-weight: 700;
+          font-style: normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+      }
+  </style>
+  <style id="mttstyle">
+      #mttContainer {
+          left: 0 !important;
+          top: 0 !important;
+          width: 1000px !important;
+          margin-left: -500px !important;
+          position: fixed !important;
+          z-index: 100000200 !important;
+          background: none !important;
+          pointer-events: none !important;
+          display: inline-block !important;
+      }
+      .bootstrapiso .tooltip {
+          width:auto  !important;
+          height:auto  !important;
+          background: none !important;
+          border:none !important;
+          border-radius: 0px !important;
+          visibility: visible  !important;
+          pointer-events: none !important;
+      }
+      .bootstrapiso  .bs-tooltip-top { 
+          margin-bottom: 15px  !important;
+      }
+      .bootstrapiso  .bs-tooltip-bottom { 
+          margin-top: 15px  !important;
+      }
+      .bootstrapiso .tooltip-inner {
+          font-size: 14px  !important;
+          max-width: 200px  !important;
+          text-align: center !important;
+          backdrop-filter: blur(2px) !important; 
+          background-color: #000000b8 !important;
+          color: #ffffffff !important;
+          pointer-events: auto;
+      }
+      .bootstrapiso .arrow::before {
+          border-top-color: #000000b8 !important;
+      }
+      .bootstrapiso .arrow {
+          font-size: 14px  !important;
+          margin: auto  !important;
+      }
+      .bootstrapiso .arrow::after {
+          display:none !important;
+      }
+      .ocr_text_div{
+          position: absolute;
+          opacity: 0.7;
+          font-size: calc(100% + 1cqw);
+          overflow: hidden;
+          border: 2px solid CornflowerBlue;
+          color: transparent !important;
+          background: none !important;
+      }
+      
+  </style><style type="text/css">
+      @font-face {
+          font-weight: 400;
+          font-style:  normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+      }
+      
+      @font-face {
+          font-weight: 700;
+          font-style:  normal;
+          font-family: circular;
+          
+          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+      }</style><style id="mttstyle">
+          #mttContainer {
+              left: 0 !important;
+              top: 0 !important;
+              width: 1000px !important;
+              margin-left: -500px !important;
+              position: fixed !important;
+              z-index: 100000200 !important;
+              background: none !important;
+              pointer-events: none !important;
+              display: inline-block !important;
+          }
+          .bootstrapiso .tooltip {
+              width:auto  !important;
+              height:auto  !important;
+              background: none !important;
+              border:none !important;
+              border-radius: 0px !important;
+              visibility: visible  !important;
+              pointer-events: none !important;
+          }
+          .bootstrapiso  .bs-tooltip-top { 
+              margin-bottom: 15px  !important;
+          }
+          .bootstrapiso  .bs-tooltip-bottom { 
+              margin-top: 15px  !important;
+          }
+          .bootstrapiso .tooltip-inner {
+              font-size: 14px  !important;
+              max-width: 200px  !important;
+              text-align: center !important;
+              backdrop-filter: blur(2px) !important; 
+              background-color: #000000b8 !important;
+              color: #ffffffff !important;
+              pointer-events: auto;
+          }
+          .bootstrapiso .arrow::before {
+              border-top-color: #000000b8 !important;
+          }
+          .bootstrapiso .arrow {
+              font-size: 14px  !important;
+              margin: auto  !important;
+          }
+          .bootstrapiso .arrow::after {
+              display:none !important;
+          }
+          .ocr_text_div{
+              position: absolute;
+              opacity: 0.7;
+              font-size: calc(100% + 1cqw);
+              overflow: hidden;
+              border: 2px solid CornflowerBlue;
+              color: transparent !important;
+              background: none !important;
+          }
+          
+      </style><style type="text/css">
+          @font-face {
+              font-weight: 400;
+              font-style:  normal;
+              font-family: circular;
+              
+              src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+          }
+          
+          @font-face {
+              font-weight: 700;
+              font-style:  normal;
+              font-family: circular;
+              
+              src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+          }</style><style id="mttstyle">
+              #mttContainer {
+                  left: 0 !important;
+                  top: 0 !important;
+                  width: 1000px !important;
+                  margin-left: -500px !important;
+                  position: fixed !important;
+                  z-index: 100000200 !important;
+                  background: none !important;
+                  pointer-events: none !important;
+                  display: inline-block !important;
+              }
+              .bootstrapiso .tooltip {
+                  width:auto  !important;
+                  height:auto  !important;
+                  background: none !important;
+                  border:none !important;
+                  border-radius: 0px !important;
+                  visibility: visible  !important;
+                  pointer-events: none !important;
+              }
+              .bootstrapiso  .bs-tooltip-top { 
+                  margin-bottom: 15px  !important;
+              }
+              .bootstrapiso  .bs-tooltip-bottom { 
+                  margin-top: 15px  !important;
+              }
+              .bootstrapiso .tooltip-inner {
+                  font-size: 14px  !important;
+                  max-width: 200px  !important;
+                  text-align: center !important;
+                  backdrop-filter: blur(2px) !important; 
+                  background-color: #000000b8 !important;
+                  color: #ffffffff !important;
+                  pointer-events: auto;
+              }
+              .bootstrapiso .arrow::before {
+                  border-top-color: #000000b8 !important;
+              }
+              .bootstrapiso .arrow {
+                  font-size: 14px  !important;
+                  margin: auto  !important;
+              }
+              .bootstrapiso .arrow::after {
+                  display:none !important;
+              }
+              .ocr_text_div{
+                  position: absolute;
+                  opacity: 0.7;
+                  font-size: calc(100% + 1cqw);
+                  overflow: hidden;
+                  border: 2px solid CornflowerBlue;
+                  color: transparent !important;
+                  background: none !important;
+              }
+              
+          </style><style type="text/css">
+              @font-face {
+                  font-weight: 400;
+                  font-style:  normal;
+                  font-family: circular;
+                  
+                  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+              }
+              
+              @font-face {
+                  font-weight: 700;
+                  font-style:  normal;
+                  font-family: circular;
+                  
+                  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+              }</style><style id="mttstyle">
+                  #mttContainer {
+                      left: 0 !important;
+                      top: 0 !important;
+                      width: 1000px !important;
+                      margin-left: -500px !important;
+                      position: fixed !important;
+                      z-index: 100000200 !important;
+                      background: none !important;
+                      pointer-events: none !important;
+                      display: inline-block !important;
+                  }
+                  .bootstrapiso .tooltip {
+                      width:auto  !important;
+                      height:auto  !important;
+                      background: none !important;
+                      border:none !important;
+                      border-radius: 0px !important;
+                      visibility: visible  !important;
+                      pointer-events: none !important;
+                  }
+                  .bootstrapiso  .bs-tooltip-top { 
+                      margin-bottom: 15px  !important;
+                  }
+                  .bootstrapiso  .bs-tooltip-bottom { 
+                      margin-top: 15px  !important;
+                  }
+                  .bootstrapiso .tooltip-inner {
+                      font-size: 14px  !important;
+                      max-width: 200px  !important;
+                      text-align: center !important;
+                      backdrop-filter: blur(2px) !important; 
+                      background-color: #000000b8 !important;
+                      color: #ffffffff !important;
+                      pointer-events: auto;
+                  }
+                  .bootstrapiso .arrow::before {
+                      border-top-color: #000000b8 !important;
+                  }
+                  .bootstrapiso .arrow {
+                      font-size: 14px  !important;
+                      margin: auto  !important;
+                  }
+                  .bootstrapiso .arrow::after {
+                      display:none !important;
+                  }
+                  .ocr_text_div{
+                      position: absolute;
+                      opacity: 0.7;
+                      font-size: calc(100% + 1cqw);
+                      overflow: hidden;
+                      border: 2px solid CornflowerBlue;
+                      color: transparent !important;
+                      background: none !important;
+                  }
+                  
+              </style><style type="text/css">
+                  @font-face {
+                      font-weight: 400;
+                      font-style:  normal;
+                      font-family: circular;
+                      
+                      src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                  }
+                  
+                  @font-face {
+                      font-weight: 700;
+                      font-style:  normal;
+                      font-family: circular;
+                      
+                      src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                  }</style><style id="mttstyle">
+                      #mttContainer {
+                          left: 0 !important;
+                          top: 0 !important;
+                          width: 1000px !important;
+                          margin-left: -500px !important;
+                          position: fixed !important;
+                          z-index: 100000200 !important;
+                          background: none !important;
+                          pointer-events: none !important;
+                          display: inline-block !important;
+                      }
+                      .bootstrapiso .tooltip {
+                          width:auto  !important;
+                          height:auto  !important;
+                          background: none !important;
+                          border:none !important;
+                          border-radius: 0px !important;
+                          visibility: visible  !important;
+                          pointer-events: none !important;
+                      }
+                      .bootstrapiso  .bs-tooltip-top { 
+                          margin-bottom: 15px  !important;
+                      }
+                      .bootstrapiso  .bs-tooltip-bottom { 
+                          margin-top: 15px  !important;
+                      }
+                      .bootstrapiso .tooltip-inner {
+                          font-size: 14px  !important;
+                          max-width: 200px  !important;
+                          text-align: center !important;
+                          backdrop-filter: blur(2px) !important; 
+                          background-color: #000000b8 !important;
+                          color: #ffffffff !important;
+                          pointer-events: auto;
+                      }
+                      .bootstrapiso .arrow::before {
+                          border-top-color: #000000b8 !important;
+                      }
+                      .bootstrapiso .arrow {
+                          font-size: 14px  !important;
+                          margin: auto  !important;
+                      }
+                      .bootstrapiso .arrow::after {
+                          display:none !important;
+                      }
+                      .ocr_text_div{
+                          position: absolute;
+                          opacity: 0.7;
+                          font-size: calc(100% + 1cqw);
+                          overflow: hidden;
+                          border: 2px solid CornflowerBlue;
+                          color: transparent !important;
+                          background: none !important;
+                      }
+                      
+                  </style><style type="text/css">
+                      @font-face {
+                          font-weight: 400;
+                          font-style:  normal;
+                          font-family: circular;
+                          
+                          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                      }
+                      
+                      @font-face {
+                          font-weight: 700;
+                          font-style:  normal;
+                          font-family: circular;
+                          
+                          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                      }</style><style id="mttstyle">
+                          #mttContainer {
+                              left: 0 !important;
+                              top: 0 !important;
+                              width: 1000px !important;
+                              margin-left: -500px !important;
+                              position: fixed !important;
+                              z-index: 100000200 !important;
+                              background: none !important;
+                              pointer-events: none !important;
+                              display: inline-block !important;
+                          }
+                          .bootstrapiso .tooltip {
+                              width:auto  !important;
+                              height:auto  !important;
+                              background: none !important;
+                              border:none !important;
+                              border-radius: 0px !important;
+                              visibility: visible  !important;
+                              pointer-events: none !important;
+                          }
+                          .bootstrapiso  .bs-tooltip-top { 
+                              margin-bottom: 15px  !important;
+                          }
+                          .bootstrapiso  .bs-tooltip-bottom { 
+                              margin-top: 15px  !important;
+                          }
+                          .bootstrapiso .tooltip-inner {
+                              font-size: 14px  !important;
+                              max-width: 200px  !important;
+                              text-align: center !important;
+                              backdrop-filter: blur(2px) !important; 
+                              background-color: #000000b8 !important;
+                              color: #ffffffff !important;
+                              pointer-events: auto;
+                          }
+                          .bootstrapiso .arrow::before {
+                              border-top-color: #000000b8 !important;
+                          }
+                          .bootstrapiso .arrow {
+                              font-size: 14px  !important;
+                              margin: auto  !important;
+                          }
+                          .bootstrapiso .arrow::after {
+                              display:none !important;
+                          }
+                          .ocr_text_div{
+                              position: absolute;
+                              opacity: 0.7;
+                              font-size: calc(100% + 1cqw);
+                              overflow: hidden;
+                              border: 2px solid CornflowerBlue;
+                              color: transparent !important;
+                              background: none !important;
+                          }
+                          
+                      </style><style type="text/css">
+                          @font-face {
+                              font-weight: 400;
+                              font-style:  normal;
+                              font-family: circular;
+                              
+                              src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                          }
+                          
+                          @font-face {
+                              font-weight: 700;
+                              font-style:  normal;
+                              font-family: circular;
+                              
+                              src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                          }</style><style id="mttstyle">
+                              #mttContainer {
+                                  left: 0 !important;
+                                  top: 0 !important;
+                                  width: 1000px !important;
+                                  margin-left: -500px !important;
+                                  position: fixed !important;
+                                  z-index: 100000200 !important;
+                                  background: none !important;
+                                  pointer-events: none !important;
+                                  display: inline-block !important;
+                              }
+                              .bootstrapiso .tooltip {
+                                  width:auto  !important;
+                                  height:auto  !important;
+                                  background: none !important;
+                                  border:none !important;
+                                  border-radius: 0px !important;
+                                  visibility: visible  !important;
+                                  pointer-events: none !important;
+                              }
+                              .bootstrapiso  .bs-tooltip-top { 
+                                  margin-bottom: 15px  !important;
+                              }
+                              .bootstrapiso  .bs-tooltip-bottom { 
+                                  margin-top: 15px  !important;
+                              }
+                              .bootstrapiso .tooltip-inner {
+                                  font-size: 14px  !important;
+                                  max-width: 200px  !important;
+                                  text-align: center !important;
+                                  backdrop-filter: blur(2px) !important; 
+                                  background-color: #000000b8 !important;
+                                  color: #ffffffff !important;
+                                  pointer-events: auto;
+                              }
+                              .bootstrapiso .arrow::before {
+                                  border-top-color: #000000b8 !important;
+                              }
+                              .bootstrapiso .arrow {
+                                  font-size: 14px  !important;
+                                  margin: auto  !important;
+                              }
+                              .bootstrapiso .arrow::after {
+                                  display:none !important;
+                              }
+                              .ocr_text_div{
+                                  position: absolute;
+                                  opacity: 0.7;
+                                  font-size: calc(100% + 1cqw);
+                                  overflow: hidden;
+                                  border: 2px solid CornflowerBlue;
+                                  color: transparent !important;
+                                  background: none !important;
+                              }
+                              
+                          </style><style type="text/css">
+                              @font-face {
+                                  font-weight: 400;
+                                  font-style:  normal;
+                                  font-family: circular;
+                                  
+                                  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                              }
+                              
+                              @font-face {
+                                  font-weight: 700;
+                                  font-style:  normal;
+                                  font-family: circular;
+                                  
+                                  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                              }</style><style id="mttstyle">
+                                  #mttContainer {
+                                      left: 0 !important;
+                                      top: 0 !important;
+                                      width: 1000px !important;
+                                      margin-left: -500px !important;
+                                      position: fixed !important;
+                                      z-index: 100000200 !important;
+                                      background: none !important;
+                                      pointer-events: none !important;
+                                      display: inline-block !important;
+                                  }
+                                  .bootstrapiso .tooltip {
+                                      width:auto  !important;
+                                      height:auto  !important;
+                                      background: none !important;
+                                      border:none !important;
+                                      border-radius: 0px !important;
+                                      visibility: visible  !important;
+                                      pointer-events: none !important;
+                                  }
+                                  .bootstrapiso  .bs-tooltip-top { 
+                                      margin-bottom: 15px  !important;
+                                  }
+                                  .bootstrapiso  .bs-tooltip-bottom { 
+                                      margin-top: 15px  !important;
+                                  }
+                                  .bootstrapiso .tooltip-inner {
+                                      font-size: 14px  !important;
+                                      max-width: 200px  !important;
+                                      text-align: center !important;
+                                      backdrop-filter: blur(2px) !important; 
+                                      background-color: #000000b8 !important;
+                                      color: #ffffffff !important;
+                                      pointer-events: auto;
+                                  }
+                                  .bootstrapiso .arrow::before {
+                                      border-top-color: #000000b8 !important;
+                                  }
+                                  .bootstrapiso .arrow {
+                                      font-size: 14px  !important;
+                                      margin: auto  !important;
+                                  }
+                                  .bootstrapiso .arrow::after {
+                                      display:none !important;
+                                  }
+                                  .ocr_text_div{
+                                      position: absolute;
+                                      opacity: 0.7;
+                                      font-size: calc(100% + 1cqw);
+                                      overflow: hidden;
+                                      border: 2px solid CornflowerBlue;
+                                      color: transparent !important;
+                                      background: none !important;
+                                  }
+                                  
+                              </style><style type="text/css">
+                                  @font-face {
+                                      font-weight: 400;
+                                      font-style:  normal;
+                                      font-family: circular;
+                                      
+                                      src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                                  }
+                                  
+                                  @font-face {
+                                      font-weight: 700;
+                                      font-style:  normal;
+                                      font-family: circular;
+                                      
+                                      src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                                  }</style><style id="mttstyle">
+                                      #mttContainer {
+                                          left: 0 !important;
+                                          top: 0 !important;
+                                          width: 1000px !important;
+                                          margin-left: -500px !important;
+                                          position: fixed !important;
+                                          z-index: 100000200 !important;
+                                          background: none !important;
+                                          pointer-events: none !important;
+                                          display: inline-block !important;
+                                      }
+                                      .bootstrapiso .tooltip {
+                                          width:auto  !important;
+                                          height:auto  !important;
+                                          background: none !important;
+                                          border:none !important;
+                                          border-radius: 0px !important;
+                                          visibility: visible  !important;
+                                          pointer-events: none !important;
+                                      }
+                                      .bootstrapiso  .bs-tooltip-top { 
+                                          margin-bottom: 15px  !important;
+                                      }
+                                      .bootstrapiso  .bs-tooltip-bottom { 
+                                          margin-top: 15px  !important;
+                                      }
+                                      .bootstrapiso .tooltip-inner {
+                                          font-size: 14px  !important;
+                                          max-width: 200px  !important;
+                                          text-align: center !important;
+                                          backdrop-filter: blur(2px) !important; 
+                                          background-color: #000000b8 !important;
+                                          color: #ffffffff !important;
+                                          pointer-events: auto;
+                                      }
+                                      .bootstrapiso .arrow::before {
+                                          border-top-color: #000000b8 !important;
+                                      }
+                                      .bootstrapiso .arrow {
+                                          font-size: 14px  !important;
+                                          margin: auto  !important;
+                                      }
+                                      .bootstrapiso .arrow::after {
+                                          display:none !important;
+                                      }
+                                      .ocr_text_div{
+                                          position: absolute;
+                                          opacity: 0.7;
+                                          font-size: calc(100% + 1cqw);
+                                          overflow: hidden;
+                                          border: 2px solid CornflowerBlue;
+                                          color: transparent !important;
+                                          background: none !important;
+                                      }
+                                      
+                                  </style><style type="text/css">
+                                      @font-face {
+                                          font-weight: 400;
+                                          font-style:  normal;
+                                          font-family: circular;
+                                          
+                                          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+                                      }
+                                      
+                                      @font-face {
+                                          font-weight: 700;
+                                          font-style:  normal;
+                                          font-family: circular;
+                                          
+                                          src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+                                      }</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .color-font  {
+    color: #ffffff;
+  padding: 24px;
+  font-weight: bold;
+  font-size: medium;
+
+  }
+  .color-font:hover  {
+    text-decoration: none;
+    color: #ffffff;;
+    border-bottom: 4px solid #ffd702;
+    
+  }
+  .color-font span  {
+    color: #000;
+   
+  text-align: center;
+  color: #ffd702;
+    text-align: center;
+  }
+  .color-font span:hover  {    
+    text-decoration: none;
+    
+  }
+  
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+  #mttContainer {
+    left: 0 !important;
+    top: 0 !important;
+    width: 1000px !important;
+    margin-left: -500px !important;
+    position: fixed !important;
+    z-index: 100000200 !important;
+    background: none !important;
+    pointer-events: none !important;
+    display: inline-block !important;
+  }
+  .bootstrapiso .tooltip {
+    width:auto  !important;
+    height:auto  !important;
+    background: none !important;
+    border:none !important;
+    border-radius: 0px !important;
+    visibility: visible  !important;
+    pointer-events: none !important;
+  }
+  .bootstrapiso  .bs-tooltip-top { 
+    margin-bottom: 15px  !important;
+  }
+  .bootstrapiso  .bs-tooltip-bottom { 
+    margin-top: 15px  !important;
+  }
+  .bootstrapiso .tooltip-inner {
+    font-size: 14px  !important;
+    max-width: 200px  !important;
+    text-align: center !important;
+    backdrop-filter: blur(2px) !important; 
+    background-color: #000000b8 !important;
+    color: #ffffffff !important;
+    pointer-events: auto;
+  }
+  .bootstrapiso .arrow::before {
+    border-top-color: #000000b8 !important;
+  }
+  .bootstrapiso .arrow {
+    font-size: 14px  !important;
+    margin: auto  !important;
+  }
+  .bootstrapiso .arrow::after {
+    display:none !important;
+  }
+  .ocr_text_div{
+    position: absolute;
+    opacity: 0.7;
+    font-size: calc(100% + 1cqw);
+    overflow: hidden;
+    border: 2px solid CornflowerBlue;
+    color: transparent !important;
+    background: none !important;
+  }
+
+  </style><style type="text/css">
+@font-face {
+font-weight: 400;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+font-weight: 700;
+font-style:  normal;
+font-family: circular;
+
+src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style><style id="mttstyle">
+    #mttContainer {
+      left: 0 !important;
+      top: 0 !important;
+      width: 1000px !important;
+      margin-left: -500px !important;
+      position: fixed !important;
+      z-index: 100000200 !important;
+      background: none !important;
+      pointer-events: none !important;
+      display: inline-block !important;
+    }
+    .bootstrapiso .tooltip {
+      width:auto  !important;
+      height:auto  !important;
+      background: none !important;
+      border:none !important;
+      border-radius: 0px !important;
+      visibility: visible  !important;
+      pointer-events: none !important;
+    }
+    .bootstrapiso  .bs-tooltip-top { 
+      margin-bottom: 15px  !important;
+    }
+    .bootstrapiso  .bs-tooltip-bottom { 
+      margin-top: 15px  !important;
+    }
+    .bootstrapiso .tooltip-inner {
+      font-size: 14px  !important;
+      max-width: 200px  !important;
+      text-align: center !important;
+      backdrop-filter: blur(2px) !important; 
+      background-color: #000000b8 !important;
+      color: #ffffffff !important;
+      pointer-events: auto;
+    }
+    .bootstrapiso .arrow::before {
+      border-top-color: #000000b8 !important;
+    }
+    .bootstrapiso .arrow {
+      font-size: 14px  !important;
+      margin: auto  !important;
+    }
+    .bootstrapiso .arrow::after {
+      display:none !important;
+    }
+    .ocr_text_div{
+      position: absolute;
+      opacity: 0.7;
+      font-size: calc(100% + 1cqw);
+      overflow: hidden;
+      border: 2px solid CornflowerBlue;
+      color: transparent !important;
+      background: none !important;
+    }
+
+    </style><style type="text/css">
+@font-face {
+  font-weight: 400;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+}
+
+@font-face {
+  font-weight: 700;
+  font-style:  normal;
+  font-family: circular;
+
+  src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+}</style></head>
+                                      
+                                      <body>
+                                          <main style="
+                                          background-image: url(imgs/portada.jpg); 
+                                          background-attachment: fixed;background-size: cover;
+                                          background-position: center center;
+                                          background-repeat: no-repeat;
+                                          min-height: 100vh;
+                                          width: 100%;
+                                      ">
+                                         <header class="">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: flex; justify-content: center;">
+          <a class="navbar-brand" href="#"><img src="imgs/logo.svg" alt=""></a>
+          <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute !important;right: 0;bottom: 10;">
+              <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+          </button>
+
+          <div class="navbar-collapse collapse" id="navbarSupportedContent" style="">
+              <ul class="navbar-nav" style="
+  font-family: lato;
+  font-size: xx-large;
+">
+                  <li class="nav-item active" style="
+  font-family: lato;
+">
+                      <a class="color-font" href="#section-portada-id">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="color-font" href="#section-2">Our tours</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="color-font" href="#section-art-id">About us</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="color-font" href="#section-omnitools-id">Terms &amp; conditions</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="color-font" href="#section-lore-id"><span class="short-title">Contact</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="color-font" href="#section-lore-id"><span class="short-title">Buy now</span></a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
+  </header><!-- Sección de encabezado -->
+
+                                      
+                                              
+                                              <!-- Sección de descuento -->
+                                              <section class="block" style="
+                                              background-color: transparent;
+                                              background: linear-gradient(356deg, rgb(17 52 70) 1%, rgb(17 52 70 / 77%) 2%, rgb(17 52 70 / 0%) 100%);
+                                              background: rgb(17,52,70);
+                                              background: linear-gradient(355deg, rgba(17,52,70,0.9282535601265822) 0%, rgba(17,52,70,0.9219244462025317) 14%, rgba(17,52,70,0.12762064873417722) 79%);
+                                              background: rgb(17,52,70);
+                                              background: linear-gradient(348deg, rgb(17 52 70) 0%, rgb(17 52 70) 14%, rgb(17 52 70 / 21%) 79%);
+                                              min-height: 55vh;
+                                              ">
+                                              <div>
+                                                <h1 style="
+                                                color: white; 
+                                                font-size: larger;
+                                                font-weight: bold;
+                                                text-transform: uppercase;
+                                                ">Tour Package Details</h1>
+                                                  <p style="
+                                                  font-size: medium;
+                                                  font-weight: bold;
+                                                  color: white;
+                                                  text-transform: uppercase;
+                                                  "> home <span style="
+    font-weight: 500;
+"> &gt;&gt; </span><span style="color:  #ffd700;
+                                                  font-size: medium;
+                                                  font-weight: bold;
+                                                  
+                                                  text-transform: uppercase;">Set departure</span></p>
+                                              </div>
+                                          </section>
+                                          
+                                          <!-- Sección de detalles -->
+                                          <section class="block" style="
+  padding-bottom: 0px;
+  /* display: flex; */
+">
+                                              <div class="container">
+                                                  <div class="row" style="
+  flex-wrap: nowrap;
+">
+                                                      <div class="col-lg-6 col-md-12" style="
+  padding-left: 0;
+  max-width: fit-content;
+">
+                                                          <h1 id="tour-title" style="
+                                                          /* margin-top: 40px; */
+                                                          font-size: x-large;
+                                                          text-transform: uppercase;
+                                                          margin-bottom: 5vh;
+                                                          padding-left: 0;
+                                                          margin-left: 0px;
+                                                          ">Parque Nacional Natural Puracé</h1> <!-- Agregamos el nuevo título aquí -->
+                                                          <!-- <h3>Unique Tour</h3>
+                                                          <hr style="
+  width: 8vw;
+"> -->
+                                              <span class="title_hr" style="  width: 100%; ">                                                                                          
+                                                  <h3 style="margin-top: 2.5vw;">Overview</h3>                                                                                                 
+                                                  <hr>
+                                              </span>   
+                                                       
+                                                              
+                                                          </div>
+                                                          <div class="label_off" style="
+  display: flex;
+  flex-direction: row;
+">
+                                                              <hr style="
+  width: 10vw;
+  min-width: 10vw;
+"> 
+                                                              <span style="
+                                                                  padding-left: 1vw;
+                                                                  color: #ffd700;
+                                                              "> 20% OFF
+                                                              </span>
+                                                          </div>
+                                                        
+                                                          
+                                                          
+                                                      </div>
+                                                  </div>
+                                              </section>
+                                              <!-- Pestañas/Tab con HTML y CSS -->
+                                              <section class="block" style="
+  padding-top: 0px;
+">
+                                                  <div class="tab-menu" style="
+                                                  width: 100%;
+                                                  font-family: ui-monospace;
+                                                  ">
+                                                  <input type="radio" name="tab-group" id="tab1" checked="">
+                                                  <label for="tab1" style="
+  margin-left: 0px;
+">
+                                                  <span>
+                                                                                                                                          
+                                                  </span>                                                                            
+                                                  <p>Tour overview</p>
+                                              </label>
+                                              
+                                              <input type="radio" name="tab-group" id="tab2">
+                                              <label for="tab2">
+                                                  <span>
+                                                      
+                                                  </span>                                                    
+                                                  <p>Itinerary</p>
+                                              </label>
+                                              
+                                              <input type="radio" name="tab-group" id="tab3">
+                                              <label for="tab3" style="
+    display: none;
+">
+                                                  <span>
+                                                      <img src="./imgs/guide.png" alt="Tour Guide">
+                                                  </span>                                                    
+                                                  <p>Tour Guide</p>
+                                              </label>
+                                              
+                                              <input type="radio" name="tab-group" id="tab4">
+                                              <label for="tab4" style="
+    display: none;
+">
+                                                  <span>
+                                                      <img src="./imgs/gallery.png" alt="Gallery">
+                                                  </span>                                                    
+                                                  <p>Gallery</p>
+                                              </label>
+                                              
+                                          <!-- <span class="title_hr" style="  width: 100%; ">                                                                                          
+                                              <h3 style="margin-top: 2.5vw;">Tour Overview</h3>                                                                                                 
+                                              <hr>
+                                          </span>    -->
+                                          <!-- Contenido de las pestañas -->                   
+                                          <div class="tab-content" id="content-tab1" style="
+                                          overflow: hidden;
+                                          ">
+                                          
+                                          <div class="timeline">
+                                              <div class="connector"></div>
+                                              <div class="day">
+                                                  <p style="min-width: fit-content;">Day 1</p>
+                                                  <span>
+                                                      <div class="diamond" style="background-color: #ffd702;z-index: 0;"></div>
+                                                      <div class="conect_line" style=""></div>
+                                                  </span>
+                                                  <div class="cont-day-activity">
+                                                      <div class="cont_title_description">
+                                                          <h2 class="title_activity">Puracé hot springs</h2>
+                                                          <p class="description_activity">Explorhe beauty of the rainforest in this exciting tour. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis soluta hic deserunt in, pariatur nesciunt distinctio voluptas. Distinctio ipsa voluptatum aliquam deleniti, dignissimos harum repellendus unde numquam temporibus. Deserunt, illo.</p>                                       
+                                                      </div>
+                                                      <span class="span_img_day">
+                                                          <img src="imgs/pic1.jpg" alt="">
+                                                      </span>
+                                                  </div>
+                                              </div>
+                                              <div class="day">
+                                                  <p style="min-width: fit-content;">Day 2</p>
+                                                  <span>
+                                                      <div class="diamond"></div>
+                                                      <div class="conect_line"></div>
+                                                  </span>
+                                                  <div class="cont-day-activity">
+                                                      <div class="cont_title_description">
+                                                          <h2 class="title_activity">Condor Sightinhg</h2>
+                                                          <p class="description_activity">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequatur deleniti, vitae eius, vel facere molestiae eaque, pariatur sequi laboriosam inventore quaerat officia in recusandae laudantium est. Sunt, dolor recusandae.</p>                                      
+                                                      </div>
+                                                      <span class="span_img_day">
+                                                          <img src="imgs/pic2.jpg" alt="">
+                                                      </span>
+                                                  </div>
+                                              </div>
+                                              <div class="day">
+                                                  <p style="min-width: fit-content;">Day 3</p>
+                                                  <span>
+                                                      <div class="diamond"></div>
+                                                      <div class="conect_line"></div>
+                                                  </span>
+                                                  <div class="cont-day-activity">
+                                                      <div class="cont_title_description">
+                                                          <h2 class="title_activity">Share photos and experiences</h2>
+                                                          <p class="description_activity">Everybody wanna see pictures sandy beaches with crystal-clear waters. This tour is perfect for those seeking peace and tranquility.</p>                                     
+                                                      </div>
+                                                      <span class="span_img_day">
+                                                          <img src="imgs/pic3.jpeg" alt="">
+                                                      </span>
+                                                  </div>
+                                              </div>
+                                              <!-- You can add more days as needed -->
+                                          </div>
+                                          
+                                          
+                                          
+                                          
+                                      </div>
+                                      
+                                      <div class="tab-content" id="content-tab2" style="
+">
+                                          <p id="tour-description" style="
+  max-width: 400px;
+">Discover the amazing beauty of nature with our Unique Tour package. Explore breathtaking
+                                              landscapes, enjoy local cuisines, and create unforgettable memories. Book your adventure
+                                              today!</p>
+                                          <ul>
+                                              <li>
+                                                  <div class="icon">
+                                                      <img src="imgs/clock.png" alt="Calendar Icon" class="default-icon">
+                                                  </div>
+                                                  <div class="text">
+                                                      <h4>Duration</h4>
+                                                      <p>7 days</p>
+                                                  </div>
+                                              </li>
+                                              <li>
+                                                  <div class="icon">
+                                                      <img src="imgs/map.png" alt="Compass Icon" class="default-icon">
+                                                  </div>
+                                                  <div class="text">
+                                                      <h4>Destination</h4>
+                                                      <p>Mountains, Forests, Beaches</p>
+                                                  </div>
+                                              </li>
+                                              <li>
+                                                  <div class="icon">
+                                                      <img src="imgs/diversity.png" alt="Group Icon" class="default-icon">
+                                                  </div>
+                                                  <div class="text">
+                                                      <h4>Group Size</h4>
+                                                      <p>10-15 people</p>
+                                                  </div>
+                                              </li>
+                                          </ul>
+                                      </div>
+                                      
+                                      <div class="tab-content" id="content-tab3">
+                                          Contenido de la pestaña Tour Guide.
+                                      </div>
+                                      
+                                      <div class="tab-content" id="content-tab4">
+                                          Contenido de la pestaña Gallery.
+                                      </div>
+                                      
+                                  </div>
+                              </section>
+                              
+                              
+                              
+                              <!-- Sección "Tour View" -->
+                              
+                              
+                              <!-- Logos de marcas patrocinadoras -->
+                              <section>
+                                  <div id="sponsors">
+                                      <h3>Our Sponsors</h3>
+                                      <img src="imgs/sponsor1.jpeg" alt="Sponsor 1" style="
+    max-width: 70px;
+">
+                                      <img src="imgs/sponsor2.png" alt="Sponsor 2" style="max-width: 70px;">
+                                      <img src="imgs/sponsor3.jpeg" alt="Sponsor 3" style="max-width: 70px;">
+                                  </div>
+                              </section>
+                              
+                              <!-- Información de contacto -->
+                              <section style="
+    color: white;
+">
+                                  <div id="contact" style="
+    text-align: center;
+    background: #212121;
+    color: silver;
+    padding: 20px 20px;
+">
+                                      <h4 style="
+    font-size: 16px;
+">Contact Us</h4>
+                                      <p style="
+    color: silver;
+    font-size: medium;
+">If you have any questions or need assistance, feel free to contact our customer support team.</p>
+                                      <p style="
+    color: silver;
+    font-size: medium;
+">Email: support@example.com</p>
+                                      <p style="
+    color: silver;
+    font-size: medium;
+">Phone: +1 (123) 456-7890</p>
+                                  </div>
+                              </section>
+                              
+                              <!-- Footer -->
+                              <footer style="
+                              background: hsl(0deg 0% 13.1%);
+                              color: white;
+                              ">
+                              <div style="
+    filter: invert(1);
+">
+                                  <img src="imgs/logo.svg" alt="Logo White">
+                              </div>
+                              <p style="
+    font-size: small;
+    color: silver;
+">© 2023 Tour Package Details. All rights reserved.</p>
+                              <div>
+                                  <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                  <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                                  <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                              </div>
+                          </footer>
+                      </main>  
+                      <!-- Logica js                               -->
+                      <!-- header{ se esconde con el scroll -->
+                      <script> 
+                        window.addEventListener('scroll', function() {
+var header = document.querySelector('header');
+
+// Verificar si la clase 'menu-open' está presente en el encabezado
+if (!header.classList.contains('menu-open') && window.scrollY < 300) {
+  header.classList.add('transparent-header');
+} else {
+  header.classList.remove('transparent-header');
+}
+});
+
+
+                      </script>
+                      <!-- Header se oculta mientras estan bajando el scroll o leyendo -->                        
+  <script>
+      var lastScrollTop = 0;
+
+      window.addEventListener('scroll', function() {
+          var header = document.querySelector('header');
+          var scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+          if (scrollTop > lastScrollTop) {
+              // El usuario está haciendo scroll hacia abajo
+              header.classList.add('header-display-none');
+          } else {
+              // El usuario está haciendo scroll hacia arriba
+              header.classList.remove('header-display-none');
+          }
+
+          lastScrollTop = scrollTop;
+      });
+  </script>
+  <!--Efecto de cambio background blaco a negro del header -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.querySelector(".navbar-toggler");
+        const header = document.querySelector("header");
+
+        menuButton.addEventListener("click", function () {          
+            if (header.classList.contains("menu-opened")) {
+                header.classList.remove("menu-opened");
+            } else {
+                header.classList.add("menu-opened");
+            }
+        });
+    });
+
+ 
+</script>
+ 
+<!-- Screen Shot all tab :) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+
+    <button id="capture">Capturar Página</button>
+
+    <script>
+        $(document).ready(function() {
+            $("#capture").click(function() {
+                html2canvas(document.body, {
+                    onrendered: function(canvas) {
+                        var imgData = canvas.toDataURL('image/png');
+                        var img = new Image();
+                        img.src = imgData;
+                        document.body.appendChild(img);
+                    }
+                });
+            });
+        });
+    </script> -->
+
+     <!-- cod basura -->
+  
+
+<script src="app.js"></script>
+</body></html>
