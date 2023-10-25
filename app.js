@@ -305,7 +305,6 @@ response.days.forEach(function(day) {
       });
   }
 
-    showAllDays();
     
     // Add días data
     // formData.append('number_day', $('#number_day').val());
@@ -325,7 +324,7 @@ alert('Editing ');
     }else{
 alert('adding ');
     }
-    
+
     $.ajax({
         url: url,
         type: 'POST',
@@ -352,6 +351,8 @@ alert('adding ');
 });
 
 // ...
+
+
 
   
 });

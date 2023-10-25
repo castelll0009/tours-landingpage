@@ -62,3 +62,83 @@ function showAllDays($daysList) {
     }
   });
 
+
+  
+// edti and  delete  days
+// $(document).ready(function() {
+//   // Variable para rastrear si estás en modo de edición o no
+//   var isEditing = false;
+
+//   // Maneja el clic en el botón "Edit" o "Save"
+//   $('.edit-day-button').click(function() {
+//     alert('i am insiede editing');
+//     var li = $(this).closest('li');
+    
+//     if (!isEditing) {
+//       // Cambia a modo de edición
+//       $(this).text('Save');
+//       li.find('.editable').each(function() {
+//         var field = $(this).data('field');
+//         var content = $(this).text();
+//         var inputElement = $('<input type="text" class="form-control">').val(content);
+//         $(this).html(inputElement);
+//       });
+//     } else {
+//       // Cambia a modo de visualización y guarda los cambios
+//       $(this).text('Edit');
+//       li.find('.editable input').each(function() {
+//         var updatedContent = $(this).val();
+//         $(this).parent().text(updatedContent);
+//       });
+//       // Aquí puedes guardar los cambios si es necesario
+//     }
+
+//     isEditing = !isEditing; // Invierte el estado de edición
+//   });
+
+//   // Maneja el clic en el botón "Delete"
+//   $('.delete-day-button').click(function() {
+//     $(this).closest('li').remove(); // Elimina el <li> actual
+//   });
+
+//   // Otros manejadores de eventos, como el botón "Add Day"
+// });
+$(document).ready(function() {
+  // Variable para rastrear si estás en modo de edición o no
+  var isEditing = false;
+
+  // Maneja el clic en el botón "Edit" o "Save" mediante la delegación de eventos
+  $('#days-list').on('click', '.edit-day-button', function() {
+    alert('Estás dentro de la edición');
+    var li = $(this).closest('li');
+    
+    if (!isEditing) {
+      // Cambia a modo de edición
+      $(this).text('Save');
+      li.find('.editable').each(function() {
+        var field = $(this).data('field');
+        var content = $(this).text();
+        var inputElement = $('<input type="text" class="form-control">').val(content);
+        $(this).html(inputElement);
+      });
+    } else {
+      // Cambia a modo de visualización y guarda los cambios
+      $(this).text('Edit');
+      li.find('.editable input').each(function() {
+        var updatedContent = $(this).val();
+        $(this).parent().text(updatedContent);
+      });
+      // Aquí puedes guardar los cambios si es necesario
+    }
+
+    isEditing = !isEditing; // Invierte el estado de edición
+  });
+
+  // Maneja el clic en el botón "Delete" mediante la delegación de eventos
+  $('#days-list').on('click', '.delete-day-button', function() {
+    $(this).closest('li').remove(); // Elimina el <li> actual
+  });
+
+  // Otros manejadores de eventos, como el botón "Add Day"
+});
+
