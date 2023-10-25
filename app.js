@@ -1,4 +1,4 @@
-let days;
+
 $(document).ready(function() {
   $('#toggle-view').click(function() {
     $('#tour-form, #tour-result').toggle();
@@ -173,7 +173,7 @@ function fetchTours() {
   });
 }
 
-// Obtener un Tour individual por su ID
+// get single Obtener un Tour individual por su ID
 $(document).on('click', '.tour-item', function(e) {
   const tourId = $(this).data('tourid');
   $.post('tour-single.php', { id: tourId }, (response) => {
@@ -199,26 +199,39 @@ $(document).on('click', '.tour-item', function(e) {
     $('#not_include').val(tour.not_include);
     $('#single_supplement').val(tour.single_supplement);
 
+   
+
     // // Acceder a los campos de 'dias'
     // $('#number_day').val(tour.number_day);
     // $('#title_day').val(tour.title_day);
     // $('#description_day').val(tour.description_day);
    // Assuming response contains the JSON data you provided
 
-// Get a reference to the "days-list" ul element
-var ul = document.getElementById("days-list");
+
+   let $ul = $('#days-list');
+   $ul.empty(); // Esto eliminará todas las etiquetas <li> dentro de la lista <ul>
 // Loop through the 'days' array in the response
 response.days.forEach(function(day) {
     // Create a new list item for each day
     var li = document.createElement("li");
     // Populate the list item with day information
-    li.innerHTML = `
-        <strong>Number:</strong> ${day.number}<br>
-        <strong>Title:</strong> ${day.title}<br>
-        <strong>Description:</strong> ${day.description}
+    li.innerHTML = `    
+    <strong>Number:</strong> <span class="editable" data-field="number">${day.number}</span><br>
+    <strong>Title:</strong> <span class="editable" data-field="title">${day.title}</span><br>
+    <strong>Description:</strong> <span class="editable" data-field="description">${day.description}</span>
+    <br>
+    <button type="button" class="edit-day-button">Edit</button>
+    <button type="button" class="delete-day-button">Delete</button>
+
+  
+    
     `;
+    // 
+        // <strong>Number:</strong> ${day.number}<br>
+        // <strong>Title:</strong> ${day.title}<br>
+        // <strong>Description:</strong> ${day.description}
     // Append the list item to the "days-list" ul
-    ul.appendChild(li);
+    $('#days-list').append(li);
 });
 
     
@@ -281,11 +294,20 @@ response.days.forEach(function(day) {
     formData.append('not_include', $('#not_include').val());
     formData.append('single_supplement', $('#single_supplement').val());
 
+    let  daysToAdd = [];
+    daysToAdd  = getDays();
+
+    showAllDays();
     // Add días data
     // formData.append('number_day', $('#number_day').val());
     // formData.append('title_day', $('#title_day').val());
     // formData.append('description_day', $('#description_day').val());    
-    formData.append('days', JSON.stringify(days));
+    formData.append('days', JSON.stringify(daysToAdd));
+    // Display the details of each day in the console
+    console.log('Deisplayiong sendedd');
+    for (const pair of formData.entries()) {
+      console.log(pair[0] + ', ' + pair[1]);
+    }
 
     const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
 
@@ -301,10 +323,9 @@ response.days.forEach(function(day) {
               $daysList.empty();
               days.length = 0;
   
-              // Limpia los campos de entrada
-              $('#number_day').val('');
-              $('#title_day').val('');
-              $('#description_day').val('');
+            // Limpia los campos de entrada
+            // Clear the entire <ul> element
+            $('#days-list').empty();
               
             $('#tour-form').trigger('reset');
             fetchTours();
