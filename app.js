@@ -385,7 +385,7 @@ function fetchTourPackageDetails(tourId) {
 
     //inventory
     $('#id-dias').text(tour.number_day);
-    $('#id-destination').text(tour.title);
+    $('#id-region-tour').text(tour.region);
     $('#id-group-size').text(tour.group_size);
     $('#id-pax').text(tour.pax);
     $('#id-supplement').text(tour.single_supplement);
