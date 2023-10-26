@@ -373,6 +373,7 @@ function fetchTourPackageDetails(tourId) {
     $('#tour-title').text(tour.title);
     $('main').css('background-image', `url(${tour.image_path})`);
     $('#tour-description').text(tour.description);   
+    $('#id-region-tour').text(tour.region);
     $('#id-price-tour').text(tour.price);  
     $('#id').text(tour.description); 
     $('#id-date-departure').text(tour.date_departure);
@@ -384,8 +385,7 @@ function fetchTourPackageDetails(tourId) {
     // Add similar lines for other elements
 
     //inventory
-    $('#id-dias').text(tour.number_day);
-    $('#id-region-tour').text(tour.region);
+    $('#id-dias').text(tour.number_day);    
     $('#id-group-size').text(tour.group_size);
     $('#id-pax').text(tour.pax);
     $('#id-supplement').text(tour.single_supplement);
