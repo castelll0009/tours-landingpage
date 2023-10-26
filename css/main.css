@@ -20,8 +20,9 @@
   }
 
 *{
+	scroll-behavior: smooth;		
     margin: 0;
-    padding: 0;
+    padding: 0;	
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
 }
@@ -37,10 +38,20 @@ html body{
 	*/
 	color: silver;
 }
+.item2 p{
+	color: rgb(255, 255, 255);
+}
+html body p{		
+	font-weight: 300;
+	font-size: 18px;
+}
 .backgrounds-cover{
 	background-size: cover;
 	background-repeat: no-repeat;    
 	background-position: center;
+}
+.theme_second_color{
+	background-color: hsl(52.31deg 41.94% 81.76%);
 }
 
 /*
@@ -50,27 +61,50 @@ main .blocks{
     min-height: 100vh;
 }
 */
+main .item1{
+	max-width: fit-content;
+}
 
 .theme-color{
 	color: #cf5a20 !important;
 }
-.theme-font-titles{
-	font-family: "Sacred Hertz";
-    font-family: 'Josefin Sans', sans-serif;
+.theme-font-titles{	
     color: #3ebd94;
     color: white;
-    font-size: 4em;
+    font-size: 60px;
+	margin: 0;
+    /* font-size: 36px; */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 
 
 .theme-font-subtitles{
-	font-family: "Sugo-Pro-Classic-Bold-trial";	
-	font-size: 2em;
+	font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.theme-font-subtitles-only{
+	font-size: 14px;
+    font-weight: 500;
+    padding: 0;    
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 .theme-font-body{
 	font-family: "Sugo-Pro-Classic-ExtraLight-trial";
 	font-family: 'Nunito', sans-serif;
 	font-size: 2em;	
+	font-size: 18px;
 }
 
 footer{
@@ -148,6 +182,8 @@ width: 100%;
 	background: linear-gradient(to top, #000000 0%, #0f0e0e3b 118%);    
 	background: linear-gradient(to top, #000000d6 0%, #0f0e0e3b 118%);	
 	background: linear-gradient(to top, #000000bd 0%, #0f0e0e3b 50%);	
+	background: linear-gradient(to top, rgb(7 48 65) 0%, rgb(8 50 67 / 3%) 50%);
+	background: linear-gradient(to top, rgb(7 48 66 / 52%) 0%, rgb(8 50 67 / 0%) 50%);
 }
 .background-color-blocks{
 	display: flex;
@@ -341,42 +377,7 @@ h2{
 	position: relative;
   }
 
-.figure-container{	
-	background-color: rgba(0, 0,  0, 0.7);
-	background-color: rgb(0 0 0 / 0%);
-	position: relative;
-}
 
-
-figure{	
-	outline: none;
-	cursor:pointer;
-	transition: all 300ms;
-	position: relative;
-	min-width: 320px;	
-	max-width: 320px;		
-	max-height: max-content;	
-	margin: 10px;
-	background-color: rgb(24, 23, 23);
-	border-radius: 20px;
-	border-width: 200px;
-	padding: 10px;
-	padding-top: 20px;	
-	/*border-top: 1px solid silver;*/
-	border-bottom: 1px solid silver;
-	/*border-right: 1px solid silver;*/
-	
-}
-figure:hover{			
-			
-	padding: 10px;
-	border: 1px solid rgba(192, 192, 192, 0.34);
-	box-shadow: 1px 4px  silver,1px 4px#31313137;			
-}
-
-figure img{	
-	width: 50%;
-}
 #iframe-map{		
 	width : 600px;
 	height : 500px;
@@ -461,7 +462,7 @@ span{
 @media screen and (min-width: 700px){		
 
 	#beepc{	
-		display: none;				
+					
 		
 	}		
 	
@@ -469,13 +470,16 @@ span{
 /*movil///////////////////////////////////////////*/
 /*movil///////////////////////////////////////////*/
 @media screen and (max-width: 800px){	
+	html body p{		
+		font-size: 14px;
+	}
 
 	.theme-font-titles{
-		font-size: 3em;
+		font-size: 36px;
 	}
-	.theme-font-body{
-		font-family: "Sugo-Pro-Classic-ExtraLight-trial";	
-		font-size: 1.3em !important;
+	
+	.theme-font-body{		
+		font-size: 14px;
 	}
 
 	.circular-gradient-top-bottom{ /*degradado  circular de  arriba hacia abajo*/
@@ -488,30 +492,10 @@ span{
 
 
 
-	#beepc{						
-		font-size: 1.5em;
-		color: #D29500;
-		position: fixed;		
-		bottom: 2px ;	
-		right: 7.5px;
-		opacity: 0.5;		
-		z-index: 100;
-		
-	}	
-	
-	#beepc2{						
-		font-size: 1.5em;
-		color: #D29500;			
-		bottom: 2px ;	
-		right: 7.5px;
-		opacity: 0.5;		
-		z-index: 30;		
-	}		
 
-	#beepc:active{			
-		position: fixed;						
-		opacity: 1;							
-	}		
+	
+
+	
 	
 
 	#info-title{
