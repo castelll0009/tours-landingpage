@@ -6,6 +6,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&amp;display=swap" rel="stylesheet">
   <!-- boostrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -65,9 +67,11 @@
       color: #000; /* Color de texto */
       line-height: 1.5; /* Espaciado entre líneas */
       font-weight: 300; /* Grosor de fuente (ligero) */
-      margin: 0 0 20px; /* Márgenes superior e inferior para separar párrafos */
+      margin: 0 27px 24px; /* Márgenes superior e inferior para separar párrafos */
     }
-    
+    .fa {
+      font-size: 50px;
+    }
     /* Estilos adicionales para una mejor legibilidad */
     p.description_activity {
       margin-top: 0; /* Elimina el margen superior predeterminado */
@@ -3517,35 +3521,52 @@
                                                   ">Discover the amazing beauty of nature with our Unique Tour package. Explore breathtaking
                                                   landscapes, enjoy local cuisines, and create unforgettable memories. Book your adventure
                                                   today!</p>
-                                                  <ul>
-                                                    <li>
-                                                      <div class="icon">
-                                                        <img src="imgs/clock.png" alt="Calendar Icon" class="default-icon">
-                                                      </div>
-                                                      <div class="text">
-                                                        <h4>Duration</h4>
-                                                        <p>7 days</p>
-                                                      </div>
-                                                    </li>
-                                                    <li>
-                                                      <div class="icon">
-                                                        <img src="imgs/map.png" alt="Compass Icon" class="default-icon">
-                                                      </div>
-                                                      <div class="text">
-                                                        <h4>Destination</h4>
-                                                        <p>Mountains, Forests, Beaches</p>
-                                                      </div>
-                                                    </li>
-                                                    <li>
-                                                      <div class="icon">
-                                                        <img src="imgs/diversity.png" alt="Group Icon" class="default-icon">
-                                                      </div>
-                                                      <div class="text">
-                                                        <h4>Group Size</h4>
-                                                        <p>10-15 people</p>
-                                                      </div>
-                                                    </li>
-                                                  </ul>
+
+                                                  <div>
+                                                    <ul>
+                                                      <li>
+                                                       <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                                        
+                                                        <div class="text">
+                                                          <h4>Duration</h4>
+                                                          <p id="id-dias">7 days</p>
+                                                        </div>
+                                                      </li>
+                                                      <li>
+                                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                                        <div class="text">
+                                                          <h4 id="id-destination">Destination</h4>
+                                                          <p>Mountains, Forests, Beaches</p>
+                                                        </div>
+                                                      </li>
+                                                      <li>
+                                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                                        <div class="text">
+                                                          <h4 id="id-group-size">Group Size</h4>
+                                                          <p>10-15 people</p>
+                                                        </div>
+                                                      </li>
+                                                    </ul>
+                                                    <ul style="justify-content: space-evenly">
+                                                      <li>
+                                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                                        <div class="text">
+                                                          <h4>Pax</h4>
+                                                          <p id="id-pax">7 days</p>
+                                                        </div>
+                                                      </li>
+                                                      <li>
+                                                        <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                                        <div class="text">
+                                                          <h4>Single Supplement</h4>
+                                                          <p id="id-supplement">Mountains, Forests, Beaches</p>
+                                                        </div>
+                                                      </li> 
+                                                     
+                                                    </ul>
+
+                                                  </div>
+                                                  
                                                 </div>
                                                 
                                                 <div class="tab-content" id="content-tab3">
