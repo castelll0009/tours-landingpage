@@ -51,7 +51,7 @@ function showAllDays($daysList) {
 
   // Add a click event handler for the "Add Day" button
   $('#add-day-btn').click(function() {
-    alert('Button Clicked'); // Test if the click event is firing
+    // alert('Button Clicked'); // Test if the click event is firing
     const numberDay = $daysList.find('li').length + 1;
     const titleDay = prompt('Enter Day Title:');
     const descriptionDay = prompt('Enter Day Description:');
