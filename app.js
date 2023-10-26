@@ -382,6 +382,13 @@ function fetchTourPackageDetails(tourId) {
     $('#id-title-tour').text(tour.title);
     $('#id-description-tour').text(tour.description);
     // Add similar lines for other elements
+
+    //inventory
+    $('#id-dias').text(tour.number_day);
+    $('#id-destination').text(tour.title);
+    $('#id-group-size').text(tour.group_size);
+    $('#id-pax').text(tour.pax);
+    $('#id-supplement').text(tour.single_supplement);
   });
 }
 
