@@ -97,10 +97,7 @@ function fetchTours() {
             <td>${tour.duration}</td>
             <td>${tour.date_departure}</td>
             <td>${tour.region}</td>
-            <td>${tour.pax}</td> <!-- Nuevo campo PAX -->
-            <td>${tour.include}</td> <!-- Nuevo campo Include -->
-            <td>${tour.not_include}</td> <!-- Nuevo campo Not Include -->
-            <td>${tour.single_supplement}</td> <!-- Nuevo campo Single Supplement -->
+          
             <td>
               <button class="tour-delete btn btn-danger" data-tourid="${tour.id}">
                 Delete
