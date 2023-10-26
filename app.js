@@ -389,6 +389,8 @@ function fetchTourPackageDetails(tourId) {
     $('#id-group-size').text(tour.group_size);
     $('#id-pax').text(tour.pax);
     $('#id-supplement').text(tour.single_supplement);
+    $('#id-include-tour').text(tour.include);
+    $('#id-no-include').text(tour.not_include);
   });
 }
 

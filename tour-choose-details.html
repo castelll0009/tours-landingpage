@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style><style type="text/css" id="operaUserStyle"></style>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <title>Tour Package Details</title>
   <!-- Agrega tus enlaces a hojas de estilo CSS aquí -->
@@ -75,6 +75,14 @@
     /* Estilos adicionales para una mejor legibilidad */
     p.description_activity {
       margin-top: 0; /* Elimina el margen superior predeterminado */
+      
+    }
+    
+    @media (max-width: 768px){
+      p.description_activity {
+      
+        margin: 0px;
+      }
     }
     
     /* Estilos adicionales para resaltar los párrafos importantes si es necesario */
@@ -323,6 +331,19 @@
       text-align: justify;
       word-wrap: break-word;
     }
+    @media (max-width: 769px)
+    {
+      .cont_title_description p{
+        padding-right: 10px;
+      }
+
+    
+    .timeline .day p{
+      margin-right: 10px;
+    }
+      
+    }
+    
     .world-wrap {
       text-align: justify;
       word-wrap: break-word;
@@ -3279,7 +3300,7 @@
                                                                   
                                                                   <body>
                                                                     <main style="background-image: url(&quot;imgs/back-tours2.jpg&quot;); background-attachment: fixed; background-size: cover; background-position: center center; background-repeat: no-repeat; min-height: 100vh; width: 100%;">
-                                                                      <header class="transparent-header">
+                                                                      <header class="header-display-none">
                                                                         <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="display: flex; justify-content: center;">
                                                                           <a class="navbar-brand" href="#"><img src="imgs/logo.svg" alt=""></a>
                                                                           <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="position: absolute !important;right: 0;bottom: 10;">
@@ -3366,19 +3387,27 @@
                                                                         ">region</h3><span>
                                                                           <p id="id-description-tour" class="description_activity" style="
                                                                           margin: 0px 0px 20px 0px;
-                                                                          ">Explorhe beauty of the rainforest in this exciting tour. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis soluta hic deserunt in, pariatur nesciunt distinctio voluptas. Distinctio ipsa voluptatum aliquam deleniti, dignissimos harum repellendus unde numquam temporibus. Deserunt, illo.</p><h3>Date Departure:</h3><p id="id-date-departure" style="
+                                                                          ">this tour  have  3  days of  duration.</p><h3>Date Departure:</h3><p id="id-date-departure" style="
                                                                           margin: 0px 0px 20px 0px;
                                                                           ">3333-03-31</p>
                                                                         </span>
                                                                         
                                                                       </div>
                                                                       <div class="label_p" style="display: flex;flex-direction: row;">
+                                                                        <span style="
+    font-size: large;
+    color: grey;
+    margin-right: 5px;
+">
+                                                                          $<span id="id-price-tour" style="
+                                                                          padding-left: 1vw;
+                                                                          /* padding: 0px 10px 0px  0px; */
+                                                                          color: grey;
+                                                                          font-size: large;
+                                                                          ">33.00</span>
+                                                                          USD
+                                                                        </span>
                                                                         
-                                                                        <span id="id-price-tour" style="
-                                                                        padding-left: 1vw;
-                                                                        padding: 0px 10px 0px  0px;
-                                                                        color: #ffd700;
-                                                                        ">33.00</span>
                                                                         
                                                                       </div>
                                                                       <hr style="width: 10vw;min-width: 10vw;"><div class="label_off" style="display: flex;flex-direction: row;">
@@ -3514,13 +3543,33 @@
                                                       </div>
                                                       
                                                       <div class="tab-content" id="content-tab2" style="
+                                                      flex-wrap: wrap;
+                                                      display: flex;
+                                                      justify-content: space-between;
+                                                      padding: 20px;
                                                       ">
-                                                      <p id="tour-description" style="
-                                                      max-width: 400px;
-                                                      ">this tour  have  3  days of  duration.</p>
-                                                      
+                                                      <div style="
+    margin-bottom: 40px;
+    /* padding: 20px; */
+">
+                                                        
+                                                          <h3 style="
+                                                          margin-top: 20px;
+                                                          ">Does include</h3><p id="id-include-tour" style="
+                                                          max-width: 400px;
+                                                          margin: 0px;
+                                                          ">33</p><h3 style="
+                                                          margin-top: 20px;
+                                                          ">Does not include</h3>
+                                                          <p id="id-no-include" style="
+                                                          max-width: 400px;
+                                                          margin: 0px;
+                                                          ">33</p></div>  
+                                                               
                                                       <div>
-                                                        <ul>
+                                                        <ul style="
+    color: grey;
+">
                                                           <li>
                                                             <i class="fa fa-clock-o" aria-hidden="true"></i>
                                                             
@@ -3544,7 +3593,7 @@
                                                             </div>
                                                           </li>
                                                         </ul>
-                                                        <ul style="justify-content: space-evenly">
+                                                        <ul style="justify-content: space-evenly;color: grey;">
                                                           <li>
                                                             <i class="fa fa-user" aria-hidden="true"></i>
                                                             <div class="text">
@@ -3562,20 +3611,12 @@
                                                           
                                                         </ul>
                                                         
-                                                        <h3 style="
-                                                        margin-top: 20px;
-                                                        ">Does include</h3><p id="tour-description" style="
-                                                        max-width: 400px;
-                                                        margin: 0px;
-                                                        ">this tour  have  3  days of  duration.</p><h3 style="
-                                                        margin-top: 20px;
-                                                        ">Does not include</h3>
-                                                        <p id="tour-description" style="
-                                                        max-width: 400px;
-                                                        margin: 0px;
-                                                        ">this tour  have  3  days of  duration.</p></div>
+                                                    
                                                         
+                                                      </div>                                                      
                                                       </div>
+                                                      
+                                                 
                                                       
                                                       <div class="tab-content" id="content-tab3">
                                                         Contenido de la pestaña Tour Guide.
