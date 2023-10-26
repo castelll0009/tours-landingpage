@@ -300,6 +300,9 @@ response.days.forEach(function(day) {
           title: 'Default Day',
           description: 'This is a default day description.',
       });
+  }else{
+    // significa qie si  hay dias  en un aarray
+    
   }
 
     
@@ -308,19 +311,17 @@ response.days.forEach(function(day) {
     // formData.append('title_day', $('#title_day').val());
     // formData.append('description_day', $('#description_day').val());    
     formData.append('days', JSON.stringify(daysToAdd));
-    // Display the details of each day in the console
-    console.log('sended');
+    // Display the details of each day in the console    
     for (const pair of formData.entries()) {
       console.log(pair[0] + ', ' + pair[1]);
     }
 
     const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
 
-    if(url == 'tour-edit.php'){
-alert('Editing ');
-    }else{
-alert('adding ');
-    }
+    // if(url == 'tour-edit.php'){
+    // }else{
+
+    // }
 
     $.ajax({
         url: url,
