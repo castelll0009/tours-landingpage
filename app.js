@@ -376,6 +376,11 @@ function fetchTourPackageDetails(tourId) {
     $('#id-price-tour').text(tour.price);  
     $('#id').text(tour.description); 
     $('#id-date-departure').text(tour.date_departure);
+    //DAYS LIST TOUR TODO
+    
+    $('#id-number-tour').text(tour.number);
+    $('#id-title-tour').text(tour.title);
+    $('#id-description-tour').text(tour.description);
     // Add similar lines for other elements
   });
 }
