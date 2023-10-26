@@ -147,7 +147,7 @@ function fetchTours() {
           </tr>
         `;
 
-        // Insertar Swiper Slider
+        // Insertar Swiper Slider -index.html and tour-choose-details.html
         template_index_tours += `
           <div tour-id='${tour.id}'
             style="background: linear-gradient(to top, rgb(15, 32, 39), rgba(32, 58, 67, 0), rgba(44, 83, 100, 0)), url(${tour.image_path}) 50% 50% / cover no-repeat !important;"
@@ -372,7 +372,10 @@ function fetchTourPackageDetails(tourId) {
     // Now, populate the placeholders with the retrieved tour details
     $('#tour-title').text(tour.title);
     $('main').css('background-image', `url(${tour.image_path})`);
-    $('#tour-description').text(tour.description);    
+    $('#tour-description').text(tour.description);   
+    $('#id-price-tour').text(tour.price);  
+    $('#id').text(tour.description); 
+    $('#id-date-departure').text(tour.date_departure);
     // Add similar lines for other elements
   });
 }
