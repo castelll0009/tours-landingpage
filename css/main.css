@@ -42,6 +42,7 @@ html body{
 	color: rgb(255, 255, 255);
 }
 html body p{		
+	font-weight: 300;
 	font-size: 18px;
 }
 .backgrounds-cover{

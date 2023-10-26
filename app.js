@@ -367,7 +367,36 @@ function fetchTourPackageDetails(tourId) {
 
     // The response is already an object, so you can directly access its properties
     const tour = response;
-    console.log('Received JSON object:', tour);
+    console.log('Received JSON object:', tour);    
+
+    // Limpia cualquier contenido previo en el contenedor de días
+    $('#days-container').empty();
+
+    //DAYS LIST TOUR TODO
+    // Recorre los días del tour y crea dinámicamente la lista de días
+    tour.days.forEach((day) => {
+      const templateDay = `
+        <div class="day">
+          <p style="min-width: fit-content;">Day ${day.number}</p>
+          <span>
+            <div class="diamond"></div>
+            <div class="conect_line"></div>
+          </span>
+          <div class="cont-day-activity">
+            <div class="cont_title_description">
+              <h2 class="title_activity">${day.title}</h2>
+              <p class="description_activity">${day.description}</p>
+            </div>
+            <span class="span_img_day">
+              <img src="imgs/pic${day.number}.jpg" alt="">
+            </span>
+          </div>
+        </div>
+      `;
+
+      // Agrega el día al contenedor de días
+      $('.timeline').append(templateDay);
+    });
 
     // Now, populate the placeholders with the retrieved tour details
     $('#tour-title').text(tour.title);
@@ -377,13 +406,8 @@ function fetchTourPackageDetails(tourId) {
     $('#id-price-tour').text(tour.price);  
     $('#id').text(tour.description); 
     $('#id-date-departure').text(tour.date_departure);
-    //DAYS LIST TOUR TODO
     
-    $('#id-number-tour').text(tour.number);
-    $('#id-title-tour').text(tour.title);
-    $('#id-description-tour').text(tour.description);
-    // Add similar lines for other elements
-
+     
     //inventory
     $('#id-dias').text(tour.number_day);    
     $('#id-group-size').text(tour.group_size);
@@ -391,8 +415,12 @@ function fetchTourPackageDetails(tourId) {
     $('#id-supplement').text(tour.single_supplement);
     $('#id-include-tour').text(tour.include);
     $('#id-no-include').text(tour.not_include);
+
+
   });
 }
+
+
 
 
 
