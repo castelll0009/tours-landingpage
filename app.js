@@ -173,13 +173,14 @@ function fetchTours() {
 // get single Obtener un Tour individual por su ID
 $(document).on('click', '.tour-item', function(e) {
 
-  $('#preview-image').css('display', 'block');
+     $('#preview-image').css('display', 'block');
  // Verifica si estás en modo de edición
  if (edit) {
-  $('#image').attr('required', 'required');
  
+  $('#previewImage').attr('required', 'required');
 } else {
-  $('#image').removeAttr('required');
+  $('#previewImage').removeAttr('required');  
+  
   
 }
   const tourId = $(this).data('tourid');
@@ -187,6 +188,8 @@ $(document).on('click', '.tour-item', function(e) {
     const tour = response; // Asegúrate de que el objeto 'tour' contiene todos los campos que esperas
     console.log('Json recuperado single: ' + JSON.stringify(response, null, 2));
  // Mostrar la imagen en el visor
+ // Mostrar la imagen en el visor y guardar el nombre original
+$('#preview-image').attr('src', tour.image_path).data('original-image-name', tour.image_name);
   $('#preview-image').attr('src', tour.image_path);
     $('#title').val(tour.title);
     $('#description').val(tour.description);
@@ -290,32 +293,33 @@ response.days.forEach(function(day) {
         formData.append('region', $('#region').val());
         formData.append('id', $('#tourId').val());
 
-          // Add inventory data
-          formData.append('pax', $('#pax').val());
-          formData.append('include', $('#include').val());
-          formData.append('not_include', $('#not_include').val());
-          formData.append('single_supplement', $('#single_supplement').val());
+        // Add inventory data
+        formData.append('pax', $('#pax').val());
+        formData.append('include', $('#include').val());
+        formData.append('not_include', $('#not_include').val());
+        formData.append('single_supplement', $('#single_supplement').val());
 
         // Extract the image from the <img> element
         const previewImageElement = document.getElementById('preview-image');
         if (previewImageElement.src) {
-            // Convert the image to a Blob
-            fetch(previewImageElement.src)
-                .then(res => res.blob())
-                .then(blob => {
-                    // Create a File from the Blob
-                    const imageFile = new File([blob], 'preview.jpg', { type: 'image/jpeg' });
+            // Get the data URI of the image from the preview
+            const imageSrc = previewImageElement.src;
+  // Generate a new random file name
+  const newFileName = generateRandomFileName();
+            // Convert the data URI to a Blob
+            const imageBlob = dataURItoBlob(imageSrc);
 
-                    // Add the image file to the form data
-                    formData.append('previewImage', imageFile);
+             // Create a File from the Blob with the new random name
+          const imageFile = new File([imageBlob], newFileName, { type: 'image/jpeg' });
 
-                    // Continue with adding the days array
-                    addDaysArrayToFormData(formData);
-                });
-        } else {
-            // If no image is displayed, handle it accordingly
-            addDaysArrayToFormData(formData);
+          
+
+            // Add the image file to the form data
+            formData.append('previewImage', imageFile);
         }
+
+        // Continue with adding the days array
+        addDaysArrayToFormData(formData);
     });
 
     function addDaysArrayToFormData(formData) {
@@ -354,7 +358,7 @@ response.days.forEach(function(day) {
                 $daysList.empty();
                 days.length = 0;
 
-                $('#prevImage').val('');
+                $('#previewImage').val('');
 
                 // Clear the input fields
                 $('#days-list').empty();
@@ -365,7 +369,20 @@ response.days.forEach(function(day) {
             },
         });
     }
+
+    // Helper function to convert Data URI to Blob
+    function dataURItoBlob(dataURI) {
+        const byteString = atob(dataURI.split(',')[1]);
+        const mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0];
+        const ab = new ArrayBuffer(byteString.length);
+        const ia = new Uint8Array(ab);
+        for (let i = 0; i < byteString.length; i++) {
+            ia[i] = byteString.charCodeAt(i);
+        }
+        return new Blob([ab], { type: mimeString });
+    }
 });
+
 
 
 
@@ -474,5 +491,12 @@ document.getElementById('previewImage').addEventListener('change', function () {
 
       reader.readAsDataURL(file);
   }
+  
 });
 
+// Generar un nombre de archivo aleatorio único
+function generateRandomFileName() {
+  const randomId = Math.random().toString(36).substr(2, 9); // Genera un ID aleatorio de 9 caracteres
+  const timestamp = new Date().getTime(); // Agrega una marca de tiempo para mayor unicidad
+  return `image_${timestamp}_${randomId}.jpg`;
+}
