@@ -172,6 +172,14 @@ function fetchTours() {
 
 // get single Obtener un Tour individual por su ID
 $(document).on('click', '.tour-item', function(e) {
+ // Verifica si estás en modo de edición
+ if (edit) {
+  $('#image').attr('required', 'required');
+ 
+} else {
+  $('#image').removeAttr('required');
+  
+}
   const tourId = $(this).data('tourid');
   $.post('tour-single.php', { id: tourId }, (response) => {
     const tour = response; // Asegúrate de que el objeto 'tour' contiene todos los campos que esperas
