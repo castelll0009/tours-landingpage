@@ -23,14 +23,18 @@ if (isset($_POST['id'])) {
     if ($_FILES['image']['size'] > 0) {
         $image = $_FILES['image'];
         $image_name = $image['name'];
+        
+        // Reemplaza los espacios por guiones bajos en el nombre del archivo
+        $image_name = str_replace(' ', '_', $image_name);
+    
         $image_tmp = $image['tmp_name'];
         $image_path = 'imgs/' . $image_name;
-
+    
         if (move_uploaded_file($image_tmp, $image_path)) {
             // Actualiza la imagen del tour solo si se ha subido una nueva
             $query_update_image = "UPDATE tour SET image_path = '$image_path' WHERE id = $tourId";
             $result_update_image = mysqli_query($connection, $query_update_image);
-
+    
             if (!$result_update_image) {
                 die('Query Failed: ' . mysqli_error($connection));
             }

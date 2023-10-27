@@ -281,15 +281,26 @@ response.days.forEach(function(day) {
     formData.append('region', $('#region').val());
     formData.append('id', $('#tourId').val());
 
-    // Add the image to the FormData object
-    const imageInput = document.getElementById('image');
-    formData.append('image', imageInput.files[0]);
+    // // Add the image to the FormData object
+    // const imageInput = document.getElementById('image');
+    // formData.append('image', imageInput.files[0]);
 
     // Add inventario data
     formData.append('pax', $('#pax').val());
     formData.append('include', $('#include').val());
     formData.append('not_include', $('#not_include').val());
     formData.append('single_supplement', $('#single_supplement').val());
+
+    
+    // Check if a new image has been selected
+    const imageInput = document.getElementById('image');
+    if (imageInput.files[0]) {
+        formData.append('image', imageInput.files[0]);
+    } else {
+        // If no new image is selected, use the previous image path
+        const prevImage = $('#prevImage').val();
+        formData.append('prevImage', prevImage);
+    }
 
     let  daysToAdd = [];
     daysToAdd  = getDays();
@@ -335,6 +346,8 @@ response.days.forEach(function(day) {
               $daysList.empty();
               days.length = 0;
   
+              $('#prevImage').val('');
+
             // Limpia los campos de entrada
             // Clear the entire <ul> element
             $('#days-list').empty();
