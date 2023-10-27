@@ -49,4 +49,3 @@ $(".swiper3").on(' mouseover touched touchmove', function(e){
   swiper3.autoplay.stop();  
 })
 
-
