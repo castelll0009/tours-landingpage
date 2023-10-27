@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;
-    padding: 5.6vw;
+    padding: 0;
     flex-direction: row;  
 }
 .blocks-gallery{
@@ -78,8 +78,8 @@
     }
     body main .blocks{        
         flex-direction: column;                
-        padding: 10vw 5vw;          
-        min-height: 70vh;
+        padding: 0 5vw;          
+        min-height: 0;
     }
 }
 

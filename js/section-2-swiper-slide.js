@@ -1,23 +1,4 @@
-var swiper = new Swiper(".swiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 200,
-      modifier: 2,
-      slideShadows: true
-    },
-    spaceBetween: 100,
-    loop: false,
-    pagination: {
-      el: ".swiper-pagination"
-    }
-  });
- 
-    var mySwiper = new Swiper('.swiper-initialized', {
+var mySwiper = new Swiper('.swiper', {
       effect: "coverflow",
       grabCursor: true,
       centeredSlides: true,
@@ -30,7 +11,7 @@ var swiper = new Swiper(".swiper", {
         slideShadows: true
       },
       spaceBetween: 100,
-      loop: false,
+      loop: true,
       pagination: {
         el: ".swiper-pagination"
       }

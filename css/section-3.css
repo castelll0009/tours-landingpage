@@ -8,8 +8,11 @@ main .section-3, #team{
 .item1-team{
     position: relative;
     width: 100%;
+	padding-bottom: 0;
 }
-
+.py-5{
+	padding-bottom: 0 !important;
+}
 .cont-info-profile{
     max-width: 50vw;
     max-height: 25vh;
