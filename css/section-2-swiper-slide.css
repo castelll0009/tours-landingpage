@@ -82,21 +82,7 @@
   border-top-left-radius: 5px;
 }
 
-.swiper-slide--one span {
-  background: #62667f;
-}
 
-.swiper-slide--two span {
-  background: #087ac4;
-}
-
-.swiper-slide--three span {
-  background: #b45205;
-}
-
-.swiper-slide--four span {
-  background: #087ac4;
-}
 
 .swiper-slide h2 {
   bottom: 0;
@@ -169,35 +155,6 @@
   margin-right: 7px;
 }
 
-.swiper-slide--one {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../imgs/t1.jpg")
-      no-repeat 50% 50% / cover;
-}
-
-.swiper-slide--two {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../imgs/t2.jpg")
-      no-repeat 50% 50% / cover;
-}
-
-.swiper-slide--three {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../imgs/t3.jpg")
-      no-repeat 50% 50% / cover;
-}
-
-.swiper-slide--four {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../imgs/t4.jpg")
-      no-repeat 50% 50% / cover;
-}
-
-.swiper-slide--five {
-  background: linear-gradient(to top, #0f2027, #203a4300, #2c536400),
-    url("../imgs/t5.jpg")
-      no-repeat 50% 50% / cover;
-}
 
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right {

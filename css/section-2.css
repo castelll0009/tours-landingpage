@@ -54,6 +54,7 @@
     min-height: 350px;
     max-width: 300px;
     max-height: 450px;
+    background: linear-gradient(to top, rgb(15, 32, 39), rgba(32, 58, 67, 0), rgba(44, 83, 100, 0));
 }
 
 main .section-2{
@@ -115,6 +116,10 @@ main .section-2{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.cont-btn-arrows-slide .btn-slide-tours:hover {
+    background-color: orange;
+    text-decoration: none;
 }
 .cont-btn-arrows-slide .btn-slide-tours i{
     color: silver;
