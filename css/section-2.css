@@ -44,8 +44,12 @@
     min-height: inherit;
     height: 100%;
 }
-.section-2 .swiper-slide {
-    flex-shrink: 0;
+.btn-slide-tours:hover{
+    color: #073041;
+}
+.section-2 .swiper-slide{
+    flex-shrink: 0; 
+    background:linear-gradient(to top, rgb(15, 32, 39), rgba(32, 58, 67, 0), rgba(44, 83, 100, 0));
     width: 100%;
     height: auto;
     position: relative;
@@ -54,6 +58,7 @@
     min-height: 350px;
     max-width: 300px;
     max-height: 450px;
+
 }
 
 main .section-2{
@@ -119,6 +124,7 @@ main .section-2{
 .cont-btn-arrows-slide .btn-slide-tours i{
     color: silver;
 }
+
 .btn-slide-tours{
     border-radius: 50%;
     min-height: 35px;    
@@ -126,6 +132,10 @@ main .section-2{
     min-width: 35px;
     max-width: 35px;
     border: 1px solid silver;
+}
+.btn-slide-tours:hover{
+   
+    background-color: rgb(197, 99, 18);
 }
 .section-2 .cont-btnbuy-opciones .btn-section2 {
     border-radius: 50px;
