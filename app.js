@@ -172,6 +172,8 @@ function fetchTours() {
 
 // get single Obtener un Tour individual por su ID
 $(document).on('click', '.tour-item', function(e) {
+
+  $('#preview-image').css('display', 'block');
  // Verifica si estás en modo de edición
  if (edit) {
   $('#image').attr('required', 'required');
@@ -184,7 +186,8 @@ $(document).on('click', '.tour-item', function(e) {
   $.post('tour-single.php', { id: tourId }, (response) => {
     const tour = response; // Asegúrate de que el objeto 'tour' contiene todos los campos que esperas
     console.log('Json recuperado single: ' + JSON.stringify(response, null, 2));
-
+ // Mostrar la imagen en el visor
+  $('#preview-image').attr('src', tour.image_path);
     $('#title').val(tour.title);
     $('#description').val(tour.description);
     $('#price').val(tour.price);
@@ -192,11 +195,8 @@ $(document).on('click', '.tour-item', function(e) {
     $('#duration').val(tour.duration);
     $('#date_departure').val(tour.date_departure);
     $('#region').val(tour.region);
-    $('#tourId').val(tourId);
-    
-    // Añadir el elemento de imagen con la ruta de la imagen
-    const image = $('<img>').attr('src', tour.image_path);
-    $('#image-container').empty().append(image);
+    $('#tourId').val(tourId);        
+
 
     // Acceder a los campos de 'inventario'
     $('#pax').val(tour.pax);
@@ -289,6 +289,12 @@ response.days.forEach(function(day) {
         formData.append('date_departure', $('#date_departure').val());
         formData.append('region', $('#region').val());
         formData.append('id', $('#tourId').val());
+
+          // Add inventory data
+          formData.append('pax', $('#pax').val());
+          formData.append('include', $('#include').val());
+          formData.append('not_include', $('#not_include').val());
+          formData.append('single_supplement', $('#single_supplement').val());
 
         // Extract the image from the <img> element
         const previewImageElement = document.getElementById('preview-image');
