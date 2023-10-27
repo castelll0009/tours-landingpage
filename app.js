@@ -219,10 +219,10 @@ $(document).ready(function() {
       edit = true;
       //Verifica si estás en modo de edición
       if (edit) {
-        alert(edit);
+        // alert(edit);
         $('#previewImage').removeAttr('required');
       } else {
-        alert(edit);
+        // alert(edit);
         $('#previewImage').attr('required', 'required');
         
       }
