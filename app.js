@@ -274,100 +274,94 @@ response.days.forEach(function(day) {
   
   // ...ADD Form  Data 
 
-  $('#tour-form').submit(e => {
-    e.preventDefault();
+  $(document).ready(function () {
+    $('#tour-form').submit(e => {
+        e.preventDefault();
 
-    const formData = new FormData();
+        const formData = new FormData();
 
-    // Add form data to the FormData object
-    formData.append('title', $('#title').val());
-    formData.append('description', $('#description').val());
-    formData.append('price', $('#price').val());
-    formData.append('group_size', $('#group_size').val());
-    formData.append('duration', $('#duration').val());
-    formData.append('date_departure', $('#date_departure').val());
-    formData.append('region', $('#region').val());
-    formData.append('id', $('#tourId').val());
+        // Add form data to the FormData object
+        formData.append('title', $('#title').val());
+        formData.append('description', $('#description').val());
+        formData.append('price', $('#price').val());
+        formData.append('group_size', $('#group_size').val());
+        formData.append('duration', $('#duration').val());
+        formData.append('date_departure', $('#date_departure').val());
+        formData.append('region', $('#region').val());
+        formData.append('id', $('#tourId').val());
 
-    // // Add the image to the FormData object
-    // const imageInput = document.getElementById('image');
-    // formData.append('image', imageInput.files[0]);
+        // Extract the image from the <img> element
+        const previewImageElement = document.getElementById('preview-image');
+        if (previewImageElement.src) {
+            // Convert the image to a Blob
+            fetch(previewImageElement.src)
+                .then(res => res.blob())
+                .then(blob => {
+                    // Create a File from the Blob
+                    const imageFile = new File([blob], 'preview.jpg', { type: 'image/jpeg' });
 
-    // Add inventario data
-    formData.append('pax', $('#pax').val());
-    formData.append('include', $('#include').val());
-    formData.append('not_include', $('#not_include').val());
-    formData.append('single_supplement', $('#single_supplement').val());
+                    // Add the image file to the form data
+                    formData.append('previewImage', imageFile);
 
-    
-    // Check if a new image has been selected
-    const imageInput = document.getElementById('image');
-    if (imageInput.files[0]) {
-        formData.append('image', imageInput.files[0]);
-    } else {
-        // If no new image is selected, use the previous image path
-        const prevImage = $('#prevImage').val();
-        formData.append('prevImage', prevImage);
-    }
-
-    let  daysToAdd = [];
-    daysToAdd  = getDays();
-    // Check if the 'daysToAdd' array is empty and add a default day if it is
-    if (daysToAdd.length === 0) {
-      daysToAdd.push({
-          number: '1',
-          title: 'Default Day',
-          description: 'This is a default day description.',
-      });
-  }else{
-    // significa qie si  hay dias  en un aarray
-    
-  }
-
-    
-    // Add días data
-    // formData.append('number_day', $('#number_day').val());
-    // formData.append('title_day', $('#title_day').val());
-    // formData.append('description_day', $('#description_day').val());    
-    formData.append('days', JSON.stringify(daysToAdd));
-    // Display the details of each day in the console    
-    for (const pair of formData.entries()) {
-      console.log(pair[0] + ', ' + pair[1]);
-    }
-
-    const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
-
-    // if(url == 'tour-edit.php'){
-    // }else{
-
-    // }
-
-    $.ajax({
-        url: url,
-        type: 'POST',
-        data: formData,
-        contentType: false,
-        processData: false,
-        success: function (response) {
-            console.log(response);
-              // Limpia la lista de días y el arreglo de días
-              $daysList.empty();
-              days.length = 0;
-  
-              $('#prevImage').val('');
-
-            // Limpia los campos de entrada
-            // Clear the entire <ul> element
-            $('#days-list').empty();
-              
-            $('#tour-form').trigger('reset');
-            fetchTours();
-            edit = false;
-        },
+                    // Continue with adding the days array
+                    addDaysArrayToFormData(formData);
+                });
+        } else {
+            // If no image is displayed, handle it accordingly
+            addDaysArrayToFormData(formData);
+        }
     });
 
-    
+    function addDaysArrayToFormData(formData) {
+        let daysToAdd = [];
+        daysToAdd = getDays();
+
+        // Check if the 'daysToAdd' array is empty and add a default day if it is
+        if (daysToAdd.length === 0) {
+            daysToAdd.push({
+                number: '1',
+                title: 'Default Day',
+                description: 'This is a default day description.',
+            });
+        }
+
+        // Add days data
+        formData.append('days', JSON.stringify(daysToAdd));
+
+        // Continue with submitting the form
+        submitForm(formData);
+    }
+
+    function submitForm(formData) {
+        const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
+
+        $.ajax({
+            url: url,
+            type: 'POST',
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                console.log(response);
+
+                // Clear the days list and the days array
+                $daysList.empty();
+                days.length = 0;
+
+                $('#prevImage').val('');
+
+                // Clear the input fields
+                $('#days-list').empty();
+
+                $('#tour-form').trigger('reset');
+                fetchTours();
+                edit = false;
+            },
+        });
+    }
 });
+
+
 
 // ...
 
@@ -441,7 +435,38 @@ function fetchTourPackageDetails(tourId) {
 
 
 
+// Cuando se selecciona una imagen desde el dispositivo
+document.getElementById('previewImage').addEventListener('change', function () {
+  
+  const file = this.files[0];
+  const imageType = /image.*/;
 
+  if (file.type.match(imageType)) {
+      const reader = new FileReader();
 
+      reader.onload = function () {
+          const img = new Image();
+          img.src = reader.result;
 
+          img.onload = function () {
+              const canvas = document.createElement('canvas');
+              const ctx = canvas.getContext('2d');
+              canvas.width = 600; // Ancho deseado
+              canvas.height = 400; // Alto deseado
+              ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+              const dataURL = canvas.toDataURL('image/jpeg', 0.7); // Cambia el formato y la calidad aquí
+
+              
+              // Ahora puedes mostrar dataURL en una etiqueta de imagen
+              const previewImage = document.getElementById('preview-image');
+              previewImage.src = dataURL;
+
+              // Mostrar la imagen estableciendo display en "block"
+              previewImage.style.display = 'block';
+          };
+      };
+
+      reader.readAsDataURL(file);
+  }
+});
 
