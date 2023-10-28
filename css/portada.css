@@ -158,7 +158,7 @@ h3{
     border: none;
     text-align: center;
     /* margin-top: auto; */
-    min-width: 40%;
+    min-width: 55%;
     max-width: 40%;
     overflow-wrap: break-word;
     background: linear-gradient(86deg, rgb(3 4 2 / 0%), transparent);
@@ -176,6 +176,7 @@ h3{
         margin-bottom: 0px;
         font-size: 3em;
         color: #cf5a20;
+        text-transform: uppercase;
     }
 .cont-picture-portada{
     margin-left: auto;

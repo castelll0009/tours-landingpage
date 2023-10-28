@@ -112,6 +112,10 @@ main .section-2{
     align-items: center;
     
 }
+.cont-btn-arrows-slide .btn-slide-tours:hover {
+   background: orange;
+   background: radial-gradient(#c99a0e00 40%, #ffa600cc 100%);
+}
 @media (max-width: 768px){
     .item2 .cont-data-slide {
         display: flex;
@@ -130,12 +134,15 @@ main .section-2{
         justify-content: center;
         min-width: 60px;
         min-height: 60px;
+        
     }
 }
 .cont-btn-arrows-slide .btn-slide-tours {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    z-index: 5;
 }
 .cont-btn-arrows-slide .btn-slide-tours i{
     color: silver;

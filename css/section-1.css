@@ -70,6 +70,12 @@
       position: relative; /* Sets in front of the image */
       z-index: 1; /* Sets in front of the image */
   }
+  @media (min-width: 768px){
+    .section-1  .header-scroll-down  span{
+        font-size: xx-large;
+    }
+    
+  }
 .section-1  .header-scroll-down p {
       margin: 0;
       font-size: 5vmin;
