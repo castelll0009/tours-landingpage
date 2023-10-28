@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $single_supplement = $_POST['single_supplement'];
 
     // Handle image upload
-    $image = $_FILES['previewImage'];
+    $image = $_FILES['image'];
     $image_name = $image['name'];
     $image_tmp = $image['tmp_name'];
     $image_path = 'imgs/' . $image_name;
@@ -50,18 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (!$result_dias) {
                     // Manejar errores si es necesario
                 }
-            }
-
-            // Ahora, manejar la imagen de vista previa
-            $previewImage = $_FILES['previewImage'];
-            $previewImage_name = $previewImage['name'];
-            $previewImage_tmp = $previewImage['tmp_name'];
-            $previewImage_path = 'imgs/' . $previewImage_name;
-
-            if (move_uploaded_file($previewImage_tmp, $previewImage_path)) {
-                // La imagen de vista previa se movió correctamente; ahora puedes almacenar $previewImage_path en la base de datos
-            } else {
-                echo json_encode(["error" => "Preview image upload failed"]);
             }
 
             if ($result_inventario) {

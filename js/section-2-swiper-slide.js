@@ -1,6 +1,4 @@
-// Espera a que el documento esté listo
-$(document).ready(function() {
-  var swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".swiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -18,14 +16,4 @@ $(document).ready(function() {
       el: ".swiper-pagination"
     }
   });
-
-  // Agrega un event listener para el botón "Anterior"
-  $(".prev-slide").click(function() {
-    swiper.slidePrev(); // Desplazarse al slide anterior
-  });
-
-  // Agrega un event listener para el botón "Siguiente"
-  $(".next-slide").click(function() {
-    swiper.slideNext(); // Desplazarse al siguiente slide
-  });
-});
+  

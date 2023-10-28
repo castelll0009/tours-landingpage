@@ -5,7 +5,7 @@ const $daysList = $('#days-list');
 
 // Function to get days from the list and format them as an array
 function getDays() {
-  
+  alert('Getting days from li an converting to array');
   const dayItems = Array.from($daysList[0].getElementsByTagName('li'));
   const days = dayItems.map(function(item) {
     const number = item.querySelector('[data-field="number"]').textContent;

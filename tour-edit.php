@@ -20,8 +20,8 @@ if (isset($_POST['id'])) {
 
 
     // Verifica si se ha subido una nueva imagen
-    if ($_FILES['previewImage']['size'] > 0) {
-        $image = $_FILES['previewImage'];
+    if ($_FILES['image']['size'] > 0) {
+        $image = $_FILES['image'];
         $image_name = $image['name'];
         
         // Reemplaza los espacios por guiones bajos en el nombre del archivo

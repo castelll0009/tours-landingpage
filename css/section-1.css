@@ -59,13 +59,6 @@
 .section-1 .header-scroll-down {
       text-align: center;
       color: #ffffffc2;
-      
-  }
-  @media (min-width: 769px){
-    .section-1 .header-scroll-down span {
-     font-size: xx-large;
-        
-    }
   }
 .section-1 .header-scroll-down h1 {
       margin-top: 0;
