@@ -136,16 +136,18 @@
                                 </div>
                             </div>
 
-                            <div class="cont-group_size-duration" style="display: flex; flex-direction: row; gap: 20px;">
+                            <div class="cont-group_size-duration"
+                                style="display: flex; flex-direction: row; gap: 20px;">
                                 <div class="form-group">
                                     <input type="number" id="group_size" placeholder="Group Size" class="form-control"
                                         required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" id="duration" placeholder="Duration" class="form-control" required>
+                                    <input type="text" id="duration" placeholder="Duration" class="form-control"
+                                        required>
                                 </div>
                             </div>
-                           
+
                             <div class="cont-date_departure-allyear"
                                 style="display: flex; flex-direction: row; gap: 20px;">
                                 <div class="form-group" style="flex: 1;">
@@ -195,17 +197,9 @@
                                 <h2>Tour Days</h2>
                                 <ul id="days-list">
                                     <!-- Here, days will be displayed -->
-                                </ul>
-                                <!-- day image -->
-                                <div class="form-group">
-                                    <label for="day-previewImage">Day Image</label>
-                                    <input type="file" id="day-previewImage" class="form-control" accept="image/*">
-                                    <input type="hidden" id="day-prevImage" name="day-prevImage">
-                                </div>
+                                </ul>                               
 
-                                <!-- Add a preview image for the day -->
-                                <img id="day-preview-image" src="" alt="Day Preview Image"
-                                    style="max-width: 100%; display: block;">
+
 
                                 <div>
                                     <button id="add-day-btn" class="btn btn-primary" type="button">Add Day</button>

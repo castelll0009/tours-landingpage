@@ -207,6 +207,8 @@ $(document).ready(function() {
         <strong>Number:</strong> <span class="editable" data-field="number">${day.number}</span><br>
         <strong>Title:</strong> <span class="editable" data-field="title">${day.title}</span><br>
         <strong>Description:</strong> <span class="editable" data-field="description">${day.description}</span>
+        <strong>Image Path:</strong> <span class="editable" data-field="image_path">${day.image_path}</span>
+
         <br>
         <button type="button" class="edit-day-button">Edit</button>
         <button type  = "button" class = "delete-day-button">Delete</button>
