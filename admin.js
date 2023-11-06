@@ -44,6 +44,7 @@ function addDay(numberDay, titleDay, descriptionDay) {
         <strong>Description:</strong> <span class="editable" data-field="description">${descriptionDay}</span><br>
         <strong id="strong-img">Image Path:</strong> <span class="editable" data-field="image_path">${day.image_path}</span>
         
+        <br>
         <button type="button" class="edit-day-button">Edit</button>
         <button type="button" class="delete-day-button">Delete</button>
     `);
