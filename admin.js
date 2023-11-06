@@ -87,7 +87,7 @@ $(document).ready(function () {
       });
       // make cont-day-image-preview visible                 
       let template_dayInput =`<div class="form-group" id="cont-day-image-preview" style="display: block;">
-      <label for="day-previewImage">Day Image</label>
+      
       <input type="file" id="day-previewImage" class="form-control" accept="image/*">
       <input type="hidden" id="day-prevImage" name="day-prevImage">
 
@@ -105,7 +105,7 @@ $(document).ready(function () {
       });
       // Aquí puedes guardar los cambios si es necesario
       // make cont-day-image-preview no visible
-      $('#cont-day-image-preview').html('');
+      $('#cont-day-image-preview').remove();
     }
 
     isEditing = !isEditing; // Invierte el estado de edición
