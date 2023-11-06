@@ -115,7 +115,7 @@
                                     <label class="form-check-label" for="price-visible">Price Visible</label>
                                 </div>
                             </div>
-                            
+
                             <div class="cont-discount_value-discount_visible" style="
                             display: flex;
                             flex-direction: row;
@@ -136,19 +136,22 @@
                                 </div>
                             </div>
 
-
-                            <div class="form-group">
-                                <input type="number" id="group_size" placeholder="Group Size" class="form-control"
-                                    required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" id="duration" placeholder="Duration" class="form-control" required>
-                            </div>
-                            <div class="cont-date_departure-allyear">
+                            <div class="cont-group_size-duration" style="display: flex; flex-direction: row; gap: 20px;">
                                 <div class="form-group">
+                                    <input type="number" id="group_size" placeholder="Group Size" class="form-control"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" id="duration" placeholder="Duration" class="form-control" required>
+                                </div>
+                            </div>
+                           
+                            <div class="cont-date_departure-allyear"
+                                style="display: flex; flex-direction: row; gap: 20px;">
+                                <div class="form-group" style="flex: 1;">
                                     <input type="date" id="date_departure" class="form-control">
                                 </div>
-                                <div class="form-check">
+                                <div class="form-check" style="flex: 1; ">
                                     <input type="checkbox" id="all-year" class="form-check-input">
                                     <label class="form-check-label" for="all-year">All Year</label>
                                 </div>
@@ -169,6 +172,7 @@
 
 
                             <!-- Campos de la tabla 'inventario' -->
+                            <h2>Inventory</h2>
                             <div class="form-group">
                                 <input type="number" id="pax" placeholder="PAX" class="form-control" required>
                             </div>
