@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $not_include = $_POST['not_include'];
     $single_supplement = $_POST['single_supplement'];
 
-    // Handle image upload
+    // Handle image upload for the tour preview
     $image = $_FILES['previewImage'];
     $image_name = $image['name'];
     $image_tmp = $image['tmp_name'];
@@ -28,40 +28,47 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = mysqli_query($connection, $query);
 
         if ($result) {
-            // Obtén el ID del nuevo tour insertado
+            // Get the ID of the new tour inserted
             $new_tour_id = mysqli_insert_id($connection);
 
-            // Insertar datos en la tabla 'inventario'
+            // Insert data into the 'inventory' table
             $query_inventario = "INSERT INTO inventario (tour_id, pax, include, not_include, single_supplement) VALUES ('$new_tour_id', '$pax', '$include', '$not_include', '$single_supplement')";
             $result_inventario = mysqli_query($connection, $query_inventario);
 
-            // Procesar y agregar los días a la tabla 'dias'
+            // Process and add the days to the 'dias' table
             $jsonDays = $_POST['days'];
-            $days = json_decode($jsonDays, true); // Decodificar el JSON en un array asociativo
+            $days = json_decode($jsonDays, true); // Decode the JSON into an associative array
 
             foreach ($days as $day) {
                 $number_day = $day['number'];
                 $title_day = $day['title'];
                 $description_day = $day['description'];
+                $image_day = '';  // Initialize image_day variable
 
-                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day) VALUES ('$new_tour_id', '$number_day', '$title_day', '$description_day')";
+                // Handle image upload for the day
+                $day_image = $_FILES['day-previewImage' . $number_day];
+                if (!empty($day_image)) {
+                    $day_image_name = $day_image['name'];
+                    $day_image_tmp = $day_image['tmp_name'];
+                    $day_image_path = 'imgs/' . $day_image_name;
+
+                    // Print the day image path before saving
+                    print("Day $number_day Image Path: $day_image_path<br>");
+
+                    if (move_uploaded_file($day_image_tmp, $day_image_path)) {
+                        // Image for the day moved successfully
+                        $image_day = $day_image_path;
+                    } else {
+                        echo json_encode(["error" => "Day $number_day image upload failed"]);
+                    }
+                }
+
+                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day, image_path) VALUES ('$new_tour_id', '$number_day', '$title_day', '$description_day', '$image_day')";
                 $result_dias = mysqli_query($connection, $query_dias);
 
                 if (!$result_dias) {
-                    // Manejar errores si es necesario
+                    // Handle errors if necessary
                 }
-            }
-
-            // Ahora, manejar la imagen de vista previa
-            $previewImage = $_FILES['previewImage'];
-            $previewImage_name = $previewImage['name'];
-            $previewImage_tmp = $previewImage['tmp_name'];
-            $previewImage_path = 'imgs/' . $previewImage_name;
-
-            if (move_uploaded_file($previewImage_tmp, $previewImage_path)) {
-                // La imagen de vista previa se movió correctamente; ahora puedes almacenar $previewImage_path en la base de datos
-            } else {
-                echo json_encode(["error" => "Preview image upload failed"]);
             }
 
             if ($result_inventario) {

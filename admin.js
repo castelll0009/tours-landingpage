@@ -36,6 +36,10 @@ function addDay(numberDay, titleDay, descriptionDay) {
     number: numberDay,
     title: titleDay,
     description: descriptionDay,
+    image: {
+      path: $(`#day-prevImage${numberDay}`).val(), // Use the path input field value
+      preview: $(`#day-preview-image${numberDay}`).attr('src'), // Use the preview image source
+    },
   };
 
   const $dayItem = $('<li>').html(`
@@ -71,8 +75,8 @@ $('#add-day-btn').click(function () {
   if (titleDay && descriptionDay) {
     // Calling the function to add the day
     addDay(numberDay, titleDay, descriptionDay);
-  }    
-  setupImagePreview(`day-previewImage${numberDay}`, `day-preview-image${numberDay}`);
+    setupImagePreview(`day-previewImage${numberDay}`, `day-preview-image${numberDay}`);
+  }      
 
 });
 
@@ -95,7 +99,6 @@ $(document).ready(function () {
         var content = $(this).text();
         var inputElement = $('<input type="text" class="form-control">').val(content);
         $(this).html(inputElement);
-
 
       });    
     } else {
@@ -123,6 +126,12 @@ $(document).ready(function () {
       alert("No puedes eliminar elementos anteriores al último.");
     }
   });
+  // Inside addDaysArrayToFormData, use the function for each day image
+$('#days-list li').each(function () {
+  const number = $(this).find('[data-field="number"]').text();
+  const formDataKey = 'dayImage' + number;
+  addImageToFormData(formData, 'day-previewImage' + number, 'day-preview-image' + number, formDataKey);
+});
 
 
   // Otros manejadores de eventos, como el botón "Add Day"
