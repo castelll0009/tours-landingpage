@@ -259,7 +259,6 @@ $(document).ready(function() {
   }
   
   // ...ADD Form  Data 
-  
   const banderaCambio = true;
   $(document).ready(function () {
     $('#tour-form').submit(e => {
@@ -290,30 +289,24 @@ $(document).ready(function() {
       // Verifica si se ha adjuntado un archivo en el campo 'previewImage'
       const previewImageInput = document.getElementById('previewImage');
       if (previewImageInput.files.length > 0) {
-        // Se ha adjuntado un archivo en el campo 'previewImage'
-        
+        // Se ha adjuntado un archivo en el campo 'previewImage'        
         // Extract the image from the <img> element
         const previewImageElement = document.getElementById('preview-image');      
         if (previewImageElement.src) {
           // Get the data URI of the image from the preview
-          const imageSrc = previewImageElement.src;
-          
+          const imageSrc = previewImageElement.src;          
           // Generate a new random file name
-          const newFileName = generateRandomFileName();
-          
+          const newFileName = generateRandomFileName();          
           // Convert the data URI to a Blob
-          const imageBlob = dataURItoBlob(imageSrc);
-          
+          const imageBlob = dataURItoBlob(imageSrc);          
           // Create a File from the Blob with the new random name
-          const imageFile = new File([imageBlob], newFileName, { type: 'image/jpeg' });
-          
+          const imageFile = new File([imageBlob], newFileName, { type: 'image/jpeg' });          
           // Add the image file to the form data
           formData.append('previewImage', imageFile);
         }else{
           const banderaCambio = false;
         }
-      }
-      
+      }      
       // Continue with adding the days array
       addDaysArrayToFormData(formData);
     });
@@ -329,11 +322,9 @@ $(document).ready(function() {
           title: 'Default Day',
           description: 'This is a default day description.',
         });
-      }
-      
+      }      
       // Add days data
-      formData.append('days', JSON.stringify(daysToAdd));
-      
+      formData.append('days', JSON.stringify(daysToAdd));      
       // Continue with submitting the form
       submitForm(formData);
     }
