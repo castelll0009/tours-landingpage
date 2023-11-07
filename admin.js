@@ -50,7 +50,7 @@ function addDay(numberDay, titleDay, descriptionDay) {
   
   <!-- Add a preview image for the day -->
   <img id="day-preview-image${numberDay}" src="" alt="Day Preview Image"
-  style="max-width: 100%; ">
+  style="max-width: 50%; ">
   </div>
   
   <br>
