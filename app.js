@@ -283,9 +283,7 @@ $(document).ready(function() {
       formData.append('single_supplement', $('#single_supplement').val());
       
       
-      
-      // Continúa con la adición del array de días y envía el formulario
-      
+      //agregando la imagen al formData
       // Verifica si se ha adjuntado un archivo en el campo 'previewImage'
       const previewImageInput = document.getElementById('previewImage');
       if (previewImageInput.files.length > 0) {
@@ -453,8 +451,7 @@ function fetchTourPackageDetails(tourId) {
 
 // Llama a la función para configurar la vista previa de la imagen de 'previewImage'
 setupImagePreview('previewImage', 'preview-image');
-// Llama a la función para configurar la vista previa de la imagen de 'day-previewImage'
-setupImagePreview('day-previewImage', 'day-preview-image');
+
 
 // Cuando se selecciona una imagen desde el dispositivo
 function setupImagePreview(inputId, imageId) {
