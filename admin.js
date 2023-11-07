@@ -83,11 +83,11 @@ $(document).ready(function () {
         var content = $(this).text();
         var inputElement = $('<input type="text" class="form-control">').val(content);
         $(this).html(inputElement);
-        
+
 
       });
       // make cont-day-image-preview visible                 
-      let template_dayInput =`<div class="form-group" id="cont-day-image-preview" style="display: block;">
+      let template_dayInput = `<div class="form-group" id="cont-day-image-preview" style="display: block;">
       
       <input type="file" id="day-previewImage" class="form-control" accept="image/*">
       <input type="hidden" id="day-prevImage" name="day-prevImage">
@@ -96,9 +96,9 @@ $(document).ready(function () {
       <img id="day-preview-image" src="" alt="Day Preview Image"
           style="max-width: 100%; ">
   </div>`
-      $('#strong-img').append(template_dayInput);     
+      $('#strong-img').append(template_dayInput);
       // Llama a la función para configurar la vista previa de la imagen de 'day-previewImage'
-setupImagePreview('day-previewImage', 'day-preview-image'); 
+      setupImagePreview('day-previewImage', 'day-preview-image');
     } else {
       // Cambia a modo de visualización y guarda los cambios
       $(this).text('Edit');
@@ -124,7 +124,6 @@ setupImagePreview('day-previewImage', 'day-preview-image');
       alert("No puedes eliminar elementos anteriores al último.");
     }
   });
-
 
   // Otros manejadores de eventos, como el botón "Add Day"
 });
