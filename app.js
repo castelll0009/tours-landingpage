@@ -451,43 +451,45 @@ function fetchTourPackageDetails(tourId) {
   });
 }
 
-
+// Llama a la función para configurar la vista previa de la imagen de 'previewImage'
+setupImagePreview('previewImage', 'preview-image');
+// Llama a la función para configurar la vista previa de la imagen de 'day-previewImage'
+setupImagePreview('day-previewImage', 'day-preview-image');
 
 // Cuando se selecciona una imagen desde el dispositivo
-document.getElementById('previewImage').addEventListener('change', function () {
-  
-  const file = this.files[0];
-  const imageType = /image.*/;
-  
-  if (file.type.match(imageType)) {
-    const reader = new FileReader();
-    
-    reader.onload = function () {
-      const img = new Image();
-      img.src = reader.result;
-      
-      img.onload = function () {
-        const canvas = document.createElement('canvas');
-        const ctx = canvas.getContext('2d');
-        canvas.width = 600; // Ancho deseado
-        canvas.height = 400; // Alto deseado
-        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        const dataURL = canvas.toDataURL('image/jpeg', 0.7); // Cambia el formato y la calidad aquí
-        
-        
-        // Ahora puedes mostrar dataURL en una etiqueta de imagen
-        const previewImage = document.getElementById('preview-image');
-        previewImage.src = dataURL;
-        
-        // Mostrar la imagen estableciendo display en "block"
-        previewImage.style.display = 'block';
+function setupImagePreview(inputId, imageId) {
+  document.getElementById(inputId).addEventListener('change', function () {
+    const file = this.files[0];
+    const imageType = /image.*/;
+
+    if (file.type.match(imageType)) {
+      const reader = new FileReader();
+
+      reader.onload = function () {
+        const img = new Image();
+        img.src = reader.result;
+
+        img.onload = function () {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = 600; // Ancho deseado
+          canvas.height = 400; // Alto deseado
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          const dataURL = canvas.toDataURL('image/jpeg', 0.7); // Cambia el formato y la calidad aquí
+
+          // Ahora puedes mostrar dataURL en una etiqueta de imagen
+          const previewImage = document.getElementById(imageId);
+          previewImage.src = dataURL;
+
+          // Mostrar la imagen estableciendo display en "block"
+          previewImage.style.display = 'block';
+        };
       };
-    };
-    
-    reader.readAsDataURL(file);
-  }
-  
-});
+
+      reader.readAsDataURL(file);
+    }
+  });
+}
 
 // Generar un nombre de archivo aleatorio único
 function generateRandomFileName() {

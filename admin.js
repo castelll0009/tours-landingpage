@@ -96,7 +96,9 @@ $(document).ready(function () {
       <img id="day-preview-image" src="" alt="Day Preview Image"
           style="max-width: 100%; ">
   </div>`
-      $('#strong-img').append(template_dayInput);      
+      $('#strong-img').append(template_dayInput);     
+      // Llama a la función para configurar la vista previa de la imagen de 'day-previewImage'
+setupImagePreview('day-previewImage', 'day-preview-image'); 
     } else {
       // Cambia a modo de visualización y guarda los cambios
       $(this).text('Edit');
