@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $image_day = '';  // Initialize image_day variable
 
                 // Handle image upload for the day
-                $day_image = $_FILES['day-previewImage' . $number_day];
+                $day_image = $_FILES['dayImage' . $number_day];
                 if (!empty($day_image)) {
                     $day_image_name = $day_image['name'];
                     $day_image_tmp = $day_image['tmp_name'];

@@ -263,7 +263,6 @@ $(document).ready(function () {
   $(document).ready(function () {
     $('#tour-form').submit(e => {
       e.preventDefault();
-
       const formData = new FormData();
 
       // Add form data to the FormData object
@@ -283,8 +282,6 @@ $(document).ready(function () {
       formData.append('single_supplement', $('#single_supplement').val());
 
       addImageToFormData(formData, 'previewImage', 'preview-image', 'previewImage');
-
-
       // Continue with adding the days array
       addDaysArrayToFormData(formData);
     });
@@ -364,7 +361,8 @@ $(document).ready(function () {
   
 
 });
-
+///////////////////////////FUNCIONES /////////////////////////
+//////////////////////////////////////////////////////////
 // Function to add an image to the FormData
 function addImageToFormData(formData, inputElement, imageElement, formDataKey) {
   const imageInput = document.getElementById(inputElement);
