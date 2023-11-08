@@ -199,22 +199,34 @@ $(document).ready(function () {
 
       let $ul = $('#days-list');
       $ul.empty(); // Esto eliminará todas las etiquetas <li> dentro de la lista <ul>
+        
+  // Recorre los días en la respuesta y crea elementos para mostrarlos.
+  response.days.forEach(function (day) {
+    var li = document.createElement("li");
+    li.innerHTML = `
+      <strong>Number:</strong> <span class="editable" data-field="number">${day.number}</span><br>
+      <strong>Title:</strong> <span class="editable" data-field="title">${day.title}</span><br>
+      <strong>Description:</strong> <span class="editable" data-field="description">${day.description}</span><br>
+      <strong>Image Path:</strong>
+      <div class="form-group cont-day-image-preview" style="display: block;">
+        <input type="file" id="day-previewImage${day.number}" class="form-control" accept="image/*">
+        <input type="hidden" id="day-prevImage${day.number}" name="day-prevImage${day.number}">
+        <!-- Add a preview image for the day -->
+        <img id="day-preview-image${day.number}" src="${day.image_path}" alt="Day Preview Image" style="max-width: 50%;">
+      </div>
+      <br>
+      <button type="button" class="edit-day-button">Edit</button>
+      <button type="button" class="delete-day-button">Delete</button>
+    `;
 
-      // Loop through the 'days' array in the response
-      response.days.forEach(function (day) {
-        var li = document.createElement("li");
-        li.innerHTML = `    
-        <strong>Number:</strong> <span class="editable" data-field="number">${day.number}</span><br>
-        <strong>Title:</strong> <span class="editable" data-field="title">${day.title}</span><br>
-        <strong>Description:</strong> <span class="editable" data-field="description">${day.description}</span>
-        <strong>Image Path:</strong> <span class="editable" data-field="image_path">${day.image_path}</span>
+    // alert(day.image_path);
+    $(`#day-preview-image${day.number}`).attr('src', day.image_path).data('original-image-name', day.image_name);
+    $('#days-list').append(li);
+  });
 
-        <br>
-        <button type="button" class="edit-day-button">Edit</button>
-        <button type  = "button" class = "delete-day-button">Delete</button>
-        `;
-        $('#days-list').append(li);
-      });
+
+
+  
 
       // Establece un valor para el campo de la imagen original (para futura comparación)
       $('#original-image-path').val(tour.image_path);

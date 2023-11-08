@@ -3,26 +3,27 @@ include('database.php');
 
 if (isset($_POST['id'])) {
     $id = mysqli_real_escape_string($connection, $_POST['id']);
-    
+
     $query = "SELECT 
-    tour.*, 
-    inventario.pax, 
-    inventario.include, 
-    inventario.not_include, 
-    inventario.single_supplement, 
-    GROUP_CONCAT(DISTINCT dias.number ORDER BY dias.number ASC) AS days_numbers,
-    GROUP_CONCAT(DISTINCT dias.title_day ORDER BY dias.number ASC) AS days_titles,
-    GROUP_CONCAT(DISTINCT dias.description_day ORDER BY dias.number ASC) AS days_descriptions
-FROM tour
-LEFT JOIN inventario ON tour.id = inventario.tour_id
-LEFT JOIN dias ON tour.id = dias.tour_id
-WHERE tour.id = {$id}
-GROUP BY tour.id;
-";
+        tour.*, 
+        inventario.pax, 
+        inventario.include, 
+        inventario.not_include, 
+        inventario.single_supplement, 
+        GROUP_CONCAT(DISTINCT dias.number ORDER BY dias.number ASC) AS days_numbers,
+        GROUP_CONCAT(DISTINCT dias.title_day ORDER BY dias.number ASC) AS days_titles,
+        GROUP_CONCAT(DISTINCT dias.description_day ORDER BY dias.number ASC) AS days_descriptions,
+        GROUP_CONCAT(DISTINCT dias.image_path ORDER BY dias.number ASC) AS days_image_paths
+    FROM tour
+    LEFT JOIN inventario ON tour.id = inventario.tour_id
+    LEFT JOIN dias ON tour.id = dias.tour_id
+    WHERE tour.id = {$id}
+    GROUP BY tour.id;
+    ";
 
     $result = mysqli_query($connection, $query);
     if (!$result) {
-        die('Query Failed'. mysqli_error($connection));
+        die('Query Failed' . mysqli_error($connection));
     }
 
     if ($row = mysqli_fetch_array($result)) {
@@ -30,6 +31,7 @@ GROUP BY tour.id;
         $days_numbers = explode(',', $row['days_numbers']);
         $days_titles = explode(',', $row['days_titles']);
         $days_descriptions = explode(',', $row['days_descriptions']);
+        $days_image_paths = explode(',', $row['days_image_paths']); // Obtener rutas de imagen
 
         // Create the days array
         $days = array();
@@ -37,7 +39,8 @@ GROUP BY tour.id;
             $days[] = array(
                 'number' => $days_numbers[$i],
                 'title' => $days_titles[$i],
-                'description' => $days_descriptions[$i]
+                'description' => $days_descriptions[$i],
+                'image_path' => $days_image_paths[$i] // Agregar rutas de imagen
             );
         }
 
@@ -55,7 +58,7 @@ GROUP BY tour.id;
             'include' => $row['include'],
             'not_include' => $row['not_include'],
             'single_supplement' => $row['single_supplement'],
-            'days' => $days, // Include days as an array
+            'days' => $days, // Include days as an array with image paths
             'id' => $row['id']
         );
     } else {
