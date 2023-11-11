@@ -268,8 +268,7 @@ $(document).ready(function () {
     console.error('No valid tourId, tour package found in the URL.');
   }
 
-  // ...ADD Form  Data 
-  const banderaCambio = true;
+  // ...ADD Form also EDIT Data 
   $(document).ready(function () {
     $('#tour-form').submit(e => {
       e.preventDefault();
@@ -311,15 +310,11 @@ $(document).ready(function () {
             preview: 'default_day_preview.jpg', // Ruta por defecto para la vista previa de la imagen
           },
         });
-      }else{
-
       }
 
       // Add days data
       formData.append('days', JSON.stringify(daysToAdd));
-      
-
-    
+          
       // Handle images for each day
       $('#days-list li').each(function () {
         
@@ -352,10 +347,7 @@ $(document).ready(function () {
 
     function submitForm(formData) {
       const url = edit === false ? 'tour-add.php' : 'tour-edit.php';
-      if (!banderaCambio) {
-        url = 'tour-edit-noimg.php';
-      }
-  
+
 
       $.ajax({
         url: url,
