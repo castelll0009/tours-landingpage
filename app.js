@@ -203,6 +203,7 @@ $(document).ready(function () {
   // Recorre los días en la respuesta y crea elementos para mostrarlos.
   response.days.forEach(function (day) {
     var li = document.createElement("li");
+    alert('day image path of day number '+day.number+' path: '+day.image_path);
     li.innerHTML = `
       <strong>Number:</strong> <span class="editable" data-field="number">${day.number}</span><br>
       <strong>Title:</strong> <span class="editable" data-field="title">${day.title}</span><br>
@@ -219,14 +220,11 @@ $(document).ready(function () {
       <button type="button" class="delete-day-button">Delete</button>
     `;
 
-    // alert(day.image_path);
+    
     $(`#day-preview-image${day.number}`).attr('src', day.image_path).data('original-image-name', day.image_name);
     $('#days-list').append(li);
-  });
-
-
-
-  
+    alert('day single ruta: '+day.image_path);
+  });  
 
       // Establece un valor para el campo de la imagen original (para futura comparación)
       $('#original-image-path').val(tour.image_path);
@@ -309,22 +307,44 @@ $(document).ready(function () {
           title: 'Default Day',
           description: 'This is a default day description.',
           image: {
-            path: '', // Provide the default path for the default day
-            preview: '', // Provide the default preview image for the default day
+            path: 'default_day_image.jpg', // Ruta por defecto para la imagen
+            preview: 'default_day_preview.jpg', // Ruta por defecto para la vista previa de la imagen
           },
         });
+      }else{
+
       }
 
       // Add days data
       formData.append('days', JSON.stringify(daysToAdd));
+      
+
+    
       // Handle images for each day
       $('#days-list li').each(function () {
+        
+        alert('subiendo los day al dataForm');
         const number = $(this).find('[data-field="number"]').text();
+        if (!$(`#day-previewImage${number}`).prop('files').length) {
+         alert('no se selecciono imagen');
+         const defaultImagePath = 'ruta_por_defecto.jpg'; // Reemplaza con tu ruta por defecto
+         formData.append('day-previewImage' + number, defaultImagePath);
+      } else {
+        alert('se selecciono imagen');
         addImageToFormData(formData, 'day-previewImage' + number, 'day-preview-image' + number, 'dayImage' + number);
+      }
+             
       });
 
       formData.forEach(function (value, key) {
         console.log('DATOSS ', key, value);
+      });
+      formData.forEach(function (value, key) {
+        if (value instanceof File) {
+          console.log('Archivo:', key, value.name);
+        } else {
+          console.log('Campo:', key, value);
+        }
       });
       // Continue with submitting the form
       submitForm(formData);
@@ -335,15 +355,7 @@ $(document).ready(function () {
       if (!banderaCambio) {
         url = 'tour-edit-noimg.php';
       }
-      // Loop through each day's image data and append it to the form data
-      $('#days-list li').each(function () {
-        const number = $(this).find('[data-field="number"]').text();
-        const imagePath = $(this).find('[id^="day-prevImage"]').val();
-        const previewImage = $(this).find('[id^="day-preview-image"]').attr('src');
-
-        formData.append(`image_path_${number}`, imagePath);
-        formData.append(`preview_image_${number}`, previewImage);
-      });
+  
 
       $.ajax({
         url: url,
