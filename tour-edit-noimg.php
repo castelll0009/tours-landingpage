@@ -16,8 +16,6 @@ if (isset($_POST['id'])) {
     $include = $_POST['include'];
     $not_include = $_POST['not_include'];
     $single_supplement = $_POST['single_supplement'];
-
-
   
 
     // Realiza la actualización de los campos del tour (sin incluir la imagen)

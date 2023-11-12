@@ -11,8 +11,9 @@ function getDays() {
     const number = item.querySelector('[data-field="number"]').textContent;
     const title = item.querySelector('[data-field="title"]').textContent;
     const description = item.querySelector('[data-field="description"]').textContent;
+    const image_path = item.querySelector('[data-field="image_path"]').textContent;
     alert('getting days... ');
-    return { number, title, description };
+    return { number, title, description, image_path };
   });
   return days;
 }
@@ -32,27 +33,27 @@ function showAllDays($daysList) {
 }
 
 // Function to add a day to the list
-function addDay(numberDay, titleDay, descriptionDay) {
+function addDay(numberDay, titleDay, descriptionDay, imagePath) {
   const day = {
     number: numberDay,
     title: titleDay,
     description: descriptionDay,
-    image: {
-      path: $(`#day-prevImage${numberDay}`).val(), // Use the path input field value
-      preview: $(`#day-preview-image${numberDay}`).attr('src'), // Use the preview image source
-    },
+    image_path: imagePath,
+    // image: {
+    //   path: $(`#day-prevImage${numberDay}`).val(), // Use the path input field value
+    //   preview: $(`#day-preview-image${numberDay}`).attr('src'), // Use the preview image source
+    // },
   };
 
   const $dayItem = $('<li>').html(`
   <strong>Number:</strong> <span class="editable" data-field="number">${numberDay}</span><br>
   <strong>Title:</strong> <span class="editable" data-field="title">${titleDay}</span><br>
   <strong>Description:</strong> <span class="editable" data-field="description">${descriptionDay}</span><br>
-  <strong id="strong-img">Image Path:</strong> 
+  <strong id="strong-img">Image Path:</strong> <span class="editable" data-field="image_path">${imagePath}</span><br>
   <div class="form-group cont-day-image-preview" style="display: block;">
   
   <input type="file" id="day-previewImage${numberDay}" class="form-control" accept="image/*">
-  <input type="hidden" id="day-prevImage${numberDay}" name="day-prevImage">
-  
+  <input type="hidden" id="day-prevImage${numberDay}" name="day-prevImage">  
   <!-- Add a preview image for the day -->
   <img id="day-preview-image${numberDay}" src="" alt="Day Preview Image"
   style="max-width: 50%; ">
@@ -72,10 +73,11 @@ $('#add-day-btn').click(function () {
   const numberDay = $daysList.find('li').length + 1;
   const titleDay = prompt('Enter Day Title:');
   const descriptionDay = prompt('Enter Day Description:');
+  const imagePath = 'NA';
 
   if (titleDay && descriptionDay) {
     // Calling the function to add the day
-    addDay(numberDay, titleDay, descriptionDay);
+    addDay(numberDay, titleDay, descriptionDay, imagePath);
     setupImagePreview(`day-previewImage${numberDay}`, `day-preview-image${numberDay}`);
   }      
 

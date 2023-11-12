@@ -208,22 +208,28 @@ $(document).ready(function () {
       <strong>Number:</strong> <span class="editable" data-field="number">${day.number}</span><br>
       <strong>Title:</strong> <span class="editable" data-field="title">${day.title}</span><br>
       <strong>Description:</strong> <span class="editable" data-field="description">${day.description}</span><br>
-      <strong>Image Path:</strong>
+      <strong id="strong-img">Image Path:</strong> <span class="editable" data-field="image_path">${day.image_path}</span><br>      
       <div class="form-group cont-day-image-preview" style="display: block;">
+
         <input type="file" id="day-previewImage${day.number}" class="form-control" accept="image/*">
         <input type="hidden" id="day-prevImage${day.number}" name="day-prevImage${day.number}">
         <!-- Add a preview image for the day -->
         <img id="day-preview-image${day.number}" src="${day.image_path}" alt="Day Preview Image" style="max-width: 50%;">
       </div>
+
       <br>
       <button type="button" class="edit-day-button">Edit</button>
       <button type="button" class="delete-day-button">Delete</button>
     `;
 
+    //pone la imagen en el previeImagenes{numberDay}
+    // $(`#day-preview-image${day.number}`).attr('src', day.image_path).data('original-image-name', day.image_name);
     
-    $(`#day-preview-image${day.number}`).attr('src', day.image_path).data('original-image-name', day.image_name);
     $('#days-list').append(li);
+    //permitir que la imagen cambie cada que el usuario modifique
+    setupImagePreview(`day-previewImage${day.number}`, `day-preview-image${day.number}`);
     alert('day single ruta: '+day.image_path);
+    
   });  
 
       // Establece un valor para el campo de la imagen original (para futura comparación)
@@ -306,31 +312,36 @@ $(document).ready(function () {
           number: '1',
           title: 'Default Day',
           description: 'This is a default day description.',
-          image: {
-            path: 'default_day_image.jpg', // Ruta por defecto para la imagen
-            preview: 'default_day_preview.jpg', // Ruta por defecto para la vista previa de la imagen
-          },
+          image_path: 'NA',
+          // image: {
+          //   path: 'default_day_image.jpg', // Ruta por defecto para la imagen
+          //   preview: 'default_day_preview.jpg', // Ruta por defecto para la vista previa de la imagen
+          // },
         });
-      }
+      }      
 
-      // Add days data
+      // Add days data inlcuida la ruta  ya sea NA o  una ruta de una imagen
       formData.append('days', JSON.stringify(daysToAdd));
           
-      // Handle images for each day
-      // $('#days-list li').each(function () {
-        
-      //   alert('subiendo los day al dataForm');
-      //   const number = $(this).find('[data-field="number"]').text();
-      //   if (!$(`#day-previewImage${number}`).prop('files').length) {
-      //    alert('no se selecciono imagen');
-      //    const defaultImagePath = 'ruta_por_defecto.jpg'; // Reemplaza con tu ruta por defecto
-      //    formData.append('day-previewImage' + number, defaultImagePath);
-      // } else {
-      //   alert('se selecciono imagen');
-      //   addImageToFormData(formData, 'day-previewImage' + number, 'day-preview-image' + number, 'dayImage' + number);
-      // }
+      // Handle images for each day, put image in preview and create a KeyPost to get datas from php
+      $('#days-list li').each(function () {        
+        alert('subiendo los day al dataForm');
+        const number = $(this).find('[data-field="number"]').text();
+        const path = $(this).find('[data-field="image_path"]').text();
+        alert('path: '+path);
+
+        // Construye el selector del input de imagen para este día específico
+        var previewImageIndex = `#day-previewImage${number}`;
+      
+        // Verifica si se seleccionó una imagen para este día
+        if (!$(previewImageIndex).prop('files').length) {
+         alert('no se selecciono imagen');
+      } else {
+        alert('se selecciono imagen');        
+        addImageToFormData(formData, 'day-previewImage' + number, 'day-preview-image' + number, 'dayImage' + number);
+      }
              
-      // });
+      });
 
       formData.forEach(function (value, key) {
         console.log('DATOSS ', key, value);
