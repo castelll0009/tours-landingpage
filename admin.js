@@ -11,6 +11,7 @@ function getDays() {
     const number = item.querySelector('[data-field="number"]').textContent;
     const title = item.querySelector('[data-field="title"]').textContent;
     const description = item.querySelector('[data-field="description"]').textContent;
+    alert('getting days... ');
     return { number, title, description };
   });
   return days;

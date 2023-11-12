@@ -298,6 +298,7 @@ $(document).ready(function () {
     function addDaysArrayToFormData(formData) {
       let daysToAdd = [];
       daysToAdd = getDays();
+      alert('Days to add or  edit :  ' + JSON.stringify(daysToAdd));
 
       // Check if the 'daysToAdd' array is empty and add a default day if it is
       if (daysToAdd.length === 0) {
@@ -316,20 +317,20 @@ $(document).ready(function () {
       formData.append('days', JSON.stringify(daysToAdd));
           
       // Handle images for each day
-      $('#days-list li').each(function () {
+      // $('#days-list li').each(function () {
         
-        alert('subiendo los day al dataForm');
-        const number = $(this).find('[data-field="number"]').text();
-        if (!$(`#day-previewImage${number}`).prop('files').length) {
-         alert('no se selecciono imagen');
-         const defaultImagePath = 'ruta_por_defecto.jpg'; // Reemplaza con tu ruta por defecto
-         formData.append('day-previewImage' + number, defaultImagePath);
-      } else {
-        alert('se selecciono imagen');
-        addImageToFormData(formData, 'day-previewImage' + number, 'day-preview-image' + number, 'dayImage' + number);
-      }
+      //   alert('subiendo los day al dataForm');
+      //   const number = $(this).find('[data-field="number"]').text();
+      //   if (!$(`#day-previewImage${number}`).prop('files').length) {
+      //    alert('no se selecciono imagen');
+      //    const defaultImagePath = 'ruta_por_defecto.jpg'; // Reemplaza con tu ruta por defecto
+      //    formData.append('day-previewImage' + number, defaultImagePath);
+      // } else {
+      //   alert('se selecciono imagen');
+      //   addImageToFormData(formData, 'day-previewImage' + number, 'day-preview-image' + number, 'dayImage' + number);
+      // }
              
-      });
+      // });
 
       formData.forEach(function (value, key) {
         console.log('DATOSS ', key, value);
