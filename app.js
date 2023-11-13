@@ -222,9 +222,8 @@ $(document).ready(function () {
       <button type="button" class="delete-day-button">Delete</button>
     `;
 
-    //pone la imagen en el previeImagenes{numberDay}
-    // $(`#day-preview-image${day.number}`).attr('src', day.image_path).data('original-image-name', day.image_name);
-    
+    //pone crea el DayImage{} que permite obtener la imagen en edit.php
+    $(`#day-preview-image${day.number}`).attr('src', day.image_path).data('original-image-name', day.image_name);    
     $('#days-list').append(li);
     //permitir que la imagen cambie cada que el usuario modifique
     setupImagePreview(`day-previewImage${day.number}`, `day-preview-image${day.number}`);

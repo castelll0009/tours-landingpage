@@ -17,6 +17,7 @@ if (isset($_POST['id'])) {
     $not_include = $_POST['not_include'];
     $single_supplement = $_POST['single_supplement'];
     
+      
     
     // Verifica si se ha subido una nueva imagen tour
     if (isset($_FILES['previewImage']) && $_FILES['previewImage']['size'] > 0) {
@@ -121,7 +122,7 @@ if (isset($_POST['id'])) {
         $number_day = $day['number'];
         $title_day = $day['title'];
         $description_day = $day['description'];
-        $image_path_day = $image_path['image_path'];
+        $image_path_day = $day['image_path'];
         
         // Check if the day exists in the database
         if (isset($existing_days[$number_day])) {
@@ -152,7 +153,7 @@ if (isset($_POST['id'])) {
                     }
                 }
                 
-                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day, image_path) VALUES ('$new_tour_id', '$number_day', '$title_day', '$description_day', '$image_day')";
+                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day, image_path) VALUES ('$tourId', '$number_day', '$title_day', '$description_day', '$image_day')";
                 $result_dias = mysqli_query($connection, $query_dias);
                 
                 if (!$result_dias) {
@@ -196,7 +197,7 @@ if (isset($_POST['id'])) {
                     }
                 }
                 
-                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day, image_path) VALUES ('$new_tour_id', '$number_day', '$title_day', '$description_day', '$image_day')";
+                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day, image_path) VALUES ('$tourId', '$number_day', '$title_day', '$description_day', '$image_day')";
                 $result_dias = mysqli_query($connection, $query_dias);
                 
                 if (!$result_dias) {
@@ -205,7 +206,7 @@ if (isset($_POST['id'])) {
             }else{
                 //ya hay imagen o se quiere conservar la imagen anterior o dejar sin imagen en este caso entonces solo se actualizan los datos y no se pone la ruta image_path ya existente
                 
-                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day, image_path) VALUES ('$new_tour_id', '$number_day', '$title_day', '$description_day', 'NA')";
+                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day, image_path) VALUES ('$tourId', '$number_day', '$title_day', '$description_day', 'NA')";
                 $result_dias = mysqli_query($connection, $query_dias);
                 
                 if (!$result_dias) {
