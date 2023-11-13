@@ -123,10 +123,11 @@ if (isset($_POST['id'])) {
         $title_day = $day['title'];
         $description_day = $day['description'];
         $image_path_day = $day['image_path'];
-        
+        $existing_image_path = $image_path_day;
+        echo "FUERA Existing Image Path for Day $number_day: $existing_image_path<br>";
         // Check if the day exists in the database
-        if (isset($existing_days[$number_day])) {
-            // $existing_image_path = $existing_days[$number_day]['image_path'];
+            // Agrega var_dump para imprimir información de depuración
+
             $existing_image_path = $image_path_day;
             
             // Debug existing image path
@@ -163,58 +164,15 @@ if (isset($_POST['id'])) {
                 //ya hay imagen o se quiere conservar la imagen anterior entonces solo se actualizan los datos y se pone la ruta image_path ya existente
                 
                 // Update the existing day information
-                $update_day_query = "UPDATE dias SET title_day = '$title_day', description_day = '$description_day', image_path = '$existing_image_path' WHERE tour_id = '$tourId' AND number = '$number_day'";
-                $result_update_day = mysqli_query($connection, $update_day_query);
+                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day, image_path) VALUES ('$tourId', '$number_day', '$title_day', '$description_day', '$existing_image_path')";
+                $result_dias = mysqli_query($connection, $query_dias);
                 
-                if (!$result_update_day) {
-                    $response['error'] = "Failed to update existing days: " . mysqli_error($connection);
-                    echo json_encode($response);
-                    exit;
+                if (!$result_dias) {
+                    // Handle errors if necessary
                 }
             }
             
-            
-        } else {
-            // Day doesn't exist, insert the new day
-            // Check if a new image is uploaded for the day
-            if(isset($_FILES['dayImage' . $number_day]) && $_FILES['dayImage' . $number_day]['size'] > 0){
-                
-                // Handle image upload for the day
-                $day_image = $_FILES['dayImage' . $number_day];
-                if (!empty($day_image)) {
-                    $day_image_name = $day_image['name'];
-                    $day_image_tmp = $day_image['tmp_name'];
-                    $day_image_path = 'imgs/' . $day_image_name;
-                    
-                    // Print the day image path before saving
-                    print("Day $number_day Image Path: $day_image_path<br>");
-                    
-                    if (move_uploaded_file($day_image_tmp, $day_image_path)) {
-                        // Image for the day moved successfully
-                        $image_day = $day_image_path;
-                    } else {
-                        echo json_encode(["error" => "Day $number_day image upload failed"]);
-                    }
-                }
-                
-                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day, image_path) VALUES ('$tourId', '$number_day', '$title_day', '$description_day', '$image_day')";
-                $result_dias = mysqli_query($connection, $query_dias);
-                
-                if (!$result_dias) {
-                    // Handle errors if necessary
-                }
-            }else{
-                //ya hay imagen o se quiere conservar la imagen anterior o dejar sin imagen en este caso entonces solo se actualizan los datos y no se pone la ruta image_path ya existente
-                
-                $query_dias = "INSERT INTO dias (tour_id, number, title_day, description_day, image_path) VALUES ('$tourId', '$number_day', '$title_day', '$description_day', 'NA')";
-                $result_dias = mysqli_query($connection, $query_dias);
-                
-                if (!$result_dias) {
-                    // Handle errors if necessary
-                }
-            }                                   
-            
-        }
+                 
     }
     
     // Debug final existing days
