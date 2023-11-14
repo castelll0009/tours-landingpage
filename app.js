@@ -294,6 +294,16 @@ $(document).ready(function () {
       formData.append('include', $('#include').val());
       formData.append('not_include', $('#not_include').val());
       formData.append('single_supplement', $('#single_supplement').val());
+      // Add the new fields
+    formData.append('price_visible', $('#price-visible').prop('checked') ? '1' : '0');
+    formData.append('discount', $('#discount').val());
+    formData.append('discount_visible', $('#discount-visible').prop('checked') ? '1' : '0');
+    formData.append('all_year', $('#all-year').prop('checked') ? '1' : '0');
+
+    console.log('HOLAAAA Price Visible:', $('#price-visible').prop('checked'));
+console.log('Discount Visible:', $('#discount-visible').prop('checked'));
+console.log('All Year:', $('#all-year').prop('checked'));
+
 
       addImageToFormData(formData, 'previewImage', 'preview-image', 'previewImage');
       // Continue with adding the days array

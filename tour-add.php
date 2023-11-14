@@ -10,6 +10,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $date_departure = $_POST['date_departure'];
     $region = $_POST['region'];
 
+    // Nuevos campos
+    $price_visible = $_POST['price_visible'];
+    $discount = $_POST['discount'];
+    $discount_visible = $_POST['discount_visible'];
+    $all_year = $_POST['all_year'];
+
     // Campos de la tabla 'inventario'
     $pax = $_POST['pax'];
     $include = $_POST['include'];
@@ -24,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (move_uploaded_file($image_tmp, $image_path)) {
         // Image moved successfully, now insert other data into the database
-        $query = "INSERT INTO tour (title, description, price, group_size, duration, date_departure, region, image_path) VALUES ('$tour_title', '$tour_description', '$price', '$group_size', '$duration', '$date_departure', '$region', '$image_path')";
+        $query = "INSERT INTO tour (title, description, price, group_size, duration, date_departure, region, image_path, price_visible, discount, discount_visible) VALUES ('$tour_title', '$tour_description', '$price', '$group_size', '$duration', '$date_departure', '$region', '$image_path', '$price_visible', '$discount', '$discount_visible')";
         $result = mysqli_query($connection, $query);
 
         if ($result) {
@@ -32,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $new_tour_id = mysqli_insert_id($connection);
 
             // Insert data into the 'inventory' table
-            $query_inventario = "INSERT INTO inventario (tour_id, pax, include, not_include, single_supplement) VALUES ('$new_tour_id', '$pax', '$include', '$not_include', '$single_supplement')";
+            $query_inventario = "INSERT INTO inventario (tour_id, pax, include, not_include, single_supplement, all_year) VALUES ('$new_tour_id', '$pax', '$include', '$not_include', '$single_supplement', '$all_year')";
             $result_inventario = mysqli_query($connection, $query_inventario);
 
             // Process and add the days to the 'dias' table
