@@ -505,6 +505,9 @@ function fetchTourPackageDetails(tourId) {
     
     $('#id').text(tour.description);
     $('#id-date-departure').text(tour.date_departure);
+    if(tour.all_year == 1 ){
+      $('#id-date-departure').text('Available all year round');
+    }
     
     
     //inventory
