@@ -9,7 +9,8 @@ if (isset($_POST['id'])) {
         inventario.pax, 
         inventario.include, 
         inventario.not_include, 
-        inventario.single_supplement, 
+        inventario.single_supplement,
+        inventario.all_year,
         GROUP_CONCAT(DISTINCT dias.number ORDER BY dias.number ASC) AS days_numbers,
         GROUP_CONCAT(DISTINCT dias.title_day ORDER BY dias.number ASC) AS days_titles,
         GROUP_CONCAT(DISTINCT dias.description_day ORDER BY dias.number ASC) AS days_descriptions,
@@ -58,6 +59,10 @@ if (isset($_POST['id'])) {
             'include' => $row['include'],
             'not_include' => $row['not_include'],
             'single_supplement' => $row['single_supplement'],
+            'all_year' => $row['all_year'], // Nuevo campo all_year
+            'price_visible' => $row['price_visible'], // Nuevo campo price_visible
+            'discount' => $row['discount'], // Nuevo campo discount
+            'discount_visible' => $row['discount_visible'], // Nuevo campo discount_visible
             'days' => $days, // Include days as an array with image paths
             'id' => $row['id']
         );

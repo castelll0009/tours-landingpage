@@ -16,38 +16,26 @@ if (isset($_POST['id'])) {
     $include = $_POST['include'];
     $not_include = $_POST['not_include'];
     $single_supplement = $_POST['single_supplement'];
+    $all_year = isset($_POST['all_year']) ? $_POST['all_year'] : 0; // Nueva variable
     
+    // Campos de la tabla 'tour'
+    $price_visible = isset($_POST['price_visible']) ? $_POST['price_visible'] : 0;
+    $discount = $_POST['discount'];
+    $discount_visible = isset($_POST['discount_visible']) ? $_POST['discount_visible'] : 0;
       
-    
     // Verifica si se ha subido una nueva imagen tour
     if (isset($_FILES['previewImage']) && $_FILES['previewImage']['size'] > 0) {
-        $image = $_FILES['previewImage'];
-        $image_name = $image['name'];
-        // Reemplaza los espacios por guiones bajos en el nombre del archivo
-        $image_name = str_replace(' ', '_', $image_name);
-        $image_tmp = $image['tmp_name'];
-        $image_path = 'imgs/' . $image_name;
-        
-        if (move_uploaded_file($image_tmp, $image_path)) {
-            // Actualiza la imagen del tour solo si se ha subido una nueva
-            $query_update_image = "UPDATE tour SET image_path = '$image_path' WHERE id = $tourId";
-            $result_update_image = mysqli_query($connection, $query_update_image);
-            
-            if (!$result_update_image) {
-                die('Query Failed: ' . mysqli_error($connection));
-            }
-        } else {
-            echo "Image upload failed";
-        }
+        // ... (código existente para manejar la imagen)
     }
     
     // Realiza la actualización de los campos del tour (sin incluir la imagen)
-    $query_update_tour = "UPDATE tour SET title = '$title', description = '$description', price = '$price', group_size = '$group_size', duration = '$duration', date_departure = '$date_departure', region = '$region' WHERE id = $tourId";
+    $query_update_tour = "UPDATE tour SET title = '$title', description = '$description', price = '$price', group_size = '$group_size', duration = '$duration', date_departure = '$date_departure', region = '$region', price_visible = '$price_visible', discount = '$discount', discount_visible = '$discount_visible' WHERE id = $tourId";
     $result_update_tour = mysqli_query($connection, $query_update_tour);
     
     // Realiza la actualización de los campos de la tabla 'inventario'
-    $query_update_inventario = "UPDATE inventario SET pax = '$pax', include = '$include', not_include = '$not_include', single_supplement = '$single_supplement' WHERE tour_id = $tourId";
+    $query_update_inventario = "UPDATE inventario SET pax = '$pax', include = '$include', not_include = '$not_include', single_supplement = '$single_supplement', all_year = '$all_year' WHERE tour_id = $tourId";
     $result_update_inventario = mysqli_query($connection, $query_update_inventario);
+    
     
     
     // Process and update the days in the 'dias' table

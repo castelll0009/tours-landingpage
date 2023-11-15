@@ -12,7 +12,7 @@ function getDays() {
     const title = item.querySelector('[data-field="title"]').textContent;
     const description = item.querySelector('[data-field="description"]').textContent;
     const image_path = item.querySelector('[data-field="image_path"]').textContent;
-    alert('getting days... ');
+    // alert('getting days... ');
     return { number, title, description, image_path };
   });
   return days;
@@ -20,7 +20,7 @@ function getDays() {
 
 // Function to show all days
 function showAllDays($daysList) {
-  alert('showing');
+  // alert('showing');
   // Get the days as an array
   const allDays = getDays($daysList);
 
@@ -55,7 +55,7 @@ function addDay(numberDay, titleDay, descriptionDay, imagePath) {
   <input type="file" id="day-previewImage${numberDay}" class="form-control" accept="image/*">
   <input type="hidden" id="day-prevImage${numberDay}" name="day-prevImage">  
   <!-- Add a preview image for the day -->
-  <img id="day-preview-image${numberDay}" src="" alt="Day Preview Image"
+  <img id="day-preview-image${numberDay}" src="NA" alt="Day Preview Image"
   style="max-width: 50%; ">
   </div>
   
