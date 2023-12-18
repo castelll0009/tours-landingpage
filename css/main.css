@@ -198,7 +198,7 @@ width: 100%;
 main{	
 	overflow: hidden;
     background-attachment: fixed;
-    background-image: url(../imgs/backgroud-portada.jpg);
+    /* background-image: url(../imgs/backgroud-portada.jpg); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
