@@ -1,0 +1,123 @@
+.section-1 .cont-arrow-down {
+    /* margin-top: 100px; */
+    /* margin-top: -20px; */
+    /* bottom: 10%; */
+    position: absolute;
+}
+
+.section-1{
+    background-color: aliceblue;
+    background-color: #809eb8;
+}
+.section-1 .wrapper-playground {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-size: 120%;
+      background-position: 40% center;
+      background-repeat: no-repeat;
+  }
+.section-1  .wrapper-playground.gyp1 {
+      background-image: url("../imgs/back-efect-scroll-desenfocado.png");
+  }
+.section-1  .wrapper-playground.gyp2 {
+      background-image: url(https://olivier3lanc.github.io/Scroll-Btween/img/gyp2-back-1000.webp);
+  }
+.section-1  .wrapper-playground::before {
+      content: "";
+      float: left;
+      padding-bottom: 66.66%;
+  }
+.section-1  .figure-scroll-down {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+  .section-1 .cont-arrow-down{
+      bottom: 10%;
+  }   
+
+.section-1  .figure-scroll-down img {
+      max-width: 100%;
+      max-height: 100%;
+      width: 100%;
+      height: auto;
+  }
+.section-1 .header-scroll-down {
+      text-align: center;
+      color: #ffffffc2;
+  }
+.section-1 .header-scroll-down h1 {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 13vw;
+  }
+.section-1  .header-scroll-down h1 span {
+      display: block;
+      position: relative; /* Sets in front of the image */
+      z-index: 1; /* Sets in front of the image */
+  }
+  @media (min-width: 768px){
+    .section-1  .header-scroll-down  span{
+        font-size: xx-large;
+    }
+    
+  }
+.section-1  .header-scroll-down p {
+      margin: 0;
+      font-size: 5vmin;
+      mix-blend-mode: difference;
+  }
+.section-1  body > p {
+      line-height: 1.5em;
+      padding: 1em;
+      max-width: 70ch;
+      margin: auto;
+  }
+.section-1  #detector {
+      position: absolute;
+      top: 100vh;
+  }
+
+@media only screen and (max-width: 1200px)
+{
+    .section-1 .figure-scroll-down img {
+        max-width: 200%;
+        /* max-height: 100%; */
+        width: 200%;
+        min-width: 130%;
+        height: auto;
+        /* margin-top: 50%; */
+        bottom: 50%;
+    }
+    .section-1 .wrapper-playground {
+        
+        min-height: 100vh;        
+    }
+    .section-1 .cont-arrow-down {
+        /* margin-top: 100px; */
+        /* margin-top: -20px; */
+        /* bottom: 10%; */
+        /* position: relative; */
+    }
+    .section-1 .wrapper-playground {
+        background-size: auto;
+        
+        
+        
+    }
+}
+  

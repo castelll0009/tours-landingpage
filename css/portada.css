@@ -1,5 +1,24 @@
+.section-portada{
+    background-image: url("../imgs/backgroud-portada.jpg");
+}
+.section-portada .picture-gradient{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background: linear-gradient(86deg, rgba(3, 4, 2, 0), transparent);
+    background: radial-gradient(circle at 70% 70%, #00000000 0% ,#00010236 40%,#000000a3 54% ,#000000d1 68% ,#000102f5 80% );
+    background: radial-gradient(circle at 70% 70%, #121c2700 0% ,#13496c36 40%,#072f41a3 54% ,#073041d1 68% ,#073043f5 80% );
+    background: radial-gradient(circle at 70% 10%, #00000000 0% ,#13496c36 ,#072f41cf ,#073041 ,#073043 );
+    background: radial-gradient(circle at 70% 90%, #00000000 0% ,#13496c36 ,#072f41cf ,#073041 ,#073043 );
+    background: linear-gradient(to top, rgb(7 48 65) 0%, rgb(8 50 67 / 3%) 50%);
+    background: radial-gradient(circle at 70% 90%, #00000000 0% ,#01050836 ,#072f4100 ,#00000038 ,#00000099 );
+    top: 0;
+    background-attachment: local;
+    right: 0;
+    z-index: 0;
+}
 .cont-btnbuy-opciones .btn-buy{
-    margin-top: 20vh;
+    
   
 }
 .cont-img-portada img{
@@ -31,8 +50,10 @@ main .section-portada{
     margin-bottom: 0px;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 6.4vw;
-    letter-spacing: -2px;
+    /* letter-spacing: -2px; */
     line-height: 1em;
+    font-family: 'Nunito', sans-serif;    
+    font-weight: 700;
 }
 
 h3{    
@@ -50,16 +71,28 @@ h3{
 .slogan{
     color: white;
     color: #e1eff0;
-    font-size: 30px;
-    font-size: 1.5vw;
+    font-size: 28px;    
+    font-size: 18px;    
+    letter-spacing: 2px;
 
 }
 .vector-subtitle{
-    color: white;   
+    color: white;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: flex-start;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    /* line-height: 1px; */
+    margin: 0 0 5px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+}
+.vector-subtitle p{
+    color: white !important;
 }
 .vector-subtitle hr {
     max-width: 8vw;
@@ -115,7 +148,7 @@ h3{
     max-width: 40%;
     overflow-wrap: break-word;
     background: linear-gradient(86deg, rgb(3 4 2 / 0%), transparent);
-    
+    z-index: 1;
     padding: 50px;
 }
 
@@ -125,7 +158,7 @@ h3{
     border: none;
     text-align: center;
     /* margin-top: auto; */
-    min-width: 40%;
+    min-width: 55%;
     max-width: 40%;
     overflow-wrap: break-word;
     background: linear-gradient(86deg, rgb(3 4 2 / 0%), transparent);
@@ -133,6 +166,7 @@ h3{
     flex-direction: column;
     align-items: flex-start;
     text-align: justify;
+    z-index: 1;
 
 
     }  
@@ -142,6 +176,7 @@ h3{
         margin-bottom: 0px;
         font-size: 3em;
         color: #cf5a20;
+        text-transform: uppercase;
     }
 .cont-picture-portada{
     margin-left: auto;
@@ -158,7 +193,7 @@ h3{
     width: 100%;    
 }
 .btn-buy{
-    margin-bottom: 8px;
+    
     cursor: pointer;
     border: 1px solid white;
     border-radius: 4px;
@@ -183,6 +218,7 @@ h3{
     width: 100%;
     height: 50px;
     max-width: 700px;
+    min-width: 100%;
     padding: 20.5px 33px;
     font-size: 12px;
     line-height: 15px;
@@ -238,7 +274,7 @@ h3{
     } */
    
     .cont-btnbuy-opciones .btn-buy{
-        margin-top: 10vh;
+        
       
     }
 
@@ -247,10 +283,10 @@ h3{
 @media only screen and (max-width: 1200px)
 {
   
-    /* .section-portada{
+    .section-portada{
         padding-top: 50% !important;           
-        padding-bottom: 100% ;  
-    } */
+    
+    } 
     .item1{
         min-width: auto;
         max-width:500px;       
@@ -262,10 +298,11 @@ h3{
     }   
     .btn-buy{     
         font-size: 10px;
-        margin-bottom: -2px;
+        
         width: 100%;
         height: 30px;
         max-width: 500px;
+        min-width: -webkit-fill-available;
     }
     .link-portada{
         font-size: 12px;
@@ -273,16 +310,15 @@ h3{
 
     }
     .text-introduction{
-        font-family: 'Josefin Sans', sans-serif;                
         line-height: 1em;
-        font-size: 15vw;
-
+        font-size: 12vw;       
+        font-size: 36px;
     
     }
     .slogan{
    
-        font-size: 3vw;
-        font-size: 6vw;
+        font-size: 14px;
+        letter-spacing: 2px;
     
     }
     
