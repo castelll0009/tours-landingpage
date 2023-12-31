@@ -1,0 +1,680 @@
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--font google lato-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+  @font-face {
+    font-weight: 400;
+    font-style:  normal;
+    font-family: circular;
+    
+    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Book.woff2') format('woff2');
+  }
+  
+  @font-face {
+    font-weight: 700;
+    font-style:  normal;
+    font-family: circular;
+    
+    src: url('chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/fonts/CircularXXWeb-Bold.woff2') format('woff2');
+  }
+  
+  
+  body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    /* Cambiar el fondo a un gradiente verde */
+    background: linear-gradient(to bottom, #4bb71b, #368e16);
+    background: rgb(207,95,8);
+    background: linear-gradient(115deg, rgba(207,95,8,1) 0%, rgba(32,148,0,1) 73%, rgba(8,122,196,1) 97%);
+    background: white;
+    color: #000;
+    background-repeat: no-repeat
+  }
+  
+  .card0 {
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    z-index: 0;
+  }
+  
+  .card00 {
+    z-index: 0
+  }
+  
+  .card1 {
+    margin-left: 140px;
+    z-index: 0;
+    border-right: 1px solid #F5F5F5
+  }
+  
+  .card2 {
+    display: none
+  }
+  
+  .card2.show {
+    display: flex;
+    flex-direction: column;
+  }
+  .social {
+    border-radius: 50%;
+    background-color: #FFCDD2;
+    color: #e5a007;
+    height: 47px;
+    width: 47px;
+    padding-top: 16px;
+    cursor: pointer
+  }
+  
+  input,
+  select {
+    padding: 2px;
+    border-radius: 0px;
+    box-sizing: border-box;
+    color: #9E9E9E;
+    border: 1px solid #BDBDBD;
+    font-size: 16px;
+    letter-spacing: 1px;
+    height: 50px !important
+  }
+  
+  select {
+    width: 100%;
+    margin-bottom: 85px
+  }
+  .text-conf{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+  }
+  input:focus,
+  select:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #e5a007 !important;
+    outline-width: 0 !important
+  }
+  
+  .form-control {
+    
+    border: none; 
+    border-bottom: 1px solid #ced4da;
+    
+  }
+  
+  
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #e5a007
+  }
+  
+  .form-group {
+    display: flex;
+    position: relative;
+    margin-bottom: 1.5rem;
+    width: 77%
+  }
+  
+  .form-control-placeholder {
+    position: absolute;
+    top: 0px;
+    padding: 12px 2px 0 2px;
+    transition: all 300ms;
+    opacity: 0.5
+  }
+  
+  .form-control:focus+.form-control-placeholder,
+  .form-control:valid+.form-control-placeholder {
+    font-size: 95%;
+    top: 10px;
+    transform: translate3d(0, -100%, 0);
+    opacity: 1;
+    background-color: #fff
+  }
+  
+  .next-button {
+    width: 18%;
+    height: 50px;
+    background-color: #fab526;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    
+    min-width: 50px;
+  }
+  
+  .next-button:hover {
+    background-color: #e5a007;
+    color: #fff
+  }
+  
+  .get-bonus {
+    margin-left: 154px
+  }
+  
+  .pic {
+    width: 230px;
+    height: 110px
+  }
+  
+  #progressbar {
+    position: absolute;
+    left: 35px;
+    overflow: hidden;
+    color: #e5a007
+  }
+  
+  #progressbar li {
+    list-style-type: none;
+    font-size: 8px;
+    font-weight: 400;
+    margin-bottom: 36px
+  }
+  
+  #progressbar li:nth-child(3) {
+    margin-bottom: 88px
+  }
+  
+  #progressbar .step0:before {
+    content: "";
+    color: #fff
+  }
+  
+  #progressbar li:before {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    font-size: 20px;
+    background: #424242;
+    border: 2px solid #e39c06;
+    border-radius: 50%;
+    margin: auto;
+  }
+  
+  #progressbar li:last-child:before {
+    width: 40px;
+    height: 40px
+  }
+  
+  #progressbar li:after {
+    content: '';
+    width: 3px;
+    height: 66px;
+    background: #BDBDBD;
+    position: absolute;
+    left: 58px;
+    top: 15px;
+    z-index: -1
+  }
+  
+  #progressbar li:last-child:after {
+    top: 147px;
+    height: 132px
+  }
+  
+  #progressbar li:nth-child(3):after {
+    top: 81px
+  }
+  
+  #progressbar li:nth-child(2):after {
+    top: 0px
+  }
+  
+  #progressbar li:first-child:after {
+    position: absolute;
+    top: -81px
+  }
+  
+  #progressbar li.active:after {
+    background: #e5a007;
+  }
+  
+  #progressbar li.active:before {
+    background: #e5a007;
+    font-family: FontAwesome;
+    content: "\f00c"
+  }
+  
+  .tick {
+    width: 100px;
+    height: 100px
+  }
+  
+  .prev {
+    display: block;
+    position: absolute;
+    left: 40px;
+    top: 20px;
+    cursor: pointer
+  }
+  
+  .prev:hover {
+    color: #D50000 !important
+  }
+  
+  @media screen and (max-width: 912px) {
+    .card00 {
+      
+    }
+    
+    .card1 {
+      border: none;
+      margin-left: 50px
+    }
+    
+    .card2 {
+      border-bottom: 1px solid #F5F5F5;
+      margin-bottom: 25px
+    }
+    
+    .social {
+      height: 30px;
+      width: 30px;
+      font-size: 15px;
+      padding-top: 8px;
+      margin-top: 7px
+    }
+    
+    .get-bonus {
+      margin-top: 40px !important;
+      margin-left: 75px
+    }
+    
+    #progressbar {
+      left: -25px
+    }
+  }
+</style>
+
+<section style="background-color: black; padding: 20px;">
+  
+    
+  <div class="cont_left_rigth" style="
+  padding: 0px;
+  padding-left: 0 !important;
+  padding-right: 0px !important;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  ">
+  
+  <div class="cont_left" style="
+  text-align: left !important;
+  padding: 5vw;
+  flex: 1; /* Hace que cada elemento ocupe el 50% del ancho disponible */
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  background: gray;
+  /* min-width: 20vw; */
+  min-height: 50vh;
+  height: -webkit-fill-available;
+  
+  
+  /* backdrop-filter: grayscale(1); */
+  background-blend-mode: soft-light;
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: -webkit-fill-available;
+  min-width: 300px;
+  ">
+  <div class="row text-center justify-content-center px-3" style="
+  padding: 0px;
+  ">                                            
+  <h3 class="mt-4" style="margin: 0px !important;padding-bottom: 30px;color: #e4a808;font-size: xx-large;width: 100%;text-align: left;">let's get going</h3>
+</div>
+<div class="col-md-6" style="
+min-width: fit-content;
+display: flex;
+text-align: left;
+flex-direction: row;
+position: relative;
+justify-content: space-around;
+height: inherit;
+max-height: 40vh;
+min-height: inherit;
+">
+<div class="card1" style="/* margin-left: 50px; */border: none;margin-left: 100px;">
+  <ul id="progressbar" class="text-center" style="z-index: 1;margin-left: 0px;position: absolute;left: 0px;">
+    <li class="active step0"></li>
+    <li class="step0"></li>
+    <li class="step0 "></li>
+    <li class="step0 "></li>
+  </ul>
+  <p class="" style="width: 100%;
+  ">Enter names and lastnames</p>
+  <p class="">Enter your email &amp; phone</p>
+  <p class="">Set departure &amp; short description</p>                                                           
+</div>
+
+</div>
+<h2 class=" get-bonus mt-4 mb-5" style="
+color: silver;
+font-size: 1.5rem;
+text-wrap: balance;
+margin: 0px;
+text-align: start;
+position: relative;
+border: 0;
+margin-bottom: 0px !important;
+margin-top: 0px !important;
+">You're Getting ready <span id="user-name" class="text-danger-cara">Jane Doe</span> Congratulations.</h2>
+</div>
+
+<div class="cont_rigth" style="flex: 1; /* Hace que cada elemento ocupe el 50% del ancho disponible */display: inline-flex;background: white;padding: 5vw;/* text-align: left; */flex-direction: column;height: -webkit-fill-available;min-width: 300px;/* justify-content: space-between; */border-radius: 5px;">
+  <p id="btn-goback" class="prev text-danger-cara" style="color: rgb(73, 80, 87); position: relative; display: none; left: 0px; top: 0px; text-align: left; font-size: smaller;"><span class="fa fa-long-arrow-left"> Go Back</span></p>
+  <!-- <button type="button" class="btn btn-secondary prev" style="position: absolute; top: 10px; right: 10px;">Atrás</button> -->
+  <div data-step="1" class="card2 first-screen ml-2 show" style="
+  min-width: 70px !important;
+  ">
+ 
+  <div class="row px-3 mt-4">
+    
+    
+    
+    
+    <div class="form-group mt-1 mb-1">
+      <div class="input-group-prepend">
+        <span class="text-conf">
+          <i class="fa fa-user"></i>
+        </span>
+      </div>
+      <input type="text" id="full-name" class="form-control valid" placeholder="Name" required="" data-step="1">
+      <!-- <label class="ml-3 form-control-placeholder" for="full-name">Name</label> -->
+      
+      
+    </div>
+    
+    
+    
+  </div>
+  
+  <div class="row px-3 mt-4">
+    <div class="form-group mt-1 mb-1"> 
+      <div class="input-group-prepend">
+        <span class="text-conf">
+          <i class="fa fa-pencil"></i>
+        </span>
+      </div>
+      <input type="text" id="full-name" class="form-control" placeholder="Second Name" required="" data-step="1"> 
+      <!-- <label class="ml-3 form-control-placeholder" for="full-name">Apellido</label>  -->
+    </div>
+    <div class="next-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
+  </div>
+  
+</div>
+<div data-step="2" class="card2 ml-2">
+  
+  <div class="row px-3 mt-4">
+    <div class="form-group mt-1 mb-1"> 
+      <div class="input-group-prepend ">
+        <span class="text-conf ">
+          <i class="fa fa-envelope"></i>
+        </span>
+      </div>
+      <input type="text" id="email" class="form-control" placeholder="Email" required="" data-step="2">
+      
+      <!-- <label class="ml-3 form-control-placeholder" for="email">Email</label>  -->
+    </div>
+  </div>
+  <div class="row px-3 mt-3">
+    <div class="form-group mt-1 mb-1"> 
+      <div class="input-group-prepend">
+        <span class="text-conf">
+          <i class="fa fa-phone"></i>
+        </span>
+      </div>
+      <input type="tel" id="phone" class="form-control" placeholder="Telefono" required="" data-step="2">
+      <!-- <label class="ml-3 form-control-placeholder" for="phone">Phone Number</label> -->
+    </div>
+    <div class="next-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> 
+    </div>
+  </div>                                              
+</div>
+
+<div data-step="3" class="card2 ml-2" id="id-preview">
+  <div class="row px-3 mt-3">
+    
+    <div class="form-group mt-1 mb-1">
+      <div class="input-group-prepend">
+        <span class="text-conf">
+          <i class="fa fa-calendar"></i>
+        </span>
+      </div>
+      <input type="date" id="tour-date" class="form-control" required="" data-step="3">
+      <!-- <label class="ml-3 form-control-placeholder" for="tour-date"></label> -->
+      
+    </div>
+  </div>
+  <div class="row px-3 mt-3">
+    
+    <div class="form-group mt-1 mb-1">
+      <div class="input-group-prepend">
+        <span class="text-conf">
+          <i class="fa fa-pencil"></i>
+        </span>
+      </div>
+      <textarea id="description" class="form-control" placeholder="Description" required="" data-step="3" rows="4"></textarea>
+      <!-- <label class="ml-3 form-control-placeholder" for="description">Description</label> -->
+      <div class="next-button final-button text-center mt-1 ml-2"> <span class="fa fa-arrow-right"></span> </div>
+    </div> 
+  </div>
+  
+  
+</div>
+
+<!-- Date departure  and description -->
+<div data-step="4" class="card2 ml-2" id="final-step-id" style="background:white;">
+  
+  <div class="row px-3 mt-2 mb-4 text-center">
+    <h2 class="col-12 text-danger-cara"><strong>Success !</strong></h2>
+    <div class="col-12 text-center">
+      <div class="success-animation">
+        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"></circle><path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"></path></svg>
+      </div>
+      
+    </div>
+    <h6 class="col-12 mt-2">
+      <i>
+        now you can write to us by Whatsapp and E-mail
+      </i>
+    </h6>
+  </div>
+  <button type="button" class="btn btn-primary contact-now-button final-button text-center mt-1 ml-2">Contact Us</button>
+  
+</div>
+</div>
+</div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script id="rendered-js">
+  $(document).ready(function () {    
+    // Maneja el clic en el botón "Contact Us"
+    $(".contact-now-button").click(function () {
+      // Obtiene los valores de los campos necesarios
+      var userName = "Name: " + $("#full-name").val();
+      var userEmail = "E-mail: " + $("#email").val();
+      var userPhone = "Phone: " + $("#phone").val();
+      var tourDate = "Tour Date: " + $("#tour-date").val();
+      var description = "Description: " + $("#description").val();
+      
+      // Crea el mensaje de WhatsApp con la información
+      var whatsappMessage = userName + "\n" + userEmail + "\n" + userPhone + "\n" + tourDate + "\n" + description;
+      
+      // Crea el enlace de WhatsApp
+      var whatsappLink = "https://api.whatsapp.com/send?phone=+573202486769&text=" + encodeURIComponent(whatsappMessage);
+      
+      // Crea el enlace de Gmail (mailto)
+      var emailSubject = "Tour Inquiry from " + $("#full-name").val();
+      var emailBody = userName + "\n" + userEmail + "\n" + userPhone + "\n" + tourDate + "\n" + description;
+      var emailLink = "mailto:castelll0009@gmail.com?subject=" + encodeURIComponent(emailSubject) + "&body=" + encodeURIComponent(emailBody);
+      
+      // Abre ambas ventanas de enlace en simultáneo
+      window.open(whatsappLink, "_blank");
+      window.open(emailLink, "_blank");
+    });
+    
+    $(".final-button").click(function() {
+      
+      
+    });
+    // Función para verificar los campos en el paso actual
+    function checkFields(step) {
+      var allFieldsFilled = true;
+      
+      // Verifica los campos de entrada requeridos en el paso actual
+      $(".form-control[data-step='" + step + "'][required]").each(function () {
+        if ($(this).val() === "") {
+          allFieldsFilled = false;
+          return false; // Rompe el bucle si se encuentra un campo vacío
+        }
+      });
+      
+      return allFieldsFilled;
+    }
+    
+    // Maneja el clic en el botón "Next"
+    $(".next-button").click(function () {  
+      
+      current_fs = $(this).parent().parent();                                   
+      var nextStep = mostrarPasoActual() + 1;
+      
+      if ( checkFields(mostrarPasoActual()) ) {
+        // Obtener el valor del campo de entrada de nombre
+        var userName = $("#full-name").val();
+        // Actualizar el contenido del <span> con el nombre del usuario
+          $("#user-name").text(userName);
+          
+          next_fs = $(this).parent().parent().next();
+          $(current_fs).removeClass("show");
+          $(next_fs).addClass("show");
+          $("#progressbar li").eq($(".card2").index(next_fs)).addClass("active");
+          
+          configurarGoBack();  
+        }else{
+          
+        }
+        // Oculta el div con id "id-preview"
+        var lastStepActive = $("#progressbar li:last").hasClass("active");
+        
+        // Muestra la última card2 solo si el último círculo de step0 tiene la clase 'active'
+        if (lastStepActive) {
+          $("#id-preview").removeClass("show");
+          // Muestra el div con id "final-step-id"
+          $("#final-step-id").addClass("show");
+        } else {
+          
+          
+        }
+      });
+      
+      
+      
+      
+    });
+    
+    // control de pasos adelante y atras
+    var pasoActual = 0;
+    function mostrarPasoActual(){
+      pasoActual = 0; // Inicializa pasoActual a 0 por defecto
+      
+      var elementosLi = document.querySelectorAll("#progressbar li");
+      
+      for (var i = 0; i < elementosLi.length; i++) {
+        if (elementosLi[i].classList.contains("active")) {
+          pasoActual = i + 1; // Suma 1 porque los índices comienzan en 0    
+        }
+        else{
+          break;
+        }
+      }                                  
+      
+      console.log("El paso actual es: " + pasoActual);
+      return pasoActual;                                    
+    }
+    
+    mostrarPasoActual();  
+    configurarGoBack(); 
+    function configurarGoBack(){
+      if(mostrarPasoActual() ===1 || mostrarPasoActual() ===4){
+        $(document).ready(function() {
+          $("p.prev").css("display", "none");
+        });
+      }else{
+        $(document).ready(function() {
+          $("p.prev").css("display", "block");
+        });
+      }                                         
+    }                        
+    
+    // Maneja el clic en el botón "Prev" (incluyendo el botón "Go Back")
+    $(".prev").click(function () {     
+      var pasoActual = mostrarPasoActual();  
+      pasoActual = pasoActual -1;                                      
+      // Actualiza el indicador de progreso
+      // $("#progressbar li").removeClass("active");
+      $("#progressbar li:eq(" + pasoActual + ")").removeClass("active");
+      $("#progressbar li:eq(" + (pasoActual-1) + ")").addClass("active");
+      
+      // Oculta todas las tarjetas
+      $(".card2").removeClass("show");                                    
+      // // Muestra solo la tarjeta correspondiente al data-step
+      $(".card2[data-step=" + (mostrarPasoActual() ) + "]").addClass("show");
+      
+      configurarGoBack();                                                           
+    });
+    
+    
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      var menuCollapsed = false;
+      var toggleMenuButton = document.getElementById('toggleMenuButton');
+      var menuContent = document.getElementById('navbarSupportedContent');
+      
+      toggleMenuButton.addEventListener('click', function () {
+        if (menuCollapsed) {
+          // Si el menú está colapsado, lo despliega
+          menuContent.style.display = 'block';
+          menuCollapsed = false;
+        } else {
+          // Si el menú está desplegado, lo colapsa
+          menuContent.style.display = 'none';
+          menuCollapsed = true;
+        }
+      });
+    });
+    
+    
+    
+    
+</script>
+  
+ 
+  
+  
+  
